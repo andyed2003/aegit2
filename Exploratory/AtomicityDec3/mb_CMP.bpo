@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/AtomicityDec3/mb_CMP.bpo|org.eventb.core.poFile#mb_CMP|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="a" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="b" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="tmp" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="used_a" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="x" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="used_b" org.eventb.core.predicate="a∈ℤ" org.eventb.core.source="/AtomicityDec3/ma.bum|org.eventb.core.machineFile#ma|org.eventb.core.invariant#="/>
+<org.eventb.core.poPredicate name="used_c" org.eventb.core.predicate="x∈ℤ" org.eventb.core.source="/AtomicityDec3/ma.bum|org.eventb.core.machineFile#ma|org.eventb.core.invariant#2"/>
+<org.eventb.core.poPredicate name="used_d" org.eventb.core.predicate="b∈ℤ" org.eventb.core.source="/AtomicityDec3/ma.bum|org.eventb.core.machineFile#ma|org.eventb.core.invariant#5"/>
+<org.eventb.core.poPredicate name="used_e" org.eventb.core.predicate="used_a∈ℤ" org.eventb.core.source="/AtomicityDec3/ma.bum|org.eventb.core.machineFile#ma|org.eventb.core.invariant#A"/>
+<org.eventb.core.poPredicate name="used_f" org.eventb.core.predicate="used_a∈ℤ" org.eventb.core.source="/AtomicityDec3/controller.bum|org.eventb.core.machineFile#controller|org.eventb.core.invariant#)"/>
+<org.eventb.core.poPredicate name="used_g" org.eventb.core.predicate="a∈ℤ" org.eventb.core.source="/AtomicityDec3/controller.bum|org.eventb.core.machineFile#controller|org.eventb.core.invariant#*"/>
+<org.eventb.core.poPredicate name="used_h" org.eventb.core.predicate="used_a∈ℤ" org.eventb.core.source="/AtomicityDec3/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.invariant#typing_used_a"/>
+<org.eventb.core.poPredicate name="used_i" org.eventb.core.predicate="a∈ℤ" org.eventb.core.source="/AtomicityDec3/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.invariant#typing_a"/>
+<org.eventb.core.poPredicate name="used_j" org.eventb.core.predicate="b∈ℤ" org.eventb.core.source="/AtomicityDec3/environ.bum|org.eventb.core.machineFile#environ|org.eventb.core.invariant#("/>
+<org.eventb.core.poPredicate name="used_k" org.eventb.core.predicate="b∈ℤ" org.eventb.core.source="/AtomicityDec3/environImpl.bum|org.eventb.core.machineFile#environImpl|org.eventb.core.invariant#typing_b"/>
+<org.eventb.core.poPredicate name="used_l" org.eventb.core.predicate="tmp∈BOOL" org.eventb.core.source="/AtomicityDec3/environImpl.bum|org.eventb.core.machineFile#environImpl|org.eventb.core.invariant#typing_d"/>
+<org.eventb.core.poPredicate name="used_m" org.eventb.core.predicate="x∈ℤ" org.eventb.core.source="/AtomicityDec3/master.bum|org.eventb.core.machineFile#master|org.eventb.core.invariant#("/>
+<org.eventb.core.poPredicate name="used_n" org.eventb.core.predicate="x∈ℤ" org.eventb.core.source="/AtomicityDec3/masterImpl.bum|org.eventb.core.machineFile#masterImpl|org.eventb.core.invariant#typing_x"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="CMPEVTIDENTcontrollerImpl_internal_includes2_+" org.eventb.core.parentSet="/AtomicityDec3/mb_CMP.bpo|org.eventb.core.poFile#mb_CMP|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="x'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="b'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="tmp'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="used_a'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="a'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="CMPEVTALLHYPcontrollerImpl_internal_includes2_+" org.eventb.core.parentSet="/AtomicityDec3/mb_CMP.bpo|org.eventb.core.poFile#mb_CMP|org.eventb.core.poPredicateSet#CMPEVTIDENTcontrollerImpl_internal_includes2_+" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="CMPEVTIDENTcontrollerImpl_internal_includes2_," org.eventb.core.parentSet="/AtomicityDec3/mb_CMP.bpo|org.eventb.core.poFile#mb_CMP|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="x'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="CMPEVTALLHYPcontrollerImpl_internal_includes2_," org.eventb.core.parentSet="/AtomicityDec3/mb_CMP.bpo|org.eventb.core.poFile#mb_CMP|org.eventb.core.poPredicateSet#CMPEVTIDENTcontrollerImpl_internal_includes2_," org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈ℤ" org.eventb.core.source="/AtomicityDec3/masterImpl.bum|org.eventb.core.machineFile#masterImpl|org.eventb.core.event#)|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="p∈ℤ" org.eventb.core.source="/AtomicityDec3/environImpl.bum|org.eventb.core.machineFile#environImpl|org.eventb.core.event#*|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="p=b" org.eventb.core.source="/AtomicityDec3/environImpl.bum|org.eventb.core.machineFile#environImpl|org.eventb.core.event#*|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="CMPEVTIDENTcontrollerImpl_internal_includes2_-" org.eventb.core.parentSet="/AtomicityDec3/mb_CMP.bpo|org.eventb.core.poFile#mb_CMP|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="a'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="CMPEVTALLHYPcontrollerImpl_internal_includes2_-" org.eventb.core.parentSet="/AtomicityDec3/mb_CMP.bpo|org.eventb.core.poFile#mb_CMP|org.eventb.core.poPredicateSet#CMPEVTIDENTcontrollerImpl_internal_includes2_-" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈ℤ" org.eventb.core.source="/AtomicityDec3/masterImpl.bum|org.eventb.core.machineFile#masterImpl|org.eventb.core.event#*|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="p=x" org.eventb.core.source="/AtomicityDec3/masterImpl.bum|org.eventb.core.machineFile#masterImpl|org.eventb.core.event#*|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="p∈ℤ" org.eventb.core.source="/AtomicityDec3/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.event#+|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="CMPEVTIDENTcontrollerImpl_internal_includes2_." org.eventb.core.parentSet="/AtomicityDec3/mb_CMP.bpo|org.eventb.core.poFile#mb_CMP|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="used_a'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="CMPEVTALLHYPcontrollerImpl_internal_includes2_." org.eventb.core.parentSet="/AtomicityDec3/mb_CMP.bpo|org.eventb.core.poFile#mb_CMP|org.eventb.core.poPredicateSet#CMPEVTIDENTcontrollerImpl_internal_includes2_." org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="CMPEVTIDENTcontrollerImpl_internal_includes2_/" org.eventb.core.parentSet="/AtomicityDec3/mb_CMP.bpo|org.eventb.core.poFile#mb_CMP|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="b'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="CMPEVTALLHYPcontrollerImpl_internal_includes2_/" org.eventb.core.parentSet="/AtomicityDec3/mb_CMP.bpo|org.eventb.core.poFile#mb_CMP|org.eventb.core.poPredicateSet#CMPEVTIDENTcontrollerImpl_internal_includes2_\/" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/AtomicityDec3/mb_CMP.bpo|org.eventb.core.poFile#mb_CMP|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0"/>
+</org.eventb.core.poFile>

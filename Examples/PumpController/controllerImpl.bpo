@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="MIN" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="MIO" org.eventb.core.predicate="MIN∈ℤ" org.eventb.core.source="/PumpController/ctx.buc|org.eventb.core.contextFile#ctx|org.eventb.core.axiom#*"/>
+<org.eventb.core.poPredicate name="MIP" org.eventb.core.predicate="MIN=10" org.eventb.core.source="/PumpController/ctx.buc|org.eventb.core.contextFile#ctx|org.eventb.core.axiom#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="c_level" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="c_level_internal" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="c_pumpOnCmd" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="c_pumpOnReq" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="c_pumpOnReq_internal" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="c_warn" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poPredicate name="c_pumpOnReq_internam" org.eventb.core.predicate="c_pumpOnReq_internal∈BOOL" org.eventb.core.source="/PumpController/controller.bum|org.eventb.core.machineFile#controller|org.eventb.core.invariant#-"/>
+<org.eventb.core.poPredicate name="c_pumpOnReq_internan" org.eventb.core.predicate="c_level_internal∈ℤ" org.eventb.core.source="/PumpController/controller.bum|org.eventb.core.machineFile#controller|org.eventb.core.invariant#."/>
+<org.eventb.core.poPredicate name="c_pumpOnReq_internao" org.eventb.core.predicate="c_level∈ℤ" org.eventb.core.source="/PumpController/controller.bum|org.eventb.core.machineFile#controller|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poPredicate name="c_pumpOnReq_internap" org.eventb.core.predicate="c_pumpOnCmd∈BOOL" org.eventb.core.source="/PumpController/controller.bum|org.eventb.core.machineFile#controller|org.eventb.core.invariant#0"/>
+<org.eventb.core.poPredicate name="c_pumpOnReq_internaq" org.eventb.core.predicate="c_warn∈BOOL" org.eventb.core.source="/PumpController/controller.bum|org.eventb.core.machineFile#controller|org.eventb.core.invariant#1"/>
+<org.eventb.core.poPredicate name="c_pumpOnReq_internar" org.eventb.core.predicate="c_pumpOnReq∈BOOL" org.eventb.core.source="/PumpController/controller.bum|org.eventb.core.machineFile#controller|org.eventb.core.invariant#2"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/m1_inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#EVTALLHYPc_pumpOnReq_internam"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="100≤MIN∧FALSE=TRUE⇒FALSE=TRUE" org.eventb.core.source="/PumpController/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.invariant#m1_inv1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/PumpController/controller.bum|org.eventb.core.machineFile#controller|org.eventb.core.event#3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/PumpController/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.event#="/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PumpController/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.invariant#m1_inv1"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poSequent#INITIALISATION\/m1_inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/m1_inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#EVTALLHYPc_pumpOnReq_internam"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="100&gt;MIN∧FALSE=TRUE⇒FALSE=TRUE" org.eventb.core.source="/PumpController/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.invariant#typing_c_pumpOnReq_internan"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/PumpController/controller.bum|org.eventb.core.machineFile#controller|org.eventb.core.event#3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/PumpController/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.event#="/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PumpController/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.invariant#typing_c_pumpOnReq_internan"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poSequent#INITIALISATION\/m1_inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_pumpOnReq_internam" org.eventb.core.parentSet="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="c_level_internal'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="c_warn'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="c_pumpOnCmd'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="c_pumpOnReq'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="c_level'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="c_pumpOnReq_internal'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_pumpOnReq_internam" org.eventb.core.parentSet="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#EVTIDENTc_pumpOnReq_internam" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_pumpOnReq_internan" org.eventb.core.parentSet="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_pumpOnReq_internan" org.eventb.core.parentSet="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#EVTIDENTc_pumpOnReq_internan" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈BOOL" org.eventb.core.source="/PumpController/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.event#&gt;|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="p=c_pumpOnCmd" org.eventb.core.source="/PumpController/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.event#&gt;|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_pumpOnReq_internao" org.eventb.core.parentSet="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="c_level'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="q" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_pumpOnReq_internao" org.eventb.core.parentSet="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#EVTIDENTc_pumpOnReq_internao" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="q∈ℤ" org.eventb.core.source="/PumpController/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.event#?|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_pumpOnReq_internap" org.eventb.core.parentSet="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="r" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="c_pumpOnReq'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_pumpOnReq_internap" org.eventb.core.parentSet="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#EVTIDENTc_pumpOnReq_internap" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="r∈BOOL" org.eventb.core.source="/PumpController/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.event#@|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="filterOK/m1_inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#EVTALLHYPc_pumpOnReq_internaq"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="c_level≤MIN∧TRUE=TRUE⇒c_warn=TRUE" org.eventb.core.source="/PumpController/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.invariant#m1_inv1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/PumpController/controller.bum|org.eventb.core.machineFile#controller|org.eventb.core.event#7"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/PumpController/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.event#A"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PumpController/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.invariant#m1_inv1"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poSequent#filterOK\/m1_inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="filterOK/m1_inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#EVTALLHYPc_pumpOnReq_internaq"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="c_level&gt;MIN∧TRUE=TRUE⇒TRUE=TRUE" org.eventb.core.source="/PumpController/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.invariant#typing_c_pumpOnReq_internan"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/PumpController/controller.bum|org.eventb.core.machineFile#controller|org.eventb.core.event#7"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/PumpController/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.event#A"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PumpController/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.invariant#typing_c_pumpOnReq_internan"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poSequent#filterOK\/m1_inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_pumpOnReq_internaq" org.eventb.core.parentSet="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="c_level_internal'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="c_pumpOnCmd'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="c_pumpOnReq_internal'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_pumpOnReq_internaq" org.eventb.core.parentSet="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#EVTIDENTc_pumpOnReq_internaq" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c_level&gt;MIN" org.eventb.core.source="/PumpController/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.event#A|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_pumpOnReq=TRUE" org.eventb.core.source="/PumpController/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.event#A|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="filterWarn/m1_inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#EVTALLHYPc_pumpOnReq_internar"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="c_level_internal≤MIN∧c_pumpOnReq_internal=TRUE⇒TRUE=TRUE" org.eventb.core.source="/PumpController/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.invariant#m1_inv1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/PumpController/controller.bum|org.eventb.core.machineFile#controller|org.eventb.core.event#8"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/PumpController/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.event#B"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/PumpController/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.invariant#m1_inv1"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poSequent#filterWarn\/m1_inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_pumpOnReq_internar" org.eventb.core.parentSet="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="c_warn'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_pumpOnReq_internar" org.eventb.core.parentSet="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#EVTIDENTc_pumpOnReq_internar" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c_level≤MIN" org.eventb.core.source="/PumpController/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.event#B|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_pumpOnReq=TRUE" org.eventb.core.source="/PumpController/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.event#B|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_pumpOnReq_internas" org.eventb.core.parentSet="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/PumpController/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c_pumpOnReq_internal∈BOOL" org.eventb.core.source="/PumpController/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.invariant#typing_c_pumpOnReq_internal"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_level_internal∈ℤ" org.eventb.core.source="/PumpController/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.invariant#typing_c_level_internal"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="c_level∈ℤ" org.eventb.core.source="/PumpController/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.invariant#typing_c_level"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="c_pumpOnCmd∈BOOL" org.eventb.core.source="/PumpController/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.invariant#typing_c_pumpOnCmd"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="c_warn∈BOOL" org.eventb.core.source="/PumpController/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.invariant#typing_c_warn"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="c_pumpOnReq∈BOOL" org.eventb.core.source="/PumpController/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.invariant#typing_c_pumpOnReq"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="c_level_internal≤MIN∧c_pumpOnReq_internal=TRUE⇒c_warn=TRUE" org.eventb.core.source="/PumpController/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.invariant#m1_inv1"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="c_level_internal&gt;MIN∧c_pumpOnReq_internal=TRUE⇒c_pumpOnCmd=TRUE" org.eventb.core.source="/PumpController/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.invariant#typing_c_pumpOnReq_internan"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

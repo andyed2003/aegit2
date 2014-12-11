@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="ch.ethz.eventb.decomposition.mchBase;org.eventb.codegen.ui.cgConfig" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="CONTROL_LOOP_OLD"/>
+<org.eventb.core.seesContext name="')" org.eventb.core.target="AIBV_temperature_context"/>
+<org.eventb.core.variable name="'" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="AIBV_state"/>
+<org.eventb.core.variable name="(" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="AIBV_action"/>
+<org.eventb.core.variable name=")" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="AIBV_amount"/>
+<org.eventb.core.variable name="*" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="AIBV_control_action_started"/>
+<org.eventb.core.variable name="+" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="AIBV_action_needs_to_measure_position"/>
+<org.eventb.core.variable name="," org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="AIBV_measured_position"/>
+<org.eventb.core.variable name="-" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="AIBV_position_measurement_to_check"/>
+<org.eventb.core.variable name="." org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="AIBV_control_loop_finishing"/>
+<org.eventb.core.variable name="/" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="AIBV_position_error"/>
+<org.eventb.core.variable name="0" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="AIBV_believed_position"/>
+<org.eventb.core.variable name="1" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="AIBV_control_loop_started"/>
+<org.eventb.core.variable name="2" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="AIBV_expected_position"/>
+<org.eventb.core.variable name="3" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="AIBV_measuring_position"/>
+<org.eventb.core.variable name="4" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="AIBV_required_position"/>
+<org.eventb.core.variable name="5" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="AIBV_temperature_control_loop_started"/>
+<org.eventb.core.variable name="6" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="AIBV_have_done_a_temperature_control_loop"/>
+<org.eventb.core.event name="'*" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="AIBV_state ≔ DISARMED" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="AIBV_action ≔ NOTHING" org.eventb.core.label="act3"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="AIBV_amount ≔ 0" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="AIBV_control_action_started ≔ FALSE" org.eventb.core.label="act5"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="AIBV_action_needs_to_measure_position ≔ FALSE" org.eventb.core.label="act11"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="AIBV_measured_position ≔ AIBV_UNKNOWN" org.eventb.core.label="act12"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="AIBV_position_measurement_to_check ≔ FALSE" org.eventb.core.label="act16"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="AIBV_control_loop_started ≔ FALSE" org.eventb.core.label="act17"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="AIBV_control_loop_finishing ≔ FALSE" org.eventb.core.label="act18"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="AIBV_position_error ≔ FALSE" org.eventb.core.label="act19"/>
+<org.eventb.core.action name="1" org.eventb.core.assignment="AIBV_believed_position ≔ AIBV_CLOSED" org.eventb.core.label="act20"/>
+<org.eventb.core.action name="2" org.eventb.core.assignment="AIBV_expected_position ≔ AIBV_CLOSED" org.eventb.core.label="act21"/>
+<org.eventb.core.action name="3" org.eventb.core.assignment="AIBV_measuring_position ≔ FALSE" org.eventb.core.label="act24"/>
+<org.eventb.core.action name="4" org.eventb.core.assignment="AIBV_required_position ≔ AIBV_CLOSED" org.eventb.core.label="act33"/>
+<org.eventb.core.action name="5" org.eventb.core.assignment="AIBV_temperature_control_loop_started ≔ FALSE" org.eventb.core.label="act34"/>
+<org.eventb.core.action name="6" org.eventb.core.assignment="AIBV_have_done_a_temperature_control_loop ≔ FALSE" org.eventb.core.label="act35"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'+" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_arm">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_arm"/>
+<org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_state = DISARMED"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="AIBV_state ≔ ARMED" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'," org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_disarm">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_disarm"/>
+<org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_state = ARMED"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_control_loop_started = FALSE"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd3" org.eventb.core.predicate="AIBV_position_error = FALSE"/>
+<org.eventb.core.guard name="*" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd4" org.eventb.core.predicate="AIBV_temperature_control_loop_started = FALSE"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="AIBV_state ≔ DISARMING" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'-" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_disarmed">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_disarmed"/>
+<org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_state = DISARMING"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_control_loop_started = FALSE"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd3" org.eventb.core.predicate="AIBV_believed_position = AIBV_CLOSED"/>
+<org.eventb.core.guard name="*" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd4" org.eventb.core.predicate="AIBV_position_error = FALSE"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="AIBV_state ≔ DISARMED" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="AIBV_have_done_a_temperature_control_loop ≔ FALSE" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'." org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_open_start">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_open_start"/>
+<org.eventb.core.parameter name="'" org.eventb.codegen.ui.parameterTypeAttribute="Out" org.eventb.core.identifier="amount"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_amount" org.eventb.core.predicate="amount ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_state = ARMED"/>
+<org.eventb.core.guard name="*" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_action = OPEN"/>
+<org.eventb.core.guard name="+" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd3" org.eventb.core.predicate="AIBV_control_action_started = FALSE"/>
+<org.eventb.core.guard name="," org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd5" org.eventb.core.predicate="amount = AIBV_amount"/>
+<org.eventb.core.guard name="-" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd6" org.eventb.core.predicate="0 ≤ amount"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="AIBV_control_action_started ≔ TRUE" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'/" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_open_end">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_open_end"/>
+<org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_state = ARMED"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_action = OPEN"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd3" org.eventb.core.predicate="AIBV_control_action_started = TRUE"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="AIBV_action, AIBV_amount ≔ NOTHING, 0" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="AIBV_control_action_started ≔ FALSE" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'0" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_close_start">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_close_start"/>
+<org.eventb.core.parameter name="'" org.eventb.codegen.ui.parameterTypeAttribute="Out" org.eventb.core.identifier="amount"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_amount" org.eventb.core.predicate="amount ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_state ≠ DISARMED"/>
+<org.eventb.core.guard name="*" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_action = CLOSE"/>
+<org.eventb.core.guard name="+" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd3" org.eventb.core.predicate="AIBV_control_action_started = FALSE"/>
+<org.eventb.core.guard name="," org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd5" org.eventb.core.predicate="amount = AIBV_amount"/>
+<org.eventb.core.guard name="-" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd6" org.eventb.core.predicate="0 ≤ amount"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="AIBV_control_action_started ≔ TRUE" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_close_end">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_close_end"/>
+<org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_state ≠ DISARMED"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_action = CLOSE"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd3" org.eventb.core.predicate="AIBV_control_action_started = TRUE"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="AIBV_action, AIBV_amount ≔ NOTHING, 0" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="AIBV_control_action_started ≔ FALSE" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_control_action_open">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_control_action_open"/>
+<org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_temperature_control_loop_started = TRUE"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_control_loop_started = FALSE"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd3" org.eventb.core.predicate="AIBV_position_error = FALSE"/>
+<org.eventb.core.guard name="*" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd4" org.eventb.core.predicate="AIBV_believed_position &lt; AIBV_required_position"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="AIBV_action ≔ OPEN" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="AIBV_amount ≔ AIBV_required_position − AIBV_believed_position" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="AIBV_expected_position ≔ AIBV_required_position" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="AIBV_action_needs_to_measure_position ≔ TRUE" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="AIBV_control_loop_started ≔ TRUE" org.eventb.core.label="act5"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_control_action_close_armed">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_control_action_close_armed"/>
+<org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_temperature_control_loop_started = TRUE"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_control_loop_started = FALSE"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd3" org.eventb.core.predicate="AIBV_position_error = FALSE"/>
+<org.eventb.core.guard name="*" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd4" org.eventb.core.predicate="AIBV_required_position &lt; AIBV_believed_position"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="AIBV_action ≔ CLOSE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="AIBV_amount ≔ AIBV_believed_position − AIBV_required_position" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="AIBV_expected_position ≔ AIBV_required_position" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="AIBV_action_needs_to_measure_position ≔ TRUE" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="AIBV_control_loop_started ≔ TRUE" org.eventb.core.label="act5"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'4" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_control_action_close_disarming">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_control_action_close_disarming"/>
+<org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_state = DISARMING"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_control_loop_started = FALSE"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd3" org.eventb.core.predicate="AIBV_position_error = FALSE"/>
+<org.eventb.core.guard name="*" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd4" org.eventb.core.predicate="AIBV_believed_position ≠ AIBV_CLOSED"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="AIBV_action ≔ CLOSE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="AIBV_amount ≔ AIBV_believed_position − AIBV_CLOSED" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="AIBV_expected_position ≔ AIBV_CLOSED" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="AIBV_action_needs_to_measure_position ≔ TRUE" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="AIBV_control_loop_started ≔ TRUE" org.eventb.core.label="act5"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'5" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_measure_position_start">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_measure_position_start"/>
+<org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_action_needs_to_measure_position = TRUE"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_action = NOTHING"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd4" org.eventb.core.predicate="AIBV_measuring_position = FALSE"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="AIBV_measuring_position ≔ TRUE" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'6" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_measure_position_end">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_measure_position_end"/>
+<org.eventb.core.parameter name="'" org.eventb.codegen.ui.parameterTypeAttribute="In" org.eventb.core.identifier="position_measurement"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_position_measurement" org.eventb.core.predicate="position_measurement ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_action_needs_to_measure_position = TRUE"/>
+<org.eventb.core.guard name="*" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_action = NOTHING"/>
+<org.eventb.core.guard name="+" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd5" org.eventb.core.predicate="(AIBV_CLOSED ≤ position_measurement ∧ position_measurement ≤ AIBV_OPEN) ∨ position_measurement = AIBV_UNKNOWN"/>
+<org.eventb.core.guard name="," org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd6" org.eventb.core.predicate="AIBV_measuring_position = TRUE"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="AIBV_action_needs_to_measure_position ≔ FALSE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="AIBV_measured_position ≔ position_measurement" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="AIBV_position_measurement_to_check ≔ TRUE" org.eventb.core.label="act5"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="AIBV_measuring_position ≔ FALSE" org.eventb.core.label="act6"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'7" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_check_position_ok">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_check_position_ok"/>
+<org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_position_measurement_to_check = TRUE"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_measured_position = AIBV_expected_position"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="AIBV_position_measurement_to_check ≔ FALSE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="AIBV_position_error, AIBV_believed_position ≔ FALSE, AIBV_measured_position" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="AIBV_control_loop_finishing ≔ TRUE" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'8" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_check_position_error">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_check_position_error"/>
+<org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_position_measurement_to_check = TRUE"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_measured_position ≠ AIBV_expected_position"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="AIBV_position_measurement_to_check ≔ FALSE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="AIBV_position_error, AIBV_believed_position ≔ TRUE, AIBV_UNKNOWN" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="AIBV_control_loop_finishing ≔ TRUE" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'9" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_finish_control_loop">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_finish_control_loop"/>
+<org.eventb.core.parameter name="'" org.eventb.codegen.ui.parameterTypeAttribute="Out" org.eventb.core.identifier="believed_position"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_believed_position" org.eventb.core.predicate="believed_position ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_control_loop_finishing = TRUE"/>
+<org.eventb.core.guard name="*" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="believed_position = AIBV_believed_position"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="AIBV_control_loop_started ≔ FALSE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="AIBV_control_loop_finishing ≔ FALSE" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="AIBV_temperature_control_loop_started ≔ FALSE" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="AIBV_have_done_a_temperature_control_loop ≔ TRUE" org.eventb.core.label="act5"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="':" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_calculate_position_partial">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_calculate_position_partial"/>
+<org.eventb.core.parameter name="'" org.eventb.codegen.ui.parameterTypeAttribute="In" org.eventb.core.identifier="temperature"/>
+<org.eventb.core.guard name="/" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_temperature" org.eventb.core.predicate="temperature ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_state = ARMED"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_temperature_control_loop_started = FALSE"/>
+<org.eventb.core.guard name="+" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd4" org.eventb.core.predicate="FULLY_OPEN_TEMP ≤ temperature ∧ temperature ≤ FULLY_CLOSED_TEMP"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="AIBV_required_position ≔ (AIBV_OPEN ∗ FULLY_CLOSED_TEMP − AIBV_CLOSED ∗ FULLY_OPEN_TEMP − (AIBV_OPEN − AIBV_CLOSED) ∗ temperature) ÷ (FULLY_CLOSED_TEMP − FULLY_OPEN_TEMP)" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="AIBV_temperature_control_loop_started ≔ TRUE" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="';" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_calculate_position_open">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_calculate_position_open"/>
+<org.eventb.core.parameter name="'" org.eventb.codegen.ui.parameterTypeAttribute="In" org.eventb.core.identifier="temperature"/>
+<org.eventb.core.guard name="/" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_temperature" org.eventb.core.predicate="temperature ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_state = ARMED"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_temperature_control_loop_started = FALSE"/>
+<org.eventb.core.guard name="+" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd4" org.eventb.core.predicate="temperature &lt; FULLY_OPEN_TEMP"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="AIBV_required_position ≔ AIBV_OPEN" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="AIBV_temperature_control_loop_started ≔ TRUE" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'=" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_calculate_position_closed">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_calculate_position_closed"/>
+<org.eventb.core.parameter name="'" org.eventb.codegen.ui.parameterTypeAttribute="In" org.eventb.core.identifier="temperature"/>
+<org.eventb.core.guard name="/" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_temperature" org.eventb.core.predicate="temperature ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_state = ARMED"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_temperature_control_loop_started = FALSE"/>
+<org.eventb.core.guard name="+" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd4" org.eventb.core.predicate="FULLY_CLOSED_TEMP &lt; temperature"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="AIBV_required_position ≔ AIBV_CLOSED" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="AIBV_temperature_control_loop_started ≔ TRUE" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_temperature_control_loop_not_needed">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_temperature_control_loop_not_needed"/>
+<org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_temperature_control_loop_started = TRUE"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_control_loop_started = FALSE"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd3" org.eventb.core.predicate="AIBV_position_error = FALSE"/>
+<org.eventb.core.guard name="*" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd4" org.eventb.core.predicate="AIBV_believed_position = AIBV_required_position"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="AIBV_temperature_control_loop_started ≔ FALSE" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'?" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_temperature_control_loop_abort">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_temperature_control_loop_abort"/>
+<org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_control_loop_started = FALSE"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_position_error = TRUE"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd3" org.eventb.core.predicate="AIBV_temperature_control_loop_started = TRUE"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="AIBV_temperature_control_loop_started ≔ FALSE" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.tasking.persistence.MachineType name="'@" org.eventb.tasking.persistence.machineTypeAttribute="AutoTask" org.eventb.tasking.persistence.priority="5">
+<org.eventb.tasking.persistence.TaskType name="'" org.eventb.tasking.persistence.periodicTaskTypeAttribute="0" org.eventb.tasking.persistence.simpleTaskTypeAttribute="NotRequired" org.eventb.tasking.persistence.taskTypeAttribute="Periodic"/>
+<org.eventb.tasking.persistence.TaskBody name="(" org.eventb.tasking.persistence.taskBodyAttribute=" AIBV_get_temperature ;&#10; if AIBV_calculate_position_partial&#10; elseif AIBV_calculate_position_open&#10; elseif AIBV_calculate_position_closed&#10; else AIBV_calculate_position_ELSE ;&#10; AIBV_set_new_temperature_measurement ;&#10; if AIBV_control_action_open&#10; elseif AIBV_control_action_close_armed&#10; elseif AIBV_temperature_control_loop_not_needed&#10; elseif AIBV_temperature_control_loop_abort&#10; elseif AIBV_control_action_close_disarming&#10; else AIBV_temperature_control_loop_ELSE ;&#10; if AIBV_open_start&#10; else AIBV_close_start ;&#10; if AIBV_open_end&#10; else AIBV_close_end ;&#10; AIBV_measure_position_start ;&#10; AIBV_measure_position_end ;&#10; if AIBV_check_position_ok&#10; else AIBV_check_position_error ;&#10; AIBV_finish_control_loop"/>
+</org.eventb.tasking.persistence.MachineType>
+<org.eventb.core.invariant name="typing_AIBV_measuring_position" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_AIBV_measuring_position" org.eventb.core.predicate="AIBV_measuring_position ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="typing_AIBV_have_done_a_temperature_control_loop" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_AIBV_have_done_a_temperature_control_loop" org.eventb.core.predicate="AIBV_have_done_a_temperature_control_loop ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="typing_AIBV_control_loop_started" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_AIBV_control_loop_started" org.eventb.core.predicate="AIBV_control_loop_started ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="typing_AIBV_position_error" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_AIBV_position_error" org.eventb.core.predicate="AIBV_position_error ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="typing_AIBV_required_position" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_AIBV_required_position" org.eventb.core.predicate="AIBV_required_position ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="typing_AIBV_control_action_started" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_AIBV_control_action_started" org.eventb.core.predicate="AIBV_control_action_started ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="typing_AIBV_measured_position" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_AIBV_measured_position" org.eventb.core.predicate="AIBV_measured_position ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="typing_AIBV_temperature_control_loop_started" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_AIBV_temperature_control_loop_started" org.eventb.core.predicate="AIBV_temperature_control_loop_started ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="typing_AIBV_amount" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_AIBV_amount" org.eventb.core.predicate="AIBV_amount ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="typing_AIBV_action_needs_to_measure_position" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_AIBV_action_needs_to_measure_position" org.eventb.core.predicate="AIBV_action_needs_to_measure_position ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="typing_AIBV_action" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_AIBV_action" org.eventb.core.predicate="AIBV_action ∈ AIBV_ACTIONS" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="typing_AIBV_position_measurement_to_check" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_AIBV_position_measurement_to_check" org.eventb.core.predicate="AIBV_position_measurement_to_check ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="typing_AIBV_expected_position" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_AIBV_expected_position" org.eventb.core.predicate="AIBV_expected_position ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="typing_AIBV_state" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_AIBV_state" org.eventb.core.predicate="AIBV_state ∈ AIBV_STATES" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="typing_AIBV_control_loop_finishing" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_AIBV_control_loop_finishing" org.eventb.core.predicate="AIBV_control_loop_finishing ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="typing_AIBV_believed_position" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_AIBV_believed_position" org.eventb.core.predicate="AIBV_believed_position ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="AIBV_controller_AIBV_control_action_machine_inv2" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="AIBV_controller_AIBV_control_action_machine_inv2" org.eventb.core.predicate="AIBV_action = OPEN ⇒ AIBV_state = ARMED"/>
+<org.eventb.core.invariant name="AIBV_controller_AIBV_control_action_machine_inv4" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="AIBV_controller_AIBV_control_action_machine_inv4" org.eventb.core.predicate="0 ≤ AIBV_amount"/>
+<org.eventb.core.invariant name="AIBV_controller_AIBV_control_action_machine_inv5" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="AIBV_controller_AIBV_control_action_machine_inv5" org.eventb.core.predicate="AIBV_action ≠ NOTHING ⇔ AIBV_amount &gt; 0"/>
+<org.eventb.core.invariant name="AIBV_controller_AIBV_actuator_machine_inv15" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="AIBV_controller_AIBV_actuator_machine_inv15" org.eventb.core.predicate="AIBV_action = NOTHING ⇒ AIBV_control_action_started = FALSE"/>
+<org.eventb.core.invariant name="AIBV_controller_AIBV_measure_position_machine_inv3" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="AIBV_controller_AIBV_measure_position_machine_inv3" org.eventb.core.predicate="(AIBV_CLOSED ≤ AIBV_measured_position ∧ AIBV_measured_position ≤ AIBV_OPEN) ∨ AIBV_measured_position = AIBV_UNKNOWN" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="AIBV_controller_AIBV_measure_position_machine_inv4" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="AIBV_controller_AIBV_measure_position_machine_inv4" org.eventb.core.predicate="AIBV_action_needs_to_measure_position = FALSE ⇒ AIBV_action = NOTHING"/>
+<org.eventb.core.invariant name="AIBV_controller_AIBV_measure_position_machine_inv5" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="AIBV_controller_AIBV_measure_position_machine_inv5" org.eventb.core.predicate="AIBV_state = DISARMED ⇒ AIBV_action_needs_to_measure_position = FALSE"/>
+<org.eventb.core.invariant name="AIBV_controller_AIBV_position_safety_machine_inv6" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="AIBV_controller_AIBV_position_safety_machine_inv6" org.eventb.core.predicate="(AIBV_CLOSED ≤ AIBV_believed_position ∧ AIBV_believed_position ≤ AIBV_OPEN) ∨ AIBV_believed_position = AIBV_UNKNOWN" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="AIBV_controller_AIBV_position_safety_machine_inv8" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="AIBV_controller_AIBV_position_safety_machine_inv8" org.eventb.core.predicate="(AIBV_CLOSED ≤ AIBV_expected_position ∧ AIBV_expected_position ≤ AIBV_OPEN)" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="AIBV_controller_AIBV_position_safety_machine_inv10" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="AIBV_controller_AIBV_position_safety_machine_inv10" org.eventb.core.predicate="AIBV_position_measurement_to_check = TRUE ⇒ AIBV_action_needs_to_measure_position = FALSE"/>
+<org.eventb.core.invariant name="AIBV_controller_AIBV_position_safety_machine_inv11" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="AIBV_controller_AIBV_position_safety_machine_inv11" org.eventb.core.predicate="AIBV_control_loop_started = FALSE ⇒ AIBV_action_needs_to_measure_position = FALSE ∧ AIBV_position_measurement_to_check = FALSE ∧ AIBV_control_loop_finishing = FALSE"/>
+<org.eventb.core.invariant name="AIBV_controller_AIBV_position_safety_machine_inv12" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="AIBV_controller_AIBV_position_safety_machine_inv12" org.eventb.core.predicate="AIBV_control_loop_started = FALSE ∧ AIBV_position_error = FALSE ⇒ AIBV_expected_position = AIBV_believed_position"/>
+<org.eventb.core.invariant name="AIBV_controller_AIBV_position_safety_machine_inv13" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="AIBV_controller_AIBV_position_safety_machine_inv13" org.eventb.core.predicate="AIBV_control_loop_finishing = TRUE ⇒ AIBV_control_loop_started = TRUE"/>
+<org.eventb.core.invariant name="AIBV_controller_AIBV_position_safety_machine_inv14" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="AIBV_controller_AIBV_position_safety_machine_inv14" org.eventb.core.predicate="AIBV_control_loop_finishing = TRUE ⇒ AIBV_position_measurement_to_check = FALSE ∧ AIBV_action_needs_to_measure_position = FALSE"/>
+<org.eventb.core.invariant name="AIBV_controller_AIBV_position_safety_machine_inv15" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="AIBV_controller_AIBV_position_safety_machine_inv15" org.eventb.core.predicate="AIBV_control_loop_finishing = TRUE ∧ AIBV_position_error = FALSE ⇒ AIBV_expected_position = AIBV_believed_position"/>
+<org.eventb.core.invariant name="AIBV_controller_AIBV_position_safety_machine_inv16" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="AIBV_controller_AIBV_position_safety_machine_inv16" org.eventb.core.predicate="AIBV_position_error = TRUE ⇔ AIBV_believed_position = AIBV_UNKNOWN"/>
+<org.eventb.core.invariant name="AIBV_controller_AIBV_position_safety_machine_inv18" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="AIBV_controller_AIBV_position_safety_machine_inv18" org.eventb.core.predicate="AIBV_position_error = TRUE ⇒ AIBV_action = NOTHING"/>
+<org.eventb.core.invariant name="AIBV_controller_AIBV_position_safety_machine_inv19" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="AIBV_controller_AIBV_position_safety_machine_inv19" org.eventb.core.predicate="AIBV_position_error = TRUE ∧ AIBV_control_loop_finishing = FALSE ⇒ AIBV_control_loop_started = FALSE"/>
+<org.eventb.core.invariant name="AIBV_controller_AIBV_position_safety_machine_inv21" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="AIBV_controller_AIBV_position_safety_machine_inv21" org.eventb.core.predicate="AIBV_action ≠ NOTHING ⇒ AIBV_believed_position ≠ AIBV_UNKNOWN ∧ 0 &lt; AIBV_amount ∧ ((AIBV_action = OPEN ∧ AIBV_expected_position = AIBV_believed_position + AIBV_amount) ∨ (AIBV_action = CLOSE ∧ AIBV_expected_position = AIBV_believed_position − AIBV_amount))"/>
+<org.eventb.core.invariant name="AIBV_controller_AIBV_position_safety_machine_inv24" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="AIBV_controller_AIBV_position_safety_machine_inv24" org.eventb.core.predicate="AIBV_state = DISARMED ⇒ AIBV_action = NOTHING"/>
+<org.eventb.core.invariant name="AIBV_controller_AIBV_position_safety_machine_inv25" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="AIBV_controller_AIBV_position_safety_machine_inv25" org.eventb.core.predicate="AIBV_state = DISARMED ⇒ AIBV_control_loop_started = FALSE"/>
+<org.eventb.core.invariant name="AIBV_controller_AIBV_position_safety_machine_inv26" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="AIBV_controller_AIBV_position_safety_machine_inv26" org.eventb.core.predicate="AIBV_state = DISARMED ⇒ AIBV_position_error = FALSE"/>
+<org.eventb.core.invariant name="AIBV_controller_AIBV_position_safety_machine_inv27" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="AIBV_controller_AIBV_position_safety_machine_inv27" org.eventb.core.predicate="AIBV_state = DISARMED ⇒ AIBV_expected_position = AIBV_CLOSED"/>
+<org.eventb.core.invariant name="AIBV_controller_AIBV_position_safety_machine_inv28" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="AIBV_controller_AIBV_position_safety_machine_inv28" org.eventb.core.predicate="AIBV_state = DISARMED ⇒ AIBV_believed_position = AIBV_CLOSED"/>
+<org.eventb.core.invariant name="AIBV_controller_AIBV_temperature_machine_inv11" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="AIBV_controller_AIBV_temperature_machine_inv11" org.eventb.core.predicate="(AIBV_CLOSED ≤ AIBV_required_position ∧ AIBV_required_position ≤ AIBV_OPEN)" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="AIBV_controller_AIBV_temperature_machine_inv19" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="AIBV_controller_AIBV_temperature_machine_inv19" org.eventb.core.predicate="AIBV_temperature_control_loop_started = TRUE ⇒ AIBV_state = ARMED"/>
+<org.eventb.core.invariant name="AIBV_controller_AIBV_temperature_machine_inv20" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="AIBV_controller_AIBV_temperature_machine_inv20" org.eventb.core.predicate="AIBV_state = DISARMED ⇒ AIBV_temperature_control_loop_started = FALSE"/>
+<org.eventb.core.invariant name="AIBV_controller_AIBV_temperature_machine_inv21" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="AIBV_controller_AIBV_temperature_machine_inv21" org.eventb.core.predicate="AIBV_state = DISARMED ⇒ AIBV_have_done_a_temperature_control_loop = FALSE"/>
+<org.eventb.core.invariant name="AIBV_controller_AIBV_temperature_machine_inv22" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="AIBV_controller_AIBV_temperature_machine_inv22" org.eventb.core.predicate="AIBV_state = ARMED ∧ AIBV_control_loop_started = TRUE ⇒ AIBV_temperature_control_loop_started = TRUE"/>
+<org.eventb.core.invariant name="AIBV_controller_AIBV_temperature_machine_inv23" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="AIBV_controller_AIBV_temperature_machine_inv23" org.eventb.core.predicate="AIBV_state = ARMED ∧ AIBV_control_loop_started = TRUE ⇒ AIBV_expected_position = AIBV_required_position"/>
+<org.eventb.core.invariant name="AIBV_controller_AIBV_temperature_machine_inv24" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="AIBV_controller_AIBV_temperature_machine_inv24" org.eventb.core.predicate="AIBV_state = ARMED ∧ AIBV_have_done_a_temperature_control_loop = TRUE ∧ AIBV_temperature_control_loop_started = FALSE ∧ AIBV_position_error = FALSE ⇒ AIBV_believed_position = AIBV_required_position"/>
+</org.eventb.core.machineFile>

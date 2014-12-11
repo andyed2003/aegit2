@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:statemachines="http://soton.ac.uk/models/eventb/statemachines" xmi:id="_hsnMoO-0EeKTcslIVbS7zQ" type="Statemachines" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_iadKEO-0EeKTcslIVbS7zQ" type="2006">
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_iadKEe-0EeKTcslIVbS7zQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_iadKEu-0EeKTcslIVbS7zQ" fontName="Ubuntu"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_iadKE--0EeKTcslIVbS7zQ"/>
+    <element xmi:type="statemachines:Initial" href="ctrl1.bum#ac.soton.eventb.statemachines.Initial._iXSE0O-1EeKTcslIVbS7zQ"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iadKFO-0EeKTcslIVbS7zQ" x="25" y="80"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_kE8V8O-0EeKTcslIVbS7zQ" type="2008">
+    <children xmi:type="notation:DecorationNode" xmi:id="_kFBOcO-0EeKTcslIVbS7zQ" type="5009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_kFBOce-0EeKTcslIVbS7zQ" type="7012">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_kFBOcu-0EeKTcslIVbS7zQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_kFBOc--0EeKTcslIVbS7zQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_kFB1gO-0EeKTcslIVbS7zQ" type="7013">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_kFB1ge-0EeKTcslIVbS7zQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_kFB1gu-0EeKTcslIVbS7zQ"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_kE8V8e-0EeKTcslIVbS7zQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_kE8V8u-0EeKTcslIVbS7zQ" fontName="Ubuntu"/>
+    <element xmi:type="statemachines:State" href="ctrl1.bum#ac.soton.eventb.statemachines.State.ready"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kE89AO-0EeKTcslIVbS7zQ" x="230" y="75"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_hsnMoe-0EeKTcslIVbS7zQ"/>
+  <element xmi:type="statemachines:Statemachine" href="ctrl1.bum#ac.soton.eventb.statemachines.Statemachine.controllerSM"/>
+  <edges xmi:type="notation:Edge" xmi:id="_ocMqEO-0EeKTcslIVbS7zQ" type="4001" source="_iadKEO-0EeKTcslIVbS7zQ" target="_kE8V8O-0EeKTcslIVbS7zQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_ocN4MO-0EeKTcslIVbS7zQ" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ocN4Me-0EeKTcslIVbS7zQ" x="-8" y="-8"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_ocNRIO-0EeKTcslIVbS7zQ" routing="Rectilinear"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ocNRIe-0EeKTcslIVbS7zQ" fontName="Ubuntu"/>
+    <element xmi:type="statemachines:Transition" href="ctrl1.bum#ac.soton.eventb.statemachines.Transition._iXSE0e-1EeKTcslIVbS7zQ"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ocNRIu-0EeKTcslIVbS7zQ" points="[10, -5, -205, 20]$[195, -5, -20, 20]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_hbvJ4PB2EeKaLbsssYXfTQ" id="(0.5,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_hbvJ4fB2EeKaLbsssYXfTQ" id="(0.4878048780487805,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_pifjwO-0EeKTcslIVbS7zQ" type="4001" source="_kE8V8O-0EeKTcslIVbS7zQ" target="_kE8V8O-0EeKTcslIVbS7zQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_pifjxO-0EeKTcslIVbS7zQ" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_pigK0O-0EeKTcslIVbS7zQ" x="95" y="-12"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_pifjwe-0EeKTcslIVbS7zQ" routing="Rectilinear"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_pifjwu-0EeKTcslIVbS7zQ" fontName="Ubuntu"/>
+    <element xmi:type="statemachines:Transition" href="ctrl1.bum#ac.soton.eventb.statemachines.Transition._iXSr4O-1EeKTcslIVbS7zQ"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_pifjw--0EeKTcslIVbS7zQ" points="[10, 4, 21, 10]$[174, 4, 185, 10]$[174, 124, 185, 130]$[-21, 124, -10, 130]$[-21, 14, -10, 20]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_piinEO-0EeKTcslIVbS7zQ" id="(0.775,0.65)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_qO9oMO-0EeKTcslIVbS7zQ" type="4001" source="_kE8V8O-0EeKTcslIVbS7zQ" target="_kE8V8O-0EeKTcslIVbS7zQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_qO-2UO-0EeKTcslIVbS7zQ" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_qO_dYO-0EeKTcslIVbS7zQ" x="-8" y="54"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_qO9oMe-0EeKTcslIVbS7zQ" routing="Rectilinear"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_qO9oMu-0EeKTcslIVbS7zQ" fontName="Ubuntu"/>
+    <element xmi:type="statemachines:Transition" href="ctrl1.bum#ac.soton.eventb.statemachines.Transition._iXSr4e-1EeKTcslIVbS7zQ"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qO9oM--0EeKTcslIVbS7zQ" points="[20, 20, 20, 36]$[20, 10, 20, 26]$[110, 10, 110, 26]$[110, 50, 110, 66]$[10, 50, 10, 66]$[10, 20, 10, 36]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_1I4YEO-0EeKTcslIVbS7zQ" id="(0.4878048780487805,0.1)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_3XHKMO-0EeKTcslIVbS7zQ" type="4001" source="_kE8V8O-0EeKTcslIVbS7zQ" target="_kE8V8O-0EeKTcslIVbS7zQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_3XHxQO-0EeKTcslIVbS7zQ" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_3XHxQe-0EeKTcslIVbS7zQ" x="61" y="-10"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_3XHKMe-0EeKTcslIVbS7zQ" routing="Rectilinear"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_3XHKMu-0EeKTcslIVbS7zQ" fontName="Ubuntu"/>
+    <element xmi:type="statemachines:Transition" href="ctrl1.bum#ac.soton.eventb.statemachines.Transition._iXSr4u-1EeKTcslIVbS7zQ"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3XHKM--0EeKTcslIVbS7zQ" points="[21, 10, 21, 10]$[135, 10, 135, 10]$[135, 82, 135, 82]$[0, 82, 0, 82]$[0, 20, 0, 20]"/>
+  </edges>
+</notation:Diagram>

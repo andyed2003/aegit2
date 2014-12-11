@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="ch.ethz.eventb.decomposition.mchBase;org.eventb.codegen.ui.cgConfig" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="controller"/>
+<org.eventb.core.variable name="'" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="a"/>
+<org.eventb.core.variable name="(" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="used_a"/>
+<org.eventb.core.event name=")" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="a ≔ 4096" org.eventb.core.label="act6"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="used_a ≔ 0" org.eventb.core.label="act8"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="*" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="controller_fmiDoStep">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="controller_fmiDoStep"/>
+<org.eventb.core.action name="'" org.eventb.core.assignment="used_a ≔ a ÷ 2" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="+" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="fmiSetInteger">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="fmiSetInteger"/>
+<org.eventb.core.parameter name="'" org.eventb.codegen.ui.parameterTypeAttribute="In" org.eventb.core.identifier="p"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="a ≔ p" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="*" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_p" org.eventb.core.predicate="p ∈ ℤ" org.eventb.core.theorem="true"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="typing_used_a" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_used_a" org.eventb.core.predicate="used_a ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="typing_a" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_a" org.eventb.core.predicate="a ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.tasking.persistence.MachineType name="typing_used_b" org.eventb.tasking.persistence.machineTypeAttribute="FMU" org.eventb.tasking.persistence.priority="5">
+<org.eventb.tasking.persistence.TaskBody name="'" org.eventb.tasking.persistence.taskBodyAttribute="controller_fmiDoStep;&#10;output &quot;used_a: &quot; used_a"/>
+</org.eventb.tasking.persistence.MachineType>
+</org.eventb.core.machineFile>

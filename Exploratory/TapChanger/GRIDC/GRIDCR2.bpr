@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="0∈0 ‥ 1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="0∈0 ‥ 2"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="ControllerInitiateTapChangerComms/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Istep=0" org.eventb.core.prHyps="p3">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p7" org.eventb.core.prInfHyps="p17"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p9,p4,p8,p7,p5,p2,p3,p1,p6,p17">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="CEvaluated" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="ControllerActive" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="Istep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="TCInit" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="Tstep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="predictedv" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="tappos" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="v" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="TCCommsFailure∈BOOL">
+<org.eventb.core.prIdent name="TCCommsFailure" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="ControllerActive=FALSE"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="TEvaluated∈BOOL">
+<org.eventb.core.prIdent name="TEvaluated" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="0∈0 ‥ 1"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="tappos∈10 ‥ 30"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="TCInit=FALSE"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="predictedv∈235 ‥ 245"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="TCCommsInitiated∈BOOL">
+<org.eventb.core.prIdent name="TCCommsInitiated" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="1∈0 ‥ 1"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="TCInit∈BOOL"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="CEvaluated=FALSE"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="Istep=0"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="Tstep∈0 ‥ 2"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="Istep∈0 ‥ 1"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="ControllerActive∈BOOL"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="v∈235 ‥ 245"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="TCAcknowledgeInit∈BOOL">
+<org.eventb.core.prIdent name="TCAcknowledgeInit" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="CEvaluated∈BOOL"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="ControllerRetryTapChangerComms/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Istep=0" org.eventb.core.prHyps="p2">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p17"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p9,p3,p7,p5,p4,p1,p6,p8,p2,p17">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="CEvaluated" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="Istep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="TCAcknowledgeInit" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="TCInit" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="Tstep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="predictedv" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="tappos" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="v" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="TCCommsFailure∈BOOL">
+<org.eventb.core.prIdent name="TCCommsFailure" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="TEvaluated∈BOOL">
+<org.eventb.core.prIdent name="TEvaluated" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="0∈0 ‥ 1"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="tappos∈10 ‥ 30"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="predictedv∈235 ‥ 245"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="TCCommsInitiated∈BOOL">
+<org.eventb.core.prIdent name="TCCommsInitiated" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="1∈0 ‥ 1"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="TCInit∈BOOL"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="CEvaluated=FALSE"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="Istep=0"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="Tstep∈0 ‥ 2"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="Istep∈0 ‥ 1"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="TCInit=TRUE"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="TCAcknowledgeInit=FALSE"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="ControllerActive∈BOOL">
+<org.eventb.core.prIdent name="ControllerActive" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="v∈235 ‥ 245"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="TCAcknowledgeInit∈BOOL"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="CEvaluated∈BOOL"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="ControllerRetryTapChangerComms/act1/SIM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prIdent name="TCInit" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="TCInit=TRUE"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="ControllerCompleteTapChangerComms/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p17"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Istep=0" org.eventb.core.prHyps="p3">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p6" org.eventb.core.prInfHyps="p18"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p10,p4,p9,p6,p5,p2,p8,p7,p1,p3,p18">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="CEvaluated" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="ControllerActive" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="Istep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="TCAcknowledgeInit" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="TCInit" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="Tstep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="predictedv" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="tappos" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="v" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="TCCommsFailure∈BOOL">
+<org.eventb.core.prIdent name="TCCommsFailure" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="ControllerActive=FALSE"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="TEvaluated∈BOOL">
+<org.eventb.core.prIdent name="TEvaluated" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="0∈0 ‥ 1"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="tappos∈10 ‥ 30"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="TCAcknowledgeInit=TRUE"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="predictedv∈235 ‥ 245"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="TCCommsInitiated∈BOOL">
+<org.eventb.core.prIdent name="TCCommsInitiated" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="1∈0 ‥ 1"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="TCInit∈BOOL"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="CEvaluated=FALSE"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="Istep=0"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="Tstep∈0 ‥ 2"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="Istep∈0 ‥ 1"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="TCInit=TRUE"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="ControllerActive∈BOOL"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="v∈235 ‥ 245"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="TCAcknowledgeInit∈BOOL"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="CEvaluated∈BOOL"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="ControllerCompleteTapChangerCommsFail/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p17"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Istep=0" org.eventb.core.prHyps="p3">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p6" org.eventb.core.prInfHyps="p18"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p10,p4,p8,p6,p5,p2,p7,p9,p1,p3,p18">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="CEvaluated" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="ControllerActive" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="Istep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="TCAcknowledgeInit" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="TCInit" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="Tstep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="predictedv" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="tappos" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="v" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="TCCommsFailure∈BOOL">
+<org.eventb.core.prIdent name="TCCommsFailure" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="ControllerActive=FALSE"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="TEvaluated∈BOOL">
+<org.eventb.core.prIdent name="TEvaluated" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="0∈0 ‥ 1"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="tappos∈10 ‥ 30"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="predictedv∈235 ‥ 245"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="TCCommsInitiated∈BOOL">
+<org.eventb.core.prIdent name="TCCommsInitiated" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="1∈0 ‥ 1"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="TCInit∈BOOL"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="CEvaluated=FALSE"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="Istep=0"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="Tstep∈0 ‥ 2"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="Istep∈0 ‥ 1"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="TCInit=TRUE"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="ControllerActive∈BOOL"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="TCAcknowledgeInit=FALSE"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="v∈235 ‥ 245"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="TCAcknowledgeInit∈BOOL"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="CEvaluated∈BOOL"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="TapChangerReadInitSignal/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Tstep=0" org.eventb.core.prHyps="p4">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p3" org.eventb.core.prInfHyps="p17"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p9,p2,p7,p5,p3,p8,p6,p1,p4,p17">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="Istep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="TCAcknowledgeInit" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="TCInit" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="TEvaluated" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="Tstep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="predictedv" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="tappos" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="v" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="TCCommsFailure∈BOOL">
+<org.eventb.core.prIdent name="TCCommsFailure" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="TEvaluated=FALSE"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="TEvaluated∈BOOL"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="tappos∈10 ‥ 30"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="1∈0 ‥ 2"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="Tstep=0"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="predictedv∈235 ‥ 245"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="0∈0 ‥ 2"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="TCCommsInitiated∈BOOL">
+<org.eventb.core.prIdent name="TCCommsInitiated" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="TCInit∈BOOL"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="Tstep∈0 ‥ 2"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="Istep∈0 ‥ 1"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="TCInit=TRUE"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="TCAcknowledgeInit=FALSE"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="ControllerActive∈BOOL">
+<org.eventb.core.prIdent name="ControllerActive" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="v∈235 ‥ 245"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="TCAcknowledgeInit∈BOOL"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="CEvaluated∈BOOL">
+<org.eventb.core.prIdent name="CEvaluated" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="TapChangerInitTerminated/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p17"/>
+<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p18"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Tstep=0" org.eventb.core.prHyps="p6">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p19"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p11,p4,p9,p8,p5,p10,p7,p1,p3,p2,p6,p19">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="Istep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="TCAcknowledgeInit" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="TCCommsFailure" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="TCCommsInitiated" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="TCInit" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="TEvaluated" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="Tstep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="predictedv" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="tappos" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="v" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="TCCommsFailure∈BOOL"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="TEvaluated=FALSE"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="TCCommsInitiated=TRUE"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="TEvaluated∈BOOL"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="tappos∈10 ‥ 30"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="Tstep=0"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="TCInit=FALSE"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="predictedv∈235 ‥ 245"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="0∈0 ‥ 2"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="TCCommsInitiated∈BOOL"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="TCInit∈BOOL"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="TCCommsFailure=FALSE"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="Tstep∈0 ‥ 2"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="Istep∈0 ‥ 1"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="2∈0 ‥ 2"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="ControllerActive∈BOOL">
+<org.eventb.core.prIdent name="ControllerActive" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="TCAcknowledgeInit=FALSE"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="v∈235 ‥ 245"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="TCAcknowledgeInit∈BOOL"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="CEvaluated∈BOOL">
+<org.eventb.core.prIdent name="CEvaluated" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="TapChangerAcknowledgeInit/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p17"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Tstep=1" org.eventb.core.prHyps="p7">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p4" org.eventb.core.prInfHyps="p18"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p8,p3,p6,p5,p4,p1,p2,p7,p18">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="Istep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="TCCommsFailure" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="Tstep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="pack" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="pfail" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="predictedv" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="tappos" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="v" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="TCCommsFailure∈BOOL"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="pack=TRUE⇒pfail=FALSE"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="TEvaluated∈BOOL">
+<org.eventb.core.prIdent name="TEvaluated" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="tappos∈10 ‥ 30"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="1∈0 ‥ 2"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="predictedv∈235 ‥ 245"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="TCCommsInitiated∈BOOL">
+<org.eventb.core.prIdent name="TCCommsInitiated" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="Tstep=1"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="TCInit∈BOOL">
+<org.eventb.core.prIdent name="TCInit" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="TCCommsFailure=TRUE⇒pack=FALSE∧pfail=TRUE"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="Tstep∈0 ‥ 2"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="Istep∈0 ‥ 1"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="2∈0 ‥ 2"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="pfail∈BOOL"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="ControllerActive∈BOOL">
+<org.eventb.core.prIdent name="ControllerActive" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="v∈235 ‥ 245"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="TCAcknowledgeInit∈BOOL">
+<org.eventb.core.prIdent name="TCAcknowledgeInit" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="pack∈BOOL"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="CEvaluated∈BOOL">
+<org.eventb.core.prIdent name="CEvaluated" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="TapChangerReset/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Tstep=0" org.eventb.core.prHyps="p4">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p3" org.eventb.core.prInfHyps="p16"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p7,p2,p6,p5,p3,p8,p4,p1,p16">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="Istep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="TCCommsFailure" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="TEvaluated" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="Tstep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="predictedv" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="tappos" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="v" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="TCCommsFailure∈BOOL"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="TEvaluated=FALSE"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="TEvaluated∈BOOL"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="tappos∈10 ‥ 30"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="Tstep=0"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="predictedv∈235 ‥ 245"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="0∈0 ‥ 2"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="TCCommsInitiated∈BOOL">
+<org.eventb.core.prIdent name="TCCommsInitiated" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="TCCommsFailure=TRUE"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="TCInit∈BOOL">
+<org.eventb.core.prIdent name="TCInit" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="Tstep∈0 ‥ 2"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="Istep∈0 ‥ 1"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="2∈0 ‥ 2"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="ControllerActive∈BOOL">
+<org.eventb.core.prIdent name="ControllerActive" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="v∈235 ‥ 245"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="TCAcknowledgeInit∈BOOL">
+<org.eventb.core.prIdent name="TCAcknowledgeInit" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="CEvaluated∈BOOL">
+<org.eventb.core.prIdent name="CEvaluated" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="TapChangerWait/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Tstep=2" org.eventb.core.prHyps="p4">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p2" org.eventb.core.prInfHyps="p14"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p6,p1,p5,p3,p2,p4,p14">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="Istep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="Tstep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="predictedv" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="tappos" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="v" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="TCCommsFailure∈BOOL">
+<org.eventb.core.prIdent name="TCCommsFailure" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="TEvaluated∈BOOL">
+<org.eventb.core.prIdent name="TEvaluated" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="tappos∈10 ‥ 30"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="predictedv∈235 ‥ 245"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="TCCommsInitiated∈BOOL">
+<org.eventb.core.prIdent name="TCCommsInitiated" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="0∈0 ‥ 2"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="TCInit∈BOOL">
+<org.eventb.core.prIdent name="TCInit" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="Tstep∈0 ‥ 2"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="Istep∈0 ‥ 1"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="2∈0 ‥ 2"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="Tstep=2"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="ControllerActive∈BOOL">
+<org.eventb.core.prIdent name="ControllerActive" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="v∈235 ‥ 245"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="TCAcknowledgeInit∈BOOL">
+<org.eventb.core.prIdent name="TCAcknowledgeInit" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="CEvaluated∈BOOL">
+<org.eventb.core.prIdent name="CEvaluated" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="ControllerWait/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Istep=1" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p4" org.eventb.core.prInfHyps="p14"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p6,p2,p5,p4,p3,p1,p14">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="Istep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="Tstep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="predictedv" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="tappos" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="v" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="TCCommsFailure∈BOOL">
+<org.eventb.core.prIdent name="TCCommsFailure" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="Istep=1"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="TEvaluated∈BOOL">
+<org.eventb.core.prIdent name="TEvaluated" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="0∈0 ‥ 1"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="tappos∈10 ‥ 30"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="predictedv∈235 ‥ 245"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="1∈0 ‥ 1"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="TCCommsInitiated∈BOOL">
+<org.eventb.core.prIdent name="TCCommsInitiated" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="TCInit∈BOOL">
+<org.eventb.core.prIdent name="TCInit" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="Tstep∈0 ‥ 2"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="Istep∈0 ‥ 1"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="ControllerActive∈BOOL">
+<org.eventb.core.prIdent name="ControllerActive" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="v∈235 ‥ 245"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="TCAcknowledgeInit∈BOOL">
+<org.eventb.core.prIdent name="TCAcknowledgeInit" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="CEvaluated∈BOOL">
+<org.eventb.core.prIdent name="CEvaluated" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="ControllerCompleteTapChangerComms/grd1/GRD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prIdent name="TCAcknowledgeInit" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="TCAcknowledgeInit=TRUE"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="ControllerCompleteTapChangerCommsFail/grd1/GRD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prIdent name="TCAcknowledgeInit" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="TCAcknowledgeInit=FALSE"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="AdjustTapPosition/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p9,p4,p8,p6,p5,p2,p1,p7,p3">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="ControllerActive" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="Istep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="Tstep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="predictedv" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="ptp" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="tappos" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="v" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="TCCommsFailure∈BOOL">
+<org.eventb.core.prIdent name="TCCommsFailure" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="tappos+ptp≥10"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="ptp∈−10 ‥ 10"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="TEvaluated∈BOOL">
+<org.eventb.core.prIdent name="TEvaluated" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="tappos∈10 ‥ 30"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="predictedv∈235 ‥ 245"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="TCCommsInitiated∈BOOL">
+<org.eventb.core.prIdent name="TCCommsInitiated" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="1∈0 ‥ 1"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="TCInit∈BOOL">
+<org.eventb.core.prIdent name="TCInit" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="ControllerActive=TRUE"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="Tstep∈0 ‥ 2"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="Istep∈0 ‥ 1"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="tappos+ptp≤30"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="ControllerActive∈BOOL"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="v∈235 ‥ 245"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="TCAcknowledgeInit∈BOOL">
+<org.eventb.core.prIdent name="TCAcknowledgeInit" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="CEvaluated∈BOOL">
+<org.eventb.core.prIdent name="CEvaluated" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="TapChangerReadPosition/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Tstep=0" org.eventb.core.prHyps="p4">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p3" org.eventb.core.prInfHyps="p17"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p9,p2,p8,p5,p3,p6,p7,p1,p4,p17">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="Istep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="TCAcknowledgeInit" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="TCInit" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="TEvaluated" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="Tstep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="predictedv" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="tappos" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="v" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="TCCommsFailure∈BOOL">
+<org.eventb.core.prIdent name="TCCommsFailure" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="TEvaluated=FALSE"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="TEvaluated∈BOOL"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="tappos∈10 ‥ 30"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="Tstep=0"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="TCAcknowledgeInit=TRUE"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="predictedv∈235 ‥ 245"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="0∈0 ‥ 2"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="TCCommsInitiated∈BOOL">
+<org.eventb.core.prIdent name="TCCommsInitiated" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="TCInit∈BOOL"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="Tstep∈0 ‥ 2"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="Istep∈0 ‥ 1"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="2∈0 ‥ 2"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="TCInit=TRUE"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="ControllerActive∈BOOL">
+<org.eventb.core.prIdent name="ControllerActive" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="v∈235 ‥ 245"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="TCAcknowledgeInit∈BOOL"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="CEvaluated∈BOOL">
+<org.eventb.core.prIdent name="CEvaluated" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="ControllerWritePosition/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p17"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Istep=0" org.eventb.core.prHyps="p2">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p6" org.eventb.core.prInfHyps="p18"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p10,p4,p9,p6,p5,p1,p2,p3,p8,p7,p18">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="CEvaluated" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="ControllerActive" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="Istep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="TCAcknowledgeInit" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="TCInit" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="Tstep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="predictedv" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="tappos" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="v" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="TCCommsFailure∈BOOL">
+<org.eventb.core.prIdent name="TCCommsFailure" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="TEvaluated∈BOOL">
+<org.eventb.core.prIdent name="TEvaluated" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="0∈0 ‥ 1"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="tappos∈10 ‥ 30"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="TCAcknowledgeInit=TRUE"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="predictedv∈235 ‥ 245"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="TCCommsInitiated∈BOOL">
+<org.eventb.core.prIdent name="TCCommsInitiated" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="1∈0 ‥ 1"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="TCInit∈BOOL"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="CEvaluated=FALSE"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="Istep=0"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="ControllerActive=TRUE"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="Tstep∈0 ‥ 2"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="Istep∈0 ‥ 1"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="TCInit=TRUE"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="ControllerActive∈BOOL"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="v∈235 ‥ 245"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="TCAcknowledgeInit∈BOOL"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="CEvaluated∈BOOL"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+</org.eventb.core.prProof>
+</org.eventb.core.prFile>

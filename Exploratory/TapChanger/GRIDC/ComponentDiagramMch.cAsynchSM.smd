@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:statemachines="http://soton.ac.uk/models/eventb/statemachines/2014">
+  <notation:Diagram xmi:id="_tASpoAHPEeS_WYFUmR5mBA" type="Statemachines" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_tASpoQHPEeS_WYFUmR5mBA"/>
+    <element xmi:type="statemachines:Statemachine" href="ComponentDiagramMch.bum#http://soton.ac.uk/models/eventb/statemachines/2014::Statemachine::ComponentDiagramMch.Component1.Controller.cAsynchSM"/>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_kLFzQAagEeS-760vy2s1cg" type="Statemachines" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_kLFzQQagEeS-760vy2s1cg"/>
+    <element xmi:type="statemachines:Statemachine" href="ComponentDiagramMch.bum#http://soton.ac.uk/models/eventb/statemachines/2014::Statemachine::ComponentDiagramMch.Component1.Controller.cAsynchSM"/>
+  </notation:Diagram>
+</xmi:XMI>

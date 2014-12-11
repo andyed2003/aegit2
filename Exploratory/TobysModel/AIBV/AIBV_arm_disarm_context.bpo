@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_STATES" org.eventb.core.type="ℙ(AIBV_STATES)"/>
+<org.eventb.core.poIdentifier name="ARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.poIdentifier name="DISARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.poIdentifier name="DISARMING" org.eventb.core.type="AIBV_STATES"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/AIBV/AIBV_arm_disarm_context.bpo|org.eventb.core.poFile#AIBV_arm_disarm_context|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(AIBV_STATES,{ARMED},{DISARMING},{DISARMED})" org.eventb.core.source="/AIBV/AIBV_arm_disarm_context.buc|org.eventb.core.contextFile#AIBV_arm_disarm_context|org.eventb.core.axiom#+"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

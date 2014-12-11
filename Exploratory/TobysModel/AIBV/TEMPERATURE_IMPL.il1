@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ASCII"?>
+<il1:Program xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:il1="http://il1/1.0" projectName="AIBV">
+  <decls xsi:type="il1:ConstantDecl" identifier="AIBV_UNKNOWN" type="&#x2124;" initialValue="&#x2212;1" ProjectName="AIBV" ComponentName="AIBV_position_context"/>
+  <decls xsi:type="il1:ConstantDecl" identifier="AIBV_CLOSED" type="&#x2124;" initialValue="0" ProjectName="AIBV" ComponentName="AIBV_position_context"/>
+  <decls xsi:type="il1:Enumeration" identifier="AIBV_STATES" ProjectName="AIBV" ComponentName="AIBV_arm_disarm_context">
+    <literalValues>ARMED</literalValues>
+    <literalValues>DISARMING</literalValues>
+    <literalValues>DISARMED</literalValues>
+  </decls>
+  <decls xsi:type="il1:ConstantDecl" identifier="MAX_TEMP" type="&#x2124;" initialValue="4" ProjectName="AIBV" ComponentName="AIBV_temperature_context"/>
+  <decls xsi:type="il1:ConstantDecl" identifier="MIN_TEMP" type="&#x2124;" initialValue="0" ProjectName="AIBV" ComponentName="AIBV_temperature_context"/>
+  <decls xsi:type="il1:ConstantDecl" identifier="FULLY_CLOSED_TEMP" type="&#x2124;" initialValue="2" ProjectName="AIBV" ComponentName="AIBV_temperature_context"/>
+  <decls xsi:type="il1:ConstantDecl" identifier="FULLY_OPEN_TEMP" type="&#x2124;" initialValue="1" ProjectName="AIBV" ComponentName="AIBV_temperature_context"/>
+  <decls xsi:type="il1:ConstantDecl" identifier="NOMINAL_TEMP" type="&#x2124;" initialValue="3" ProjectName="AIBV" ComponentName="AIBV_temperature_context"/>
+  <decls xsi:type="il1:ConstantDecl" identifier="AIBV_OPEN" type="&#x2124;" initialValue="2" ProjectName="AIBV" ComponentName="AIBV_position_context"/>
+  <decls xsi:type="il1:Enumeration" identifier="AIBV_ACTIONS" ProjectName="AIBV" ComponentName="AIBV_controller_context">
+    <literalValues>OPEN</literalValues>
+    <literalValues>CLOSE</literalValues>
+    <literalValues>NOTHING</literalValues>
+  </decls>
+  <entryPoint>
+    <autoTasks name="TEMPERATURE_IMPL" projectName="AIBV" machineName="TEMPERATURE_IMPL">
+      <body xsi:type="il1:Seq">
+        <leftBranch xsi:type="il1:Seq">
+          <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_temperature_measurement" action="AIBV_buffered_temperature  &#x2254; temperature"/>
+          <rightBranch xsi:type="il1:Action" ParentEventName="AIBV_temperature_measurement" action="AIBV_temperature_needs_checking  &#x2254; TRUE"/>
+        </leftBranch>
+        <rightBranch xsi:type="il1:If">
+          <body xsi:type="il1:Seq">
+            <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_check_temperature_ok" action="AIBV_temperature_error  &#x2254; FALSE"/>
+            <rightBranch xsi:type="il1:Action" ParentEventName="AIBV_check_temperature_ok" action="AIBV_temperature_needs_checking  &#x2254; FALSE"/>
+          </body>
+          <condition>AIBV_temperature_needs_checking = TRUE</condition>
+          <condition>MIN_TEMP &#x2264; buffered_temperature &#x2227; buffered_temperature &#x2264; MAX_TEMP</condition>
+          <else xsi:type="il1:Seq">
+            <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_check_temperature_error" action="AIBV_temperature_error  &#x2254; TRUE"/>
+            <rightBranch xsi:type="il1:Action" ParentEventName="AIBV_check_temperature_error" action="AIBV_temperature_needs_checking  &#x2254; FALSE"/>
+          </else>
+          <relatedEvent href="platform:/resource/AIBV/TEMPERATURE_IMPL.bum#org.eventb.emf.core.machine.Event.AIBV_check_temperature_ok"/>
+        </rightBranch>
+      </body>
+      <taskType xsi:type="il1:PeriodicTaskType"/>
+      <decls xsi:type="il1:VariableDecl" identifier="AIBV_temperature_needs_checking" type="BOOL" initialValue="FALSE" ProjectName="AIBV" ComponentName="TEMPERATURE_IMPL"/>
+      <decls xsi:type="il1:VariableDecl" identifier="AIBV_temperature_error" type="BOOL" initialValue="FALSE" ProjectName="AIBV" ComponentName="TEMPERATURE_IMPL"/>
+      <decls xsi:type="il1:VariableDecl" identifier="AIBV_buffered_temperature" type="&#x2124;" initialValue="NOMINAL_TEMP" ProjectName="AIBV" ComponentName="TEMPERATURE_IMPL"/>
+    </autoTasks>
+  </entryPoint>
+</il1:Program>

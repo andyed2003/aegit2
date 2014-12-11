@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ch.ethz.eventb.decomposition.core.dcpFile org.eventb.core.configuration="ch.ethz.eventb.decomposition.core.dcmp">
+<ch.ethz.eventb.decomposition.core.configuration ch.ethz.eventb.decomposition.core.decomposeContext="NO_DECOMPOSITION" ch.ethz.eventb.decomposition.core.newProject="false" ch.ethz.eventb.decomposition.core.style="Shared events (B-style)" name="internal_configuration1"/>
+<ch.ethz.eventb.decomposition.core.component ch.ethz.eventb.decomposition.core.target="AIBV_controller_2d" name="internal_component1"/>
+<ch.ethz.eventb.decomposition.core.subComponent name="internal_sub-component1" org.eventb.core.label="AAAA_SHARED">
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="AIBV_temperature" name="internal_elements1"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="AIBV_new_temperature_measurement" name="internal_elements2"/>
+</ch.ethz.eventb.decomposition.core.subComponent>
+<ch.ethz.eventb.decomposition.core.subComponent name="internal_sub-component2" org.eventb.core.label="AAAA_CONTROL_LOOP">
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="AIBV_state" name="internal_elements1"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="AIBV_action" name="internal_elements2"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="AIBV_amount" name="internal_elements3"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="AIBV_control_action_started" name="internal_elements4"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="AIBV_action_needs_to_measure_position" name="internal_elements5"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="AIBV_measured_position" name="internal_elements6"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="AIBV_position_measurement_to_check" name="internal_elements7"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="AIBV_control_loop_finishing" name="internal_elements8"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="AIBV_position_error" name="internal_elements9"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="AIBV_believed_position" name="internal_elements10"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="AIBV_control_loop_started" name="internal_elements11"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="AIBV_expected_position" name="internal_elements12"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="AIBV_measuring_position" name="internal_elements13"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="AIBV_required_position" name="internal_elements14"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="AIBV_temperature_control_loop_started" name="internal_elements15"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="AIBV_have_done_a_temperature_control_loop" name="internal_elements16"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="AIBV_temperature_LOCAL" name="internal_elements17"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="AIBV_new_temperature_measurement_LOCAL" name="internal_elements18"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="DUMMY_VARIABLE" name="internal_elements19"/>
+</ch.ethz.eventb.decomposition.core.subComponent>
+<ch.ethz.eventb.decomposition.core.subComponent name="internal_sub-component3" org.eventb.core.label="AAAA_TEMPERATURE">
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="AIBV_temperature_needs_checking" name="internal_elements1"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="AIBV_temperature_error" name="internal_elements2"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="AIBV_buffered_temperature" name="internal_elements3"/>
+</ch.ethz.eventb.decomposition.core.subComponent>
+</ch.ethz.eventb.decomposition.core.dcpFile>

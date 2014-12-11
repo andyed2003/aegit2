@@ -1,0 +1,7 @@
+#ifndef AAAA_SHARED_IMPL_H
+#define AAAA_SHARED_IMPL_H
+void AAAA_SHARED_IMPL_AIBV_check_temperature_ok(int buffered_temperature);
+void AAAA_SHARED_IMPL_AIBV_get_temperature(int *temperature, BOOL *new_temperature_measurement);
+void AAAA_SHARED_IMPL_AIBV_set_new_temperature_measurement(BOOL new_temperature_measurement);
+#endif
+

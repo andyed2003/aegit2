@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile ch.ethz.eventb.decomposition.decomposed="true" org.eventb.core.configuration="ch.ethz.eventb.decomposition.mchBase;org.eventb.codegen.ui.cgConfig" org.eventb.core.generated="true" version="5">
+<org.eventb.core.seesContext name="0" org.eventb.core.target="AIBV_temperature_context"/>
+<org.eventb.core.variable name="'" org.eventb.core.identifier="AIBV_temperature"/>
+<org.eventb.core.variable name="(" org.eventb.core.identifier="AIBV_new_temperature_measurement"/>
+<org.eventb.core.invariant name=")" org.eventb.core.label="typing_AIBV_temperature" org.eventb.core.predicate="AIBV_temperature ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="*" org.eventb.core.label="typing_AIBV_new_temperature_measurement" org.eventb.core.predicate="AIBV_new_temperature_measurement ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="+" org.eventb.core.label="AIBV_controller_AIBV_temperature_machine_inv9" org.eventb.core.predicate="MIN_TEMP ≤ AIBV_temperature ∧ AIBV_temperature ≤ MAX_TEMP"/>
+<org.eventb.core.event name="," org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="AIBV_temperature ≔ NOMINAL_TEMP" org.eventb.core.label="act28"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="AIBV_new_temperature_measurement ≔ FALSE" org.eventb.core.label="act29"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="-" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_check_temperature_ok">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="buffered_temperature"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="typing_buffered_temperature" org.eventb.core.predicate="buffered_temperature ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd4" org.eventb.core.predicate="MIN_TEMP ≤ buffered_temperature ∧ buffered_temperature ≤ MAX_TEMP"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="AIBV_temperature, AIBV_new_temperature_measurement ≔ buffered_temperature, TRUE" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="." org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_get_temperature">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="temperature"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="new_temperature_measurement"/>
+<org.eventb.core.guard name="," org.eventb.core.label="typing_new_temperature_measurement" org.eventb.core.predicate="new_temperature_measurement ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="typing_temperature" org.eventb.core.predicate="temperature ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="temperature = AIBV_temperature"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="new_temperature_measurement = AIBV_new_temperature_measurement"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="AIBV_new_temperature_measurement = TRUE"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="/" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_set_new_temperature_measurement">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="new_temperature_measurement"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="typing_new_temperature_measurement" org.eventb.core.predicate="new_temperature_measurement ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="AIBV_new_temperature_measurement ≔ new_temperature_measurement" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

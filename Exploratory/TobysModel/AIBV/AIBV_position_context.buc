@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.codegen.ui.taskingContextAttribute="Tasking" org.eventb.core.configuration="org.eventb.core.fwd;org.eventb.codegen.ui.cgConfig" version="3">
+<org.eventb.core.extendsContext name="'" org.eventb.core.target="AIBV_arm_disarm_context"/>
+<org.eventb.core.axiom name="," org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="axm1" org.eventb.core.predicate="AIBV_CLOSED ∈ ℤ"/>
+<org.eventb.core.axiom name="-" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="axm2" org.eventb.core.predicate="AIBV_CLOSED = 0"/>
+<org.eventb.core.axiom name="/" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="axm3" org.eventb.core.predicate="AIBV_OPEN ∈ ℤ"/>
+<org.eventb.core.axiom name="0" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="axm4" org.eventb.core.predicate="AIBV_OPEN = 2"/>
+<org.eventb.core.constant name="+" org.eventb.core.identifier="AIBV_CLOSED"/>
+<org.eventb.core.constant name="." org.eventb.core.identifier="AIBV_OPEN"/>
+<org.eventb.core.constant name=")" org.eventb.core.identifier="AIBV_UNKNOWN"/>
+<org.eventb.core.axiom name="1" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="axm5" org.eventb.core.predicate="AIBV_UNKNOWN ∈ ℤ"/>
+<org.eventb.core.axiom name="2" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="axm6" org.eventb.core.predicate="AIBV_UNKNOWN = −1"/>
+<org.eventb.core.axiom name="3" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="axm7" org.eventb.core.predicate="AIBV_UNKNOWN &lt; AIBV_CLOSED ∧ AIBV_CLOSED &lt; AIBV_OPEN" org.eventb.core.theorem="true"/>
+</org.eventb.core.contextFile>

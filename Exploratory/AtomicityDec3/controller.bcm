@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scMachineFile org.eventb.core.accurate="true" org.eventb.core.configuration="ch.ethz.eventb.decomposition.pogConfig">
+<org.eventb.core.scInvariant name="'" org.eventb.core.label="typing_used_a" org.eventb.core.predicate="used_a∈ℤ" org.eventb.core.source="/AtomicityDec3/controller.bum|org.eventb.core.machineFile#controller|org.eventb.core.invariant#)" org.eventb.core.theorem="true"/>
+<org.eventb.core.scInvariant name="(" org.eventb.core.label="typing_a" org.eventb.core.predicate="a∈ℤ" org.eventb.core.source="/AtomicityDec3/controller.bum|org.eventb.core.machineFile#controller|org.eventb.core.invariant#*" org.eventb.core.theorem="true"/>
+<org.eventb.core.scVariable ch.ethz.eventb.decomposition.nature="0" name="a" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/AtomicityDec3/controller.bum|org.eventb.core.machineFile#controller|org.eventb.core.variable#'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.scVariable ch.ethz.eventb.decomposition.nature="0" name="used_a" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/AtomicityDec3/controller.bum|org.eventb.core.machineFile#controller|org.eventb.core.variable#(" org.eventb.core.type="ℤ"/>
+<org.eventb.core.scEvent ch.ethz.eventb.decomposition.external="false" name="used_b" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION" org.eventb.core.source="/AtomicityDec3/controller.bum|org.eventb.core.machineFile#controller|org.eventb.core.event#+">
+<org.eventb.core.scAction name="'" org.eventb.core.assignment="a :∈ ℤ" org.eventb.core.label="act6" org.eventb.core.source="/AtomicityDec3/controller.bum|org.eventb.core.machineFile#controller|org.eventb.core.event#+|org.eventb.core.action#'"/>
+<org.eventb.core.scAction name="(" org.eventb.core.assignment="used_a ≔ 0" org.eventb.core.label="act8" org.eventb.core.source="/AtomicityDec3/controller.bum|org.eventb.core.machineFile#controller|org.eventb.core.event#+|org.eventb.core.action#("/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent ch.ethz.eventb.decomposition.external="true" name="used_c" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="controller_fmiDoStep" org.eventb.core.source="/AtomicityDec3/controller.bum|org.eventb.core.machineFile#controller|org.eventb.core.event#,">
+<org.eventb.core.scAction name="'" org.eventb.core.assignment="used_a ≔ a ÷ 2" org.eventb.core.label="act1" org.eventb.core.source="/AtomicityDec3/controller.bum|org.eventb.core.machineFile#controller|org.eventb.core.event#,|org.eventb.core.action#'"/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent ch.ethz.eventb.decomposition.external="false" name="used_d" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="fmiSetInteger" org.eventb.core.source="/AtomicityDec3/controller.bum|org.eventb.core.machineFile#controller|org.eventb.core.event#-">
+<org.eventb.core.scGuard name="'" org.eventb.core.label="typing_p" org.eventb.core.predicate="p∈ℤ" org.eventb.core.source="/AtomicityDec3/controller.bum|org.eventb.core.machineFile#controller|org.eventb.core.event#-|org.eventb.core.guard#*" org.eventb.core.theorem="true"/>
+<org.eventb.core.scParameter name="p" org.eventb.core.source="/AtomicityDec3/controller.bum|org.eventb.core.machineFile#controller|org.eventb.core.event#-|org.eventb.core.parameter#'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.scAction name="q" org.eventb.core.assignment="a ≔ p" org.eventb.core.label="act1" org.eventb.core.source="/AtomicityDec3/controller.bum|org.eventb.core.machineFile#controller|org.eventb.core.event#-|org.eventb.core.action#)"/>
+</org.eventb.core.scEvent>
+</org.eventb.core.scMachineFile>

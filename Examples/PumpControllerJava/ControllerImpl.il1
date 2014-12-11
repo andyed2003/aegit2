@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="ASCII"?>
+<il1:Program xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:il1="http://il1/1.0" projectName="PumpControllerJava">
+  <decls xsi:type="il1:ConstantDecl" identifier="MIN" type="&#x2124;" initialValue="10" ProjectName="PumpControllerJava" ComponentName="ctx"/>
+  <entryPoint>
+    <autoTasks name="ControllerImpl" projectName="PumpControllerJava" machineName="ControllerImpl">
+      <body xsi:type="il1:Seq">
+        <leftBranch xsi:type="il1:Seq">
+          <rightBranch xsi:type="il1:Call">
+            <subroutine name="getLevel_eAPI" machineName="EnvironmentImpl" projectName="PumpControllerJava">
+              <body xsi:type="il1:Action" action="p1 &#x2254; e_level"/>
+              <formalParameters xsi:type="il1:OutParameter" identifier="p1" type=" &#x2124;" ProjectName="PumpControllerJava"/>
+            </subroutine>
+            <actualParameters xsi:type="il1:InParameter" identifier="c_level" type=" &#x2124;" ProjectName="PumpControllerJava" ComponentName="ControllerImpl"/>
+          </rightBranch>
+        </leftBranch>
+        <rightBranch xsi:type="il1:Seq">
+          <leftBranch xsi:type="il1:Seq">
+            <rightBranch xsi:type="il1:Call">
+              <subroutine name="getPumpOnReq_eAPI" machineName="EnvironmentImpl" projectName="PumpControllerJava">
+                <body xsi:type="il1:Action" action="p2 &#x2254; e_pumpOnReq"/>
+                <formalParameters xsi:type="il1:OutParameter" identifier="p2" type=" BOOL" ProjectName="PumpControllerJava"/>
+              </subroutine>
+              <actualParameters xsi:type="il1:InParameter" identifier="c_pumpOnReq" type=" BOOL" ProjectName="PumpControllerJava" ComponentName="ControllerImpl"/>
+            </rightBranch>
+          </leftBranch>
+          <rightBranch xsi:type="il1:Seq">
+            <leftBranch xsi:type="il1:Seq">
+              <leftBranch xsi:type="il1:Seq">
+                <leftBranch xsi:type="il1:Action" ParentEventName="internalCommsPre" action="c_level_internal  &#x2254; c_level"/>
+                <rightBranch xsi:type="il1:Action" ParentEventName="internalCommsPre" action="c_pumpOnReq_internal  &#x2254; c_pumpOnReq"/>
+              </leftBranch>
+            </leftBranch>
+            <rightBranch xsi:type="il1:Seq">
+              <leftBranch xsi:type="il1:If">
+                <body xsi:type="il1:Seq">
+                  <leftBranch xsi:type="il1:Seq">
+                    <leftBranch xsi:type="il1:Action" ParentEventName="filterWarn" action="c_warn_internal  &#x2254; TRUE"/>
+                    <rightBranch xsi:type="il1:Action" ParentEventName="filterWarn" action="commit  &#x2254; TRUE"/>
+                  </leftBranch>
+                </body>
+                <condition>c_level_internal &#x2264; MIN</condition>
+                <condition>c_pumpOnReq_internal = TRUE</condition>
+                <else xsi:type="il1:Seq">
+                  <leftBranch xsi:type="il1:Seq">
+                    <leftBranch xsi:type="il1:Action" ParentEventName="filterOK" action="c_pumpOnCmd_internal  &#x2254; TRUE"/>
+                    <rightBranch xsi:type="il1:Action" ParentEventName="filterOK" action="commit  &#x2254; TRUE"/>
+                  </leftBranch>
+                </else>
+                <relatedEvent href="platform:/resource/PumpControllerJava/ControllerImpl.bum#org.eventb.emf.core.machine.Event.filterWarn"/>
+              </leftBranch>
+              <rightBranch xsi:type="il1:Seq">
+                <leftBranch xsi:type="il1:Seq">
+                  <leftBranch xsi:type="il1:Seq">
+                    <leftBranch xsi:type="il1:Action" ParentEventName="internalCommsPost" action="c_warn  &#x2254; c_warn_internal"/>
+                    <rightBranch xsi:type="il1:Action" ParentEventName="internalCommsPost" action="c_pumpOnCmd  &#x2254; c_pumpOnCmd_internal"/>
+                  </leftBranch>
+                </leftBranch>
+                <rightBranch xsi:type="il1:Seq">
+                  <leftBranch xsi:type="il1:Seq">
+                    <rightBranch xsi:type="il1:Call">
+                      <subroutine name="setPumpOnCmd_eAPI" machineName="EnvironmentImpl" projectName="PumpControllerJava">
+                        <body xsi:type="il1:Action" ParentEventName="setPumpOnCmd_eAPI" action="e_pumpOnCmd &#x2254; p3"/>
+                        <formalParameters xsi:type="il1:InParameter" identifier="p3" type=" BOOL" ProjectName="PumpControllerJava"/>
+                      </subroutine>
+                      <actualParameters xsi:type="il1:OutParameter" identifier="c_pumpOnCmd" type=" BOOL" ProjectName="PumpControllerJava" ComponentName="ControllerImpl"/>
+                    </rightBranch>
+                  </leftBranch>
+                  <rightBranch xsi:type="il1:Seq">
+                    <rightBranch xsi:type="il1:Call">
+                      <subroutine name="setWarn_eAPI" machineName="EnvironmentImpl" projectName="PumpControllerJava">
+                        <body xsi:type="il1:Action" ParentEventName="setWarn_eAPI" action="e_warn &#x2254; p4"/>
+                        <formalParameters xsi:type="il1:InParameter" identifier="p4" type=" BOOL" ProjectName="PumpControllerJava"/>
+                      </subroutine>
+                      <actualParameters xsi:type="il1:OutParameter" identifier="c_warn" type=" BOOL" ProjectName="PumpControllerJava" ComponentName="ControllerImpl"/>
+                    </rightBranch>
+                  </rightBranch>
+                </rightBranch>
+              </rightBranch>
+            </rightBranch>
+          </rightBranch>
+        </rightBranch>
+      </body>
+      <taskType xsi:type="il1:PeriodicTaskType"/>
+      <decls xsi:type="il1:VariableDecl" identifier="c_level" type="&#x2124;" initialValue="100" ProjectName="PumpControllerJava" ComponentName="ControllerImpl"/>
+      <decls xsi:type="il1:VariableDecl" identifier="c_pumpOnReq" type="BOOL" initialValue="FALSE" ProjectName="PumpControllerJava" ComponentName="ControllerImpl"/>
+      <decls xsi:type="il1:VariableDecl" identifier="c_pumpOnCmd" type="BOOL" initialValue="FALSE" ProjectName="PumpControllerJava" ComponentName="ControllerImpl"/>
+      <decls xsi:type="il1:VariableDecl" identifier="c_warn" type="BOOL" initialValue="FALSE" ProjectName="PumpControllerJava" ComponentName="ControllerImpl"/>
+      <decls xsi:type="il1:VariableDecl" identifier="c_level_internal" type="&#x2124;" initialValue="100" ProjectName="PumpControllerJava" ComponentName="ControllerImpl"/>
+      <decls xsi:type="il1:VariableDecl" identifier="c_pumpOnReq_internal" type="BOOL" initialValue="FALSE" ProjectName="PumpControllerJava" ComponentName="ControllerImpl"/>
+      <decls xsi:type="il1:VariableDecl" identifier="c_pumpOnCmd_internal" type="BOOL" initialValue="FALSE" ProjectName="PumpControllerJava" ComponentName="ControllerImpl"/>
+      <decls xsi:type="il1:VariableDecl" identifier="c_warn_internal" type="BOOL" initialValue="FALSE" ProjectName="PumpControllerJava" ComponentName="ControllerImpl"/>
+      <decls xsi:type="il1:VariableDecl" identifier="commit" type="BOOL" initialValue="FALSE" ProjectName="PumpControllerJava" ComponentName="ControllerImpl"/>
+    </autoTasks>
+  </entryPoint>
+  <environMachines name="EnvironmentImpl" projectName="PumpControllerJava" machineName="EnvironmentImpl">
+    <body xsi:type="il1:Action" ParentEventName="read_ePorts" action="e_level &#x2254; e_level"/>
+    <taskType xsi:type="il1:PeriodicTaskType"/>
+    <decls xsi:type="il1:VariableDecl" identifier="e_level" type="&#x2124;" initialValue="90" ProjectName="PumpControllerJava" ComponentName="EnvironmentImpl"/>
+    <decls xsi:type="il1:VariableDecl" identifier="e_pumpOnReq" type="BOOL" initialValue="FALSE" ProjectName="PumpControllerJava" ComponentName="EnvironmentImpl"/>
+    <decls xsi:type="il1:VariableDecl" identifier="e_pumpOnCmd" type="BOOL" initialValue="FALSE" ProjectName="PumpControllerJava" ComponentName="EnvironmentImpl"/>
+    <decls xsi:type="il1:VariableDecl" identifier="e_warn" type="BOOL" initialValue="FALSE" ProjectName="PumpControllerJava" ComponentName="EnvironmentImpl"/>
+    <decls xsi:type="il1:VariableDecl" identifier="init" type="BOOL" initialValue="TRUE" ProjectName="PumpControllerJava" ComponentName="EnvironmentImpl"/>
+    <subroutines name="getLevel_eAPI" machineName="EnvironmentImpl" projectName="PumpControllerJava">
+      <body xsi:type="il1:Action" action="p1 &#x2254; e_level"/>
+      <formalParameters xsi:type="il1:OutParameter" identifier="p1" type=" &#x2124;" ProjectName="PumpControllerJava"/>
+    </subroutines>
+    <subroutines name="getPumpOnReq_eAPI" machineName="EnvironmentImpl" projectName="PumpControllerJava">
+      <body xsi:type="il1:Action" action="p2 &#x2254; e_pumpOnReq"/>
+      <formalParameters xsi:type="il1:OutParameter" identifier="p2" type=" BOOL" ProjectName="PumpControllerJava"/>
+    </subroutines>
+    <subroutines name="setPumpOnCmd_eAPI" machineName="EnvironmentImpl" projectName="PumpControllerJava">
+      <body xsi:type="il1:Action" ParentEventName="setPumpOnCmd_eAPI" action="e_pumpOnCmd &#x2254; p3"/>
+      <formalParameters xsi:type="il1:InParameter" identifier="p3" type=" BOOL" ProjectName="PumpControllerJava"/>
+    </subroutines>
+    <subroutines name="setWarn_eAPI" machineName="EnvironmentImpl" projectName="PumpControllerJava">
+      <body xsi:type="il1:Action" ParentEventName="setWarn_eAPI" action="e_warn &#x2254; p4"/>
+      <formalParameters xsi:type="il1:InParameter" identifier="p4" type=" BOOL" ProjectName="PumpControllerJava"/>
+    </subroutines>
+  </environMachines>
+</il1:Program>

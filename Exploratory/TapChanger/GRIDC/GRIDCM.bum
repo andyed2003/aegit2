@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1398689374014" org.eventb.texttools.text_representation="machine GRIDCM&#10;&#10;variables v tappos predictedv&#10;&#10;invariants&#10;  @inv1 v ∈ 235 ‥ 245&#10;  @inv2 tappos ∈ 10 ‥ 30&#10;  @inv3 predictedv ∈ 235 ‥ 245&#10;&#10;events&#10;  event INITIALISATION&#10;    then&#10;      @act1 v ≔ 240&#10;      @act2 tappos ≔ 20&#10;      @act3 predictedv ≔ 240&#10;  end&#10;&#10;  event ReadVoltage&#10;    any pv&#10;    where&#10;      @grd1 pv ∈ 235 ‥ 245&#10;    then&#10;      @act1 v ≔ pv&#10;  end&#10;&#10;  event PredictVoltageChange&#10;    any ppv&#10;    where&#10;      @grd1 ppv ∈ 235 ‥ 245&#10;    then&#10;      @act1 predictedv ≔ ppv&#10;  end&#10;&#10;  event AdjustTapPosition&#10;    any ptp&#10;    where&#10;      @grd1 ptp ∈ −10 ‥ 10&#10;      @grd2 tappos + ptp ≥ 10&#10;      @grd3 tappos + ptp ≤ 30&#10;    then&#10;      @act1 tappos ≔ tappos + ptp&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.variable name="_KqLEgM7LEeOwhtEFi5ykCw" org.eventb.core.identifier="v"/>
+<org.eventb.core.variable name="_KqLEgc7LEeOwhtEFi5ykCw" org.eventb.core.identifier="tappos"/>
+<org.eventb.core.variable name="_KqLEgs7LEeOwhtEFi5ykCw" org.eventb.core.identifier="predictedv"/>
+<org.eventb.core.invariant name="_KqLEg87LEeOwhtEFi5ykCw" org.eventb.core.label="inv1" org.eventb.core.predicate="v ∈ 235 ‥ 245"/>
+<org.eventb.core.invariant name="_KqLEhM7LEeOwhtEFi5ykCw" org.eventb.core.label="inv2" org.eventb.core.predicate="tappos ∈ 10 ‥ 30"/>
+<org.eventb.core.invariant name="_KqLEhc7LEeOwhtEFi5ykCw" org.eventb.core.label="inv3" org.eventb.core.predicate="predictedv ∈ 235 ‥ 245"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_KqLrkM7LEeOwhtEFi5ykCw" org.eventb.core.assignment="v ≔ 240" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_KqLrkc7LEeOwhtEFi5ykCw" org.eventb.core.assignment="tappos ≔ 20" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="_KqLrks7LEeOwhtEFi5ykCw" org.eventb.core.assignment="predictedv ≔ 240" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_KqLrk87LEeOwhtEFi5ykCw" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ReadVoltage">
+<org.eventb.core.parameter name="_KqMSoM7LEeOwhtEFi5ykCw" org.eventb.core.identifier="pv"/>
+<org.eventb.core.guard name="_KqMSoc7LEeOwhtEFi5ykCw" org.eventb.core.label="grd1" org.eventb.core.predicate="pv ∈ 235 ‥ 245"/>
+<org.eventb.core.action name="_KqMSos7LEeOwhtEFi5ykCw" org.eventb.core.assignment="v ≔ pv" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_KqMSo87LEeOwhtEFi5ykCw" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PredictVoltageChange">
+<org.eventb.core.parameter name="_KqMSpM7LEeOwhtEFi5ykCw" org.eventb.core.identifier="ppv"/>
+<org.eventb.core.guard name="_KqMSpc7LEeOwhtEFi5ykCw" org.eventb.core.label="grd1" org.eventb.core.predicate="ppv ∈ 235 ‥ 245"/>
+<org.eventb.core.action name="_KqM5sM7LEeOwhtEFi5ykCw" org.eventb.core.assignment="predictedv ≔ ppv" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_KqM5sc7LEeOwhtEFi5ykCw" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AdjustTapPosition">
+<org.eventb.core.parameter name="_KqM5ss7LEeOwhtEFi5ykCw" org.eventb.core.identifier="ptp"/>
+<org.eventb.core.guard name="_KqM5s87LEeOwhtEFi5ykCw" org.eventb.core.label="grd1" org.eventb.core.predicate="ptp ∈ −10 ‥ 10"/>
+<org.eventb.core.guard name="_KqM5tM7LEeOwhtEFi5ykCw" org.eventb.core.label="grd2" org.eventb.core.predicate="tappos + ptp ≥ 10"/>
+<org.eventb.core.guard name="_KqM5tc7LEeOwhtEFi5ykCw" org.eventb.core.label="grd3" org.eventb.core.predicate="tappos + ptp ≤ 30"/>
+<org.eventb.core.action name="_KqNgwM7LEeOwhtEFi5ykCw" org.eventb.core.assignment="tappos ≔ tappos + ptp" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

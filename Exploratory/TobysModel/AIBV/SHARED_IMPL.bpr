@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="INITIALISATION/AIBV_controller_AIBV_temperature_machine_inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15" org.eventb.core.prSets="AIBV_ACTIONS,AIBV_STATES">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(AIBV_STATES,{ARMED},{DISARMING},{DISARMED}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p11" org.eventb.core.prInfHyps="p16,p17,p18,p19"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p16,p17,p18,p19"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(AIBV_ACTIONS,{OPEN},{CLOSE},{NOTHING}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p13" org.eventb.core.prInfHyps="p20,p21,p22,p23"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p20,p21,p22,p23"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p8" org.eventb.core.prInfHyps="p24,p25"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p2" org.eventb.core.prInfHyps="p26,p27"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p28"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p29"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p30"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p31"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p32"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p33"/>
+<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p34"/>
+<org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p35"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p36">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p36" org.eventb.core.prHyps="p5,p6,p3,p14,p4,p12,p15,p7,p10,p1,p9,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p37">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p37" org.eventb.core.prHyps="p5,p6,p3,p14,p4,p12,p15,p7,p10,p1,p9,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="AIBV_CLOSED" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="AIBV_OPEN" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="AIBV_UNKNOWN" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="ARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.prIdent name="CLOSE" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.prIdent name="DISARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.prIdent name="DISARMING" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.prIdent name="FULLY_CLOSED_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="FULLY_OPEN_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="MAX_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="MIN_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="NOMINAL_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="NOTHING" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.prIdent name="OPEN" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="MIN_TEMP&lt;NOMINAL_TEMP"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="MAX_TEMP∈ℤ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="FULLY_OPEN_TEMP&lt;FULLY_CLOSED_TEMP"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="MIN_TEMP≤NOMINAL_TEMP"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="AIBV_CLOSED&lt;AIBV_OPEN"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="MAX_TEMP=4"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬ARMED=DISARMED"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="AIBV_CLOSED=0"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬ARMED=DISARMING"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="FULLY_CLOSED_TEMP=2"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="AIBV_UNKNOWN&lt;AIBV_CLOSED∧AIBV_CLOSED&lt;AIBV_OPEN"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬OPEN=CLOSE"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="partition(AIBV_STATES,{ARMED},{DISARMING},{DISARMED})"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="FULLY_CLOSED_TEMP∈ℤ"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="NOMINAL_TEMP∈ℤ"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="partition(AIBV_ACTIONS,{OPEN},{CLOSE},{NOTHING})"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="AIBV_STATES={ARMED,DISARMING,DISARMED}"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="MIN_TEMP=0"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬CLOSE=NOTHING"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="AIBV_UNKNOWN=−1"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="MIN_TEMP&lt;NOMINAL_TEMP∧NOMINAL_TEMP&lt;MAX_TEMP"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="AIBV_UNKNOWN∈ℤ"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="AIBV_OPEN=2"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬OPEN=NOTHING"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="NOMINAL_TEMP≤MAX_TEMP"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="NOMINAL_TEMP&lt;MAX_TEMP"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="MIN_TEMP≤NOMINAL_TEMP∧NOMINAL_TEMP≤MAX_TEMP"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="AIBV_CLOSED∈ℤ"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="FULLY_CLOSED_TEMP&lt;NOMINAL_TEMP"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="MIN_TEMP&lt;FULLY_OPEN_TEMP"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="AIBV_ACTIONS={OPEN,CLOSE,NOTHING}"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬DISARMING=DISARMED"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="NOMINAL_TEMP=3"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="FULLY_OPEN_TEMP∈ℤ"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="AIBV_OPEN∈ℤ"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="MIN_TEMP∈ℤ"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="FULLY_OPEN_TEMP=1"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="AIBV_UNKNOWN&lt;AIBV_CLOSED"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL3:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="AIBV_check_temperature_ok/AIBV_controller_AIBV_temperature_machine_inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prIdent name="MAX_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="MIN_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="buffered_temperature" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="MIN_TEMP≤buffered_temperature∧buffered_temperature≤MAX_TEMP"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="AIBV_calculate_position_partial/grd6/GRD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(AIBV_STATES,{ARMED},{DISARMING},{DISARMED}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p3" org.eventb.core.prInfHyps="p4,p5,p6,p7"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p4,p5,p6,p7"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(AIBV_ACTIONS,{OPEN},{CLOSE},{NOTHING}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p8" org.eventb.core.prInfHyps="p9,p10,p11,p12"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p9,p10,p11,p12"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p13" org.eventb.core.prInfHyps="p14,p15"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p16" org.eventb.core.prInfHyps="p17,p18"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prHypAction name="FORWARD_INF4" org.eventb.core.prHyps="p19" org.eventb.core.prInfHyps="p20,p21"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p19"/>
+<org.eventb.core.prHypAction name="FORWARD_INF6" org.eventb.core.prHyps="p2" org.eventb.core.prInfHyps="p22,p23"/>
+<org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p24"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p25"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p26"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p27"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p28"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p29"/>
+<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p30"/>
+<org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p31"/>
+<org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p32"/>
+<org.eventb.core.prHypAction name="HIDE9" org.eventb.core.prHyps="p33"/>
+<org.eventb.core.prHypAction name="HIDE10" org.eventb.core.prHyps="p34"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p35">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with temperature=AIBV_temperature" org.eventb.core.prGoal="p35" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p22">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p22" org.eventb.core.prHyps="p22"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p36">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with temperature=AIBV_temperature" org.eventb.core.prGoal="p36" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p23">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p23" org.eventb.core.prHyps="p23"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="AIBV_temperature" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="FULLY_CLOSED_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="FULLY_OPEN_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="temperature" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="MIN_TEMP&lt;NOMINAL_TEMP">
+<org.eventb.core.prIdent name="MIN_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="NOMINAL_TEMP" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="MAX_TEMP∈ℤ">
+<org.eventb.core.prIdent name="MAX_TEMP" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="AIBV_CLOSED&lt;AIBV_OPEN">
+<org.eventb.core.prIdent name="AIBV_CLOSED" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="AIBV_OPEN" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="AIBV_new_temperature_measurement∈BOOL">
+<org.eventb.core.prIdent name="AIBV_new_temperature_measurement" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬ARMED=DISARMED">
+<org.eventb.core.prIdent name="ARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.prIdent name="DISARMED" org.eventb.core.type="AIBV_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="AIBV_temperature≤MAX_TEMP">
+<org.eventb.core.prIdent name="MAX_TEMP" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="AIBV_temperature≤FULLY_CLOSED_TEMP"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬ARMED=DISARMING">
+<org.eventb.core.prIdent name="ARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.prIdent name="DISARMING" org.eventb.core.type="AIBV_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬OPEN=CLOSE">
+<org.eventb.core.prIdent name="CLOSE" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.prIdent name="OPEN" org.eventb.core.type="AIBV_ACTIONS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="AIBV_UNKNOWN&lt;AIBV_CLOSED∧AIBV_CLOSED&lt;AIBV_OPEN">
+<org.eventb.core.prIdent name="AIBV_CLOSED" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="AIBV_OPEN" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="AIBV_UNKNOWN" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(AIBV_STATES,{ARMED},{DISARMING},{DISARMED})">
+<org.eventb.core.prIdent name="AIBV_STATES" org.eventb.core.type="ℙ(AIBV_STATES)"/>
+<org.eventb.core.prIdent name="ARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.prIdent name="DISARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.prIdent name="DISARMING" org.eventb.core.type="AIBV_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="FULLY_OPEN_TEMP≤temperature∧temperature≤FULLY_CLOSED_TEMP"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="FULLY_OPEN_TEMP≤AIBV_temperature"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="temperature≤FULLY_CLOSED_TEMP"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="FULLY_CLOSED_TEMP∈ℤ"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="NOMINAL_TEMP∈ℤ">
+<org.eventb.core.prIdent name="NOMINAL_TEMP" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="partition(AIBV_ACTIONS,{OPEN},{CLOSE},{NOTHING})">
+<org.eventb.core.prIdent name="AIBV_ACTIONS" org.eventb.core.type="ℙ(AIBV_ACTIONS)"/>
+<org.eventb.core.prIdent name="CLOSE" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.prIdent name="NOTHING" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.prIdent name="OPEN" org.eventb.core.type="AIBV_ACTIONS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="AIBV_STATES={ARMED,DISARMING,DISARMED}">
+<org.eventb.core.prIdent name="AIBV_STATES" org.eventb.core.type="ℙ(AIBV_STATES)"/>
+<org.eventb.core.prIdent name="ARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.prIdent name="DISARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.prIdent name="DISARMING" org.eventb.core.type="AIBV_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="temperature=AIBV_temperature"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="MIN_TEMP≤AIBV_temperature∧AIBV_temperature≤MAX_TEMP">
+<org.eventb.core.prIdent name="MAX_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="MIN_TEMP" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬CLOSE=NOTHING">
+<org.eventb.core.prIdent name="CLOSE" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.prIdent name="NOTHING" org.eventb.core.type="AIBV_ACTIONS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="MIN_TEMP&lt;NOMINAL_TEMP∧NOMINAL_TEMP&lt;MAX_TEMP">
+<org.eventb.core.prIdent name="MAX_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="MIN_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="NOMINAL_TEMP" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="AIBV_UNKNOWN∈ℤ">
+<org.eventb.core.prIdent name="AIBV_UNKNOWN" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬OPEN=NOTHING">
+<org.eventb.core.prIdent name="NOTHING" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.prIdent name="OPEN" org.eventb.core.type="AIBV_ACTIONS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="FULLY_OPEN_TEMP≤AIBV_temperature∧AIBV_temperature≤FULLY_CLOSED_TEMP"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="NOMINAL_TEMP&lt;MAX_TEMP">
+<org.eventb.core.prIdent name="MAX_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="NOMINAL_TEMP" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="AIBV_CLOSED∈ℤ">
+<org.eventb.core.prIdent name="AIBV_CLOSED" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="temperature∈ℤ"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="AIBV_temperature∈ℤ"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="AIBV_ACTIONS={OPEN,CLOSE,NOTHING}">
+<org.eventb.core.prIdent name="AIBV_ACTIONS" org.eventb.core.type="ℙ(AIBV_ACTIONS)"/>
+<org.eventb.core.prIdent name="CLOSE" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.prIdent name="NOTHING" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.prIdent name="OPEN" org.eventb.core.type="AIBV_ACTIONS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬DISARMING=DISARMED">
+<org.eventb.core.prIdent name="DISARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.prIdent name="DISARMING" org.eventb.core.type="AIBV_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="FULLY_OPEN_TEMP≤temperature"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="FULLY_OPEN_TEMP∈ℤ"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="AIBV_OPEN∈ℤ">
+<org.eventb.core.prIdent name="AIBV_OPEN" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="MIN_TEMP≤AIBV_temperature">
+<org.eventb.core.prIdent name="MIN_TEMP" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="MIN_TEMP∈ℤ">
+<org.eventb.core.prIdent name="MIN_TEMP" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="AIBV_UNKNOWN&lt;AIBV_CLOSED">
+<org.eventb.core.prIdent name="AIBV_CLOSED" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="AIBV_UNKNOWN" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL3:1"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="AIBV_calculate_position_open/grd6/GRD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(AIBV_STATES,{ARMED},{DISARMING},{DISARMED}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p3" org.eventb.core.prInfHyps="p4,p5,p6,p7"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p4,p5,p6,p7"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(AIBV_ACTIONS,{OPEN},{CLOSE},{NOTHING}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p8" org.eventb.core.prInfHyps="p9,p10,p11,p12"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p9,p10,p11,p12"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p13" org.eventb.core.prInfHyps="p14,p15"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p16" org.eventb.core.prInfHyps="p17,p18"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prHypAction name="FORWARD_INF4" org.eventb.core.prHyps="p19" org.eventb.core.prInfHyps="p20,p21"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p19"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p22"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p23"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p24"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p25"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p26"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p27"/>
+<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p28"/>
+<org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p29"/>
+<org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p30"/>
+<org.eventb.core.prHypAction name="HIDE9" org.eventb.core.prHyps="p31"/>
+<org.eventb.core.prHypAction name="HIDE10" org.eventb.core.prHyps="p32"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with temperature=AIBV_temperature" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p2">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p1" org.eventb.core.prHyps="p1"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="AIBV_temperature" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="FULLY_OPEN_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="temperature" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="MIN_TEMP&lt;NOMINAL_TEMP">
+<org.eventb.core.prIdent name="MIN_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="NOMINAL_TEMP" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="MAX_TEMP∈ℤ">
+<org.eventb.core.prIdent name="MAX_TEMP" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="AIBV_CLOSED&lt;AIBV_OPEN">
+<org.eventb.core.prIdent name="AIBV_CLOSED" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="AIBV_OPEN" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="AIBV_new_temperature_measurement∈BOOL">
+<org.eventb.core.prIdent name="AIBV_new_temperature_measurement" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬ARMED=DISARMED">
+<org.eventb.core.prIdent name="ARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.prIdent name="DISARMED" org.eventb.core.type="AIBV_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="AIBV_temperature≤MAX_TEMP">
+<org.eventb.core.prIdent name="MAX_TEMP" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬ARMED=DISARMING">
+<org.eventb.core.prIdent name="ARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.prIdent name="DISARMING" org.eventb.core.type="AIBV_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬OPEN=CLOSE">
+<org.eventb.core.prIdent name="CLOSE" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.prIdent name="OPEN" org.eventb.core.type="AIBV_ACTIONS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="AIBV_UNKNOWN&lt;AIBV_CLOSED∧AIBV_CLOSED&lt;AIBV_OPEN">
+<org.eventb.core.prIdent name="AIBV_CLOSED" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="AIBV_OPEN" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="AIBV_UNKNOWN" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(AIBV_STATES,{ARMED},{DISARMING},{DISARMED})">
+<org.eventb.core.prIdent name="AIBV_STATES" org.eventb.core.type="ℙ(AIBV_STATES)"/>
+<org.eventb.core.prIdent name="ARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.prIdent name="DISARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.prIdent name="DISARMING" org.eventb.core.type="AIBV_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="AIBV_temperature&lt;FULLY_OPEN_TEMP"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="FULLY_CLOSED_TEMP∈ℤ">
+<org.eventb.core.prIdent name="FULLY_CLOSED_TEMP" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="NOMINAL_TEMP∈ℤ">
+<org.eventb.core.prIdent name="NOMINAL_TEMP" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="partition(AIBV_ACTIONS,{OPEN},{CLOSE},{NOTHING})">
+<org.eventb.core.prIdent name="AIBV_ACTIONS" org.eventb.core.type="ℙ(AIBV_ACTIONS)"/>
+<org.eventb.core.prIdent name="CLOSE" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.prIdent name="NOTHING" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.prIdent name="OPEN" org.eventb.core.type="AIBV_ACTIONS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="AIBV_STATES={ARMED,DISARMING,DISARMED}">
+<org.eventb.core.prIdent name="AIBV_STATES" org.eventb.core.type="ℙ(AIBV_STATES)"/>
+<org.eventb.core.prIdent name="ARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.prIdent name="DISARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.prIdent name="DISARMING" org.eventb.core.type="AIBV_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="temperature=AIBV_temperature"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="MIN_TEMP≤AIBV_temperature∧AIBV_temperature≤MAX_TEMP">
+<org.eventb.core.prIdent name="MAX_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="MIN_TEMP" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬CLOSE=NOTHING">
+<org.eventb.core.prIdent name="CLOSE" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.prIdent name="NOTHING" org.eventb.core.type="AIBV_ACTIONS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="MIN_TEMP&lt;NOMINAL_TEMP∧NOMINAL_TEMP&lt;MAX_TEMP">
+<org.eventb.core.prIdent name="MAX_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="MIN_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="NOMINAL_TEMP" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="AIBV_UNKNOWN∈ℤ">
+<org.eventb.core.prIdent name="AIBV_UNKNOWN" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬OPEN=NOTHING">
+<org.eventb.core.prIdent name="NOTHING" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.prIdent name="OPEN" org.eventb.core.type="AIBV_ACTIONS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="temperature&lt;FULLY_OPEN_TEMP"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="NOMINAL_TEMP&lt;MAX_TEMP">
+<org.eventb.core.prIdent name="MAX_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="NOMINAL_TEMP" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="AIBV_CLOSED∈ℤ">
+<org.eventb.core.prIdent name="AIBV_CLOSED" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="temperature∈ℤ"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="AIBV_temperature∈ℤ"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="AIBV_ACTIONS={OPEN,CLOSE,NOTHING}">
+<org.eventb.core.prIdent name="AIBV_ACTIONS" org.eventb.core.type="ℙ(AIBV_ACTIONS)"/>
+<org.eventb.core.prIdent name="CLOSE" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.prIdent name="NOTHING" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.prIdent name="OPEN" org.eventb.core.type="AIBV_ACTIONS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬DISARMING=DISARMED">
+<org.eventb.core.prIdent name="DISARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.prIdent name="DISARMING" org.eventb.core.type="AIBV_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="FULLY_OPEN_TEMP∈ℤ"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="AIBV_OPEN∈ℤ">
+<org.eventb.core.prIdent name="AIBV_OPEN" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="MIN_TEMP≤AIBV_temperature">
+<org.eventb.core.prIdent name="MIN_TEMP" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="MIN_TEMP∈ℤ">
+<org.eventb.core.prIdent name="MIN_TEMP" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="AIBV_UNKNOWN&lt;AIBV_CLOSED">
+<org.eventb.core.prIdent name="AIBV_CLOSED" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="AIBV_UNKNOWN" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL3:1"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="AIBV_calculate_position_closed/grd6/GRD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(AIBV_STATES,{ARMED},{DISARMING},{DISARMED}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p3" org.eventb.core.prInfHyps="p4,p5,p6,p7"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p4,p5,p6,p7"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(AIBV_ACTIONS,{OPEN},{CLOSE},{NOTHING}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p8" org.eventb.core.prInfHyps="p9,p10,p11,p12"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p9,p10,p11,p12"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p13" org.eventb.core.prInfHyps="p14,p15"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p16" org.eventb.core.prInfHyps="p17,p18"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prHypAction name="FORWARD_INF4" org.eventb.core.prHyps="p19" org.eventb.core.prInfHyps="p20,p21"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p19"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p22"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p23"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p24"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p25"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p26"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p27"/>
+<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p28"/>
+<org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p29"/>
+<org.eventb.core.prHypAction name="HIDE8" org.eventb.core.prHyps="p30"/>
+<org.eventb.core.prHypAction name="HIDE9" org.eventb.core.prHyps="p31"/>
+<org.eventb.core.prHypAction name="HIDE10" org.eventb.core.prHyps="p32"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with temperature=AIBV_temperature" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p2">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p1" org.eventb.core.prHyps="p1"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="AIBV_temperature" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="FULLY_CLOSED_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="temperature" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="MIN_TEMP&lt;NOMINAL_TEMP">
+<org.eventb.core.prIdent name="MIN_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="NOMINAL_TEMP" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="MAX_TEMP∈ℤ">
+<org.eventb.core.prIdent name="MAX_TEMP" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="AIBV_CLOSED&lt;AIBV_OPEN">
+<org.eventb.core.prIdent name="AIBV_CLOSED" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="AIBV_OPEN" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="AIBV_new_temperature_measurement∈BOOL">
+<org.eventb.core.prIdent name="AIBV_new_temperature_measurement" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬ARMED=DISARMED">
+<org.eventb.core.prIdent name="ARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.prIdent name="DISARMED" org.eventb.core.type="AIBV_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="AIBV_temperature≤MAX_TEMP">
+<org.eventb.core.prIdent name="MAX_TEMP" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬ARMED=DISARMING">
+<org.eventb.core.prIdent name="ARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.prIdent name="DISARMING" org.eventb.core.type="AIBV_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬OPEN=CLOSE">
+<org.eventb.core.prIdent name="CLOSE" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.prIdent name="OPEN" org.eventb.core.type="AIBV_ACTIONS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="AIBV_UNKNOWN&lt;AIBV_CLOSED∧AIBV_CLOSED&lt;AIBV_OPEN">
+<org.eventb.core.prIdent name="AIBV_CLOSED" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="AIBV_OPEN" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="AIBV_UNKNOWN" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="FULLY_CLOSED_TEMP&lt;temperature"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(AIBV_STATES,{ARMED},{DISARMING},{DISARMED})">
+<org.eventb.core.prIdent name="AIBV_STATES" org.eventb.core.type="ℙ(AIBV_STATES)"/>
+<org.eventb.core.prIdent name="ARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.prIdent name="DISARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.prIdent name="DISARMING" org.eventb.core.type="AIBV_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="FULLY_CLOSED_TEMP∈ℤ"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="NOMINAL_TEMP∈ℤ">
+<org.eventb.core.prIdent name="NOMINAL_TEMP" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="partition(AIBV_ACTIONS,{OPEN},{CLOSE},{NOTHING})">
+<org.eventb.core.prIdent name="AIBV_ACTIONS" org.eventb.core.type="ℙ(AIBV_ACTIONS)"/>
+<org.eventb.core.prIdent name="CLOSE" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.prIdent name="NOTHING" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.prIdent name="OPEN" org.eventb.core.type="AIBV_ACTIONS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="AIBV_STATES={ARMED,DISARMING,DISARMED}">
+<org.eventb.core.prIdent name="AIBV_STATES" org.eventb.core.type="ℙ(AIBV_STATES)"/>
+<org.eventb.core.prIdent name="ARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.prIdent name="DISARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.prIdent name="DISARMING" org.eventb.core.type="AIBV_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="temperature=AIBV_temperature"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="MIN_TEMP≤AIBV_temperature∧AIBV_temperature≤MAX_TEMP">
+<org.eventb.core.prIdent name="MAX_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="MIN_TEMP" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬CLOSE=NOTHING">
+<org.eventb.core.prIdent name="CLOSE" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.prIdent name="NOTHING" org.eventb.core.type="AIBV_ACTIONS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="MIN_TEMP&lt;NOMINAL_TEMP∧NOMINAL_TEMP&lt;MAX_TEMP">
+<org.eventb.core.prIdent name="MAX_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="MIN_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="NOMINAL_TEMP" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="FULLY_CLOSED_TEMP&lt;AIBV_temperature"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="AIBV_UNKNOWN∈ℤ">
+<org.eventb.core.prIdent name="AIBV_UNKNOWN" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬OPEN=NOTHING">
+<org.eventb.core.prIdent name="NOTHING" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.prIdent name="OPEN" org.eventb.core.type="AIBV_ACTIONS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="NOMINAL_TEMP&lt;MAX_TEMP">
+<org.eventb.core.prIdent name="MAX_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="NOMINAL_TEMP" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="AIBV_CLOSED∈ℤ">
+<org.eventb.core.prIdent name="AIBV_CLOSED" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="temperature∈ℤ"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="AIBV_temperature∈ℤ"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="AIBV_ACTIONS={OPEN,CLOSE,NOTHING}">
+<org.eventb.core.prIdent name="AIBV_ACTIONS" org.eventb.core.type="ℙ(AIBV_ACTIONS)"/>
+<org.eventb.core.prIdent name="CLOSE" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.prIdent name="NOTHING" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.prIdent name="OPEN" org.eventb.core.type="AIBV_ACTIONS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬DISARMING=DISARMED">
+<org.eventb.core.prIdent name="DISARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.prIdent name="DISARMING" org.eventb.core.type="AIBV_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="FULLY_OPEN_TEMP∈ℤ">
+<org.eventb.core.prIdent name="FULLY_OPEN_TEMP" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="AIBV_OPEN∈ℤ">
+<org.eventb.core.prIdent name="AIBV_OPEN" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="MIN_TEMP≤AIBV_temperature">
+<org.eventb.core.prIdent name="MIN_TEMP" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="MIN_TEMP∈ℤ">
+<org.eventb.core.prIdent name="MIN_TEMP" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="AIBV_UNKNOWN&lt;AIBV_CLOSED">
+<org.eventb.core.prIdent name="AIBV_CLOSED" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="AIBV_UNKNOWN" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL3:1"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+</org.eventb.core.prFile>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile ch.ethz.eventb.decomposition.decomposed="true" org.eventb.core.configuration="ch.ethz.eventb.decomposition.mchBase;org.eventb.codegen.ui.cgConfig" org.eventb.core.generated="true" version="5">
+<org.eventb.core.seesContext name="C" org.eventb.core.target="ctx"/>
+<org.eventb.core.variable name="'" org.eventb.core.identifier="c_level"/>
+<org.eventb.core.variable name="(" org.eventb.core.identifier="c_pumpOnReq"/>
+<org.eventb.core.variable name=")" org.eventb.core.identifier="c_pumpOnCmd"/>
+<org.eventb.core.variable name="*" org.eventb.core.identifier="c_warn"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="c_level_internal"/>
+<org.eventb.core.variable name="," org.eventb.core.identifier="c_pumpOnReq_internal"/>
+<org.eventb.core.variable name="-" org.eventb.core.identifier="c_pumpOnCmd_internal"/>
+<org.eventb.core.variable name="." org.eventb.core.identifier="c_warn_internal"/>
+<org.eventb.core.variable name="/" org.eventb.core.identifier="commit"/>
+<org.eventb.core.invariant name="0" org.eventb.core.label="typing_commit" org.eventb.core.predicate="commit ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="1" org.eventb.core.label="typing_c_pumpOnCmd_internal" org.eventb.core.predicate="c_pumpOnCmd_internal ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="2" org.eventb.core.label="typing_c_pumpOnReq_internal" org.eventb.core.predicate="c_pumpOnReq_internal ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="3" org.eventb.core.label="typing_c_level_internal" org.eventb.core.predicate="c_level_internal ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="4" org.eventb.core.label="typing_c_warn_internal" org.eventb.core.predicate="c_warn_internal ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="5" org.eventb.core.label="typing_c_level" org.eventb.core.predicate="c_level ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="6" org.eventb.core.label="typing_c_pumpOnCmd" org.eventb.core.predicate="c_pumpOnCmd ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="7" org.eventb.core.label="typing_c_warn" org.eventb.core.predicate="c_warn ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="8" org.eventb.core.label="typing_c_pumpOnReq" org.eventb.core.predicate="c_pumpOnReq ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.event name="9" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="c_level ≔ 100" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="c_pumpOnReq ≔ FALSE" org.eventb.core.label="act5"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="c_pumpOnCmd ≔ FALSE" org.eventb.core.label="act7"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="c_warn ≔ FALSE" org.eventb.core.label="act11"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="c_level_internal ≔ 100" org.eventb.core.label="act13"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="c_pumpOnReq_internal ≔ FALSE" org.eventb.core.label="act14"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="c_warn_internal ≔ FALSE" org.eventb.core.label="act15"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="c_pumpOnCmd_internal ≔ FALSE" org.eventb.core.label="act16"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="commit ≔ FALSE" org.eventb.core.label="act17"/>
+</org.eventb.core.event>
+<org.eventb.core.event name=":" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="getLevel_eAPI">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="p1"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="typing_p1" org.eventb.core.predicate="p1 ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="c_level ≔ p1" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name=";" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="getPumpOnReq_eAPI">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="p2"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="typing_p2" org.eventb.core.predicate="p2 ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="c_pumpOnReq ≔ p2" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="=" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="internalCommsPre">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="commit = FALSE"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="c_level_internal ≔ c_level" org.eventb.core.label="act1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="c_pumpOnReq_internal ≔ c_pumpOnReq" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="filterWarn">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="c_level_internal ≤ MIN"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="c_pumpOnReq_internal = TRUE"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="c_warn_internal ≔ TRUE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="commit ≔ TRUE" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="?" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="filterOK">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="c_level_internal &gt; MIN"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="c_pumpOnReq_internal = TRUE"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="c_pumpOnCmd_internal ≔ TRUE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="commit ≔ TRUE" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="@" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="internalCommsPost">
+<org.eventb.core.action name="'" org.eventb.core.assignment="c_warn ≔ c_warn_internal" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="c_pumpOnCmd ≔ c_pumpOnCmd_internal" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="A" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="setPumpOnCmd_eAPI">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="p3"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="typing_p3" org.eventb.core.predicate="p3 ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="p3 = c_pumpOnCmd"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="B" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="setWarn_eAPI">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="p4"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="typing_p4" org.eventb.core.predicate="p4 ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="p4 = c_warn"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

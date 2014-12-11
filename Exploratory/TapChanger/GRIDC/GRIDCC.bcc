@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="HORIZON∈235 ‥ 245 ⇸ (1 ‥ 3 → 235 ‥ 245)" org.eventb.core.source="/GRIDC/GRIDCC.buc|org.eventb.core.contextFile#GRIDCC|org.eventb.core.axiom#_G0jAAdA6EeOa9czDEdPT3g" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="HORIZON={235 ↦ {1 ↦ 238,2 ↦ 236,3 ↦ 235},236 ↦ {1 ↦ 239,2 ↦ 237,3 ↦ 235},237 ↦ {1 ↦ 239,2 ↦ 238,3 ↦ 236},238 ↦ {1 ↦ 240,2 ↦ 239,3 ↦ 236},239 ↦ {1 ↦ 241,2 ↦ 240,3 ↦ 237},240 ↦ {1 ↦ 242,2 ↦ 240,3 ↦ 237},241 ↦ {1 ↦ 242,2 ↦ 241,3 ↦ 238},242 ↦ {1 ↦ 243,2 ↦ 243,3 ↦ 238},243 ↦ {1 ↦ 244,2 ↦ 243,3 ↦ 240},244 ↦ {1 ↦ 244,2 ↦ 244,3 ↦ 241},245 ↦ {1 ↦ 245,2 ↦ 244,3 ↦ 242}}" org.eventb.core.source="/GRIDC/GRIDCC.buc|org.eventb.core.contextFile#GRIDCC|org.eventb.core.axiom#_G0jnENA6EeOa9czDEdPT3g" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="HORIZON" org.eventb.core.source="/GRIDC/GRIDCC.buc|org.eventb.core.contextFile#GRIDCC|org.eventb.core.constant#_G0jAANA6EeOa9czDEdPT3g" org.eventb.core.type="ℙ(ℤ×ℙ(ℤ×ℤ))"/>
+</org.eventb.core.scContextFile>

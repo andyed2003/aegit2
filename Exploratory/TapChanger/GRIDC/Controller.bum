@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile ch.ethz.eventb.decomposition.decomposed="true" org.eventb.core.configuration="ch.ethz.eventb.decomposition.mchBase;org.eventb.codegen.ui.cgConfig" org.eventb.core.generated="true" version="5">
+<org.eventb.core.seesContext name="O" org.eventb.core.target="GRIDCC"/>
+<org.eventb.core.variable name="'" org.eventb.core.identifier="v"/>
+<org.eventb.core.variable name="(" org.eventb.core.identifier="tappos"/>
+<org.eventb.core.variable name=")" org.eventb.core.identifier="predictedv"/>
+<org.eventb.core.variable name="*" org.eventb.core.identifier="Istep"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="ControllerActive"/>
+<org.eventb.core.variable name="," org.eventb.core.identifier="CRetrycount"/>
+<org.eventb.core.variable name="-" org.eventb.core.identifier="Cstep"/>
+<org.eventb.core.variable name="." org.eventb.core.identifier="CFstep"/>
+<org.eventb.core.variable name="/" org.eventb.core.identifier="safemode"/>
+<org.eventb.core.invariant name="0" org.eventb.core.label="typing_v" org.eventb.core.predicate="v ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="1" org.eventb.core.label="typing_ControllerActive" org.eventb.core.predicate="ControllerActive ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="2" org.eventb.core.label="typing_tappos" org.eventb.core.predicate="tappos ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="3" org.eventb.core.label="typing_Istep" org.eventb.core.predicate="Istep ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="4" org.eventb.core.label="typing_Cstep" org.eventb.core.predicate="Cstep ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="5" org.eventb.core.label="typing_CFstep" org.eventb.core.predicate="CFstep ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="6" org.eventb.core.label="typing_predictedv" org.eventb.core.predicate="predictedv ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="7" org.eventb.core.label="typing_safemode" org.eventb.core.predicate="safemode ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="8" org.eventb.core.label="typing_CRetrycount" org.eventb.core.predicate="CRetrycount ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.event name="9" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="v ≔ 240" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="tappos ≔ 20" org.eventb.core.label="act2"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="predictedv ≔ 240" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="Istep ≔ 0" org.eventb.core.label="act6"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="ControllerActive ≔ FALSE" org.eventb.core.label="act10"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="CRetrycount ≔ 0" org.eventb.core.label="act13"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="Cstep ≔ 0" org.eventb.core.label="act18"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="CFstep ≔ 0" org.eventb.core.label="act21"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="safemode ≔ FALSE" org.eventb.core.label="act30"/>
+</org.eventb.core.event>
+<org.eventb.core.event name=":" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerEvaluate">
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="Cstep = 0"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="Cstep ≔ 1" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name=";" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerInitiateTapChangerComms">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd2" org.eventb.core.predicate="Istep = 0"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd5" org.eventb.core.predicate="Cstep = 1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="Istep ≔ 1" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="CRetrycount ≔ 3" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="=" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerRetryTapChangerComms">
+<org.eventb.core.guard name=")" org.eventb.core.label="grd5" org.eventb.core.predicate="Istep = 0"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd6" org.eventb.core.predicate="CRetrycount &gt; 0"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd7" org.eventb.core.predicate="Cstep = 1"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="Istep ≔ 1" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="CRetrycount ≔  CRetrycount − 1" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerCompleteTapChangerComms">
+<org.eventb.core.guard name=")" org.eventb.core.label="grd4" org.eventb.core.predicate="ControllerActive = FALSE"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd5" org.eventb.core.predicate="Istep = 0"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd6" org.eventb.core.predicate="Cstep = 1"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="ControllerActive ≔ TRUE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="Istep ≔ 1" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="?" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerCompleteTapChangerCommsFail">
+<org.eventb.core.guard name=")" org.eventb.core.label="grd4" org.eventb.core.predicate="ControllerActive = FALSE"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd5" org.eventb.core.predicate="Istep = 0"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd6" org.eventb.core.predicate="CRetrycount = 0"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd7" org.eventb.core.predicate="Cstep = 1"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="Istep ≔ 1" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="@" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerReadVoltage">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="pv"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="pobservablechange"/>
+<org.eventb.core.guard name="2" org.eventb.core.label="typing_pobservablechange" org.eventb.core.predicate="pobservablechange ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="3" org.eventb.core.label="typing_pv" org.eventb.core.predicate="pv ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="pv ∈ 235 ‥ 245"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="(tappos ∈ 23 ‥ 30 ∧ pobservablechange ∈ 0 ‥ 2) ∨&#10;            (tappos ∈ 10 ‥ 17 ∧ pobservablechange ∈ −2 ‥ 0) ∨&#10;            (tappos ∈ 18 ‥ 22 ∧ pobservablechange ∈ −2 ‥ 2)"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="pv = v + pobservablechange"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd4" org.eventb.core.predicate="ControllerActive = TRUE"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd5" org.eventb.core.predicate="Cstep = 1"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd6" org.eventb.core.predicate="CFstep = 0"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="v ≔ pv" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="1" org.eventb.core.assignment="CFstep ≔ 1" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="A" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerAdjustTapPositionUp">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="ptp"/>
+<org.eventb.core.guard name="7" org.eventb.core.label="typing_ptp" org.eventb.core.predicate="ptp ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="ptp ∈ 1 ‥ 10"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="tappos + ptp ≥ 10"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd3" org.eventb.core.predicate="tappos + ptp ≤ 30"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd4" org.eventb.core.predicate="ControllerActive = TRUE"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd33" org.eventb.core.predicate="Istep = 0"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd5" org.eventb.core.predicate="Cstep = 1"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd6" org.eventb.core.predicate="CFstep = 1"/>
+<org.eventb.core.action name="4" org.eventb.core.assignment="tappos ≔ tappos + ptp" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="5" org.eventb.core.assignment="safemode ≔ FALSE" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="6" org.eventb.core.assignment="CFstep ≔ 2" org.eventb.core.label="act5"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="B" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerAdjustTapPositionDown">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="ptp"/>
+<org.eventb.core.guard name="6" org.eventb.core.label="typing_ptp" org.eventb.core.predicate="ptp ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="ptp ∈ −10 ‥ −1"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="tappos + ptp ≥ 10"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd3" org.eventb.core.predicate="ControllerActive = TRUE"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd33" org.eventb.core.predicate="Istep = 0"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd4" org.eventb.core.predicate="Cstep = 1"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd5" org.eventb.core.predicate="CFstep = 1"/>
+<org.eventb.core.action name="3" org.eventb.core.assignment="tappos ≔ tappos + ptp" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="4" org.eventb.core.assignment="safemode ≔ FALSE" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="5" org.eventb.core.assignment="CFstep ≔ 2" org.eventb.core.label="act5"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="C" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerDoNotAdjustTapPositionOnCount">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="ptp"/>
+<org.eventb.core.guard name="1" org.eventb.core.label="typing_ptp" org.eventb.core.predicate="ptp ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd0" org.eventb.core.predicate="ptp = 0"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd33" org.eventb.core.predicate="Istep = 0"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="Cstep = 1"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="CFstep = 1"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="ControllerActive = TRUE"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="tappos ≔ tappos + ptp" org.eventb.core.label="act0"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="CFstep ≔ 2" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="D" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerDoNotAdjustTapPositionOnLowVoltage">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="ptp"/>
+<org.eventb.core.guard name="2" org.eventb.core.label="typing_ptp" org.eventb.core.predicate="ptp ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd0" org.eventb.core.predicate="ptp = 0"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd33" org.eventb.core.predicate="Istep = 0"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="Cstep = 1"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="CFstep = 1"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="ControllerActive = TRUE"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="tappos ≔ tappos + ptp" org.eventb.core.label="act0"/>
+<org.eventb.core.action name="1" org.eventb.core.assignment="CFstep ≔ 2" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="E" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerDoNotAdjustTapPositionOnHighVoltage">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="ptp"/>
+<org.eventb.core.guard name="2" org.eventb.core.label="typing_ptp" org.eventb.core.predicate="ptp ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd0" org.eventb.core.predicate="ptp = 0"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd33" org.eventb.core.predicate="Istep = 0"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="Cstep = 1"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="CFstep = 1"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="ControllerActive = TRUE"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="tappos ≔ tappos + ptp" org.eventb.core.label="act0"/>
+<org.eventb.core.action name="1" org.eventb.core.assignment="CFstep ≔ 2" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="F" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerMovetoSafeModeLowVoltage">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="ptp"/>
+<org.eventb.core.guard name="4" org.eventb.core.label="typing_ptp" org.eventb.core.predicate="ptp ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd0" org.eventb.core.predicate="ptp = 0"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd33" org.eventb.core.predicate="Istep = 0"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="Cstep = 1"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="CFstep = 1"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="ControllerActive = TRUE"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd6" org.eventb.core.predicate="tappos = 30"/>
+<org.eventb.core.action name="1" org.eventb.core.assignment="tappos ≔ tappos + ptp" org.eventb.core.label="act0"/>
+<org.eventb.core.action name="2" org.eventb.core.assignment="safemode ≔ TRUE" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="3" org.eventb.core.assignment="CFstep ≔ 2" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="G" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerMovetoSafeModeHighVoltage">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="ptp"/>
+<org.eventb.core.guard name="4" org.eventb.core.label="typing_ptp" org.eventb.core.predicate="ptp ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd0" org.eventb.core.predicate="ptp = 0"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd33" org.eventb.core.predicate="Istep = 0"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="Cstep = 1"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="CFstep = 1"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="ControllerActive = TRUE"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd6" org.eventb.core.predicate="tappos = 10"/>
+<org.eventb.core.action name="1" org.eventb.core.assignment="tappos ≔ tappos + ptp" org.eventb.core.label="act0"/>
+<org.eventb.core.action name="2" org.eventb.core.assignment="safemode ≔ TRUE" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="3" org.eventb.core.assignment="CFstep ≔ 2" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="H" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerWritePosition">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="tappos_param"/>
+<org.eventb.core.guard name="1" org.eventb.core.label="typing_tappos_param" org.eventb.core.predicate="tappos_param ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="Istep = 0"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="ControllerActive = TRUE"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd6" org.eventb.core.predicate="Cstep = 1"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd8" org.eventb.core.predicate="CFstep = 3"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd9" org.eventb.core.predicate="tappos = tappos_param"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="Istep ≔ 1" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="I" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerWriteVoltage">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="v_param"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="typing_v_param" org.eventb.core.predicate="v_param ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="Cstep = 1"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="CFstep = 2"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd3" org.eventb.core.predicate="ControllerActive = TRUE"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd4" org.eventb.core.predicate="v_param = v"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="CFstep ≔ 3" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="J" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerWait">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="Istep = 1"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="Cstep = 1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="Istep ≔ 0" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="Cstep ≔ 0" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="CFstep ≔ 0" org.eventb.core.label="act5"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PredictorReadVoltage">
+<org.eventb.core.guard name="*" org.eventb.core.label="grd3" org.eventb.core.predicate="ControllerActive = TRUE"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="L" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PredictorPredictVoltageChange">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="ptrajectory"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="pfirststep"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="pload"/>
+<org.eventb.core.guard name="3" org.eventb.core.label="typing_pload" org.eventb.core.predicate="pload ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="4" org.eventb.core.label="typing_ptrajectory" org.eventb.core.predicate="ptrajectory ∈ ℙ(ℤ × ℤ)" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="5" org.eventb.core.label="typing_pfirststep" org.eventb.core.predicate="pfirststep ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="pfirststep ∈ ℕ"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="pload ∈ 1 ‥ 3"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd6" org.eventb.core.predicate="pfirststep = ptrajectory(pload)"/>
+<org.eventb.core.guard name="1" org.eventb.core.label="grd8" org.eventb.core.predicate="ControllerActive = TRUE"/>
+<org.eventb.core.action name="2" org.eventb.core.assignment="predictedv ≔ pfirststep" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="M" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PredictorInactive">
+<org.eventb.core.guard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="ControllerActive = FALSE"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="N" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PredictorWriteVoltage">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="predictedv_param"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="typing_predictedv_param" org.eventb.core.predicate="predictedv_param ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd3" org.eventb.core.predicate="predictedv_param = predictedv"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ch.ethz.eventb.decomposition.core.dcpFile org.eventb.core.configuration="ch.ethz.eventb.decomposition.core.dcmp">
+<ch.ethz.eventb.decomposition.core.configuration ch.ethz.eventb.decomposition.core.decomposeContext="NO_DECOMPOSITION" ch.ethz.eventb.decomposition.core.newProject="false" ch.ethz.eventb.decomposition.core.style="Shared events (B-style)" name="internal_configuration1"/>
+<ch.ethz.eventb.decomposition.core.component ch.ethz.eventb.decomposition.core.target="m2" name="internal_component1"/>
+<ch.ethz.eventb.decomposition.core.subComponent name="internal_sub-component1" org.eventb.core.label="Controller">
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="c_level" name="internal_elements1"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="c_pumpOnReq" name="internal_elements2"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="c_pumpOnCmd" name="internal_elements3"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="c_warn" name="internal_elements4"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="c_level_internal" name="internal_elements5"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="c_pumpOnReq_internal" name="internal_elements6"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="c_pumpOnCmd_internal" name="internal_elements7"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="c_warn_internal" name="internal_elements8"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="commit" name="internal_elements9"/>
+</ch.ethz.eventb.decomposition.core.subComponent>
+<ch.ethz.eventb.decomposition.core.subComponent name="internal_sub-component2" org.eventb.core.label="Environment">
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="e_level" name="internal_elements1"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="e_pumpOnReq" name="internal_elements2"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="e_pumpOnCmd" name="internal_elements3"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="e_warn" name="internal_elements4"/>
+</ch.ethz.eventb.decomposition.core.subComponent>
+</ch.ethz.eventb.decomposition.core.dcpFile>

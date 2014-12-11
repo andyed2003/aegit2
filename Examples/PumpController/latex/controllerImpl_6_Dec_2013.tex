@@ -1,0 +1,144 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage[top=3cm, bottom=2.5cm, left=3cm, right=2.5cm] {geometry}
+\usepackage {bsymb,b2latex}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr,lastpage,color}
+\lhead{\rm An Event-B Specification of controllerImpl}
+\rhead {\rm Page \thepage~of \pageref{LastPage}}
+\lfoot{}\cfoot{}\rfoot{}
+\pagestyle{fancy}
+%---------------------------------------------------------
+\begin{document}
+\thispagestyle{empty}
+\begin{description}
+\BTitle{controllerImpl}{6Dec2013}{05:36:51 PM}
+\MACHINE{controllerImpl}
+\REFINES{controller}
+\SEES{ctx}
+\VARIABLES
+	\begin{description}
+		\Item{ c\_level }
+		\Item{ c\_pumpOnReq }
+		\Item{ c\_pumpOnCmd }
+		\Item{ c\_warn }
+		\Item{ c\_level\_internal }
+		\Item{ c\_pumpOnReq\_internal }
+	\end{description}
+\INVARIANTS
+	\begin{description}
+		\nItem{ typing\_c\_pumpOnReq\_internal }{ c\_pumpOnReq\_internal \in  BOOL }
+		\nItem{ typing\_c\_level\_internal }{ c\_level\_internal \in  \intg  }
+		\nItem{ typing\_c\_level }{ c\_level \in  \intg  }
+		\nItem{ typing\_c\_pumpOnCmd }{ c\_pumpOnCmd \in  BOOL }
+		\nItem{ typing\_c\_warn }{ c\_warn \in  BOOL }
+		\nItem{ typing\_c\_pumpOnReq }{ c\_pumpOnReq \in  BOOL }
+		\nItem{ m1\_inv1 }{ c\_level\_internal \leq  MIN \land  c\_pumpOnReq\_internal = TRUE \limp  c\_warn = TRUE }
+		\nItem{ m1\_inv2 }{ c\_level\_internal >  MIN \land  c\_pumpOnReq\_internal = TRUE \limp  c\_pumpOnCmd = TRUE }
+	\end{description}
+\EVENTS
+	\INITIALISATION
+		\begin{description}
+		\BeginAct
+			\begin{description}
+			\nItem{ act1 }{ c\_level :=  100 }
+			\nItem{ act5 }{ c\_pumpOnReq :=  FALSE }
+			\nItem{ act7 }{ c\_pumpOnCmd :=  FALSE }
+			\nItem{ act11 }{ c\_warn :=  FALSE }
+			\nItem{ act13 }{ c\_level\_internal :=  100 }
+			\nItem{ act14 }{ c\_pumpOnReq\_internal :=  FALSE }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {fmiGetBoolean\_c}
+	\REF {fmiGetBoolean\_c}
+		\begin{description}
+		\AnyPrm
+			\begin{description}
+			\Item{p }
+			\end{description}
+		\WhereGrd
+			\begin{description}
+			\nItem{ typing\_p }{ p \in  BOOL }
+			\nItem{ grd1 }{ p = c\_pumpOnCmd }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\Item{ skip }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {fmiSetInteger\_c}
+	\REF {fmiSetInteger\_c}
+		\begin{description}
+		\AnyPrm
+			\begin{description}
+			\Item{p }
+			\end{description}
+		\WhereGrd
+			\begin{description}
+			\nItem{ typing\_p }{ p \in  \intg  }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItem{ act1 }{ c\_level :=  p }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {fmiSetBoolean\_c}
+	\REF {fmiSetBoolean\_c}
+		\begin{description}
+		\AnyPrm
+			\begin{description}
+			\Item{p }
+			\end{description}
+		\WhereGrd
+			\begin{description}
+			\nItem{ typing\_p }{ p \in  BOOL }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItem{ act1 }{ c\_pumpOnReq :=  p }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {filterOK}
+	\REF {filterOK}
+		\begin{description}
+		\WhenGrd
+			\begin{description}
+			\nItem{ grd1 }{ c\_level >  MIN }
+			\nItem{ grd2 }{ c\_pumpOnReq = TRUE }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItem{ act1 }{ c\_level\_internal :=  c\_level }
+			\nItem{ act2 }{ c\_pumpOnReq\_internal :=  TRUE }
+			\nItem{ act3 }{ c\_pumpOnCmd :=  TRUE }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {filterWarn}
+	\REF {filterWarn}
+		\begin{description}
+		\WhenGrd
+			\begin{description}
+			\nItem{ grd1 }{ c\_level \leq  MIN }
+			\nItem{ grd2 }{ c\_pumpOnReq = TRUE }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItem{ act1 }{ c\_warn :=  TRUE }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {doNothing}
+		\begin{description}
+		\BeginAct
+			\begin{description}
+			\Item{ skip }
+			\end{description}
+		\EndAct
+		\end{description}
+\END
+\end{description}
+\end{document}

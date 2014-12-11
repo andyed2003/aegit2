@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="ch.ethz.eventb.decomposition.mchBase;org.eventb.codegen.ui.cgConfig" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="AIBV_controller_1"/>
+<org.eventb.core.seesContext name="':" org.eventb.core.target="AIBV_temperature_context"/>
+<org.eventb.core.variable name="'" org.eventb.core.identifier="AIBV_state"/>
+<org.eventb.core.variable name="(" org.eventb.core.identifier="AIBV_action"/>
+<org.eventb.core.variable name=")" org.eventb.core.identifier="AIBV_amount"/>
+<org.eventb.core.variable name="*" org.eventb.core.identifier="AIBV_control_action_started"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="AIBV_action_needs_to_measure_position"/>
+<org.eventb.core.variable name="," org.eventb.core.identifier="AIBV_measured_position"/>
+<org.eventb.core.variable name="-" org.eventb.core.identifier="AIBV_position_measurement_to_check"/>
+<org.eventb.core.variable name="." org.eventb.core.identifier="AIBV_control_loop_finishing"/>
+<org.eventb.core.variable name="/" org.eventb.core.identifier="AIBV_position_error"/>
+<org.eventb.core.variable name="0" org.eventb.core.identifier="AIBV_believed_position"/>
+<org.eventb.core.variable name="1" org.eventb.core.identifier="AIBV_control_loop_started"/>
+<org.eventb.core.variable name="2" org.eventb.core.identifier="AIBV_expected_position"/>
+<org.eventb.core.variable name="3" org.eventb.core.identifier="AIBV_measuring_position"/>
+<org.eventb.core.variable name="4" org.eventb.core.identifier="AIBV_temperature"/>
+<org.eventb.core.variable name="5" org.eventb.core.identifier="AIBV_new_temperature_measurement"/>
+<org.eventb.core.variable name="6" org.eventb.core.identifier="AIBV_temperature_needs_checking"/>
+<org.eventb.core.variable name="7" org.eventb.core.identifier="AIBV_temperature_error"/>
+<org.eventb.core.variable name="8" org.eventb.core.identifier="AIBV_buffered_temperature"/>
+<org.eventb.core.variable name="9" org.eventb.core.identifier="AIBV_required_position"/>
+<org.eventb.core.variable name=":" org.eventb.core.identifier="AIBV_temperature_control_loop_started"/>
+<org.eventb.core.variable name=";" org.eventb.core.identifier="AIBV_have_done_a_temperature_control_loop"/>
+<org.eventb.core.event name="';" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.event name="'=" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AIBV_arm">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_arm"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AIBV_disarm">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_disarm"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'?" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AIBV_disarmed">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_disarmed"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'@" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AIBV_open_start">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_open_start"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AIBV_open_end">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_open_end"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'B" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AIBV_close_start">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_close_start"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'C" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AIBV_close_end">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_close_end"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'D" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AIBV_control_action_open">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_control_action_open"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'E" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AIBV_control_action_close_armed">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_control_action_close_armed"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'F" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AIBV_control_action_close_disarming">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_control_action_close_disarming"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'G" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AIBV_measure_position_start">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_measure_position_start"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'H" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AIBV_measure_position_end">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_measure_position_end"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'I" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AIBV_check_position_ok">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_check_position_ok"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'J" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AIBV_check_position_error">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_check_position_error"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'K" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AIBV_finish_control_loop">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_finish_control_loop"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'L" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AIBV_temperature_measurement">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_temperature_measurement"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'_" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_check_temperature_ok">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_check_temperature_ok"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="buffered_temperature"/>
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_temperature_needs_checking = TRUE"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="MIN_TEMP ≤ AIBV_buffered_temperature ∧ AIBV_buffered_temperature ≤ MAX_TEMP"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="buffered_temperature = AIBV_buffered_temperature"/>
+<org.eventb.core.guard name="," org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd4" org.eventb.core.predicate="MIN_TEMP ≤ buffered_temperature ∧ buffered_temperature ≤ MAX_TEMP"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="AIBV_temperature, AIBV_new_temperature_measurement, AIBV_temperature_error ≔ buffered_temperature, TRUE, FALSE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="AIBV_temperature_needs_checking ≔ FALSE" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'N" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AIBV_check_temperature_error">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_check_temperature_error"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'O" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_calculate_position_partial">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_calculate_position_partial"/>
+<org.eventb.core.parameter name="/" org.eventb.core.identifier="temperature"/>
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_state = ARMED"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_temperature_control_loop_started = FALSE"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="AIBV_new_temperature_measurement = TRUE"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd4" org.eventb.core.predicate="FULLY_OPEN_TEMP ≤ AIBV_temperature ∧ AIBV_temperature ≤ FULLY_CLOSED_TEMP"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="temperature = AIBV_temperature"/>
+<org.eventb.core.guard name="0" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd6" org.eventb.core.predicate="FULLY_OPEN_TEMP ≤ temperature ∧ temperature ≤ FULLY_CLOSED_TEMP"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="AIBV_required_position ≔ (AIBV_OPEN ∗ FULLY_CLOSED_TEMP − AIBV_CLOSED ∗ FULLY_OPEN_TEMP − (AIBV_OPEN − AIBV_CLOSED) ∗ temperature) ÷ (FULLY_CLOSED_TEMP − FULLY_OPEN_TEMP)" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="AIBV_new_temperature_measurement ≔ FALSE" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="AIBV_temperature_control_loop_started ≔ TRUE" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'P" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AIBV_calculate_position_open">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_calculate_position_open"/>
+<org.eventb.core.parameter name="/" org.eventb.core.identifier="temperature"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="temperature = AIBV_temperature"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd6" org.eventb.core.predicate="temperature &lt; FULLY_OPEN_TEMP"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'Q" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AIBV_calculate_position_closed">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_calculate_position_closed"/>
+<org.eventb.core.parameter name="/" org.eventb.core.identifier="temperature"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="temperature = AIBV_temperature"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd6" org.eventb.core.predicate="FULLY_CLOSED_TEMP &lt; temperature"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'R" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AIBV_temperature_control_loop_not_needed">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_temperature_control_loop_not_needed"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="'S" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AIBV_temperature_control_loop_abort">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_temperature_control_loop_abort"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/AtomicityDec3/mb.bpo|org.eventb.core.poFile#mb|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="a" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="b" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="used_a" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="x" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="used_b" org.eventb.core.predicate="a∈ℤ" org.eventb.core.source="/AtomicityDec3/ma.bum|org.eventb.core.machineFile#ma|org.eventb.core.invariant#="/>
+<org.eventb.core.poPredicate name="used_c" org.eventb.core.predicate="x∈ℤ" org.eventb.core.source="/AtomicityDec3/ma.bum|org.eventb.core.machineFile#ma|org.eventb.core.invariant#2"/>
+<org.eventb.core.poPredicate name="used_d" org.eventb.core.predicate="b∈ℤ" org.eventb.core.source="/AtomicityDec3/ma.bum|org.eventb.core.machineFile#ma|org.eventb.core.invariant#5"/>
+<org.eventb.core.poPredicate name="used_e" org.eventb.core.predicate="used_a∈ℤ" org.eventb.core.source="/AtomicityDec3/ma.bum|org.eventb.core.machineFile#ma|org.eventb.core.invariant#A"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTused_b" org.eventb.core.parentSet="/AtomicityDec3/mb.bpo|org.eventb.core.poFile#mb|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="x'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="b'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="used_a'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="a'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPused_b" org.eventb.core.parentSet="/AtomicityDec3/mb.bpo|org.eventb.core.poFile#mb|org.eventb.core.poPredicateSet#EVTIDENTused_b" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTused_c" org.eventb.core.parentSet="/AtomicityDec3/mb.bpo|org.eventb.core.poFile#mb|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="b'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPused_c" org.eventb.core.parentSet="/AtomicityDec3/mb.bpo|org.eventb.core.poFile#mb|org.eventb.core.poPredicateSet#EVTIDENTused_c" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTused_d" org.eventb.core.parentSet="/AtomicityDec3/mb.bpo|org.eventb.core.poFile#mb|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="used_a'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPused_d" org.eventb.core.parentSet="/AtomicityDec3/mb.bpo|org.eventb.core.poFile#mb|org.eventb.core.poPredicateSet#EVTIDENTused_d" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="fmiGetInteger/act1/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AtomicityDec3/mb.bpo|org.eventb.core.poFile#mb|org.eventb.core.poPredicateSet#EVTALLHYPused_e"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="p=b" org.eventb.core.source="/AtomicityDec3/ma.bum|org.eventb.core.machineFile#ma|org.eventb.core.event#0|org.eventb.core.action#'"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AtomicityDec3/ma.bum|org.eventb.core.machineFile#ma|org.eventb.core.event#0"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AtomicityDec3/ma.bum|org.eventb.core.machineFile#ma|org.eventb.core.event#0|org.eventb.core.action#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AtomicityDec3/mb.bum|org.eventb.core.machineFile#mb|org.eventb.core.event#D"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AtomicityDec3/mb.bpo|org.eventb.core.poFile#mb|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AtomicityDec3/mb.bpo|org.eventb.core.poFile#mb|org.eventb.core.poSequent#fmiGetInteger\/act1\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTused_e" org.eventb.core.parentSet="/AtomicityDec3/mb.bpo|org.eventb.core.poFile#mb|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="x'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPused_e" org.eventb.core.parentSet="/AtomicityDec3/mb.bpo|org.eventb.core.poFile#mb|org.eventb.core.poPredicateSet#EVTIDENTused_e" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p=b" org.eventb.core.source="/AtomicityDec3/mb.bum|org.eventb.core.machineFile#mb|org.eventb.core.event#D|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="fmiSetInteger/act1/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AtomicityDec3/mb.bpo|org.eventb.core.poFile#mb|org.eventb.core.poPredicateSet#EVTALLHYPused_f"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="p=x" org.eventb.core.source="/AtomicityDec3/ma.bum|org.eventb.core.machineFile#ma|org.eventb.core.event#3|org.eventb.core.action#'"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AtomicityDec3/ma.bum|org.eventb.core.machineFile#ma|org.eventb.core.event#3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AtomicityDec3/ma.bum|org.eventb.core.machineFile#ma|org.eventb.core.event#3|org.eventb.core.action#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AtomicityDec3/mb.bum|org.eventb.core.machineFile#mb|org.eventb.core.event#E"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AtomicityDec3/mb.bpo|org.eventb.core.poFile#mb|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AtomicityDec3/mb.bpo|org.eventb.core.poFile#mb|org.eventb.core.poSequent#fmiSetInteger\/act1\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTused_f" org.eventb.core.parentSet="/AtomicityDec3/mb.bpo|org.eventb.core.poFile#mb|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="a'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPused_f" org.eventb.core.parentSet="/AtomicityDec3/mb.bpo|org.eventb.core.poFile#mb|org.eventb.core.poPredicateSet#EVTIDENTused_f" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p=x" org.eventb.core.source="/AtomicityDec3/mb.bum|org.eventb.core.machineFile#mb|org.eventb.core.event#E|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/AtomicityDec3/mb.bpo|org.eventb.core.poFile#mb|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0"/>
+</org.eventb.core.poFile>

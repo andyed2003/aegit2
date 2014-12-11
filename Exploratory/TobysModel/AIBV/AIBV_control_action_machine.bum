@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="AIBV_position_machine"/>
+<org.eventb.core.seesContext name="." org.eventb.core.target="AIBV_controller_context"/>
+<org.eventb.core.variable name="," org.eventb.core.identifier="AIBV_state"/>
+<org.eventb.core.variable name="4" org.eventb.core.identifier="AIBV_position"/>
+<org.eventb.core.event name="5" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="AIBV_action ≔ NOTHING" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="AIBV_amount ≔ 0" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="6" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AIBV_arm">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_arm"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="7" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AIBV_disarm">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_disarm"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_action = NOTHING"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="G" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AIBV_disarmed">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_disarmed"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_action = NOTHING"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="8" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AIBV_open">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_open"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_action = OPEN"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="AIBV_action, AIBV_amount ≔ NOTHING, 0" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="9" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AIBV_close">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_close"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_action = CLOSE"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="AIBV_action, AIBV_amount ≔ NOTHING, 0" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name=":" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_control_action">
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_state ≠ DISARMED"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_action = NOTHING"/>
+<org.eventb.core.action name="'" org.eventb.core.assignment="AIBV_action, AIBV_amount :∣ ((AIBV_state = ARMED ∧ AIBV_action' = OPEN) ∨ AIBV_action' = CLOSE) ∧ 0 &lt; AIBV_amount'" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name=";" org.eventb.core.identifier="AIBV_action"/>
+<org.eventb.core.invariant name="=" org.eventb.core.label="inv1" org.eventb.core.predicate="AIBV_action ∈ AIBV_ACTIONS"/>
+<org.eventb.core.variable name="&gt;" org.eventb.core.identifier="AIBV_amount"/>
+<org.eventb.core.invariant name="E" org.eventb.core.label="inv2" org.eventb.core.predicate="AIBV_action = OPEN ⇒ AIBV_state = ARMED"/>
+<org.eventb.core.invariant name="?" org.eventb.core.label="inv3" org.eventb.core.predicate="AIBV_amount ∈ ℕ"/>
+<org.eventb.core.invariant name="@" org.eventb.core.label="inv4" org.eventb.core.predicate="0 ≤ AIBV_amount"/>
+<org.eventb.core.invariant name="F" org.eventb.core.label="inv5" org.eventb.core.predicate="AIBV_action ≠ NOTHING ⇔ AIBV_amount &gt; 0"/>
+</org.eventb.core.machineFile>

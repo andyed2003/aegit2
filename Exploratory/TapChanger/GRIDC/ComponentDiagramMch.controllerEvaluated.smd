@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:statemachines="http://soton.ac.uk/models/eventb/statemachines/2014" xmi:id="_9smtYAG4EeSnMp996DaeuA" type="Statemachines" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_9tW7UAG4EeSnMp996DaeuA" type="2006">
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_9tW7UQG4EeSnMp996DaeuA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_9tW7UgG4EeSnMp996DaeuA" fontName="Ubuntu"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_9tW7UwG4EeSnMp996DaeuA"/>
+    <element xmi:type="statemachines:Initial" href="ComponentDiagramMch.bum#http://soton.ac.uk/models/eventb/statemachines/2014::Initial::ComponentDiagramMch.Component1.Controller.cprsm._3xBfwAG4EeSnMp996DaeuA"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9tW7VAG4EeSnMp996DaeuA" x="170" y="185"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_CizAQAG5EeSnMp996DaeuA" type="2008">
+    <children xmi:type="notation:DecorationNode" xmi:id="_CizARAG5EeSnMp996DaeuA" type="5009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_CiznUAG5EeSnMp996DaeuA" type="7012">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_CiznUQG5EeSnMp996DaeuA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_CiznUgG5EeSnMp996DaeuA"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_CiznUwG5EeSnMp996DaeuA" type="7013">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_CiznVAG5EeSnMp996DaeuA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_CiznVQG5EeSnMp996DaeuA"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_CizAQQG5EeSnMp996DaeuA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_CizAQgG5EeSnMp996DaeuA" fontName="Ubuntu"/>
+    <element xmi:type="statemachines:State" href="ComponentDiagramMch.bum#http://soton.ac.uk/models/eventb/statemachines/2014::State::ComponentDiagramMch.Component1.Controller.cprsm.ControllerInitial"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CizAQwG5EeSnMp996DaeuA" x="270" y="170"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_9smtYQG4EeSnMp996DaeuA"/>
+  <element xmi:type="statemachines:Statemachine" href="ComponentDiagramMch.bum#http://soton.ac.uk/models/eventb/statemachines/2014::Statemachine::ComponentDiagramMch.Component1.Controller.cprsm"/>
+  <edges xmi:type="notation:Edge" xmi:id="_ENoxcAG5EeSnMp996DaeuA" type="4001" source="_9tW7UAG4EeSnMp996DaeuA" target="_CizAQAG5EeSnMp996DaeuA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_ENpYgwG5EeSnMp996DaeuA" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ENp_kAG5EeSnMp996DaeuA" x="-8" y="-8"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_ENpYgAG5EeSnMp996DaeuA" routing="Rectilinear"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ENpYgQG5EeSnMp996DaeuA" fontName="Ubuntu"/>
+    <element xmi:type="statemachines:Transition" href="ComponentDiagramMch.bum#http://soton.ac.uk/models/eventb/statemachines/2014::Transition::ComponentDiagramMch.Component1.Controller.cprsm._ENsb0AG5EeSnMp996DaeuA"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ENpYggG5EeSnMp996DaeuA" points="[10, -1, -128, 4]$[90, -11, -48, -6]"/>
+  </edges>
+</notation:Diagram>

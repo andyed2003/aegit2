@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="ch.ethz.eventb.decomposition.mchBase;org.eventb.codegen.ui.cgConfig" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="Controller"/>
+<org.eventb.core.seesContext name="C" org.eventb.core.target="ctx"/>
+<org.eventb.tasking.persistence.MachineType name="M" org.eventb.tasking.persistence.machineTypeAttribute="AutoTask" org.eventb.tasking.persistence.priority="5">
+<org.eventb.tasking.persistence.TaskType name="'" org.eventb.tasking.persistence.periodicTaskTypeAttribute="0" org.eventb.tasking.persistence.simpleTaskTypeAttribute="NotRequired" org.eventb.tasking.persistence.taskTypeAttribute="Periodic"/>
+<org.eventb.tasking.persistence.TaskBody name="(" org.eventb.tasking.persistence.taskBodyAttribute=" getLevel_eAPI ;&#10; getPumpOnReq_eAPI ;&#10; internalCommsPre ;&#10; if filterWarn&#10; else filterOK ;&#10; internalCommsPost ;&#10; setPumpOnCmd_eAPI ;&#10; setWarn_eAPI"/>
+</org.eventb.tasking.persistence.MachineType>
+<org.eventb.core.variable name="'" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="c_level"/>
+<org.eventb.core.variable name="(" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="c_pumpOnReq"/>
+<org.eventb.core.variable name=")" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="c_pumpOnCmd"/>
+<org.eventb.core.variable name="*" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="c_warn"/>
+<org.eventb.core.variable name="+" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="c_level_internal"/>
+<org.eventb.core.variable name="," org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="c_pumpOnReq_internal"/>
+<org.eventb.core.variable name="-" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="c_pumpOnCmd_internal"/>
+<org.eventb.core.variable name="." org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="c_warn_internal"/>
+<org.eventb.core.variable name="/" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="commit"/>
+<org.eventb.core.invariant name="typing_commit" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_commit" org.eventb.core.predicate="commit ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="typing_c_pumpOnCmd_internal" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_c_pumpOnCmd_internal" org.eventb.core.predicate="c_pumpOnCmd_internal ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="typing_c_pumpOnReq_internal" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_c_pumpOnReq_internal" org.eventb.core.predicate="c_pumpOnReq_internal ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="typing_c_level_internal" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_c_level_internal" org.eventb.core.predicate="c_level_internal ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="typing_c_warn_internal" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_c_warn_internal" org.eventb.core.predicate="c_warn_internal ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="typing_c_level" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_c_level" org.eventb.core.predicate="c_level ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="typing_c_pumpOnCmd" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_c_pumpOnCmd" org.eventb.core.predicate="c_pumpOnCmd ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="typing_c_warn" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_c_warn" org.eventb.core.predicate="c_warn ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="typing_c_pumpOnReq" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_c_pumpOnReq" org.eventb.core.predicate="c_pumpOnReq ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.event name="D" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="c_level ≔ 100" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="c_pumpOnReq ≔ FALSE" org.eventb.core.label="act5"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="c_pumpOnCmd ≔ FALSE" org.eventb.core.label="act7"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="c_warn ≔ FALSE" org.eventb.core.label="act11"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="c_level_internal ≔ 100" org.eventb.core.label="act13"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="c_pumpOnReq_internal ≔ FALSE" org.eventb.core.label="act14"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="c_warn_internal ≔ FALSE" org.eventb.core.label="act15"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="c_pumpOnCmd_internal ≔ FALSE" org.eventb.core.label="act16"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="commit ≔ FALSE" org.eventb.core.label="act17"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="E" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="getLevel_eAPI">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="getLevel_eAPI"/>
+<org.eventb.core.parameter name="'" org.eventb.codegen.ui.parameterTypeAttribute="In" org.eventb.core.identifier="p1"/>
+<org.eventb.core.guard name="*" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_p1" org.eventb.core.predicate="p1 ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="c_level ≔ p1" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="F" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="getPumpOnReq_eAPI">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="getPumpOnReq_eAPI"/>
+<org.eventb.core.parameter name="'" org.eventb.codegen.ui.parameterTypeAttribute="In" org.eventb.core.identifier="p2"/>
+<org.eventb.core.guard name="*" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_p2" org.eventb.core.predicate="p2 ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="c_pumpOnReq ≔ p2" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="G" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="internalCommsPre">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="internalCommsPre"/>
+<org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="commit = FALSE"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="c_level_internal ≔ c_level" org.eventb.core.label="act1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="c_pumpOnReq_internal ≔ c_pumpOnReq" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="H" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="filterWarn">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="filterWarn"/>
+<org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="c_level_internal ≤ MIN"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="c_pumpOnReq_internal = TRUE"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="c_warn_internal ≔ TRUE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="commit ≔ TRUE" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="I" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="filterOK">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="filterOK"/>
+<org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="c_level_internal &gt; MIN"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="c_pumpOnReq_internal = TRUE"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="c_pumpOnCmd_internal ≔ TRUE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="commit ≔ TRUE" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="J" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="internalCommsPost">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="internalCommsPost"/>
+<org.eventb.core.action name="'" org.eventb.core.assignment="c_warn ≔ c_warn_internal" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="c_pumpOnCmd ≔ c_pumpOnCmd_internal" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="setPumpOnCmd_eAPI">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="setPumpOnCmd_eAPI"/>
+<org.eventb.core.parameter name="'" org.eventb.codegen.ui.parameterTypeAttribute="Out" org.eventb.core.identifier="p3"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_p3" org.eventb.core.predicate="p3 ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="p3 = c_pumpOnCmd"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="L" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="setWarn_eAPI">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="setWarn_eAPI"/>
+<org.eventb.core.parameter name="'" org.eventb.codegen.ui.parameterTypeAttribute="Out" org.eventb.core.identifier="p4"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_p4" org.eventb.core.predicate="p4 ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="p4 = c_warn"/>
+</org.eventb.core.event>
+<ac.soton.eventb.emf.core.extension.persistence.serialisedExtension ac.soton.eventb.emf.core.extension.persistence.eClassifier="EventBComponent" ac.soton.eventb.emf.core.extension.persistence.ePackageURI="http://soton.ac.uk/models/fmusim/components/1.0" ac.soton.eventb.emf.core.extension.persistence.extensionId="ac.soton.fmusim.components.eventb" ac.soton.eventb.emf.core.extension.persistence.serialised="&lt;components:EventBComponent xmi:version=&quot;2.0&quot; xmlns:xmi=&quot;http://www.omg.org/XMI&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:components=&quot;http://soton.ac.uk/models/fmusim/components/1.0&quot; reference=&quot;ac.soton.fmusim.components.eventb._tYd_QJPVEeOUTrmx2j5ogQ&quot; localGenerated=&quot;false&quot; extensionId=&quot;ac.soton.fmusim.components.eventb&quot; name=&quot;ControllerImpl&quot; stepPeriod=&quot;1.0&quot;&gt;&#10;  &lt;annotations source=&quot;http:///org/eventb/core/RodinInternalAnnotations&quot;&gt;&#10;    &lt;details key=&quot;name&quot; value=&quot;_BDZOsI_ZEeO8kbnRdv0uRw&quot;/&gt;&#10;  &lt;/annotations&gt;&#10;  &lt;inputs xsi:type=&quot;components:EventBPort&quot; name=&quot;c_level&quot; type=&quot;Integer&quot;&gt;&#10;    &lt;parameter href=&quot;platform:/resource/PumpControllerJava/EnvironmentImpl.bum#org.eventb.emf.core.machine.Parameter.p1&quot;/&gt;&#10;    &lt;variable href=&quot;platform:/resource/PumpControllerJava/ControllerImpl.bum#org.eventb.emf.core.machine.Variable.c_level&quot;/&gt;&#10;  &lt;/inputs&gt;&#10;  &lt;inputs xsi:type=&quot;components:EventBPort&quot; name=&quot;c_pumpOnReq&quot; type=&quot;Boolean&quot;&gt;&#10;    &lt;parameter href=&quot;platform:/resource/PumpControllerJava/EnvironmentImpl.bum#org.eventb.emf.core.machine.Parameter.p2&quot;/&gt;&#10;    &lt;variable href=&quot;platform:/resource/PumpControllerJava/ControllerImpl.bum#org.eventb.emf.core.machine.Variable.c_pumpOnReq&quot;/&gt;&#10;  &lt;/inputs&gt;&#10;  &lt;outputs xsi:type=&quot;components:EventBPort&quot; name=&quot;c_warn&quot; type=&quot;Boolean&quot; causality=&quot;Output&quot;&gt;&#10;    &lt;parameter href=&quot;platform:/resource/PumpControllerJava/EnvironmentImpl.bum#org.eventb.emf.core.machine.Parameter.p3&quot;/&gt;&#10;    &lt;variable href=&quot;platform:/resource/PumpControllerJava/ControllerImpl.bum#org.eventb.emf.core.machine.Variable.c_warn&quot;/&gt;&#10;  &lt;/outputs&gt;&#10;  &lt;outputs xsi:type=&quot;components:EventBPort&quot; name=&quot;c_pumpOnCmd&quot; type=&quot;Boolean&quot; causality=&quot;Output&quot;&gt;&#10;    &lt;parameter href=&quot;platform:/resource/PumpControllerJava/EnvironmentImpl.bum#org.eventb.emf.core.machine.Parameter.p4&quot;/&gt;&#10;    &lt;variable href=&quot;platform:/resource/PumpControllerJava/ControllerImpl.bum#org.eventb.emf.core.machine.Variable.c_pumpOnCmd&quot;/&gt;&#10;  &lt;/outputs&gt;&#10;  &lt;machine href=&quot;platform:/resource/PumpControllerJava/ControllerImpl.bum#org.eventb.emf.core.machine.Machine.ControllerImpl&quot;/&gt;&#10;  &lt;readInputEvents href=&quot;platform:/resource/PumpControllerJava/ControllerImpl.bum#org.eventb.emf.core.machine.Event.internalCommsPre&quot;/&gt;&#10;  &lt;waitEvents href=&quot;platform:/resource/PumpControllerJava/ControllerImpl.bum#org.eventb.emf.core.machine.Event.internalCommsPost&quot;/&gt;&#10;&lt;/components:EventBComponent&gt;&#10;" name="_BDZOsI_ZEeO8kbnRdv0uRw" org.eventb.core.generated="false"/>
+</org.eventb.core.machineFile>

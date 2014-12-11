@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile ch.ethz.eventb.decomposition.decomposed="true" org.eventb.core.configuration="ch.ethz.eventb.decomposition.mchBase;org.eventb.codegen.ui.cgConfig" org.eventb.core.generated="true" version="5">
+<org.eventb.core.variable name="'" org.eventb.core.identifier="a"/>
+<org.eventb.core.variable name="(" org.eventb.core.identifier="used_a"/>
+<org.eventb.core.invariant name=")" org.eventb.core.label="typing_used_a" org.eventb.core.predicate="used_a ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="*" org.eventb.core.label="typing_a" org.eventb.core.predicate="a ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.event name="+" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="a :∈ ℤ" org.eventb.core.label="act6"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="used_a ≔ 0" org.eventb.core.label="act8"/>
+</org.eventb.core.event>
+<org.eventb.core.event ch.ethz.eventb.decomposition.external="true" name="," org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="controller_fmiDoStep">
+<org.eventb.core.action name="'" org.eventb.core.assignment="used_a ≔ a ÷ 2" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="-" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="fmiSetInteger">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="p"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="a ≔ p" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="typing_p" org.eventb.core.predicate="p ∈ ℤ" org.eventb.core.theorem="true"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

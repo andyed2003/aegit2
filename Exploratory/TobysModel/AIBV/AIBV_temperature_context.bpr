@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="axm7/THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with MIN_TEMP=0" org.eventb.core.prGoal="p4" org.eventb.core.prHyps="p3">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with NOMINAL_TEMP=3" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="p2">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p6">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p7" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p8">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with MAX_TEMP=4" org.eventb.core.prGoal="p8" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with NOMINAL_TEMP=3" org.eventb.core.prGoal="p9" org.eventb.core.prHyps="p2">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p10" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p7" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="MAX_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="MIN_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="NOMINAL_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="3&lt;4"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="NOMINAL_TEMP&lt;MAX_TEMP"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="MIN_TEMP&lt;NOMINAL_TEMP"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="MIN_TEMP&lt;NOMINAL_TEMP∧NOMINAL_TEMP&lt;MAX_TEMP"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="NOMINAL_TEMP&lt;4"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="MAX_TEMP=4"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="0&lt;3"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="0&lt;NOMINAL_TEMP"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="NOMINAL_TEMP=3"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="MIN_TEMP=0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL3:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="axm12/THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with MIN_TEMP=0" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p3">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with FULLY_OPEN_TEMP=1" org.eventb.core.prGoal="p3" org.eventb.core.prHyps="p2">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p4" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p5" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="FULLY_OPEN_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="MIN_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="MIN_TEMP&lt;FULLY_OPEN_TEMP"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="0&lt;1"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="0&lt;FULLY_OPEN_TEMP"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="MIN_TEMP=0"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="FULLY_OPEN_TEMP=1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL3:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="axm13/THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with FULLY_OPEN_TEMP=1" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p2">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p3">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with FULLY_CLOSED_TEMP=2" org.eventb.core.prGoal="p3" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p4" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p5" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="FULLY_CLOSED_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="FULLY_OPEN_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="FULLY_OPEN_TEMP&lt;FULLY_CLOSED_TEMP"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="1&lt;FULLY_CLOSED_TEMP"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="1&lt;2"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="FULLY_CLOSED_TEMP=2"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="FULLY_OPEN_TEMP=1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL3:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="axm14/THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with NOMINAL_TEMP=3" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with FULLY_OPEN_TEMP=1" org.eventb.core.prHyps="p3">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p6"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with FULLY_CLOSED_TEMP=2" org.eventb.core.prGoal="p4" org.eventb.core.prHyps="p2">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p6" org.eventb.core.prInfHyps="p7"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p8" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="FULLY_CLOSED_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="FULLY_OPEN_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="NOMINAL_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="FULLY_OPEN_TEMP&lt;FULLY_CLOSED_TEMP"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="FULLY_CLOSED_TEMP&lt;3"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="1&lt;FULLY_CLOSED_TEMP"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="2&lt;3"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="FULLY_CLOSED_TEMP&lt;NOMINAL_TEMP"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="1&lt;2"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="NOMINAL_TEMP=3"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="FULLY_CLOSED_TEMP=2"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="FULLY_OPEN_TEMP=1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL3:1"/>
+</org.eventb.core.prProof>
+</org.eventb.core.prFile>

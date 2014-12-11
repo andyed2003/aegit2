@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="ch.ethz.eventb.decomposition.mchBase;org.eventb.codegen.ui.cgConfig" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="TEMPERATURE"/>
+<org.eventb.core.seesContext name="2" org.eventb.core.target="AIBV_temperature_context"/>
+<org.eventb.core.variable name="'" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="AIBV_temperature_needs_checking"/>
+<org.eventb.core.variable name="(" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="AIBV_temperature_error"/>
+<org.eventb.core.variable name=")" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="AIBV_buffered_temperature"/>
+<org.eventb.core.event name="3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="AIBV_temperature_needs_checking ≔ FALSE" org.eventb.core.label="act30"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="AIBV_temperature_error ≔ FALSE" org.eventb.core.label="act31"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="AIBV_buffered_temperature ≔ NOMINAL_TEMP" org.eventb.core.label="act32"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="4" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_temperature_measurement">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_temperature_measurement"/>
+<org.eventb.core.parameter name="'" org.eventb.codegen.ui.parameterTypeAttribute="In" org.eventb.core.identifier="temperature"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_temperature" org.eventb.core.predicate="temperature ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="AIBV_buffered_temperature ≔ temperature" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="AIBV_temperature_needs_checking ≔ TRUE" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="5" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_check_temperature_ok">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_check_temperature_ok"/>
+<org.eventb.core.parameter name="'" org.eventb.codegen.ui.parameterTypeAttribute="Out" org.eventb.core.identifier="buffered_temperature"/>
+<org.eventb.core.guard name="." org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_buffered_temperature" org.eventb.core.predicate="buffered_temperature ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_temperature_needs_checking = TRUE"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="MIN_TEMP ≤ AIBV_buffered_temperature ∧ AIBV_buffered_temperature ≤ MAX_TEMP"/>
+<org.eventb.core.guard name="*" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd3" org.eventb.core.predicate="buffered_temperature = AIBV_buffered_temperature"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="AIBV_temperature_error ≔ FALSE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="AIBV_temperature_needs_checking ≔ FALSE" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="6" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_check_temperature_error">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_check_temperature_error"/>
+<org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_temperature_needs_checking = TRUE"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="¬(MIN_TEMP ≤ AIBV_buffered_temperature ∧ AIBV_buffered_temperature ≤ MAX_TEMP)"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="AIBV_temperature_error ≔ TRUE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="AIBV_temperature_needs_checking ≔ FALSE" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.tasking.persistence.MachineType name="7" org.eventb.tasking.persistence.machineTypeAttribute="AutoTask" org.eventb.tasking.persistence.priority="5">
+<org.eventb.tasking.persistence.TaskType name="'" org.eventb.tasking.persistence.periodicTaskTypeAttribute="0" org.eventb.tasking.persistence.simpleTaskTypeAttribute="NotRequired" org.eventb.tasking.persistence.taskTypeAttribute="Periodic"/>
+<org.eventb.tasking.persistence.TaskBody name="(" org.eventb.tasking.persistence.taskBodyAttribute=" AIBV_temperature_measurement ;&#10; if AIBV_check_temperature_ok&#10; else AIBV_check_temperature_error"/>
+</org.eventb.tasking.persistence.MachineType>
+<org.eventb.core.invariant name="typing_AIBV_buffered_temperature" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_AIBV_buffered_temperature" org.eventb.core.predicate="AIBV_buffered_temperature ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="typing_AIBV_temperature_needs_checking" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_AIBV_temperature_needs_checking" org.eventb.core.predicate="AIBV_temperature_needs_checking ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="typing_AIBV_temperature_error" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_AIBV_temperature_error" org.eventb.core.predicate="AIBV_temperature_error ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="AIBV_controller_AIBV_temperature_machine_inv14" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="AIBV_controller_AIBV_temperature_machine_inv14" org.eventb.core.predicate="AIBV_temperature_needs_checking = FALSE ∧ AIBV_temperature_error = TRUE ⇒ ¬(MIN_TEMP ≤ AIBV_buffered_temperature ∧ AIBV_buffered_temperature ≤ MAX_TEMP)"/>
+</org.eventb.core.machineFile>

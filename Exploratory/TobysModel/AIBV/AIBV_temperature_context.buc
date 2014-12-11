@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.codegen.ui.taskingContextAttribute="Tasking" org.eventb.core.configuration="org.eventb.core.fwd;org.eventb.codegen.ui.cgConfig" version="3">
+<org.eventb.core.extendsContext name="'" org.eventb.core.target="AIBV_controller_context"/>
+<org.eventb.core.constant name="(" org.eventb.core.identifier="MIN_TEMP"/>
+<org.eventb.core.axiom name=")" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="axm1" org.eventb.core.predicate="MIN_TEMP ∈ ℤ"/>
+<org.eventb.core.axiom name="*" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="axm2" org.eventb.core.predicate="MIN_TEMP = 0"/>
+<org.eventb.core.constant name="+" org.eventb.core.identifier="MAX_TEMP"/>
+<org.eventb.core.axiom name="," org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="axm3" org.eventb.core.predicate="MAX_TEMP ∈ ℤ"/>
+<org.eventb.core.axiom name="-" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="axm4" org.eventb.core.predicate="MAX_TEMP = 4"/>
+<org.eventb.core.constant name="." org.eventb.core.identifier="NOMINAL_TEMP"/>
+<org.eventb.core.axiom name="/" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="axm5" org.eventb.core.predicate="NOMINAL_TEMP ∈ ℤ"/>
+<org.eventb.core.axiom name="0" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="axm6" org.eventb.core.predicate="NOMINAL_TEMP = 3"/>
+<org.eventb.core.axiom name="1" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="axm7" org.eventb.core.predicate="MIN_TEMP &lt; NOMINAL_TEMP ∧ NOMINAL_TEMP &lt; MAX_TEMP" org.eventb.core.theorem="true"/>
+<org.eventb.core.constant name="2" org.eventb.core.identifier="FULLY_OPEN_TEMP"/>
+<org.eventb.core.constant name="3" org.eventb.core.identifier="FULLY_CLOSED_TEMP"/>
+<org.eventb.core.axiom name="4" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="axm8" org.eventb.core.predicate="FULLY_OPEN_TEMP ∈ ℤ"/>
+<org.eventb.core.axiom name="5" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="axm9" org.eventb.core.predicate="FULLY_OPEN_TEMP = 1"/>
+<org.eventb.core.axiom name="6" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="axm10" org.eventb.core.predicate="FULLY_CLOSED_TEMP ∈ ℤ"/>
+<org.eventb.core.axiom name="7" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="axm11" org.eventb.core.predicate="FULLY_CLOSED_TEMP = 2"/>
+<org.eventb.core.axiom name="8" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="axm12" org.eventb.core.predicate="MIN_TEMP &lt; FULLY_OPEN_TEMP" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="9" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="axm13" org.eventb.core.predicate="FULLY_OPEN_TEMP &lt; FULLY_CLOSED_TEMP" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name=":" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="axm14" org.eventb.core.predicate="FULLY_CLOSED_TEMP &lt; NOMINAL_TEMP" org.eventb.core.theorem="true"/>
+</org.eventb.core.contextFile>

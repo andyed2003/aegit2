@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/AtomicityDec3/environImpl.bpo|org.eventb.core.poFile#environImpl|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="b" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="tmp" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poPredicate name="tmq" org.eventb.core.predicate="b∈ℤ" org.eventb.core.source="/AtomicityDec3/environ.bum|org.eventb.core.machineFile#environ|org.eventb.core.invariant#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTtmq" org.eventb.core.parentSet="/AtomicityDec3/environImpl.bpo|org.eventb.core.poFile#environImpl|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="b'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="tmp'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPtmq" org.eventb.core.parentSet="/AtomicityDec3/environImpl.bpo|org.eventb.core.poFile#environImpl|org.eventb.core.poPredicateSet#EVTIDENTtmq" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTtmr" org.eventb.core.parentSet="/AtomicityDec3/environImpl.bpo|org.eventb.core.poFile#environImpl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="b'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPtmr" org.eventb.core.parentSet="/AtomicityDec3/environImpl.bpo|org.eventb.core.poFile#environImpl|org.eventb.core.poPredicateSet#EVTIDENTtmr" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTtms" org.eventb.core.parentSet="/AtomicityDec3/environImpl.bpo|org.eventb.core.poFile#environImpl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPtms" org.eventb.core.parentSet="/AtomicityDec3/environImpl.bpo|org.eventb.core.poFile#environImpl|org.eventb.core.poPredicateSet#EVTIDENTtms" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈ℤ" org.eventb.core.source="/AtomicityDec3/environImpl.bum|org.eventb.core.machineFile#environImpl|org.eventb.core.event#*|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="p=b" org.eventb.core.source="/AtomicityDec3/environImpl.bum|org.eventb.core.machineFile#environImpl|org.eventb.core.event#*|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/AtomicityDec3/environImpl.bpo|org.eventb.core.poFile#environImpl|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="b∈ℤ" org.eventb.core.source="/AtomicityDec3/environImpl.bum|org.eventb.core.machineFile#environImpl|org.eventb.core.invariant#typing_b"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="tmp∈BOOL" org.eventb.core.source="/AtomicityDec3/environImpl.bum|org.eventb.core.machineFile#environImpl|org.eventb.core.invariant#typing_d"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ch.ethz.eventb.decomposition.core.dcpFile org.eventb.core.configuration="ch.ethz.eventb.decomposition.core.dcmp">
+<ch.ethz.eventb.decomposition.core.configuration ch.ethz.eventb.decomposition.core.decomposeContext="NO_DECOMPOSITION" ch.ethz.eventb.decomposition.core.newProject="false" ch.ethz.eventb.decomposition.core.style="Shared events (B-style)" name="internal_configuration1"/>
+<ch.ethz.eventb.decomposition.core.component ch.ethz.eventb.decomposition.core.target="ctrl1" name="internal_component1"/>
+<ch.ethz.eventb.decomposition.core.subComponent name="internal_sub-component1" org.eventb.core.label="controller">
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="c_Level" name="internal_elements1"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="c_pumpOn" name="internal_elements2"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="c_time" name="internal_elements3"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="controllerSM" name="internal_elements4"/>
+</ch.ethz.eventb.decomposition.core.subComponent>
+<ch.ethz.eventb.decomposition.core.subComponent name="internal_sub-component2" org.eventb.core.label="environment">
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="environSM" name="internal_elements1"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="fmi_Level" name="internal_elements2"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="fmi_PumpOn" name="internal_elements3"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="fmi_time" name="internal_elements4"/>
+</ch.ethz.eventb.decomposition.core.subComponent>
+</ch.ethz.eventb.decomposition.core.dcpFile>

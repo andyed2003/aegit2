@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.comment="Initial Communication Details" org.eventb.core.configuration="org.eventb.core.fwd;org.eventb.codegen.ui.cgConfig" version="5">
+<org.eventb.core.seesContext name="N" org.eventb.core.target="ctx"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="c_level ≔ 100" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="e_level ≔ 90" org.eventb.core.label="act6"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="c_pumpOnReq ≔ FALSE" org.eventb.core.label="act5"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="e_pumpOnReq ≔ FALSE" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="c_pumpOnCmd ≔ FALSE" org.eventb.core.label="act7"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="e_pumpOnCmd ≔ FALSE" org.eventb.core.label="act9"/>
+<org.eventb.core.action name="1" org.eventb.core.assignment="c_warn ≔ FALSE" org.eventb.core.label="act11"/>
+<org.eventb.core.action name="2" org.eventb.core.assignment="e_warn ≔ FALSE" org.eventb.core.label="act12"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="(" org.eventb.core.identifier="c_level"/>
+<org.eventb.core.variable name="2" org.eventb.core.identifier="e_level"/>
+<org.eventb.core.invariant name=")" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="inv1" org.eventb.core.predicate="c_level ∈ ℤ"/>
+<org.eventb.core.invariant name="3" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="inv6" org.eventb.core.predicate="e_level ∈ ℤ"/>
+<org.eventb.core.invariant name="1" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="inv5" org.eventb.core.predicate="c_pumpOnReq ∈ BOOL"/>
+<org.eventb.core.invariant name="/" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="inv4" org.eventb.core.predicate="e_pumpOnReq ∈ BOOL"/>
+<org.eventb.core.invariant name="5" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="inv7" org.eventb.core.predicate="c_pumpOnCmd ∈ BOOL"/>
+<org.eventb.core.invariant name="9" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="inv9" org.eventb.core.predicate="e_pumpOnCmd ∈ BOOL"/>
+<org.eventb.core.event name="?" org.eventb.core.comment="controller gets level from environ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="getLevel_eAPI">
+<org.eventb.core.action name="'" org.eventb.core.assignment="c_level ≔ e_level" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="&gt;" org.eventb.core.comment="controller gets pump on REQ (T/F)" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="getPumpOnReq_eAPI">
+<org.eventb.core.action name="'" org.eventb.core.assignment="c_pumpOnReq ≔ e_pumpOnReq" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="T" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="output">
+<org.eventb.core.action name="'" org.eventb.core.assignment="c_warn :∈ BOOL" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="c_pumpOnCmd :∈ BOOL" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="=" org.eventb.core.comment="controller send pump on CMD (T/F)" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="setPumpOnCmd_eAPI">
+<org.eventb.core.action name="'" org.eventb.core.assignment="e_pumpOnCmd ≔ c_pumpOnCmd" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="0" org.eventb.core.identifier="c_pumpOnReq"/>
+<org.eventb.core.variable name="." org.eventb.core.identifier="e_pumpOnReq"/>
+<org.eventb.core.variable name="4" org.eventb.core.identifier="c_pumpOnCmd"/>
+<org.eventb.core.variable name="8" org.eventb.core.identifier="e_pumpOnCmd"/>
+<org.eventb.core.variable name="E" org.eventb.core.identifier="c_warn"/>
+<org.eventb.core.invariant name="F" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="inv11" org.eventb.core.predicate="c_warn ∈ BOOL"/>
+<org.eventb.core.variable name="G" org.eventb.core.identifier="e_warn"/>
+<org.eventb.core.invariant name="H" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="inv12" org.eventb.core.predicate="e_warn ∈ BOOL"/>
+<org.eventb.core.event name="U" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="setWarn_eAPI">
+<org.eventb.core.action name="'" org.eventb.core.assignment="e_warn :∈ BOOL" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="V" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="write_ePorts">
+<org.eventb.core.action name="'" org.eventb.core.assignment="e_level :∈ ℤ" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="e_pumpOnReq :∈ BOOL" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

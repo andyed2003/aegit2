@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_STATES" org.eventb.core.type="ℙ(AIBV_STATES)"/>
+<org.eventb.core.poIdentifier name="ARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.poIdentifier name="DISARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.poIdentifier name="DISARMING" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.poPredicate name="AIBV_STATET" org.eventb.core.predicate="partition(AIBV_STATES,{ARMED},{DISARMING},{DISARMED})" org.eventb.core.source="/AIBV/AIBV_arm_disarm_context.buc|org.eventb.core.contextFile#AIBV_arm_disarm_context|org.eventb.core.axiom#+"/>
+<org.eventb.core.poIdentifier name="AIBV_CLOSED" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_OPEN" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_UNKNOWN" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="AIBV_UNKNOWO" org.eventb.core.predicate="AIBV_CLOSED∈ℤ" org.eventb.core.source="/AIBV/AIBV_position_context.buc|org.eventb.core.contextFile#AIBV_position_context|org.eventb.core.axiom#,"/>
+<org.eventb.core.poPredicate name="AIBV_UNKNOWP" org.eventb.core.predicate="AIBV_CLOSED=0" org.eventb.core.source="/AIBV/AIBV_position_context.buc|org.eventb.core.contextFile#AIBV_position_context|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="AIBV_UNKNOWQ" org.eventb.core.predicate="AIBV_OPEN∈ℤ" org.eventb.core.source="/AIBV/AIBV_position_context.buc|org.eventb.core.contextFile#AIBV_position_context|org.eventb.core.axiom#\/"/>
+<org.eventb.core.poPredicate name="AIBV_UNKNOWR" org.eventb.core.predicate="AIBV_OPEN=2" org.eventb.core.source="/AIBV/AIBV_position_context.buc|org.eventb.core.contextFile#AIBV_position_context|org.eventb.core.axiom#0"/>
+<org.eventb.core.poPredicate name="AIBV_UNKNOWS" org.eventb.core.predicate="AIBV_UNKNOWN∈ℤ" org.eventb.core.source="/AIBV/AIBV_position_context.buc|org.eventb.core.contextFile#AIBV_position_context|org.eventb.core.axiom#1"/>
+<org.eventb.core.poPredicate name="AIBV_UNKNOWT" org.eventb.core.predicate="AIBV_UNKNOWN=−1" org.eventb.core.source="/AIBV/AIBV_position_context.buc|org.eventb.core.contextFile#AIBV_position_context|org.eventb.core.axiom#2"/>
+<org.eventb.core.poPredicate name="AIBV_UNKNOWU" org.eventb.core.predicate="AIBV_UNKNOWN&lt;AIBV_CLOSED∧AIBV_CLOSED&lt;AIBV_OPEN" org.eventb.core.source="/AIBV/AIBV_position_context.buc|org.eventb.core.contextFile#AIBV_position_context|org.eventb.core.axiom#3"/>
+<org.eventb.core.poIdentifier name="AIBV_ACTIONS" org.eventb.core.type="ℙ(AIBV_ACTIONS)"/>
+<org.eventb.core.poIdentifier name="CLOSE" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.poIdentifier name="NOTHING" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.poIdentifier name="OPEN" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.poPredicate name="AIBV_UNKNOWV" org.eventb.core.predicate="partition(AIBV_ACTIONS,{OPEN},{CLOSE},{NOTHING})" org.eventb.core.source="/AIBV/AIBV_controller_context.buc|org.eventb.core.contextFile#AIBV_controller_context|org.eventb.core.axiom#+"/>
+<org.eventb.core.poIdentifier name="FULLY_CLOSED_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="FULLY_OPEN_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="MAX_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="MIN_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="NOMINAL_TEMP" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="axm7/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AIBV/AIBV_temperature_context.bpo|org.eventb.core.poFile#AIBV_temperature_context|org.eventb.core.poPredicateSet#HYPAIBV_controller_contexz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="MIN_TEMP&lt;NOMINAL_TEMP∧NOMINAL_TEMP&lt;MAX_TEMP" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#1"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/AIBV/AIBV_temperature_context.bpo|org.eventb.core.poFile#AIBV_temperature_context|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/AIBV/AIBV_temperature_context.bpo|org.eventb.core.poFile#AIBV_temperature_context|org.eventb.core.poPredicateSet#HYPAIBV_controller_contexz"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm12/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AIBV/AIBV_temperature_context.bpo|org.eventb.core.poFile#AIBV_temperature_context|org.eventb.core.poPredicateSet#HYPAIBV_controller_contey'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="MIN_TEMP&lt;FULLY_OPEN_TEMP" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#8"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/AIBV/AIBV_temperature_context.bpo|org.eventb.core.poFile#AIBV_temperature_context|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/AIBV/AIBV_temperature_context.bpo|org.eventb.core.poFile#AIBV_temperature_context|org.eventb.core.poPredicateSet#HYPAIBV_controller_contey'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm13/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AIBV/AIBV_temperature_context.bpo|org.eventb.core.poFile#AIBV_temperature_context|org.eventb.core.poPredicateSet#HYPAIBV_controller_contey("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="FULLY_OPEN_TEMP&lt;FULLY_CLOSED_TEMP" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#9"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#9"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/AIBV/AIBV_temperature_context.bpo|org.eventb.core.poFile#AIBV_temperature_context|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/AIBV/AIBV_temperature_context.bpo|org.eventb.core.poFile#AIBV_temperature_context|org.eventb.core.poPredicateSet#HYPAIBV_controller_contey("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm14/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AIBV/AIBV_temperature_context.bpo|org.eventb.core.poFile#AIBV_temperature_context|org.eventb.core.poPredicateSet#HYPAIBV_controller_contey)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="FULLY_CLOSED_TEMP&lt;NOMINAL_TEMP" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#:"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/AIBV/AIBV_temperature_context.bpo|org.eventb.core.poFile#AIBV_temperature_context|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/AIBV/AIBV_temperature_context.bpo|org.eventb.core.poFile#AIBV_temperature_context|org.eventb.core.poPredicateSet#HYPAIBV_controller_contey)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="HYPAIBV_controller_contexz" org.eventb.core.parentSet="/AIBV/AIBV_temperature_context.bpo|org.eventb.core.poFile#AIBV_temperature_context|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="MIN_TEMP∈ℤ" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="MIN_TEMP=0" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="MAX_TEMP∈ℤ" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#,"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="MAX_TEMP=4" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="NOMINAL_TEMP∈ℤ" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#\/"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="NOMINAL_TEMP=3" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#0"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPAIBV_controller_contey'" org.eventb.core.parentSet="/AIBV/AIBV_temperature_context.bpo|org.eventb.core.poFile#AIBV_temperature_context|org.eventb.core.poPredicateSet#HYPAIBV_controller_contexz" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="MIN_TEMP&lt;NOMINAL_TEMP∧NOMINAL_TEMP&lt;MAX_TEMP" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#1"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="FULLY_OPEN_TEMP∈ℤ" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#4"/>
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="FULLY_OPEN_TEMP=1" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#5"/>
+<org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="FULLY_CLOSED_TEMP∈ℤ" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#6"/>
+<org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="FULLY_CLOSED_TEMP=2" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#7"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPAIBV_controller_contey(" org.eventb.core.parentSet="/AIBV/AIBV_temperature_context.bpo|org.eventb.core.poFile#AIBV_temperature_context|org.eventb.core.poPredicateSet#HYPAIBV_controller_contey'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD11" org.eventb.core.predicate="MIN_TEMP&lt;FULLY_OPEN_TEMP" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#8"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPAIBV_controller_contey)" org.eventb.core.parentSet="/AIBV/AIBV_temperature_context.bpo|org.eventb.core.poFile#AIBV_temperature_context|org.eventb.core.poPredicateSet#HYPAIBV_controller_contey(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD12" org.eventb.core.predicate="FULLY_OPEN_TEMP&lt;FULLY_CLOSED_TEMP" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#9"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/AIBV/AIBV_temperature_context.bpo|org.eventb.core.poFile#AIBV_temperature_context|org.eventb.core.poPredicateSet#HYPAIBV_controller_contey)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD13" org.eventb.core.predicate="FULLY_CLOSED_TEMP&lt;NOMINAL_TEMP" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#:"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

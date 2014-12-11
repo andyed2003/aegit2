@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="ch.ethz.eventb.decomposition.mchBase;org.eventb.codegen.ui.cgConfig" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="Environment"/>
+<org.eventb.core.seesContext name="4" org.eventb.core.target="ctx"/>
+<org.eventb.tasking.persistence.MachineType name=":" org.eventb.tasking.persistence.machineTypeAttribute="Environ" org.eventb.tasking.persistence.priority="5">
+<org.eventb.tasking.persistence.TaskType name="'" org.eventb.tasking.persistence.periodicTaskTypeAttribute="0" org.eventb.tasking.persistence.simpleTaskTypeAttribute="NotRequired" org.eventb.tasking.persistence.taskTypeAttribute="Periodic"/>
+<org.eventb.tasking.persistence.TaskBody name="(" org.eventb.tasking.persistence.taskBodyAttribute=" if set_ePortValsMin&#10; else set_ePortValsNormal ;&#10; read_ePorts"/>
+</org.eventb.tasking.persistence.MachineType>
+<org.eventb.core.variable name="'" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="e_level"/>
+<org.eventb.core.variable name="(" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="e_pumpOnReq"/>
+<org.eventb.core.variable name=")" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="e_pumpOnCmd"/>
+<org.eventb.core.variable name="*" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="e_warn"/>
+<org.eventb.core.variable name="_Cl1ekI_pEeO90uPncl7G7A" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="init"/>
+<org.eventb.core.invariant name="typing_e_pumpOnCmd" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_e_pumpOnCmd" org.eventb.core.predicate="e_pumpOnCmd ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="typing_e_warn" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_e_warn" org.eventb.core.predicate="e_warn ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="typing_e_level" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_e_level" org.eventb.core.predicate="e_level ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="typing_e_pumpOnReq" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_e_pumpOnReq" org.eventb.core.predicate="e_pumpOnReq ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="_Cl3TwI_pEeO90uPncl7G7A" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="PCInvarinit" org.eventb.core.predicate="init ∈ BOOL"/>
+<org.eventb.core.event name="5" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="e_level ≔ 30" org.eventb.core.label="act6"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="e_pumpOnReq ≔ FALSE" org.eventb.core.label="act4"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="e_pumpOnCmd ≔ FALSE" org.eventb.core.label="act9"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="e_warn ≔ FALSE" org.eventb.core.label="act12"/>
+<org.eventb.core.action name="_Cl4h4I_pEeO90uPncl7G7A" org.eventb.core.assignment="init≔TRUE" org.eventb.core.generated="true" org.eventb.core.label="PCInitinit"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="6" org.eventb.core.comment="This component writes out the level, and pumpOn request" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="c_read">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_read"/>
+<org.eventb.core.parameter name="'" org.eventb.codegen.ui.parameterTypeAttribute="Out" org.eventb.core.identifier="p1"/>
+<org.eventb.core.parameter name="*" org.eventb.codegen.ui.parameterTypeAttribute="Out" org.eventb.core.identifier="p2"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_p1" org.eventb.core.predicate="p1 ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="p1 = e_level"/>
+<org.eventb.core.guard name="+" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="grd2" org.eventb.core.predicate="p2∈BOOL"/>
+<org.eventb.core.guard name="," org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd3" org.eventb.core.predicate="p2 = e_pumpOnReq"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="8" org.eventb.core.comment="This component reads in the controller pumpOnCmd and warning flag" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="c_write">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_write"/>
+<org.eventb.core.parameter name="'" org.eventb.codegen.ui.parameterTypeAttribute="In" org.eventb.core.identifier="p3"/>
+<org.eventb.core.parameter name="+" org.eventb.codegen.ui.parameterTypeAttribute="In" org.eventb.core.identifier="p4"/>
+<org.eventb.core.guard name="*" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_p3" org.eventb.core.predicate="p3 ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="," org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="grd1" org.eventb.core.predicate="p4 ∈ BOOL"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="e_pumpOnCmd ≔ p3" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="e_warn ≔ p4" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_Cl3TwI_pEeO90uPncl7G7C" org.eventb.core.comment="models a user requesting pumpOn if level falls to 20" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="set_ePortValsMin">
+<org.eventb.core.refinesEvent name=")" org.eventb.core.target="set_ePortVals"/>
+<org.eventb.core.guard name="*" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="e_level &lt; 20"/>
+<org.eventb.core.action name="'" org.eventb.core.assignment="e_level ≔ e_level − 1" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="e_pumpOnReq ≔ TRUE" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_uOt4sOcBEeOZHKo3a_fBeR" org.eventb.core.comment="models no user action above level 20" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="set_ePortValsNormal">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="set_ePortVals"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="e_level ≥ 20"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="e_level ≔ e_level − 7" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="e_pumpOnReq ≔ FALSE" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_Cl3TwI_pEeO90uPncl7G7D" org.eventb.core.comment="A dummy event to wait for" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="read_ePorts">
+<org.eventb.core.action name="'" org.eventb.core.assignment="e_level ≔ e_level" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<ac.soton.eventb.emf.core.extension.persistence.serialisedExtension ac.soton.eventb.emf.core.extension.persistence.eClassifier="EventBComponent" ac.soton.eventb.emf.core.extension.persistence.ePackageURI="http://soton.ac.uk/models/fmusim/components/1.0" ac.soton.eventb.emf.core.extension.persistence.extensionId="ac.soton.fmusim.components.eventb" ac.soton.eventb.emf.core.extension.persistence.serialised="&lt;components:EventBComponent xmi:version=&quot;2.0&quot; xmlns:xmi=&quot;http://www.omg.org/XMI&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:components=&quot;http://soton.ac.uk/models/fmusim/components/1.0&quot; reference=&quot;ac.soton.fmusim.components.eventb._I-1ccP3QEeO62Id-a_OtSA&quot; localGenerated=&quot;false&quot; extensionId=&quot;ac.soton.fmusim.components.eventb&quot; name=&quot;EnvironmentImplImpl&quot; stepPeriod=&quot;1.0&quot;&gt;&#10;  &lt;annotations source=&quot;http:///org/eventb/core/RodinInternalAnnotations&quot;&gt;&#10;    &lt;details key=&quot;name&quot; value=&quot;_BECH4I_ZEeO8kbnRdv0uRw&quot;/&gt;&#10;  &lt;/annotations&gt;&#10;  &lt;inputs xsi:type=&quot;components:EventBPort&quot; name=&quot;e_pumpOnCmd&quot; type=&quot;Boolean&quot;&gt;&#10;    &lt;parameter href=&quot;platform:/resource/PumpControllerFMU/EnvironmentImpl.bum#org.eventb.emf.core.machine.Parameter.p4&quot;/&gt;&#10;    &lt;variable href=&quot;platform:/resource/PumpControllerFMU/EnvironmentImpl.bum#org.eventb.emf.core.machine.Variable.e_pumpOnCmd&quot;/&gt;&#10;  &lt;/inputs&gt;&#10;  &lt;inputs xsi:type=&quot;components:EventBPort&quot; name=&quot;e_warn&quot; type=&quot;Boolean&quot;&gt;&#10;    &lt;parameter href=&quot;platform:/resource/PumpControllerFMU/EnvironmentImpl.bum#org.eventb.emf.core.machine.Parameter.p3&quot;/&gt;&#10;    &lt;variable href=&quot;platform:/resource/PumpControllerFMU/EnvironmentImpl.bum#org.eventb.emf.core.machine.Variable.e_warn&quot;/&gt;&#10;  &lt;/inputs&gt;&#10;  &lt;outputs xsi:type=&quot;components:EventBPort&quot; name=&quot;e_level&quot; type=&quot;Integer&quot; causality=&quot;Output&quot;&gt;&#10;    &lt;parameter href=&quot;platform:/resource/PumpControllerFMU/EnvironmentImpl.bum#org.eventb.emf.core.machine.Parameter.p1&quot;/&gt;&#10;    &lt;variable href=&quot;platform:/resource/PumpControllerFMU/EnvironmentImpl.bum#org.eventb.emf.core.machine.Variable.e_level&quot;/&gt;&#10;  &lt;/outputs&gt;&#10;  &lt;outputs xsi:type=&quot;components:EventBPort&quot; name=&quot;e_pumpOnReq&quot; type=&quot;Boolean&quot; causality=&quot;Output&quot;&gt;&#10;    &lt;parameter href=&quot;platform:/resource/PumpControllerFMU/EnvironmentImpl.bum#org.eventb.emf.core.machine.Parameter.p2&quot;/&gt;&#10;    &lt;variable href=&quot;platform:/resource/PumpControllerFMU/EnvironmentImpl.bum#org.eventb.emf.core.machine.Variable.e_pumpOnReq&quot;/&gt;&#10;  &lt;/outputs&gt;&#10;  &lt;machine href=&quot;platform:/resource/PumpControllerFMU/EnvironmentImpl.bum#org.eventb.emf.core.machine.Machine.EnvironmentImpl&quot;/&gt;&#10;  &lt;readInputEvents href=&quot;platform:/resource/PumpControllerFMU/EnvironmentImpl.bum#org.eventb.emf.core.machine.Event.read_ePorts&quot;/&gt;&#10;  &lt;waitEvents href=&quot;platform:/resource/PumpControllerFMU/EnvironmentImpl.bum#org.eventb.emf.core.machine.Event.read_ePorts&quot;/&gt;&#10;&lt;/components:EventBComponent&gt;&#10;" name="_BECH4I_ZEeO8kbnRdv0uRw" org.eventb.core.generated="false"/>
+</org.eventb.core.machineFile>

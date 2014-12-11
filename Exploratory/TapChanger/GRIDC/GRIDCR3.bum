@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1399636783782" org.eventb.texttools.text_representation="machine GRIDCR3 refines GRIDCR2&#10;&#10;variables v tappos predictedv CEvaluated TEvaluated Istep Tstep TCInit TCAcknowledgeInit ControllerActive TCCommsFailure TCCommsInitiated CRetrycount&#10;&#10;invariants&#10;  @inv1 CRetrycount ∈ 0 ‥ 3&#10;&#10;events&#10;  event INITIALISATION&#10;    then&#10;      @act1 v ≔ 240&#10;      @act2 tappos ≔ 20&#10;      @act3 predictedv ≔ 240&#10;      @act4 CEvaluated ≔ FALSE&#10;      @act5 TEvaluated ≔ FALSE&#10;      @act6 Istep ≔ 0&#10;      @act7 Tstep ≔ 0&#10;      @act8 TCInit ≔ FALSE&#10;      @act9 TCAcknowledgeInit ≔ FALSE&#10;      @act10 ControllerActive ≔ FALSE&#10;      @act11 TCCommsFailure ≔ FALSE&#10;      @act12 TCCommsInitiated ≔ FALSE&#10;      @act13 CRetrycount ≔ 0&#10;  end&#10;&#10;  event ControllerInitiateTapChangerComms refines ControllerInitiateTapChangerComms&#10;    where&#10;      @grd1 CEvaluated = FALSE&#10;      @grd2 Istep = 0&#10;      @grd3 ControllerActive = FALSE&#10;      @grd4 TCInit = FALSE&#10;    then&#10;      @act1 TCInit ≔ TRUE&#10;      @act2 Istep ≔ 1&#10;      @act3 CRetrycount ≔ 3&#10;  end&#10;&#10;  event ControllerRetryTapChangerComms refines ControllerRetryTapChangerComms&#10;    where&#10;      @grd1 CEvaluated = FALSE&#10;      @grd2 TCInit = TRUE&#10;      @grd3 TCAcknowledgeInit = FALSE&#10;      //@grd4 ControllerActive = FALSE&#10;      @grd5 Istep = 0&#10;      @grd6 CRetrycount &gt; 0&#10;    then&#10;      @act1 Istep ≔ 1&#10;      @act2 CRetrycount ≔  CRetrycount − 1&#10;  end&#10;&#10;  event ControllerCompleteTapChangerComms refines ControllerCompleteTapChangerComms&#10;    where&#10;      @grd1 CEvaluated = FALSE&#10;      @grd2 TCInit = TRUE&#10;      @grd3 TCAcknowledgeInit = TRUE&#10;      @grd4 ControllerActive = FALSE&#10;      @grd5 Istep = 0&#10;    then&#10;      @act1 ControllerActive ≔ TRUE&#10;      @act2 Istep ≔ 1&#10;  end&#10;&#10;  event ControllerCompleteTapChangerCommsFail refines ControllerCompleteTapChangerCommsFail&#10;    where&#10;      @grd1 CEvaluated = FALSE&#10;      @grd2 TCInit = TRUE&#10;      @grd3 TCAcknowledgeInit = FALSE&#10;      @grd4 ControllerActive = FALSE&#10;      @grd5 Istep = 0&#10;      @grd6 CRetrycount = 0&#10;    then&#10;      @act1 TCInit ≔ FALSE&#10;      @act2 Istep ≔ 1&#10;  end&#10;&#10;  event ControllerWritePosition refines ControllerWritePosition&#10;    where&#10;      @grd1 CEvaluated = FALSE&#10;      @grd2 Istep = 0&#10;      @grd3 ControllerActive = TRUE&#10;      @grd4 TCInit = TRUE&#10;      @grd5 TCAcknowledgeInit = TRUE&#10;    then&#10;      @act1 Istep ≔ 1&#10;  end&#10;&#10;  event ControllerWait refines ControllerWait&#10;    where&#10;      @grd1 Istep = 1&#10;    then&#10;      @act1 CEvaluated ≔ TRUE&#10;      @act2 Istep ≔ 0&#10;  end&#10;&#10;  event TapChangerReadInitSignal refines TapChangerReadInitSignal&#10;    where&#10;      @grd1 TCAcknowledgeInit = FALSE&#10;      @grd2 TCInit = TRUE&#10;      @grd3 TEvaluated = FALSE&#10;      /* @grd4 TCCommsFailure = FALSE&#10;         @grd5 TCCommsInitiated = FALSE */&#10;      @grd6 Tstep = 0&#10;    then&#10;      @act1 Tstep ≔ 1&#10;  end&#10;&#10;  event TapChangerInitTerminated refines TapChangerInitTerminated&#10;    where&#10;      @grd1 TCAcknowledgeInit = FALSE&#10;      @grd2 TCInit = FALSE&#10;      @grd3 TEvaluated = FALSE&#10;      @grd4 TCCommsFailure = FALSE&#10;      @grd5 TCCommsInitiated = TRUE&#10;      @grd6 Tstep = 0&#10;    then&#10;      @act1 TCCommsInitiated ≔ FALSE&#10;      @act2 Tstep ≔ 2&#10;  end&#10;&#10;  event TapChangerAcknowledgeInit refines TapChangerAcknowledgeInit&#10;    any pack pfail&#10;    where&#10;      @grd1 pack ∈ BOOL&#10;      @grd2 pfail ∈ BOOL&#10;      @grd3 pack = TRUE ⇒ pfail = FALSE&#10;      @grd4 TCCommsFailure = TRUE ⇒ pack = FALSE ∧ pfail = TRUE&#10;      @grd5 Tstep = 1&#10;    then&#10;      @act1 TCAcknowledgeInit ≔ pack&#10;      @act2 TCCommsFailure ≔ pfail&#10;      @act3 TCCommsInitiated ≔ TRUE&#10;      @act4 Tstep ≔ 2&#10;  end&#10;&#10;  event TapChangerReset refines TapChangerReset&#10;    where&#10;      @grd3 TCCommsFailure = TRUE&#10;      @grd1 Tstep = 0&#10;      @grd2 TEvaluated = FALSE&#10;    then&#10;      @act1 TCCommsFailure ≔ FALSE&#10;      @act2 Tstep ≔ 2&#10;  end&#10;&#10;  event TapChangerReadPosition refines TapChangerReadPosition&#10;    where&#10;      @grd1 TCAcknowledgeInit = TRUE&#10;      @grd2 TCInit = TRUE&#10;      @grd3 TEvaluated = FALSE&#10;      @grd6 Tstep = 0&#10;    then&#10;      @act1 Tstep ≔ 2&#10;  end&#10;&#10;  event TapChangerWait refines TapChangerWait&#10;    where&#10;      @grd1 Tstep = 2&#10;    then&#10;      @act1 TEvaluated ≔ TRUE&#10;      @act2 Tstep ≔ 0&#10;  end&#10;&#10;  event ReadVoltage refines ReadVoltage&#10;    any pv&#10;    where&#10;      @grd1 pv ∈ 235 ‥ 245&#10;    then&#10;      @act1 v ≔ pv&#10;  end&#10;&#10;  event PredictVoltageChange refines PredictVoltageChange&#10;    any ppv&#10;    where&#10;      @grd1 ppv ∈ 235 ‥ 245&#10;      @grd2 ControllerActive = TRUE&#10;    then&#10;      @act1 predictedv ≔ ppv&#10;  end&#10;&#10;  event AdjustTapPosition refines AdjustTapPosition&#10;    any ptp&#10;    where&#10;      @grd1 ptp ∈ −10 ‥ 10&#10;      @grd2 tappos + ptp ≥ 10&#10;      @grd3 tappos + ptp ≤ 30&#10;      @grd4 ControllerActive = TRUE&#10;    then&#10;      @act1 tappos ≔ tappos + ptp&#10;  end&#10;&#10;  event Update refines Update&#10;    where&#10;      @grd1 CEvaluated = TRUE&#10;      @grd2 TEvaluated = TRUE&#10;    then&#10;      @act1 CEvaluated ≔ FALSE&#10;      @act2 TEvaluated ≔ FALSE&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="_B2YnQNdpEeO5lPNBQmS28w" org.eventb.core.target="GRIDCR2"/>
+<org.eventb.core.variable name="_KqLEgM7LEeOwhtEFi5ykCw" org.eventb.core.identifier="v"/>
+<org.eventb.core.variable name="_KqLEgc7LEeOwhtEFi5ykCw" org.eventb.core.identifier="tappos"/>
+<org.eventb.core.variable name="_KqLEgs7LEeOwhtEFi5ykCw" org.eventb.core.identifier="predictedv"/>
+<org.eventb.core.variable name="_8ufh4M7MEeOwhtEFi5ykCw" org.eventb.core.identifier="CEvaluated"/>
+<org.eventb.core.variable name="_8ufh4c7MEeOwhtEFi5ykCw" org.eventb.core.identifier="TEvaluated"/>
+<org.eventb.core.variable name="_8ufh4s7MEeOwhtEFi5ykCw" org.eventb.core.identifier="Istep"/>
+<org.eventb.core.variable name="_8ufh487MEeOwhtEFi5ykCw" org.eventb.core.identifier="Tstep"/>
+<org.eventb.core.variable name="_MTFtoc7MEeOwhtEFi5ykCw" org.eventb.core.identifier="TCInit"/>
+<org.eventb.core.variable name="_8ufh5M7MEeOwhtEFi5ykCw" org.eventb.core.identifier="TCAcknowledgeInit"/>
+<org.eventb.core.variable name="_MTGUsM7MEeOwhtEFi5ykCw" org.eventb.core.identifier="ControllerActive"/>
+<org.eventb.core.variable name="_8ugI8M7MEeOwhtEFi5ykCw" org.eventb.core.identifier="TCCommsFailure"/>
+<org.eventb.core.variable name="_8ugI8c7MEeOwhtEFi5ykCw" org.eventb.core.identifier="TCCommsInitiated"/>
+<org.eventb.core.variable name="_MTGUsM7MEeOwhtEFi5ykD/" org.eventb.core.identifier="CRetrycount"/>
+<org.eventb.core.invariant name="_MTGUsM7MEeOwhtEFi5ykD0" org.eventb.core.label="inv1" org.eventb.core.predicate="CRetrycount ∈ 0 ‥ 3"/>
+<org.eventb.core.event name="_MTGUsM7MEeOwhtEFi5ykCx" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_8uhXEM7MEeOwhtEFi5ykCw" org.eventb.core.assignment="v ≔ 240" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_8uhXEc7MEeOwhtEFi5ykCw" org.eventb.core.assignment="tappos ≔ 20" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="_8uhXEs7MEeOwhtEFi5ykCw" org.eventb.core.assignment="predictedv ≔ 240" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="_8uhXE87MEeOwhtEFi5ykCw" org.eventb.core.assignment="CEvaluated ≔ FALSE" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="_8uhXFM7MEeOwhtEFi5ykCw" org.eventb.core.assignment="TEvaluated ≔ FALSE" org.eventb.core.label="act5"/>
+<org.eventb.core.action name="_8uh-IM7MEeOwhtEFi5ykCw" org.eventb.core.assignment="Istep ≔ 0" org.eventb.core.label="act6"/>
+<org.eventb.core.action name="_8uh-Ic7MEeOwhtEFi5ykCw" org.eventb.core.assignment="Tstep ≔ 0" org.eventb.core.label="act7"/>
+<org.eventb.core.action name="_8uh-Is7MEeOwhtEFi5ykCw" org.eventb.core.assignment="TCInit ≔ FALSE" org.eventb.core.label="act8"/>
+<org.eventb.core.action name="_8uh-I87MEeOwhtEFi5ykCw" org.eventb.core.assignment="TCAcknowledgeInit ≔ FALSE" org.eventb.core.label="act9"/>
+<org.eventb.core.action name="_8uh-JM7MEeOwhtEFi5ykCw" org.eventb.core.assignment="ControllerActive ≔ FALSE" org.eventb.core.label="act10"/>
+<org.eventb.core.action name="_8uh-Jc7MEeOwhtEFi5ykCw" org.eventb.core.assignment="TCCommsFailure ≔ FALSE" org.eventb.core.label="act11"/>
+<org.eventb.core.action name="_8uilMM7MEeOwhtEFi5ykCw" org.eventb.core.assignment="TCCommsInitiated ≔ FALSE" org.eventb.core.label="act12"/>
+<org.eventb.core.action name="_8uilMM7MEeOwhtEFi5ykCx" org.eventb.core.assignment="CRetrycount ≔ 0" org.eventb.core.label="act13"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_MTGUsM7MEeOwhtEFi5ykCy" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerInitiateTapChangerComms">
+<org.eventb.core.refinesEvent name="_B2cRoNdpEeO5lPNBQmS28w" org.eventb.core.target="ControllerInitiateTapChangerComms"/>
+<org.eventb.core.guard name="_8uilMc7MEeOwhtEFi5ykCw" org.eventb.core.label="grd1" org.eventb.core.predicate="CEvaluated = FALSE"/>
+<org.eventb.core.guard name="_8uilMs7MEeOwhtEFi5ykCw" org.eventb.core.label="grd2" org.eventb.core.predicate="Istep = 0"/>
+<org.eventb.core.guard name="_8uilM87MEeOwhtEFi5ykCw" org.eventb.core.label="grd3" org.eventb.core.predicate="ControllerActive = FALSE"/>
+<org.eventb.core.guard name="_8ujMQM7MEeOwhtEFi5ykCw" org.eventb.core.label="grd4" org.eventb.core.predicate="TCInit = FALSE"/>
+<org.eventb.core.action name="_8ujMQc7MEeOwhtEFi5ykCw" org.eventb.core.assignment="TCInit ≔ TRUE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_8ujMQs7MEeOwhtEFi5ykCw" org.eventb.core.assignment="Istep ≔ 1" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="_txoc0M7TEeOwhtEFi5ykCw" org.eventb.core.assignment="CRetrycount ≔ 3" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_MTGUsM7MEeOwhtEFi5ykCz" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerRetryTapChangerComms">
+<org.eventb.core.refinesEvent name="_B2c4sNdpEeO5lPNBQmS28w" org.eventb.core.target="ControllerRetryTapChangerComms"/>
+<org.eventb.core.guard name="_8ujMQ87MEeOwhtEFi5ykCw" org.eventb.core.label="grd1" org.eventb.core.predicate="CEvaluated = FALSE"/>
+<org.eventb.core.guard name="_8ujMRM7MEeOwhtEFi5ykCw" org.eventb.core.label="grd2" org.eventb.core.predicate="TCInit = TRUE"/>
+<org.eventb.core.guard name="_8ujzUM7MEeOwhtEFi5ykCw" org.eventb.core.comment="@grd4 ControllerActive = FALSE" org.eventb.core.label="grd3" org.eventb.core.predicate="TCAcknowledgeInit = FALSE"/>
+<org.eventb.core.guard name="_8ujzUs7MEeOwhtEFi5ykCw" org.eventb.core.label="grd5" org.eventb.core.predicate="Istep = 0"/>
+<org.eventb.core.guard name="_ja55kM7TEeOwhtEFi5ykCw" org.eventb.core.label="grd6" org.eventb.core.predicate="CRetrycount &gt; 0"/>
+<org.eventb.core.action name="_8ujzU87MEeOwhtEFi5ykCw" org.eventb.core.assignment="Istep ≔ 1" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_ja55kc7TEeOwhtEFi5ykCw" org.eventb.core.assignment="CRetrycount ≔  CRetrycount − 1" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_MTGUsM7MEeOwhtEFi5ykC{" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerCompleteTapChangerComms">
+<org.eventb.core.refinesEvent name="_B2eG0NdpEeO5lPNBQmS28w" org.eventb.core.target="ControllerCompleteTapChangerComms"/>
+<org.eventb.core.guard name="_8ujzVM7MEeOwhtEFi5ykCw" org.eventb.core.label="grd1" org.eventb.core.predicate="CEvaluated = FALSE"/>
+<org.eventb.core.guard name="_8ukaYM7MEeOwhtEFi5ykCw" org.eventb.core.label="grd2" org.eventb.core.predicate="TCInit = TRUE"/>
+<org.eventb.core.guard name="_8ukaYc7MEeOwhtEFi5ykCw" org.eventb.core.label="grd3" org.eventb.core.predicate="TCAcknowledgeInit = TRUE"/>
+<org.eventb.core.guard name="_8ukaYs7MEeOwhtEFi5ykCw" org.eventb.core.label="grd4" org.eventb.core.predicate="ControllerActive = FALSE"/>
+<org.eventb.core.guard name="_8ukaY87MEeOwhtEFi5ykCw" org.eventb.core.label="grd5" org.eventb.core.predicate="Istep = 0"/>
+<org.eventb.core.action name="_8ukaZM7MEeOwhtEFi5ykCw" org.eventb.core.assignment="ControllerActive ≔ TRUE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_8ulBcM7MEeOwhtEFi5ykCw" org.eventb.core.assignment="Istep ≔ 1" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_MTGUsM7MEeOwhtEFi5ykC|" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerCompleteTapChangerCommsFail">
+<org.eventb.core.refinesEvent name="_B2et4NdpEeO5lPNBQmS28w" org.eventb.core.target="ControllerCompleteTapChangerCommsFail"/>
+<org.eventb.core.guard name="_8ulBcc7MEeOwhtEFi5ykCw" org.eventb.core.label="grd1" org.eventb.core.predicate="CEvaluated = FALSE"/>
+<org.eventb.core.guard name="_8ulBcs7MEeOwhtEFi5ykCw" org.eventb.core.label="grd2" org.eventb.core.predicate="TCInit = TRUE"/>
+<org.eventb.core.guard name="_8ulBc87MEeOwhtEFi5ykCw" org.eventb.core.label="grd3" org.eventb.core.predicate="TCAcknowledgeInit = FALSE"/>
+<org.eventb.core.guard name="_8ulogM7MEeOwhtEFi5ykCw" org.eventb.core.label="grd4" org.eventb.core.predicate="ControllerActive = FALSE"/>
+<org.eventb.core.guard name="_8ulogc7MEeOwhtEFi5ykCw" org.eventb.core.label="grd5" org.eventb.core.predicate="Istep = 0"/>
+<org.eventb.core.guard name="_p1O4sM7TEeOwhtEFi5ykCw" org.eventb.core.label="grd6" org.eventb.core.predicate="CRetrycount = 0"/>
+<org.eventb.core.action name="_8ulogs7MEeOwhtEFi5ykCw" org.eventb.core.assignment="TCInit ≔ FALSE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_8umPkM7MEeOwhtEFi5ykCw" org.eventb.core.assignment="Istep ≔ 1" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_H6DGMM-PEeOpipKU6EcABg" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerWritePosition">
+<org.eventb.core.refinesEvent name="_B2fU8NdpEeO5lPNBQmS28w" org.eventb.core.target="ControllerWritePosition"/>
+<org.eventb.core.guard name="_H6DGMs-PEeOpipKU6EcABg" org.eventb.core.label="grd1" org.eventb.core.predicate="CEvaluated = FALSE"/>
+<org.eventb.core.guard name="_H6DtQM-PEeOpipKU6EcABg" org.eventb.core.label="grd2" org.eventb.core.predicate="Istep = 0"/>
+<org.eventb.core.guard name="_H6DtQc-PEeOpipKU6EcABg" org.eventb.core.label="grd3" org.eventb.core.predicate="ControllerActive = TRUE"/>
+<org.eventb.core.guard name="_H6DtQs-PEeOpipKU6EcABg" org.eventb.core.label="grd4" org.eventb.core.predicate="TCInit = TRUE"/>
+<org.eventb.core.guard name="_H6DtQ8-PEeOpipKU6EcABg" org.eventb.core.label="grd5" org.eventb.core.predicate="TCAcknowledgeInit = TRUE"/>
+<org.eventb.core.action name="_H6EUUM-PEeOpipKU6EcABg" org.eventb.core.assignment="Istep ≔ 1" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_MTGUsM7MEeOwhtEFi5ykC}" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerWait">
+<org.eventb.core.refinesEvent name="_B2gjENdpEeO5lPNBQmS28w" org.eventb.core.target="ControllerWait"/>
+<org.eventb.core.guard name="_8up58c7MEeOwhtEFi5ykCw" org.eventb.core.label="grd1" org.eventb.core.predicate="Istep = 1"/>
+<org.eventb.core.action name="_8up58s7MEeOwhtEFi5ykCw" org.eventb.core.assignment="CEvaluated ≔ TRUE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_8up5887MEeOwhtEFi5ykCw" org.eventb.core.assignment="Istep ≔ 0" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_MTGUsM7MEeOwhtEFi5ykC~" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="TapChangerReadInitSignal">
+<org.eventb.core.refinesEvent name="_B2gjEddpEeO5lPNBQmS28w" org.eventb.core.target="TapChangerReadInitSignal"/>
+<org.eventb.core.guard name="_8uqhAM7MEeOwhtEFi5ykCw" org.eventb.core.label="grd1" org.eventb.core.predicate="TCAcknowledgeInit = FALSE"/>
+<org.eventb.core.guard name="_8uqhAc7MEeOwhtEFi5ykCw" org.eventb.core.label="grd2" org.eventb.core.predicate="TCInit = TRUE"/>
+<org.eventb.core.guard name="_8uqhAs7MEeOwhtEFi5ykCw" org.eventb.core.comment="@grd4 TCCommsFailure = FALSE&#10;         @grd5 TCCommsInitiated = FALSE " org.eventb.core.label="grd3" org.eventb.core.predicate="TEvaluated = FALSE"/>
+<org.eventb.core.guard name="_8uqhA87MEeOwhtEFi5ykCw" org.eventb.core.label="grd6" org.eventb.core.predicate="Tstep = 0"/>
+<org.eventb.core.action name="_8urIEM7MEeOwhtEFi5ykCw" org.eventb.core.assignment="Tstep ≔ 1" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_MTGUsM7MEeOwhtEFi5ykD'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="TapChangerInitTerminated">
+<org.eventb.core.refinesEvent name="_B2hKINdpEeO5lPNBQmS28w" org.eventb.core.target="TapChangerInitTerminated"/>
+<org.eventb.core.guard name="_8urIEs7MEeOwhtEFi5ykCw" org.eventb.core.label="grd1" org.eventb.core.predicate="TCAcknowledgeInit = FALSE"/>
+<org.eventb.core.guard name="_8urIE87MEeOwhtEFi5ykCw" org.eventb.core.label="grd2" org.eventb.core.predicate="TCInit = FALSE"/>
+<org.eventb.core.guard name="_8urIFM7MEeOwhtEFi5ykCw" org.eventb.core.label="grd3" org.eventb.core.predicate="TEvaluated = FALSE"/>
+<org.eventb.core.guard name="_8urvIM7MEeOwhtEFi5ykCw" org.eventb.core.label="grd4" org.eventb.core.predicate="TCCommsFailure = FALSE"/>
+<org.eventb.core.guard name="_8urvIc7MEeOwhtEFi5ykCw" org.eventb.core.label="grd5" org.eventb.core.predicate="TCCommsInitiated = TRUE"/>
+<org.eventb.core.guard name="_8urvIs7MEeOwhtEFi5ykCw" org.eventb.core.label="grd6" org.eventb.core.predicate="Tstep = 0"/>
+<org.eventb.core.action name="_8urvI87MEeOwhtEFi5ykCw" org.eventb.core.assignment="TCCommsInitiated ≔ FALSE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_8urvJM7MEeOwhtEFi5ykCw" org.eventb.core.assignment="Tstep ≔ 2" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_MTGUsM7MEeOwhtEFi5ykD(" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="TapChangerAcknowledgeInit">
+<org.eventb.core.refinesEvent name="_B2hxMNdpEeO5lPNBQmS28w" org.eventb.core.target="TapChangerAcknowledgeInit"/>
+<org.eventb.core.parameter name="_8usWMM7MEeOwhtEFi5ykCw" org.eventb.core.identifier="pack"/>
+<org.eventb.core.parameter name="_8usWMc7MEeOwhtEFi5ykCw" org.eventb.core.identifier="pfail"/>
+<org.eventb.core.guard name="_8usWMs7MEeOwhtEFi5ykCw" org.eventb.core.label="grd1" org.eventb.core.predicate="pack ∈ BOOL"/>
+<org.eventb.core.guard name="_8usWM87MEeOwhtEFi5ykCw" org.eventb.core.label="grd2" org.eventb.core.predicate="pfail ∈ BOOL"/>
+<org.eventb.core.guard name="_8usWNM7MEeOwhtEFi5ykCw" org.eventb.core.label="grd3" org.eventb.core.predicate="pack = TRUE ⇒ pfail = FALSE"/>
+<org.eventb.core.guard name="_8usWNc7MEeOwhtEFi5ykCw" org.eventb.core.label="grd4" org.eventb.core.predicate="TCCommsFailure = TRUE ⇒ pack = FALSE ∧ pfail = TRUE"/>
+<org.eventb.core.guard name="_8usWNs7MEeOwhtEFi5ykCw" org.eventb.core.label="grd5" org.eventb.core.predicate="Tstep = 1"/>
+<org.eventb.core.action name="_8us9QM7MEeOwhtEFi5ykCw" org.eventb.core.assignment="TCAcknowledgeInit ≔ pack" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_8us9Qc7MEeOwhtEFi5ykCw" org.eventb.core.assignment="TCCommsFailure ≔ pfail" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="_8us9Qs7MEeOwhtEFi5ykCw" org.eventb.core.assignment="TCCommsInitiated ≔ TRUE" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="_8us9Q87MEeOwhtEFi5ykCw" org.eventb.core.assignment="Tstep ≔ 2" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_MTGUsM7MEeOwhtEFi5ykD)" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="TapChangerReset">
+<org.eventb.core.refinesEvent name="_B2i_UNdpEeO5lPNBQmS28w" org.eventb.core.target="TapChangerReset"/>
+<org.eventb.core.guard name="_8utkUM7MEeOwhtEFi5ykCw" org.eventb.core.label="grd3" org.eventb.core.predicate="TCCommsFailure = TRUE"/>
+<org.eventb.core.guard name="_8utkUc7MEeOwhtEFi5ykCw" org.eventb.core.label="grd1" org.eventb.core.predicate="Tstep = 0"/>
+<org.eventb.core.guard name="_8utkUs7MEeOwhtEFi5ykCw" org.eventb.core.label="grd2" org.eventb.core.predicate="TEvaluated = FALSE"/>
+<org.eventb.core.action name="_8utkU87MEeOwhtEFi5ykCw" org.eventb.core.assignment="TCCommsFailure ≔ FALSE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_8utkVM7MEeOwhtEFi5ykCw" org.eventb.core.assignment="Tstep ≔ 2" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_H6EUUc-PEeOpipKU6EcABg" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="TapChangerReadPosition">
+<org.eventb.core.refinesEvent name="_B2jmYNdpEeO5lPNBQmS28w" org.eventb.core.target="TapChangerReadPosition"/>
+<org.eventb.core.guard name="_H6EUU8-PEeOpipKU6EcABg" org.eventb.core.label="grd1" org.eventb.core.predicate="TCAcknowledgeInit = TRUE"/>
+<org.eventb.core.guard name="_H6EUVM-PEeOpipKU6EcABg" org.eventb.core.label="grd2" org.eventb.core.predicate="TCInit = TRUE"/>
+<org.eventb.core.guard name="_H6E7YM-PEeOpipKU6EcABg" org.eventb.core.label="grd3" org.eventb.core.predicate="TEvaluated = FALSE"/>
+<org.eventb.core.guard name="_H6E7Yc-PEeOpipKU6EcABg" org.eventb.core.label="grd6" org.eventb.core.predicate="Tstep = 0"/>
+<org.eventb.core.action name="_H6E7Ys-PEeOpipKU6EcABg" org.eventb.core.assignment="Tstep ≔ 2" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_MTGUsM7MEeOwhtEFi5ykD*" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="TapChangerWait">
+<org.eventb.core.refinesEvent name="_B2kNcNdpEeO5lPNBQmS28w" org.eventb.core.target="TapChangerWait"/>
+<org.eventb.core.guard name="_8uuLYM7MEeOwhtEFi5ykCw" org.eventb.core.label="grd1" org.eventb.core.predicate="Tstep = 2"/>
+<org.eventb.core.action name="_8uuLYc7MEeOwhtEFi5ykCw" org.eventb.core.assignment="TEvaluated ≔ TRUE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_8uuLYs7MEeOwhtEFi5ykCw" org.eventb.core.assignment="Tstep ≔ 0" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_MTGUsM7MEeOwhtEFi5ykD+" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ReadVoltage">
+<org.eventb.core.refinesEvent name="_B2kNcddpEeO5lPNBQmS28w" org.eventb.core.target="ReadVoltage"/>
+<org.eventb.core.parameter name="_8undss7MEeOwhtEFi5ykCw" org.eventb.core.identifier="pv"/>
+<org.eventb.core.guard name="_8unds87MEeOwhtEFi5ykCw" org.eventb.core.label="grd1" org.eventb.core.predicate="pv ∈ 235 ‥ 245"/>
+<org.eventb.core.action name="_8uoEwM7MEeOwhtEFi5ykCw" org.eventb.core.assignment="v ≔ pv" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_MTGUsM7MEeOwhtEFi5ykD," org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PredictVoltageChange">
+<org.eventb.core.refinesEvent name="_B2k0gNdpEeO5lPNBQmS28w" org.eventb.core.target="PredictVoltageChange"/>
+<org.eventb.core.parameter name="_8uoEws7MEeOwhtEFi5ykCw" org.eventb.core.identifier="ppv"/>
+<org.eventb.core.guard name="_8uoEw87MEeOwhtEFi5ykCw" org.eventb.core.label="grd1" org.eventb.core.predicate="ppv ∈ 235 ‥ 245"/>
+<org.eventb.core.guard name="_8uoExM7MEeOwhtEFi5ykCw" org.eventb.core.label="grd2" org.eventb.core.predicate="ControllerActive = TRUE"/>
+<org.eventb.core.action name="_8uor0M7MEeOwhtEFi5ykCw" org.eventb.core.assignment="predictedv ≔ ppv" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_MTGUsM7MEeOwhtEFi5ykD-" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AdjustTapPosition">
+<org.eventb.core.refinesEvent name="_B2lbkNdpEeO5lPNBQmS28w" org.eventb.core.target="AdjustTapPosition"/>
+<org.eventb.core.parameter name="_8uor0s7MEeOwhtEFi5ykCw" org.eventb.core.identifier="ptp"/>
+<org.eventb.core.guard name="_8uor087MEeOwhtEFi5ykCw" org.eventb.core.label="grd1" org.eventb.core.predicate="ptp ∈ −10 ‥ 10"/>
+<org.eventb.core.guard name="_8upS4M7MEeOwhtEFi5ykCw" org.eventb.core.label="grd2" org.eventb.core.predicate="tappos + ptp ≥ 10"/>
+<org.eventb.core.guard name="_8upS4c7MEeOwhtEFi5ykCw" org.eventb.core.label="grd3" org.eventb.core.predicate="tappos + ptp ≤ 30"/>
+<org.eventb.core.guard name="_8upS4s7MEeOwhtEFi5ykCw" org.eventb.core.label="grd4" org.eventb.core.predicate="ControllerActive = TRUE"/>
+<org.eventb.core.action name="_8upS487MEeOwhtEFi5ykCw" org.eventb.core.assignment="tappos ≔ tappos + ptp" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_MTGUsM7MEeOwhtEFi5ykD." org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Update">
+<org.eventb.core.refinesEvent name="_B2mCoNdpEeO5lPNBQmS28w" org.eventb.core.target="Update"/>
+<org.eventb.core.guard name="_8uuLZM7MEeOwhtEFi5ykCw" org.eventb.core.label="grd1" org.eventb.core.predicate="CEvaluated = TRUE"/>
+<org.eventb.core.guard name="_8uuLZc7MEeOwhtEFi5ykCw" org.eventb.core.label="grd2" org.eventb.core.predicate="TEvaluated = TRUE"/>
+<org.eventb.core.action name="_8uuycM7MEeOwhtEFi5ykCw" org.eventb.core.assignment="CEvaluated ≔ FALSE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_8uuycc7MEeOwhtEFi5ykCw" org.eventb.core.assignment="TEvaluated ≔ FALSE" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

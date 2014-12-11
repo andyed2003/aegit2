@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="AIBV_control_action_machine"/>
+<org.eventb.core.seesContext name="." org.eventb.core.target="AIBV_controller_context"/>
+<org.eventb.core.variable name="," org.eventb.core.identifier="AIBV_state"/>
+<org.eventb.core.variable name="4" org.eventb.core.identifier="AIBV_position"/>
+<org.eventb.core.variable name=";" org.eventb.core.identifier="AIBV_action"/>
+<org.eventb.core.variable name="&gt;" org.eventb.core.identifier="AIBV_amount"/>
+<org.eventb.core.event name="C" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="*" org.eventb.core.assignment="AIBV_control_action_started ≔ FALSE" org.eventb.core.label="act5"/>
+<org.eventb.core.action name="'" org.eventb.core.assignment="AIBV_open_started ≔ FALSE" org.eventb.core.label="act6"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="AIBV_open_performed ≔ FALSE" org.eventb.core.label="act7"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="AIBV_close_started ≔ FALSE" org.eventb.core.label="act8"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="AIBV_close_performed ≔ FALSE" org.eventb.core.label="act9"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="AIBV_position_moving ≔ AIBV_CLOSED" org.eventb.core.label="act10"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="D" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AIBV_arm">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_arm"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="E" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AIBV_disarm">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_disarm"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="Q" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AIBV_disarmed">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_disarmed"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="R" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_open_start">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_state = ARMED"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_action = OPEN"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="AIBV_control_action_started = FALSE"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd4" org.eventb.core.predicate="AIBV_open_started = FALSE"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="AIBV_control_action_started ≔ TRUE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="AIBV_open_started ≔ TRUE" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="AIBV_open_performed ≔ FALSE" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="F" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_open_success">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_open_started = TRUE"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_open_performed = FALSE"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd3" org.eventb.core.predicate="AIBV_position + AIBV_amount ≤ AIBV_OPEN"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="AIBV_position_moving ≔ AIBV_position + AIBV_amount" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="AIBV_open_performed ≔ TRUE" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="I" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_open_ignore">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_open_started = TRUE"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_open_performed = FALSE"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="AIBV_position_moving ≔ AIBV_position" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="AIBV_open_performed ≔ TRUE" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="J" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_open_over_drive">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_open_started = TRUE"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_open_performed = FALSE"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd3" org.eventb.core.predicate="AIBV_OPEN &lt; AIBV_position + AIBV_amount"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="AIBV_position_moving ≔ AIBV_OPEN" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="AIBV_open_performed ≔ TRUE" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_open_random">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_open_started = TRUE"/>
+<org.eventb.core.guard name="internal4" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_open_performed = FALSE"/>
+<org.eventb.core.guard name="internal2" org.eventb.core.label="grd3" org.eventb.core.predicate="AIBV_position &lt; AIBV_OPEN"/>
+<org.eventb.core.guard name="internal3" org.eventb.core.label="grd4" org.eventb.core.predicate="¬(AIBV_amount = 1 ∧ AIBV_position + AIBV_amount = AIBV_OPEN)"/>
+<org.eventb.core.action name="internal1" org.eventb.core.assignment="AIBV_position_moving :∣ AIBV_position &lt; AIBV_position_moving' ∧ AIBV_position_moving' ≤ AIBV_OPEN ∧ AIBV_position_moving' ≠ AIBV_position + AIBV_amount" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="internal5" org.eventb.core.assignment="AIBV_open_performed ≔ TRUE" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="U" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_open_end">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_open"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_state = ARMED"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_action = OPEN"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd3" org.eventb.core.predicate="AIBV_control_action_started = TRUE"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd4" org.eventb.core.predicate="AIBV_open_performed = TRUE"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="AIBV_position ≔ AIBV_position_moving" org.eventb.core.label="act1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="AIBV_action, AIBV_amount ≔ NOTHING, 0" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="AIBV_control_action_started ≔ FALSE" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="AIBV_open_started ≔ FALSE" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="AIBV_open_performed ≔ FALSE" org.eventb.core.label="act5"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_close_start">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_state ≠ DISARMED"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_action = CLOSE"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="AIBV_control_action_started = FALSE"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd4" org.eventb.core.predicate="AIBV_close_started = FALSE"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="AIBV_control_action_started ≔ TRUE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="AIBV_close_started ≔ TRUE" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="AIBV_close_performed ≔ FALSE" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="G" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_close_success">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_close_started = TRUE"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_close_performed = FALSE"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd3" org.eventb.core.predicate="AIBV_CLOSED ≤ AIBV_position − AIBV_amount"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="AIBV_position_moving ≔ AIBV_position − AIBV_amount" org.eventb.core.label="act1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="AIBV_close_performed ≔ TRUE" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="L" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_close_ignore">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_close_started = TRUE"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_close_performed = FALSE"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="AIBV_position_moving ≔ AIBV_position" org.eventb.core.label="act1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="AIBV_close_performed ≔ TRUE" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="M" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_close_over_drive">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_close_started = TRUE"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_close_performed = FALSE"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd3" org.eventb.core.predicate="AIBV_position − AIBV_amount &lt; AIBV_CLOSED"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="AIBV_position_moving ≔ AIBV_CLOSED" org.eventb.core.label="act1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="AIBV_close_performed ≔ TRUE" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="N" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_close_random">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_close_started = TRUE"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_close_performed = FALSE"/>
+<org.eventb.core.guard name="internal2" org.eventb.core.label="grd3" org.eventb.core.predicate="AIBV_CLOSED &lt; AIBV_position"/>
+<org.eventb.core.guard name="internal3" org.eventb.core.label="grd4" org.eventb.core.predicate="¬(AIBV_amount = 1 ∧ AIBV_position − AIBV_amount = AIBV_CLOSED)"/>
+<org.eventb.core.action name="internal1" org.eventb.core.assignment="AIBV_position_moving :∣ AIBV_CLOSED ≤ AIBV_position_moving' ∧ AIBV_position_moving' &lt; AIBV_position ∧ AIBV_position_moving' ≠ AIBV_position − AIBV_amount" org.eventb.core.label="act1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="AIBV_close_performed ≔ TRUE" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_close_end">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_close"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_state ≠ DISARMED"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd2" org.eventb.core.predicate="AIBV_action = CLOSE"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd3" org.eventb.core.predicate="AIBV_control_action_started = TRUE"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd4" org.eventb.core.predicate="AIBV_close_performed = TRUE"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="AIBV_position ≔ AIBV_position_moving" org.eventb.core.label="act1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="AIBV_action, AIBV_amount ≔ NOTHING, 0" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="AIBV_control_action_started ≔ FALSE" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="AIBV_close_started ≔ FALSE" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="AIBV_close_performed ≔ FALSE" org.eventb.core.label="act5"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="H" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AIBV_control_action">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AIBV_control_action"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="]" org.eventb.core.identifier="AIBV_control_action_started"/>
+<org.eventb.core.variable name="S" org.eventb.core.identifier="AIBV_open_started"/>
+<org.eventb.core.invariant name="^" org.eventb.core.label="inv1" org.eventb.core.predicate="AIBV_control_action_started ∈ BOOL"/>
+<org.eventb.core.invariant name="T" org.eventb.core.label="inv2" org.eventb.core.predicate="AIBV_open_started ∈ BOOL"/>
+<org.eventb.core.variable name="V" org.eventb.core.identifier="AIBV_open_performed"/>
+<org.eventb.core.invariant name="W" org.eventb.core.label="inv3" org.eventb.core.predicate="AIBV_open_performed ∈ BOOL"/>
+<org.eventb.core.invariant name="a" org.eventb.core.label="inv4" org.eventb.core.predicate="AIBV_close_started ∈ BOOL"/>
+<org.eventb.core.invariant name="c" org.eventb.core.label="inv5" org.eventb.core.predicate="AIBV_close_performed ∈ BOOL"/>
+<org.eventb.core.invariant name="Y" org.eventb.core.label="inv6" org.eventb.core.predicate="AIBV_position_moving ∈ {n ∣ n ∈ ℤ ∧ AIBV_CLOSED ≤ n ∧ n ≤ AIBV_OPEN}"/>
+<org.eventb.core.invariant name="Z" org.eventb.core.label="inv7" org.eventb.core.predicate="(AIBV_CLOSED ≤ AIBV_position_moving ∧ AIBV_position_moving ≤ AIBV_OPEN)" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="d" org.eventb.core.label="inv8" org.eventb.core.predicate="AIBV_open_started = TRUE ⇒ AIBV_close_started = FALSE"/>
+<org.eventb.core.invariant name="e" org.eventb.core.label="inv9" org.eventb.core.predicate="AIBV_close_started = TRUE ⇒ AIBV_open_started = FALSE" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="_" org.eventb.core.label="inv10" org.eventb.core.predicate="AIBV_control_action_started = TRUE ⇔ AIBV_open_started = TRUE ∨ AIBV_close_started = TRUE"/>
+<org.eventb.core.invariant name="[" org.eventb.core.label="inv11" org.eventb.core.predicate="AIBV_open_performed = TRUE ⇒ AIBV_open_started = TRUE"/>
+<org.eventb.core.invariant name="f" org.eventb.core.label="inv12" org.eventb.core.predicate="AIBV_close_performed = TRUE ⇒ AIBV_close_started = TRUE"/>
+<org.eventb.core.invariant name="\" org.eventb.core.label="inv13" org.eventb.core.predicate="AIBV_action = OPEN ∧ AIBV_open_performed = TRUE ⇒ AIBV_position ≤ AIBV_position_moving"/>
+<org.eventb.core.variable name="`" org.eventb.core.identifier="AIBV_close_started"/>
+<org.eventb.core.variable name="b" org.eventb.core.identifier="AIBV_close_performed"/>
+<org.eventb.core.variable name="X" org.eventb.core.identifier="AIBV_position_moving"/>
+<org.eventb.core.invariant name="g" org.eventb.core.label="inv14" org.eventb.core.predicate="AIBV_action = CLOSE ∧ AIBV_close_performed = TRUE ⇒ AIBV_position_moving ≤ AIBV_position"/>
+<org.eventb.core.invariant name="evt3" org.eventb.core.label="inv15" org.eventb.core.predicate="AIBV_action = NOTHING ⇒ AIBV_control_action_started = FALSE"/>
+</org.eventb.core.machineFile>

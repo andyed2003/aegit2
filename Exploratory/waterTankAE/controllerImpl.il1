@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="ASCII"?>
+<il1:Program xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:il1="http://il1/1.0" projectName="waterTankAE">
+  <decls xsi:type="il1:ConstantDecl" identifier="stableSim" type="environSM_STATES" ProjectName="waterTankAE" ComponentName="ctrl0_implicitContext"/>
+  <decls xsi:type="il1:ConstantDecl" identifier="Low" type="&#x2124;" initialValue="800" ProjectName="waterTankAE" ComponentName="ctx0"/>
+  <decls xsi:type="il1:ConstantDecl" identifier="ComputeDelay" type="&#x2124;" initialValue="100" ProjectName="waterTankAE" ComponentName="ctx0"/>
+  <decls xsi:type="il1:Enumeration" identifier="environSM_STATES" ProjectName="waterTankAE" ComponentName="ctrl0_implicitContext">
+    <literalValues>stableSim</literalValues>
+  </decls>
+  <decls xsi:type="il1:ConstantDecl" identifier="WriteDelay" type="&#x2124;" initialValue="20" ProjectName="waterTankAE" ComponentName="ctx0"/>
+  <decls xsi:type="il1:Enumeration" identifier="controllerSM_STATES" ProjectName="waterTankAE" ComponentName="ctrl0_implicitContext">
+    <literalValues>ready</literalValues>
+  </decls>
+  <decls xsi:type="il1:ConstantDecl" identifier="High" type="&#x2124;" initialValue="2000" ProjectName="waterTankAE" ComponentName="ctx0"/>
+  <decls xsi:type="il1:ConstantDecl" identifier="ready" type="controllerSM_STATES" ProjectName="waterTankAE" ComponentName="ctrl0_implicitContext"/>
+  <decls xsi:type="il1:ConstantDecl" identifier="ReadDelay" type="&#x2124;" initialValue="20" ProjectName="waterTankAE" ComponentName="ctx0"/>
+  <entryPoint>
+    <autoTasks name="controllerImpl" projectName="waterTankAE" machineName="controllerImpl">
+      <body xsi:type="il1:Seq">
+        <leftBranch xsi:type="il1:Call" machineName="controllerImpl" projectName="waterTankAE">
+          <subroutine name="controllerSMstateMachine" machineName="controllerImpl" projectName="waterTankAE">
+            <body xsi:type="il1:Case" caseExpression="controllerSM">
+              <caseStatement caseValue="ready">
+                <command xsi:type="il1:If">
+                  <body xsi:type="il1:Seq">
+                    <leftBranch xsi:type="il1:Action" ParentEventName="decideOn" action="c_time  &#x2254; c_time + ComputeDelay"/>
+                    <rightBranch xsi:type="il1:Action" ParentEventName="decideOn" action="c_pumpOn  &#x2254; TRUE"/>
+                  </body>
+                  <condition>c_Level &lt; Low</condition>
+                  <branch>
+                    <condition>c_Level > High</condition>
+                    <action xsi:type="il1:Seq">
+                      <leftBranch xsi:type="il1:Action" ParentEventName="decideOff" action="c_pumpOn  &#x2254; FALSE"/>
+                      <rightBranch xsi:type="il1:Action" ParentEventName="decideOff" action="c_time  &#x2254; c_time + ComputeDelay"/>
+                    </action>
+                    <branch>
+                      <condition>c_Level &#x2265; Low</condition>
+                      <condition>c_Level &#x2264; High</condition>
+                      <action xsi:type="il1:Action" ParentEventName="decideKeep" action="c_time &#x2254; c_time +ComputeDelay"/>
+                      <relatedEvent href="platform:/resource/waterTankAE/controllerImpl.bum#org.eventb.emf.core.machine.Event.decideKeep"/>
+                    </branch>
+                    <relatedEvent href="platform:/resource/waterTankAE/controllerImpl.bum#org.eventb.emf.core.machine.Event.decideOff"/>
+                  </branch>
+                  <relatedEvent href="platform:/resource/waterTankAE/controllerImpl.bum#org.eventb.emf.core.machine.Event.decideOn"/>
+                </command>
+              </caseStatement>
+            </body>
+          </subroutine>
+        </leftBranch>
+        <rightBranch xsi:type="il1:Seq">
+          <leftBranch xsi:type="il1:Seq">
+            <rightBranch xsi:type="il1:Call">
+              <subroutine name="writePump" machineName="environmentImpl" projectName="waterTankAE">
+                <body xsi:type="il1:Seq">
+                  <leftBranch xsi:type="il1:Action" ParentEventName="writePump" action="fmi_PumpOn &#x2254; p"/>
+                  <rightBranch xsi:type="il1:Action" ParentEventName="writePump" action="fmi_time &#x2254; fmi_time + WriteDelay"/>
+                </body>
+                <formalParameters xsi:type="il1:InParameter" identifier="p" type=" BOOL" ProjectName="waterTankAE"/>
+              </subroutine>
+              <actualParameters xsi:type="il1:OutParameter" identifier="c_pumpOn" type=" BOOL" ProjectName="waterTankAE" ComponentName="controllerImpl"/>
+            </rightBranch>
+          </leftBranch>
+          <rightBranch xsi:type="il1:Seq">
+            <leftBranch xsi:type="il1:Seq">
+              <rightBranch xsi:type="il1:Call">
+                <subroutine name="readLevel" machineName="environmentImpl" projectName="waterTankAE">
+                  <body xsi:type="il1:Seq">
+                    <leftBranch xsi:type="il1:Action" ParentEventName="readLevel" action="fmi_time &#x2254; fmi_time + ReadDelay"/>
+                    <rightBranch xsi:type="il1:Action" action="p &#x2254; fmi_Level"/>
+                  </body>
+                  <formalParameters xsi:type="il1:OutParameter" identifier="p" type=" &#x2124;" ProjectName="waterTankAE"/>
+                </subroutine>
+                <actualParameters xsi:type="il1:InParameter" identifier="c_Level" type=" &#x2124;" ProjectName="waterTankAE" ComponentName="controllerImpl"/>
+              </rightBranch>
+            </leftBranch>
+            <rightBranch xsi:type="il1:Output" text="c_Level" element="c_Level"/>
+          </rightBranch>
+        </rightBranch>
+      </body>
+      <taskType xsi:type="il1:PeriodicTaskType" period="100"/>
+      <decls xsi:type="il1:VariableDecl" identifier="c_Level" type="&#x2124;" ProjectName="waterTankAE" ComponentName="controllerImpl"/>
+      <decls xsi:type="il1:VariableDecl" identifier="c_pumpOn" type="BOOL" initialValue="FALSE" ProjectName="waterTankAE" ComponentName="controllerImpl"/>
+      <decls xsi:type="il1:VariableDecl" identifier="c_time" type="&#x2124;" initialValue="0" ProjectName="waterTankAE" ComponentName="controllerImpl"/>
+      <decls xsi:type="il1:VariableDecl" identifier="controllerSM" type="controllerSM_STATES" initialValue="ready" ProjectName="waterTankAE" ComponentName="controllerImpl"/>
+      <subroutines name="controllerSMstateMachine" machineName="controllerImpl" projectName="waterTankAE">
+        <body xsi:type="il1:Case" caseExpression="controllerSM">
+          <caseStatement caseValue="ready">
+            <command xsi:type="il1:If">
+              <body xsi:type="il1:Seq">
+                <leftBranch xsi:type="il1:Action" ParentEventName="decideOn" action="c_time  &#x2254; c_time + ComputeDelay"/>
+                <rightBranch xsi:type="il1:Action" ParentEventName="decideOn" action="c_pumpOn  &#x2254; TRUE"/>
+              </body>
+              <condition>c_Level &lt; Low</condition>
+              <branch>
+                <condition>c_Level > High</condition>
+                <action xsi:type="il1:Seq">
+                  <leftBranch xsi:type="il1:Action" ParentEventName="decideOff" action="c_pumpOn  &#x2254; FALSE"/>
+                  <rightBranch xsi:type="il1:Action" ParentEventName="decideOff" action="c_time  &#x2254; c_time + ComputeDelay"/>
+                </action>
+                <branch>
+                  <condition>c_Level &#x2265; Low</condition>
+                  <condition>c_Level &#x2264; High</condition>
+                  <action xsi:type="il1:Action" ParentEventName="decideKeep" action="c_time &#x2254; c_time +ComputeDelay"/>
+                  <relatedEvent href="platform:/resource/waterTankAE/controllerImpl.bum#org.eventb.emf.core.machine.Event.decideKeep"/>
+                </branch>
+                <relatedEvent href="platform:/resource/waterTankAE/controllerImpl.bum#org.eventb.emf.core.machine.Event.decideOff"/>
+              </branch>
+              <relatedEvent href="platform:/resource/waterTankAE/controllerImpl.bum#org.eventb.emf.core.machine.Event.decideOn"/>
+            </command>
+          </caseStatement>
+        </body>
+      </subroutines>
+    </autoTasks>
+  </entryPoint>
+  <environMachines name="environmentImpl" projectName="waterTankAE" machineName="environmentImpl">
+    <body xsi:type="il1:Seq">
+      <leftBranch xsi:type="il1:Call" machineName="environmentImpl" projectName="waterTankAE">
+        <subroutine name="environSMstateMachine" machineName="environmentImpl" projectName="waterTankAE">
+          <body xsi:type="il1:Case" caseExpression="environSM">
+            <caseStatement caseValue="stableSim">
+              <command xsi:type="il1:If">
+                <body xsi:type="il1:Action" ParentEventName="fmiDecLevel" action="fmi_Level &#x2254; fmi_Level &#x2212; 1"/>
+                <condition>fmi_PumpOn = FALSE</condition>
+                <branch>
+                  <condition>fmi_PumpOn = TRUE</condition>
+                  <action xsi:type="il1:Action" ParentEventName="fmiIncLevel" action="fmi_Level &#x2254; fmi_Level + 1"/>
+                  <relatedEvent href="platform:/resource/waterTankAE/environmentImpl.bum#org.eventb.emf.core.machine.Event.fmiIncLevel"/>
+                </branch>
+                <relatedEvent href="platform:/resource/waterTankAE/environmentImpl.bum#org.eventb.emf.core.machine.Event.fmiDecLevel"/>
+              </command>
+            </caseStatement>
+          </body>
+        </subroutine>
+      </leftBranch>
+      <rightBranch xsi:type="il1:Seq">
+        <leftBranch xsi:type="il1:Output" text="fmiLevel: " element="fmi_Level"/>
+        <rightBranch xsi:type="il1:Output" text="fmi_PumpOn: " element="fmi_PumpOn"/>
+      </rightBranch>
+    </body>
+    <taskType xsi:type="il1:PeriodicTaskType" period="100"/>
+    <decls xsi:type="il1:VariableDecl" identifier="environSM" type="environSM_STATES" initialValue="stableSim" ProjectName="waterTankAE" ComponentName="environmentImpl"/>
+    <decls xsi:type="il1:VariableDecl" identifier="fmi_Level" type="&#x2124;" initialValue="1000" ProjectName="waterTankAE" ComponentName="environmentImpl"/>
+    <decls xsi:type="il1:VariableDecl" identifier="fmi_PumpOn" type="BOOL" initialValue="FALSE" ProjectName="waterTankAE" ComponentName="environmentImpl"/>
+    <decls xsi:type="il1:VariableDecl" identifier="fmi_time" type="&#x2124;" initialValue="0" ProjectName="waterTankAE" ComponentName="environmentImpl"/>
+    <subroutines name="environSMstateMachine" machineName="environmentImpl" projectName="waterTankAE">
+      <body xsi:type="il1:Case" caseExpression="environSM">
+        <caseStatement caseValue="stableSim">
+          <command xsi:type="il1:If">
+            <body xsi:type="il1:Action" ParentEventName="fmiDecLevel" action="fmi_Level &#x2254; fmi_Level &#x2212; 1"/>
+            <condition>fmi_PumpOn = FALSE</condition>
+            <branch>
+              <condition>fmi_PumpOn = TRUE</condition>
+              <action xsi:type="il1:Action" ParentEventName="fmiIncLevel" action="fmi_Level &#x2254; fmi_Level + 1"/>
+              <relatedEvent href="platform:/resource/waterTankAE/environmentImpl.bum#org.eventb.emf.core.machine.Event.fmiIncLevel"/>
+            </branch>
+            <relatedEvent href="platform:/resource/waterTankAE/environmentImpl.bum#org.eventb.emf.core.machine.Event.fmiDecLevel"/>
+          </command>
+        </caseStatement>
+      </body>
+    </subroutines>
+    <subroutines name="readLevel" machineName="environmentImpl" projectName="waterTankAE">
+      <body xsi:type="il1:Seq">
+        <leftBranch xsi:type="il1:Action" ParentEventName="readLevel" action="fmi_time &#x2254; fmi_time + ReadDelay"/>
+        <rightBranch xsi:type="il1:Action" action="p &#x2254; fmi_Level"/>
+      </body>
+      <formalParameters xsi:type="il1:OutParameter" identifier="p" type=" &#x2124;" ProjectName="waterTankAE"/>
+    </subroutines>
+    <subroutines name="writePump" machineName="environmentImpl" projectName="waterTankAE">
+      <body xsi:type="il1:Seq">
+        <leftBranch xsi:type="il1:Action" ParentEventName="writePump" action="fmi_PumpOn &#x2254; p"/>
+        <rightBranch xsi:type="il1:Action" ParentEventName="writePump" action="fmi_time &#x2254; fmi_time + WriteDelay"/>
+      </body>
+      <formalParameters xsi:type="il1:InParameter" identifier="p" type=" BOOL" ProjectName="waterTankAE"/>
+    </subroutines>
+  </environMachines>
+</il1:Program>

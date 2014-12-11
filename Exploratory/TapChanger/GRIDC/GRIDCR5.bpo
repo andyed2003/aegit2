@@ -1,0 +1,1063 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="HORIZON" org.eventb.core.type="ℙ(ℤ×ℙ(ℤ×ℤ))"/>
+<org.eventb.core.poPredicate name="HORIZOO" org.eventb.core.predicate="HORIZON∈235 ‥ 245 ⇸ (1 ‥ 3 → 235 ‥ 245)" org.eventb.core.source="/GRIDC/GRIDCC.buc|org.eventb.core.contextFile#GRIDCC|org.eventb.core.axiom#_G0jAAdA6EeOa9czDEdPT3g"/>
+<org.eventb.core.poPredicate name="HORIZOP" org.eventb.core.predicate="HORIZON={235 ↦ {1 ↦ 238,2 ↦ 236,3 ↦ 235},236 ↦ {1 ↦ 239,2 ↦ 237,3 ↦ 235},237 ↦ {1 ↦ 239,2 ↦ 238,3 ↦ 236},238 ↦ {1 ↦ 240,2 ↦ 239,3 ↦ 236},239 ↦ {1 ↦ 241,2 ↦ 240,3 ↦ 237},240 ↦ {1 ↦ 242,2 ↦ 240,3 ↦ 237},241 ↦ {1 ↦ 242,2 ↦ 241,3 ↦ 238},242 ↦ {1 ↦ 243,2 ↦ 243,3 ↦ 238},243 ↦ {1 ↦ 244,2 ↦ 243,3 ↦ 240},244 ↦ {1 ↦ 244,2 ↦ 244,3 ↦ 241},245 ↦ {1 ↦ 245,2 ↦ 244,3 ↦ 242}}" org.eventb.core.source="/GRIDC/GRIDCC.buc|org.eventb.core.contextFile#GRIDCC|org.eventb.core.axiom#_G0jnENA6EeOa9czDEdPT3g"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="CEvaluated" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="CFstep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="CRetrycount" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="ControllerActive" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="Cstep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="DEvaluated" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="Istep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="PEvaluated" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="PFstep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="PRstep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="Pstep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="TCAcknowledgeInit" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="TCCommsFailure" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="TCCommsInitiated" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="TCInit" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="TCposition" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="TCrequestedposition" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="TCstep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="TEvaluated" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="Tstep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="count" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="countprime" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="currentvoltage" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="currentvoltageprime" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="position" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="positionprime" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="predicted" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="predictedprime" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="predictedv" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="reset" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="resetprime" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="safemode" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="seedvoltage" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="tappos" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="v" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="currentvoltageprimf" org.eventb.core.predicate="v∈235 ‥ 245" org.eventb.core.source="/GRIDC/GRIDCM.bum|org.eventb.core.machineFile#GRIDCM|org.eventb.core.invariant#_KqLEg87LEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="currentvoltageprimg" org.eventb.core.predicate="tappos∈10 ‥ 30" org.eventb.core.source="/GRIDC/GRIDCM.bum|org.eventb.core.machineFile#GRIDCM|org.eventb.core.invariant#_KqLEhM7LEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="currentvoltageprimh" org.eventb.core.predicate="predictedv∈235 ‥ 245" org.eventb.core.source="/GRIDC/GRIDCM.bum|org.eventb.core.machineFile#GRIDCM|org.eventb.core.invariant#_KqLEhc7LEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="currentvoltageprimi" org.eventb.core.predicate="TCInit∈BOOL" org.eventb.core.source="/GRIDC/GRIDCR1.bum|org.eventb.core.machineFile#GRIDCR1|org.eventb.core.invariant#_MTGUsc7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="currentvoltageprimj" org.eventb.core.predicate="ControllerActive∈BOOL" org.eventb.core.source="/GRIDC/GRIDCR1.bum|org.eventb.core.machineFile#GRIDCR1|org.eventb.core.invariant#_MTGUss7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="currentvoltageprimk" org.eventb.core.predicate="CEvaluated∈BOOL" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugI8s7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="currentvoltagepriml" org.eventb.core.predicate="TEvaluated∈BOOL" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugI887MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="currentvoltageprimm" org.eventb.core.predicate="Istep∈0 ‥ 1" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugI9M7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="currentvoltageprimn" org.eventb.core.predicate="Tstep∈0 ‥ 2" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugwAM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="currentvoltageprimo" org.eventb.core.predicate="TCInit∈BOOL" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugwAc7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="currentvoltageprimp" org.eventb.core.predicate="TCAcknowledgeInit∈BOOL" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugwAs7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="currentvoltageprimq" org.eventb.core.predicate="ControllerActive∈BOOL" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugwA87MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="currentvoltageprimr" org.eventb.core.predicate="TCCommsFailure∈BOOL" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugwBM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="currentvoltageprims" org.eventb.core.predicate="TCCommsInitiated∈BOOL" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugwBc7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="currentvoltageprimt" org.eventb.core.predicate="CRetrycount∈0 ‥ 3" org.eventb.core.source="/GRIDC/GRIDCR3.bum|org.eventb.core.machineFile#GRIDCR3|org.eventb.core.invariant#_MTGUsM7MEeOwhtEFi5ykD0"/>
+<org.eventb.core.poPredicate name="currentvoltageprimu" org.eventb.core.predicate="position∈10 ‥ 30" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.invariant#_bcwekc-UEeOpipKU6EcABi"/>
+<org.eventb.core.poPredicate name="currentvoltageprimv" org.eventb.core.predicate="positionprime∈10 ‥ 30" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.invariant#_bcwekc-UEeOpipKU6EcABk"/>
+<org.eventb.core.poPredicate name="currentvoltageprimw" org.eventb.core.predicate="TCposition∈10 ‥ 30" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.invariant#_bcwekc-UEeOpipKU6EcABm"/>
+<org.eventb.core.poPredicate name="currentvoltageprimx" org.eventb.core.predicate="TCrequestedposition∈10 ‥ 30" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.invariant#_bcwekc-UEeOpipKU6EcABo"/>
+<org.eventb.core.poPredicate name="currentvoltageprimy" org.eventb.core.predicate="Cstep∈0 ‥ 1" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.invariant#_bcwekc-UEeOpipKU6EcABq"/>
+<org.eventb.core.poPredicate name="currentvoltageprimz" org.eventb.core.predicate="Pstep∈0 ‥ 1" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcABi"/>
+<org.eventb.core.poPredicate name="currentvoltageprim{" org.eventb.core.predicate="Cstep=1⇒CEvaluated=FALSE" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.invariant#_RJTU8M-YEeOpipKU6EcABg"/>
+<org.eventb.core.poPredicate name="currentvoltageprim|" org.eventb.core.predicate="TCstep∈0 ‥ 1" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcABk"/>
+<org.eventb.core.poPredicate name="currentvoltageprim}" org.eventb.core.predicate="TCstep=1⇒TEvaluated=FALSE" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.invariant#_Ne5mIM-gEeOZ4aAY1Aob2A"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimf"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ 3" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAB~"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD0"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABk"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAB~"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimf"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ 3" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD0"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABk"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC("/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimf"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ 3" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD0"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABk"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC*"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimf"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="240∈235 ‥ 245" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD0"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABk"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC,"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimf"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="240∈235 ‥ 245" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD0"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABk"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC."/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#INITIALISATION\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimf"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="240∈235 ‥ 245" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD0"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABk"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC0"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#INITIALISATION\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimf"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="240∈235 ‥ 245" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD0"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABk"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC2"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#INITIALISATION\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimf"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ 3" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD0"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABk"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC:"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#INITIALISATION\/inv11\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD10"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimf"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="240∈235 ‥ 245" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcACA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD0"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABk"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcACA"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#INITIALISATION\/inv14\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD13"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv15/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimf"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ 2" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcACC"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD0"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABk"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcACC"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#INITIALISATION\/inv15\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD14"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv16/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimf"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="FALSE=FALSE⇒FALSE=FALSE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_SfpQoNdKEeOMIdJ7n5dMWQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD0"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABk"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_SfpQoNdKEeOMIdJ7n5dMWQ"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#INITIALISATION\/inv16\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD15"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentvoltageprimf" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="predictedv'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="DEvaluated'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="PEvaluated'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="count'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="TCrequestedposition'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="Cstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="CRetrycount'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="Tstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="TCCommsInitiated'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="ControllerActive'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="TCCommsFailure'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="CFstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="PFstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="positionprime'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="TCInit'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="Pstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="TEvaluated'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="resetprime'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="currentvoltageprime'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="TCposition'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="Istep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="tappos'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="CEvaluated'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="seedvoltage'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="safemode'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="currentvoltage'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="predictedprime'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="countprime'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="TCAcknowledgeInit'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="TCstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="predicted'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="reset'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="v'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="PRstep'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentvoltageprimf" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTIDENTcurrentvoltageprimf" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentvoltageprimg" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="Cstep'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentvoltageprimg" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTIDENTcurrentvoltageprimg" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="CEvaluated=FALSE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABl|org.eventb.core.guard#_Nq60cM-WEeOpipKU6EcABg"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="Cstep=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABl|org.eventb.core.guard#_Nq60cc-WEeOpipKU6EcABg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="ControllerInitiateTapChangerComms/inv16/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimh"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="TRUE=FALSE⇒ControllerActive=FALSE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_SfpQoNdKEeOMIdJ7n5dMWQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABm"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_SfpQoNdKEeOMIdJ7n5dMWQ"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerInitiateTapChangerComms\/inv16\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD15"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ControllerInitiateTapChangerComms/grd3/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimh"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ControllerActive=FALSE" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD1|org.eventb.core.guard#_8uilM87MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD1|org.eventb.core.guard#_8uilM87MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABm"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerInitiateTapChangerComms\/grd3\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentvoltageprimh" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="CRetrycount'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="TCInit'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="Istep'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentvoltageprimh" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTIDENTcurrentvoltageprimh" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="Istep=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABm|org.eventb.core.guard#_8uilMs7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="TCInit=FALSE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABm|org.eventb.core.guard#_8ujMQM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="Cstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABm|org.eventb.core.guard#_NqtZEM-WEeOpipKU6EcABg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentvoltageprimi" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="CRetrycount'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="Istep'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentvoltageprimi" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTIDENTcurrentvoltageprimi" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="TCInit=TRUE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABn|org.eventb.core.guard#_8ujMRM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="TCAcknowledgeInit=FALSE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABn|org.eventb.core.guard#_8ujzUM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="Istep=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABn|org.eventb.core.guard#_8ujzUs7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="CRetrycount&gt;0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABn|org.eventb.core.guard#_ja55kM7TEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="Cstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABn|org.eventb.core.guard#_NqunMM-WEeOpipKU6EcABg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="ControllerCompleteTapChangerComms/inv16/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimj"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="TCInit=FALSE⇒TRUE=FALSE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_SfpQoNdKEeOMIdJ7n5dMWQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABo"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_SfpQoNdKEeOMIdJ7n5dMWQ"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerCompleteTapChangerComms\/inv16\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD15"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentvoltageprimj" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="ControllerActive'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="Istep'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentvoltageprimj" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTIDENTcurrentvoltageprimj" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="TCInit=TRUE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABo|org.eventb.core.guard#_8ukaYM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="TCAcknowledgeInit=TRUE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABo|org.eventb.core.guard#_8ukaYc7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="ControllerActive=FALSE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABo|org.eventb.core.guard#_8ukaYs7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="Istep=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABo|org.eventb.core.guard#_8ukaY87MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="Cstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABo|org.eventb.core.guard#_miyF4M-WEeOpipKU6EcABg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="ControllerCompleteTapChangerCommsFail/inv16/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimk"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="FALSE=FALSE⇒ControllerActive=FALSE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_SfpQoNdKEeOMIdJ7n5dMWQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABp"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_SfpQoNdKEeOMIdJ7n5dMWQ"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerCompleteTapChangerCommsFail\/inv16\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD15"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentvoltageprimk" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="TCInit'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="Istep'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentvoltageprimk" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTIDENTcurrentvoltageprimk" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="TCInit=TRUE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABp|org.eventb.core.guard#_8ulBcs7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="TCAcknowledgeInit=FALSE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABp|org.eventb.core.guard#_8ulBc87MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="ControllerActive=FALSE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABp|org.eventb.core.guard#_8ulogM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="Istep=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABp|org.eventb.core.guard#_8ulogc7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="CRetrycount=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABp|org.eventb.core.guard#_p1O4sM7TEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="Cstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABp|org.eventb.core.guard#_mizUAM-WEeOpipKU6EcABg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="ControllerReadVoltage/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltagepriml"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1∈0 ‥ 3" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAB~"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD&gt;"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkpPMNHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAB~"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerReadVoltage\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentvoltagepriml" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="pv" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="CFstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="pobservablechange" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="v'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentvoltagepriml" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTIDENTcurrentvoltagepriml" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="pv∈235 ‥ 245" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkpPMNHyEeOl7IZCNnYhig|org.eventb.core.guard#_lkp2Q9HyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="(tappos∈23 ‥ 30∧pobservablechange∈0 ‥ 2)∨(tappos∈10 ‥ 17∧pobservablechange∈−2 ‥ 0)∨(tappos∈18 ‥ 22∧pobservablechange∈−2 ‥ 2)" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkpPMNHyEeOl7IZCNnYhig|org.eventb.core.guard#_lkp2RNHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="pv=v+pobservablechange" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkpPMNHyEeOl7IZCNnYhig|org.eventb.core.guard#_wDrtkNTqEeOl9MyB9Q6lAw"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="ControllerActive=TRUE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkpPMNHyEeOl7IZCNnYhig|org.eventb.core.guard#_UYOXwdH4EeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="Cstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkpPMNHyEeOl7IZCNnYhig|org.eventb.core.guard#_lkp2RtHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="CFstep=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkpPMNHyEeOl7IZCNnYhig|org.eventb.core.guard#_lkp2R9HyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="Pstep=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkpPMNHyEeOl7IZCNnYhig|org.eventb.core.guard#_ZqwIsdH1EeOl7IZCNnYhig"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="ControllerAdjustTapPositionUp/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimm"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="2∈0 ‥ 3" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAB~"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkqdUtHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAB~"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerAdjustTapPositionUp\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ControllerAdjustTapPositionUp/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimm"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ptp∈−10 ‥ 10" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3INHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3INHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkqdUtHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerAdjustTapPositionUp\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentvoltageprimm" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="CFstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="Pstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="ptp" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="resetprime'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="tappos'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="safemode'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentvoltageprimm" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTIDENTcurrentvoltageprimm" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ptp∈1 ‥ 10" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkqdUtHyEeOl7IZCNnYhig|org.eventb.core.guard#_lkqdVdHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="tappos+ptp≥10" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkqdUtHyEeOl7IZCNnYhig|org.eventb.core.guard#_lkrEYNHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="tappos+ptp≤30" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkqdUtHyEeOl7IZCNnYhig|org.eventb.core.guard#_lkrEYdHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="ControllerActive=TRUE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkqdUtHyEeOl7IZCNnYhig|org.eventb.core.guard#_Zqx94dH1EeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="Istep=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkqdUtHyEeOl7IZCNnYhig|org.eventb.core.guard#_ZnwWQNTuEeOl9MyB9Q6lAw"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="Cstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkqdUtHyEeOl7IZCNnYhig|org.eventb.core.guard#_lkrEY9HyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="CFstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkqdUtHyEeOl7IZCNnYhig|org.eventb.core.guard#_lkrEZNHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="Pstep=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkqdUtHyEeOl7IZCNnYhig|org.eventb.core.guard#_Zqyk8NH1EeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="count=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkqdUtHyEeOl7IZCNnYhig|org.eventb.core.guard#_lkrrcNHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="currentvoltage&lt;240" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkqdUtHyEeOl7IZCNnYhig|org.eventb.core.guard#_lkrrcdHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="predicted&lt;240" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkqdUtHyEeOl7IZCNnYhig|org.eventb.core.guard#_wDvX8NTqEeOl9MyB9Q6lAw"/>
+<org.eventb.core.poPredicate name="PRD11" org.eventb.core.predicate="reset=FALSE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkqdUtHyEeOl7IZCNnYhig|org.eventb.core.guard#_wDvX8dTqEeOl9MyB9Q6lAw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="ControllerAdjustTapPositionDown/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimn"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="2∈0 ‥ 3" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAB~"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lksSgNHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAB~"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerAdjustTapPositionDown\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ControllerAdjustTapPositionDown/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimn"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ptp∈−10 ‥ 10" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3INHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3INHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lksSgNHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerAdjustTapPositionDown\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ControllerAdjustTapPositionDown/grd3/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimn"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="tappos+ptp≤30" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3ItHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3ItHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lksSgNHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerAdjustTapPositionDown\/grd3\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentvoltageprimn" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="CFstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="Pstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="ptp" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="resetprime'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="tappos'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="safemode'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentvoltageprimn" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTIDENTcurrentvoltageprimn" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ptp∈−10 ‥ −1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lksSgNHyEeOl7IZCNnYhig|org.eventb.core.guard#_lksSg9HyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="tappos+ptp≥10" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lksSgNHyEeOl7IZCNnYhig|org.eventb.core.guard#_lksShNHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="ControllerActive=TRUE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lksSgNHyEeOl7IZCNnYhig|org.eventb.core.guard#_lksShdHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="Istep=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lksSgNHyEeOl7IZCNnYhig|org.eventb.core.guard#_ZnxkYdTuEeOl9MyB9Q6lAw"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="Cstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lksSgNHyEeOl7IZCNnYhig|org.eventb.core.guard#_lksShtHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="CFstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lksSgNHyEeOl7IZCNnYhig|org.eventb.core.guard#_lks5kNHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="Pstep=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lksSgNHyEeOl7IZCNnYhig|org.eventb.core.guard#_lks5kdHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="count=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lksSgNHyEeOl7IZCNnYhig|org.eventb.core.guard#_Zq0aINH1EeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="currentvoltage&gt;240" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lksSgNHyEeOl7IZCNnYhig|org.eventb.core.guard#_lks5k9HyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="predicted&gt;240" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lksSgNHyEeOl7IZCNnYhig|org.eventb.core.guard#_ySSTINTqEeOl9MyB9Q6lAw"/>
+<org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="reset=FALSE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lksSgNHyEeOl7IZCNnYhig|org.eventb.core.guard#_ySSTIdTqEeOl9MyB9Q6lAw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="ControllerDoNotAdjustTapPositionOnCount/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimo"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="2∈0 ‥ 3" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAB~"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lktgotHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAB~"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerDoNotAdjustTapPositionOnCount\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ControllerDoNotAdjustTapPositionOnCount/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimo"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ptp∈−10 ‥ 10" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3INHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3INHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lktgotHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerDoNotAdjustTapPositionOnCount\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ControllerDoNotAdjustTapPositionOnCount/grd2/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimo"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="tappos+ptp≥10" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3IdHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3IdHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lktgotHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerDoNotAdjustTapPositionOnCount\/grd2\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ControllerDoNotAdjustTapPositionOnCount/grd3/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimo"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="tappos+ptp≤30" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3ItHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3ItHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lktgotHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerDoNotAdjustTapPositionOnCount\/grd3\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentvoltageprimo" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="CFstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="Pstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="ptp" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="resetprime'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="tappos'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentvoltageprimo" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTIDENTcurrentvoltageprimo" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ptp=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lktgotHyEeOl7IZCNnYhig|org.eventb.core.guard#_UYSpMdH4EeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="Istep=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lktgotHyEeOl7IZCNnYhig|org.eventb.core.guard#_ZnzZkNTuEeOl9MyB9Q6lAw"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="Cstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lktgotHyEeOl7IZCNnYhig|org.eventb.core.guard#_lktgpNHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="CFstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lktgotHyEeOl7IZCNnYhig|org.eventb.core.guard#_lktgpdHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="Pstep=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lktgotHyEeOl7IZCNnYhig|org.eventb.core.guard#_lkuHsNHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="ControllerActive=TRUE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lktgotHyEeOl7IZCNnYhig|org.eventb.core.guard#_Zq1oQdH1EeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="count&gt;0∨reset=TRUE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lktgotHyEeOl7IZCNnYhig|org.eventb.core.guard#_ySUvYNTqEeOl9MyB9Q6lAw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="ControllerDoNotAdjustTapPositionOnLowVoltage/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimp"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="2∈0 ‥ 3" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAB~"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkuHs9HyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAB~"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerDoNotAdjustTapPositionOnLowVoltage\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ControllerDoNotAdjustTapPositionOnLowVoltage/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimp"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ptp∈−10 ‥ 10" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3INHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3INHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkuHs9HyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerDoNotAdjustTapPositionOnLowVoltage\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ControllerDoNotAdjustTapPositionOnLowVoltage/grd2/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimp"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="tappos+ptp≥10" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3IdHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3IdHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkuHs9HyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerDoNotAdjustTapPositionOnLowVoltage\/grd2\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ControllerDoNotAdjustTapPositionOnLowVoltage/grd3/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimp"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="tappos+ptp≤30" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3ItHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3ItHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkuHs9HyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerDoNotAdjustTapPositionOnLowVoltage\/grd3\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentvoltageprimp" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="CFstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="Pstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="ptp" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="resetprime'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="tappos'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentvoltageprimp" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTIDENTcurrentvoltageprimp" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ptp=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkuHs9HyEeOl7IZCNnYhig|org.eventb.core.guard#_UYTQQtH4EeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="Istep=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkuHs9HyEeOl7IZCNnYhig|org.eventb.core.guard#_Zn0AodTuEeOl9MyB9Q6lAw"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="Cstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkuHs9HyEeOl7IZCNnYhig|org.eventb.core.guard#_lkuHtdHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="CFstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkuHs9HyEeOl7IZCNnYhig|org.eventb.core.guard#_lkuHttHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="Pstep=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkuHs9HyEeOl7IZCNnYhig|org.eventb.core.guard#_lkuuwNHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="ControllerActive=TRUE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkuHs9HyEeOl7IZCNnYhig|org.eventb.core.guard#_Zq22YdH1EeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="count=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkuHs9HyEeOl7IZCNnYhig|org.eventb.core.guard#_ySWkkNTqEeOl9MyB9Q6lAw"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="currentvoltage≤240∧predicted≥240" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkuHs9HyEeOl7IZCNnYhig|org.eventb.core.guard#_ySWkkdTqEeOl9MyB9Q6lAw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="ControllerDoNotAdjustTapPositionOnHighVoltage/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimq"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="2∈0 ‥ 3" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAB~"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkuuxNHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAB~"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerDoNotAdjustTapPositionOnHighVoltage\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ControllerDoNotAdjustTapPositionOnHighVoltage/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimq"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ptp∈−10 ‥ 10" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3INHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3INHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkuuxNHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerDoNotAdjustTapPositionOnHighVoltage\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ControllerDoNotAdjustTapPositionOnHighVoltage/grd2/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimq"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="tappos+ptp≥10" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3IdHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3IdHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkuuxNHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerDoNotAdjustTapPositionOnHighVoltage\/grd2\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ControllerDoNotAdjustTapPositionOnHighVoltage/grd3/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimq"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="tappos+ptp≤30" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3ItHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3ItHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkuuxNHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerDoNotAdjustTapPositionOnHighVoltage\/grd3\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentvoltageprimq" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="CFstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="Pstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="ptp" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="resetprime'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="tappos'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentvoltageprimq" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTIDENTcurrentvoltageprimq" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ptp=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkuuxNHyEeOl7IZCNnYhig|org.eventb.core.guard#_UYUeYdH4EeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="Istep=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkuuxNHyEeOl7IZCNnYhig|org.eventb.core.guard#_Zn2c4dTuEeOl9MyB9Q6lAw"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="Cstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkuuxNHyEeOl7IZCNnYhig|org.eventb.core.guard#_lkvV0NHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="CFstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkuuxNHyEeOl7IZCNnYhig|org.eventb.core.guard#_lkvV0dHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="Pstep=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkuuxNHyEeOl7IZCNnYhig|org.eventb.core.guard#_lkvV0tHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="ControllerActive=TRUE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkuuxNHyEeOl7IZCNnYhig|org.eventb.core.guard#_Zq4EgdH1EeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="count=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkuuxNHyEeOl7IZCNnYhig|org.eventb.core.guard#_ySZA0NTqEeOl9MyB9Q6lAw"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="currentvoltage≥240∧predicted≤240" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkuuxNHyEeOl7IZCNnYhig|org.eventb.core.guard#_ySZA0dTqEeOl9MyB9Q6lAw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="ControllerMovetoSafeModeLowVoltage/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimr"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="2∈0 ‥ 3" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAB~"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkvV1tHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAB~"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerMovetoSafeModeLowVoltage\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ControllerMovetoSafeModeLowVoltage/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimr"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ptp∈−10 ‥ 10" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3INHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3INHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkvV1tHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerMovetoSafeModeLowVoltage\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ControllerMovetoSafeModeLowVoltage/grd2/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimr"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="tappos+ptp≥10" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3IdHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3IdHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkvV1tHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerMovetoSafeModeLowVoltage\/grd2\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ControllerMovetoSafeModeLowVoltage/grd3/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimr"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="tappos+ptp≤30" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3ItHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3ItHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkvV1tHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerMovetoSafeModeLowVoltage\/grd3\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentvoltageprimr" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="CFstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="Pstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="ptp" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="resetprime'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="tappos'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="safemode'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentvoltageprimr" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTIDENTcurrentvoltageprimr" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ptp=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkvV1tHyEeOl7IZCNnYhig|org.eventb.core.guard#_PKXLwNH4EeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="Istep=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkvV1tHyEeOl7IZCNnYhig|org.eventb.core.guard#_Zn4SEdTuEeOl9MyB9Q6lAw"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="Cstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkvV1tHyEeOl7IZCNnYhig|org.eventb.core.guard#_lkv84dHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="CFstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkvV1tHyEeOl7IZCNnYhig|org.eventb.core.guard#_lkv84tHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="Pstep=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkvV1tHyEeOl7IZCNnYhig|org.eventb.core.guard#_lkv849HyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="ControllerActive=TRUE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkvV1tHyEeOl7IZCNnYhig|org.eventb.core.guard#_PKVWkNH4EeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="count=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkvV1tHyEeOl7IZCNnYhig|org.eventb.core.guard#_lkv85dHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="tappos=30" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkvV1tHyEeOl7IZCNnYhig|org.eventb.core.guard#_5XJ5gNTpEeOl9MyB9Q6lAw"/>
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="currentvoltage&lt;240∧predicted&lt;240" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkvV1tHyEeOl7IZCNnYhig|org.eventb.core.guard#_Zq4rktH1EeOl7IZCNnYhig"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="ControllerMovetoSafeModeHighVoltage/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprims"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="2∈0 ‥ 3" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAB~"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkwj89HyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAB~"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerMovetoSafeModeHighVoltage\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ControllerMovetoSafeModeHighVoltage/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprims"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ptp∈−10 ‥ 10" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3INHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3INHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkwj89HyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerMovetoSafeModeHighVoltage\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ControllerMovetoSafeModeHighVoltage/grd2/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprims"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="tappos+ptp≥10" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3IdHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3IdHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkwj89HyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerMovetoSafeModeHighVoltage\/grd2\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ControllerMovetoSafeModeHighVoltage/grd3/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprims"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="tappos+ptp≤30" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3ItHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_HfRpANHwEeOl7IZCNnYhig|org.eventb.core.guard#_HfS3ItHwEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkwj89HyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerMovetoSafeModeHighVoltage\/grd3\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentvoltageprims" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="CFstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="Pstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="ptp" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="resetprime'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="tappos'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="safemode'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentvoltageprims" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTIDENTcurrentvoltageprims" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ptp=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkwj89HyEeOl7IZCNnYhig|org.eventb.core.guard#_PKV9otH4EeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="Istep=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkwj89HyEeOl7IZCNnYhig|org.eventb.core.guard#_Zn6HQdTuEeOl9MyB9Q6lAw"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="Cstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkwj89HyEeOl7IZCNnYhig|org.eventb.core.guard#_lkwj9dHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="CFstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkwj89HyEeOl7IZCNnYhig|org.eventb.core.guard#_lkwj9tHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="Pstep=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkwj89HyEeOl7IZCNnYhig|org.eventb.core.guard#_lkxLANHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="ControllerActive=TRUE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkwj89HyEeOl7IZCNnYhig|org.eventb.core.guard#_5XM80NTpEeOl9MyB9Q6lAw"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="count=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkwj89HyEeOl7IZCNnYhig|org.eventb.core.guard#_lkxLAtHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="tappos=10" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkwj89HyEeOl7IZCNnYhig|org.eventb.core.guard#_5XNj4NTpEeOl9MyB9Q6lAw"/>
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="currentvoltage&gt;240∧predicted&gt;240" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkwj89HyEeOl7IZCNnYhig|org.eventb.core.guard#_Zq55sdH1EeOl7IZCNnYhig"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="ControllerWritePosition/act2/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimt"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="tappos_param=tappos" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD5|org.eventb.core.action#_99S6cM-UEeOpipKU6EcABg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD5"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD5|org.eventb.core.action#_99S6cM-UEeOpipKU6EcABg"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABq"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerWritePosition\/act2\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ControllerWritePosition/Pstep/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimt"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1=Pstep" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABq|org.eventb.core.action#_5XR1UNTpEeOl9MyB9Q6lAw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD5"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABq"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerWritePosition\/Pstep\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentvoltageprimt" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="positionprime'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="Pstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="Istep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="tappos_param" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentvoltageprimt" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTIDENTcurrentvoltageprimt" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="Istep=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABq|org.eventb.core.guard#_H6DtQM-PEeOpipKU6EcABg"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="ControllerActive=TRUE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABq|org.eventb.core.guard#_H6DtQc-PEeOpipKU6EcABg"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="TCInit=TRUE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABq|org.eventb.core.guard#_H6DtQs-PEeOpipKU6EcABg"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="TCAcknowledgeInit=TRUE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABq|org.eventb.core.guard#_H6DtQ8-PEeOpipKU6EcABg"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="Cstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABq|org.eventb.core.guard#_mi1JMM-WEeOpipKU6EcABg"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="Pstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABq|org.eventb.core.guard#_k4qQ8M-XEeOpipKU6EcABg"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="CFstep=3" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABq|org.eventb.core.guard#_yXKlkNUKEeOYXKmvcyzXKw"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="tappos=tappos_param" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABq|org.eventb.core.guard#_yXKlkNUKEeOYXKmvcyzXKy"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="ControllerWriteVoltage/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="3∈0 ‥ 3" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAB~"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkxyENHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAB~"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerWriteVoltage\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ControllerWriteVoltage/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="v_param∈235 ‥ 245" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkxyENHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerWriteVoltage\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentvoltageprimu" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="v_param" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="CFstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="currentvoltageprime'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentvoltageprimu" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTIDENTcurrentvoltageprimu" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="Cstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkxyENHyEeOl7IZCNnYhig|org.eventb.core.guard#_lkxyEtHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="CFstep=2" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkxyENHyEeOl7IZCNnYhig|org.eventb.core.guard#_lkxyE9HyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="ControllerActive=TRUE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkxyENHyEeOl7IZCNnYhig|org.eventb.core.guard#_ySg8odTqEeOl9MyB9Q6lAw"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="v_param=v" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkxyENHyEeOl7IZCNnYhig|org.eventb.core.guard#_ySg8odTqEeOl9MyB9Q6lAx"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="ControllerWait/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprimv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ 3" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAB~"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD6"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABr"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAB~"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#ControllerWait\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentvoltageprimv" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="Cstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="CFstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="Pstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="Istep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="CEvaluated'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentvoltageprimv" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTIDENTcurrentvoltageprimv" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="Istep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABr|org.eventb.core.guard#_8up58c7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="Cstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABr|org.eventb.core.guard#_mi1wQc-WEeOpipKU6EcABg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentvoltageprimw" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="TCstep'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentvoltageprimw" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTIDENTcurrentvoltageprimw" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="TEvaluated=FALSE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABs|org.eventb.core.guard#_wJAHUM-YEeOpipKU6EcABg"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="TCstep=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABs|org.eventb.core.guard#_wJAHUc-YEeOpipKU6EcABg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentvoltageprimx" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="Tstep'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentvoltageprimx" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTIDENTcurrentvoltageprimx" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="TCAcknowledgeInit=FALSE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABt|org.eventb.core.guard#_8uqhAM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="TCInit=TRUE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABt|org.eventb.core.guard#_8uqhAc7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="Tstep=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABt|org.eventb.core.guard#_wEN5ENTqEeOl9MyB9Q6lAw"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="TCstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABt|org.eventb.core.guard#_wEN5EdTqEeOl9MyB9Q6lAw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentvoltageprimy" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="Tstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="TCCommsInitiated'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentvoltageprimy" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTIDENTcurrentvoltageprimy" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="TCAcknowledgeInit=FALSE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABu|org.eventb.core.guard#_8urIEs7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="TCInit=FALSE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABu|org.eventb.core.guard#_8urIE87MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="TCCommsFailure=FALSE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABu|org.eventb.core.guard#_8urvIM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="TCCommsInitiated=TRUE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABu|org.eventb.core.guard#_8urvIc7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="Tstep=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABu|org.eventb.core.guard#_8urvIs7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="TCstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABu|org.eventb.core.guard#_wI2WUM-YEeOpipKU6EcABg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentvoltageprimz" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="pfail" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="Tstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="TCCommsInitiated'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="TCCommsFailure'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="pack" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="TCAcknowledgeInit'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentvoltageprimz" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTIDENTcurrentvoltageprimz" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="pack∈BOOL" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABv|org.eventb.core.guard#_8usWMs7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="pfail∈BOOL" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABv|org.eventb.core.guard#_8usWM87MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="pack=TRUE⇒pfail=FALSE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABv|org.eventb.core.guard#_8usWNM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="TCCommsFailure=TRUE⇒pack=FALSE∧pfail=TRUE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABv|org.eventb.core.guard#_8usWNc7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="Tstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABv|org.eventb.core.guard#_8usWNs7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="TCstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABv|org.eventb.core.guard#_yyG3kM-YEeOpipKU6EcABg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentvoltageprim{" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="Tstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="TCCommsFailure'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentvoltageprim{" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTIDENTcurrentvoltageprim{" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="TCCommsFailure=TRUE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABw|org.eventb.core.guard#_8utkUc7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="Tstep=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABw|org.eventb.core.guard#_wELc0dTqEeOl9MyB9Q6lAw"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="TCstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABw|org.eventb.core.guard#_8utkUM7MEeOwhtEFi5ykCw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="TapChangerReadPosition/act2/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprim\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="position_param=position" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD;|org.eventb.core.action#_99ZoIM-UEeOpipKU6EcABg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD;"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD;|org.eventb.core.action#_99ZoIM-UEeOpipKU6EcABg"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABx"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#TapChangerReadPosition\/act2\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentvoltageprim|" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="TCrequestedposition'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="Tstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="position_param" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentvoltageprim|" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTIDENTcurrentvoltageprim\|" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="TCAcknowledgeInit=TRUE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABx|org.eventb.core.guard#_H6EUU8-PEeOpipKU6EcABg"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="TCInit=TRUE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABx|org.eventb.core.guard#_H6EUVM-PEeOpipKU6EcABg"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="Tstep=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABx|org.eventb.core.guard#_wEPuQNTqEeOl9MyB9Q6lAw"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="TCstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABx|org.eventb.core.guard#_BA874M-ZEeOpipKU6EcABg"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="position_param=position" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABx|org.eventb.core.guard#_wEPuQNTqEeOl9MyB9Q6lAy"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentvoltageprim}" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="Tstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="TEvaluated'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="TCstep'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentvoltageprim}" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTIDENTcurrentvoltageprim}" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="Tstep=2" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABy|org.eventb.core.guard#_8uuLYM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="TCstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcABy|org.eventb.core.guard#_BA-xEM-ZEeOpipKU6EcABg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="PredictorEvaluate/inv15/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprim~"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1∈0 ‥ 2" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcACC"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkxyFtHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcACC"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#PredictorEvaluate\/inv15\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD14"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentvoltageprim~" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="PRstep'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentvoltageprim~" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTIDENTcurrentvoltageprim~" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="PEvaluated=FALSE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkxyFtHyEeOl7IZCNnYhig|org.eventb.core.guard#_lk2qkdHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="PRstep=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lkxyFtHyEeOl7IZCNnYhig|org.eventb.core.guard#_lk2qktHyEeOl7IZCNnYhig"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="PredictorReadVoltage/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprin'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1∈0 ‥ 3" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk2qlNHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC:"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#PredictorReadVoltage\/inv11\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD10"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="PredictorReadVoltage/inv14/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprin'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="currentvoltage_param∈235 ‥ 245" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcACA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk2qlNHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcACA"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#PredictorReadVoltage\/inv14\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD13"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentvoltageprin'" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="PFstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="seedvoltage'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="currentvoltage_param" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentvoltageprin'" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTIDENTcurrentvoltageprin'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="PRstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk2qlNHyEeOl7IZCNnYhig|org.eventb.core.guard#_lk3RoNHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="PFstep=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk2qlNHyEeOl7IZCNnYhig|org.eventb.core.guard#_lk3RodHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="ControllerActive=TRUE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk2qlNHyEeOl7IZCNnYhig|org.eventb.core.guard#_2wTRYNT8EeOl9MyB9Q6lAw"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="currentvoltage_param=currentvoltage" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk2qlNHyEeOl7IZCNnYhig|org.eventb.core.guard#_lk3RotHyEeOl7IZCNnYhii"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="PredictorPredictVoltageChange/grd5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTHYPcurrentvoltageprin(+"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="seedvoltage∈dom(HORIZON)∧HORIZON∈ℤ ⇸ ℙ(ℤ × ℤ)" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk3RpNHyEeOl7IZCNnYhig|org.eventb.core.guard#_lk4fwNHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk3RpNHyEeOl7IZCNnYhig|org.eventb.core.guard#_lk4fwNHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTHYPcurrentvoltageprin(+"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="PredictorPredictVoltageChange/grd6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTHYPcurrentvoltageprin(,"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="pload∈dom(ptrajectory)∧ptrajectory∈ℤ ⇸ ℤ" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk3RpNHyEeOl7IZCNnYhig|org.eventb.core.guard#_lk4fwdHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk3RpNHyEeOl7IZCNnYhig|org.eventb.core.guard#_lk4fwdHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTHYPcurrentvoltageprin(,"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="PredictorPredictVoltageChange/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprin("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="2∈0 ‥ 3" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD?"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk3RpNHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC:"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#PredictorPredictVoltageChange\/inv11\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD10"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="PredictorPredictVoltageChange/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprin("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="pfirststep∈235 ‥ 245" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD?|org.eventb.core.guard#_8uoEw87MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD?"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD?|org.eventb.core.guard#_8uoEw87MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk3RpNHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#PredictorPredictVoltageChange\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="PredictorPredictVoltageChange/act1/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprin("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="pfirststep=pfirststep" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD?|org.eventb.core.action#_8uor0M7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD?"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD?|org.eventb.core.action#_8uor0M7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk3RpNHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#PredictorPredictVoltageChange\/act1\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentvoltageprin(" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="predictedv'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="ptrajectory" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+<org.eventb.core.poIdentifier name="pfirststep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="pload" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="PFstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="ppv" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPcurrentvoltageprin(+" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTIDENTcurrentvoltageprin(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="pfirststep∈ℕ" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk3RpNHyEeOl7IZCNnYhig|org.eventb.core.guard#_lk34s9HyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="PRstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk3RpNHyEeOl7IZCNnYhig|org.eventb.core.guard#_lk34tNHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="pload∈1 ‥ 3" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk3RpNHyEeOl7IZCNnYhig|org.eventb.core.guard#_lk34tdHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="seedvoltage∈dom(HORIZON)" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk3RpNHyEeOl7IZCNnYhig|org.eventb.core.guard#_lk34ttHyEeOl7IZCNnYhig"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPcurrentvoltageprin(," org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTHYPcurrentvoltageprin(+" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="ptrajectory=HORIZON(seedvoltage)" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk3RpNHyEeOl7IZCNnYhig|org.eventb.core.guard#_lk4fwNHyEeOl7IZCNnYhig"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentvoltageprin(" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTHYPcurrentvoltageprin(," org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="pfirststep=ptrajectory(pload)" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk3RpNHyEeOl7IZCNnYhig|org.eventb.core.guard#_lk4fwdHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="PFstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk3RpNHyEeOl7IZCNnYhig|org.eventb.core.guard#_lk4fwtHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="ControllerActive=TRUE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk3RpNHyEeOl7IZCNnYhig|org.eventb.core.guard#_5yVkMNTqEeOl9MyB9Q6lAw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="PredictorInactive/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprin)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="3∈0 ‥ 3" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_Tt_lMNT8EeOl9MyB9Q6lAw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC:"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#PredictorInactive\/inv11\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD10"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentvoltageprin)" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="PFstep'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentvoltageprin)" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTIDENTcurrentvoltageprin)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="PRstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_Tt_lMNT8EeOl9MyB9Q6lAw|org.eventb.core.guard#_Tt_lMdT8EeOl9MyB9Q6lAw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="PFstep=0" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_Tt_lMNT8EeOl9MyB9Q6lAw|org.eventb.core.guard#_Tt_lMtT8EeOl9MyB9Q6lAw"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="ControllerActive=FALSE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_Tt_lMNT8EeOl9MyB9Q6lAw|org.eventb.core.guard#_TuAMQNT8EeOl9MyB9Q6lAw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="PredictorWriteVoltage/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprin*"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="predictedv_param∈235 ‥ 245" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk5t4dHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC2"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#PredictorWriteVoltage\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="PredictorWriteVoltage/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprin*"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="3∈0 ‥ 3" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk5t4dHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC:"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#PredictorWriteVoltage\/inv11\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD10"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentvoltageprin*" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="predictedv_param" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="PFstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="predictedprime'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentvoltageprin*" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTIDENTcurrentvoltageprin*" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="PRstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk5t4dHyEeOl7IZCNnYhig|org.eventb.core.guard#_lk5t4tHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="PFstep=2" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk5t4dHyEeOl7IZCNnYhig|org.eventb.core.guard#_lk5t49HyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="predictedv_param=predictedv" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk5t4dHyEeOl7IZCNnYhig|org.eventb.core.guard#_lk5t5dHyEeOl7IZCNnYhii"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="PredictorWait/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprin+"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ 3" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk4fxdHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC:"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#PredictorWait\/inv11\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD10"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="PredictorWait/inv15/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprin+"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ 2" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcACC"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk4fxdHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcACC"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#PredictorWait\/inv15\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD14"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentvoltageprin+" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="PEvaluated'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="PFstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="PRstep'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentvoltageprin+" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTIDENTcurrentvoltageprin+" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="PEvaluated=FALSE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk4fxdHyEeOl7IZCNnYhig|org.eventb.core.guard#_lk5G0dHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="PRstep=1" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk4fxdHyEeOl7IZCNnYhig|org.eventb.core.guard#_lk5G0tHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="PFstep=3" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk4fxdHyEeOl7IZCNnYhig|org.eventb.core.guard#_lk5G09HyEeOl7IZCNnYhig"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="DecrementerEvaluate/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprin,"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="pc∈0 ‥ 3" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk6U8NHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC*"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#DecrementerEvaluate\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentvoltageprin," org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="DEvaluated'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="pc" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="countprime'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentvoltageprin," org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTIDENTcurrentvoltageprin," org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="pc∈0 ‥ 3" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk6U8NHyEeOl7IZCNnYhig|org.eventb.core.guard#_lk6U8tHyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="(count=0∧reset=TRUE∧pc=3)∨(count=0∧reset=FALSE∧pc=0)∨(count&gt;0∧pc=count − 1)" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk6U8NHyEeOl7IZCNnYhig|org.eventb.core.guard#_lk6U89HyEeOl7IZCNnYhig"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="DEvaluated=FALSE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_lk6U8NHyEeOl7IZCNnYhig|org.eventb.core.guard#_lk6U9NHyEeOl7IZCNnYhig"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="Update/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprin-"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="countprime∈0 ‥ 3" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykDA"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcAB\|"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC("/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#Update\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="Update/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprin-"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="currentvoltageprime∈235 ‥ 245" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykDA"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcAB\|"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC,"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#Update\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="Update/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTALLHYPcurrentvoltageprin-"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="predictedprime∈235 ‥ 245" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR4.bum|org.eventb.core.machineFile#GRIDCR4|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykDA"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcAB\|"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC0"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poSequent#Update\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcurrentvoltageprin-" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="DEvaluated'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="PEvaluated'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="count'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="TEvaluated'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="CEvaluated'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="currentvoltage'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="predicted'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="reset'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcurrentvoltageprin-" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#EVTIDENTcurrentvoltageprin-" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="CEvaluated=TRUE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcAB\||org.eventb.core.guard#_8uuLZM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="TEvaluated=TRUE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcAB\||org.eventb.core.guard#_8uuLZc7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="PEvaluated=TRUE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcAB\||org.eventb.core.guard#_XghcoNTxEeOl9MyB9Q6lAw"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="DEvaluated=TRUE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.event#_pKd50M-WEeOpipKU6EcAB\||org.eventb.core.guard#_XghcodTxEeOl9MyB9Q6lAw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR5.bpo|org.eventb.core.poFile#GRIDCR5|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="CFstep∈0 ‥ 3" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAB~"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="count∈0 ‥ 3" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC("/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="countprime∈0 ‥ 3" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC*"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="currentvoltage∈235 ‥ 245" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC,"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="currentvoltageprime∈235 ‥ 245" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC."/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="predicted∈235 ‥ 245" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC0"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="predictedprime∈235 ‥ 245" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC2"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="reset∈BOOL" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC4"/>
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="resetprime∈BOOL" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC6"/>
+<org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="safemode∈BOOL" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC8"/>
+<org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="PFstep∈0 ‥ 3" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC:"/>
+<org.eventb.core.poPredicate name="PRD11" org.eventb.core.predicate="PEvaluated∈BOOL" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC="/>
+<org.eventb.core.poPredicate name="PRD12" org.eventb.core.predicate="DEvaluated∈BOOL" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcAC?"/>
+<org.eventb.core.poPredicate name="PRD13" org.eventb.core.predicate="seedvoltage∈235 ‥ 245" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcACA"/>
+<org.eventb.core.poPredicate name="PRD14" org.eventb.core.predicate="PRstep∈0 ‥ 2" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_pKd50M-WEeOpipKU6EcACC"/>
+<org.eventb.core.poPredicate name="PRD15" org.eventb.core.predicate="TCInit=FALSE⇒ControllerActive=FALSE" org.eventb.core.source="/GRIDC/GRIDCR5.bum|org.eventb.core.machineFile#GRIDCR5|org.eventb.core.invariant#_SfpQoNdKEeOMIdJ7n5dMWQ"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

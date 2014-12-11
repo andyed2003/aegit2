@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_STATES" org.eventb.core.type="ℙ(AIBV_STATES)"/>
+<org.eventb.core.poIdentifier name="ARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.poIdentifier name="DISARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.poIdentifier name="DISARMING" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.poPredicate name="AIBV_STATET" org.eventb.core.predicate="partition(AIBV_STATES,{ARMED},{DISARMING},{DISARMED})" org.eventb.core.source="/AIBV/AIBV_arm_disarm_context.buc|org.eventb.core.contextFile#AIBV_arm_disarm_context|org.eventb.core.axiom#+"/>
+<org.eventb.core.poIdentifier name="AIBV_CLOSED" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_OPEN" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_UNKNOWN" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="AIBV_UNKNOWO" org.eventb.core.predicate="AIBV_CLOSED∈ℤ" org.eventb.core.source="/AIBV/AIBV_position_context.buc|org.eventb.core.contextFile#AIBV_position_context|org.eventb.core.axiom#,"/>
+<org.eventb.core.poPredicate name="AIBV_UNKNOWP" org.eventb.core.predicate="AIBV_CLOSED=0" org.eventb.core.source="/AIBV/AIBV_position_context.buc|org.eventb.core.contextFile#AIBV_position_context|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="AIBV_UNKNOWQ" org.eventb.core.predicate="AIBV_OPEN∈ℤ" org.eventb.core.source="/AIBV/AIBV_position_context.buc|org.eventb.core.contextFile#AIBV_position_context|org.eventb.core.axiom#\/"/>
+<org.eventb.core.poPredicate name="AIBV_UNKNOWR" org.eventb.core.predicate="AIBV_OPEN=2" org.eventb.core.source="/AIBV/AIBV_position_context.buc|org.eventb.core.contextFile#AIBV_position_context|org.eventb.core.axiom#0"/>
+<org.eventb.core.poPredicate name="AIBV_UNKNOWS" org.eventb.core.predicate="AIBV_UNKNOWN∈ℤ" org.eventb.core.source="/AIBV/AIBV_position_context.buc|org.eventb.core.contextFile#AIBV_position_context|org.eventb.core.axiom#1"/>
+<org.eventb.core.poPredicate name="AIBV_UNKNOWT" org.eventb.core.predicate="AIBV_UNKNOWN=−1" org.eventb.core.source="/AIBV/AIBV_position_context.buc|org.eventb.core.contextFile#AIBV_position_context|org.eventb.core.axiom#2"/>
+<org.eventb.core.poPredicate name="AIBV_UNKNOWU" org.eventb.core.predicate="AIBV_UNKNOWN&lt;AIBV_CLOSED∧AIBV_CLOSED&lt;AIBV_OPEN" org.eventb.core.source="/AIBV/AIBV_position_context.buc|org.eventb.core.contextFile#AIBV_position_context|org.eventb.core.axiom#3"/>
+<org.eventb.core.poIdentifier name="AIBV_ACTIONS" org.eventb.core.type="ℙ(AIBV_ACTIONS)"/>
+<org.eventb.core.poIdentifier name="CLOSE" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.poIdentifier name="NOTHING" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.poIdentifier name="OPEN" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.poPredicate name="AIBV_UNKNOWV" org.eventb.core.predicate="partition(AIBV_ACTIONS,{OPEN},{CLOSE},{NOTHING})" org.eventb.core.source="/AIBV/AIBV_controller_context.buc|org.eventb.core.contextFile#AIBV_controller_context|org.eventb.core.axiom#+"/>
+<org.eventb.core.poIdentifier name="FULLY_CLOSED_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="FULLY_OPEN_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="MAX_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="MIN_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="NOMINAL_TEMP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="FULLY_CLOSED_TEMQ" org.eventb.core.predicate="MIN_TEMP∈ℤ" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#)"/>
+<org.eventb.core.poPredicate name="FULLY_CLOSED_TEMR" org.eventb.core.predicate="MIN_TEMP=0" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#*"/>
+<org.eventb.core.poPredicate name="FULLY_CLOSED_TEMS" org.eventb.core.predicate="MAX_TEMP∈ℤ" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#,"/>
+<org.eventb.core.poPredicate name="FULLY_CLOSED_TEMT" org.eventb.core.predicate="MAX_TEMP=4" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="FULLY_CLOSED_TEMU" org.eventb.core.predicate="NOMINAL_TEMP∈ℤ" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#\/"/>
+<org.eventb.core.poPredicate name="FULLY_CLOSED_TEMV" org.eventb.core.predicate="NOMINAL_TEMP=3" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#0"/>
+<org.eventb.core.poPredicate name="FULLY_CLOSED_TEMW" org.eventb.core.predicate="MIN_TEMP&lt;NOMINAL_TEMP∧NOMINAL_TEMP&lt;MAX_TEMP" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#1"/>
+<org.eventb.core.poPredicate name="FULLY_CLOSED_TEMX" org.eventb.core.predicate="FULLY_OPEN_TEMP∈ℤ" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#4"/>
+<org.eventb.core.poPredicate name="FULLY_CLOSED_TEMY" org.eventb.core.predicate="FULLY_OPEN_TEMP=1" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#5"/>
+<org.eventb.core.poPredicate name="FULLY_CLOSED_TEMZ" org.eventb.core.predicate="FULLY_CLOSED_TEMP∈ℤ" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#6"/>
+<org.eventb.core.poPredicate name="FULLY_CLOSED_TEM[" org.eventb.core.predicate="FULLY_CLOSED_TEMP=2" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#7"/>
+<org.eventb.core.poPredicate name="FULLY_CLOSED_TEM\" org.eventb.core.predicate="MIN_TEMP&lt;FULLY_OPEN_TEMP" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#8"/>
+<org.eventb.core.poPredicate name="FULLY_CLOSED_TEM]" org.eventb.core.predicate="FULLY_OPEN_TEMP&lt;FULLY_CLOSED_TEMP" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#9"/>
+<org.eventb.core.poPredicate name="FULLY_CLOSED_TEM^" org.eventb.core.predicate="FULLY_CLOSED_TEMP&lt;NOMINAL_TEMP" org.eventb.core.source="/AIBV/AIBV_temperature_context.buc|org.eventb.core.contextFile#AIBV_temperature_context|org.eventb.core.axiom#:"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_action" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.poIdentifier name="AIBV_action_needs_to_measure_position" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_amount" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_believed_position" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_buffered_temperature" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_control_action_started" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_control_loop_finishing" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_control_loop_started" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_expected_position" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_have_done_a_temperature_control_loop" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_measured_position" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_measuring_position" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_new_temperature_measurement" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_position_error" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_position_measurement_to_check" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_required_position" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_required_position_LOCAL" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_state" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.poIdentifier name="AIBV_temperature" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_temperature_control_loop_started" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_temperature_error" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_temperature_needs_checking" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_looq" org.eventb.core.predicate="AIBV_measuring_position∈BOOL" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#="/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_loor" org.eventb.core.predicate="AIBV_have_done_a_temperature_control_loop∈BOOL" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#&gt;"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_loos" org.eventb.core.predicate="AIBV_control_loop_started∈BOOL" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#?"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_loot" org.eventb.core.predicate="AIBV_position_error∈BOOL" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#@"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_loou" org.eventb.core.predicate="AIBV_required_position∈ℤ" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#A"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_loov" org.eventb.core.predicate="AIBV_control_action_started∈BOOL" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#B"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_loow" org.eventb.core.predicate="AIBV_measured_position∈ℤ" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#C"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_loox" org.eventb.core.predicate="AIBV_temperature_control_loop_started∈BOOL" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#D"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_looy" org.eventb.core.predicate="AIBV_amount∈ℤ" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#E"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_looz" org.eventb.core.predicate="AIBV_temperature∈ℤ" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#F"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_loo{" org.eventb.core.predicate="AIBV_action_needs_to_measure_position∈BOOL" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#G"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_loo|" org.eventb.core.predicate="AIBV_action∈AIBV_ACTIONS" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#H"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_loo}" org.eventb.core.predicate="AIBV_position_measurement_to_check∈BOOL" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#I"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_loo~" org.eventb.core.predicate="AIBV_expected_position∈ℤ" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#J"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lop'" org.eventb.core.predicate="AIBV_new_temperature_measurement∈BOOL" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#K"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lop(" org.eventb.core.predicate="AIBV_state∈AIBV_STATES" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#L"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lop)" org.eventb.core.predicate="AIBV_buffered_temperature∈ℤ" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#M"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lop*" org.eventb.core.predicate="AIBV_temperature_needs_checking∈BOOL" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#N"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lop+" org.eventb.core.predicate="AIBV_control_loop_finishing∈BOOL" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#O"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lop," org.eventb.core.predicate="AIBV_believed_position∈ℤ" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#P"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lop-" org.eventb.core.predicate="AIBV_temperature_error∈BOOL" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#Q"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lop." org.eventb.core.predicate="AIBV_action=OPEN⇒AIBV_state=ARMED" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#R"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lop/" org.eventb.core.predicate="AIBV_amount∈ℕ" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#S"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lop0" org.eventb.core.predicate="0≤AIBV_amount" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#T"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lop1" org.eventb.core.predicate="AIBV_action≠NOTHING⇔AIBV_amount&gt;0" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#U"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lop2" org.eventb.core.predicate="AIBV_action=NOTHING⇒AIBV_control_action_started=FALSE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#V"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lop3" org.eventb.core.predicate="AIBV_measured_position∈{n⦂ℤ·n∈ℤ∧AIBV_CLOSED≤n∧n≤AIBV_OPEN ∣ n}∪{AIBV_UNKNOWN}" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#W"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lop4" org.eventb.core.predicate="(AIBV_CLOSED≤AIBV_measured_position∧AIBV_measured_position≤AIBV_OPEN)∨AIBV_measured_position=AIBV_UNKNOWN" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#X"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lop5" org.eventb.core.predicate="AIBV_action_needs_to_measure_position=FALSE⇒AIBV_action=NOTHING" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#Y"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lop6" org.eventb.core.predicate="AIBV_state=DISARMED⇒AIBV_action_needs_to_measure_position=FALSE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#Z"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lop7" org.eventb.core.predicate="AIBV_believed_position∈{n⦂ℤ·n∈ℤ∧AIBV_CLOSED≤n∧n≤AIBV_OPEN ∣ n}∪{AIBV_UNKNOWN}" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#["/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lop8" org.eventb.core.predicate="(AIBV_CLOSED≤AIBV_believed_position∧AIBV_believed_position≤AIBV_OPEN)∨AIBV_believed_position=AIBV_UNKNOWN" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#\\"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lop9" org.eventb.core.predicate="AIBV_expected_position∈{n⦂ℤ·n∈ℤ∧AIBV_CLOSED≤n∧n≤AIBV_OPEN ∣ n}" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#]"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lop:" org.eventb.core.predicate="AIBV_CLOSED≤AIBV_expected_position∧AIBV_expected_position≤AIBV_OPEN" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#^"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lop;" org.eventb.core.predicate="AIBV_position_measurement_to_check=TRUE⇒AIBV_action_needs_to_measure_position=FALSE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#_"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lop=" org.eventb.core.predicate="AIBV_control_loop_started=FALSE⇒AIBV_action_needs_to_measure_position=FALSE∧AIBV_position_measurement_to_check=FALSE∧AIBV_control_loop_finishing=FALSE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#`"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lop&gt;" org.eventb.core.predicate="AIBV_control_loop_started=FALSE∧AIBV_position_error=FALSE⇒AIBV_expected_position=AIBV_believed_position" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#a"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lop?" org.eventb.core.predicate="AIBV_control_loop_finishing=TRUE⇒AIBV_control_loop_started=TRUE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#b"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lop@" org.eventb.core.predicate="AIBV_control_loop_finishing=TRUE⇒AIBV_position_measurement_to_check=FALSE∧AIBV_action_needs_to_measure_position=FALSE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#c"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lopA" org.eventb.core.predicate="AIBV_control_loop_finishing=TRUE∧AIBV_position_error=FALSE⇒AIBV_expected_position=AIBV_believed_position" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#d"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lopB" org.eventb.core.predicate="AIBV_position_error=TRUE⇔AIBV_believed_position=AIBV_UNKNOWN" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#e"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lopC" org.eventb.core.predicate="AIBV_position_error=TRUE⇒AIBV_action=NOTHING" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#f"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lopD" org.eventb.core.predicate="AIBV_position_error=TRUE∧AIBV_control_loop_finishing=FALSE⇒AIBV_control_loop_started=FALSE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#g"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lopE" org.eventb.core.predicate="AIBV_action≠NOTHING⇒AIBV_believed_position≠AIBV_UNKNOWN∧0&lt;AIBV_amount∧((AIBV_action=OPEN∧AIBV_expected_position=AIBV_believed_position+AIBV_amount)∨(AIBV_action=CLOSE∧AIBV_expected_position=AIBV_believed_position − AIBV_amount))" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#h"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lopF" org.eventb.core.predicate="AIBV_state=DISARMED⇒AIBV_action=NOTHING" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#i"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lopG" org.eventb.core.predicate="AIBV_state=DISARMED⇒AIBV_control_loop_started=FALSE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#j"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lopH" org.eventb.core.predicate="AIBV_state=DISARMED⇒AIBV_position_error=FALSE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#k"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lopI" org.eventb.core.predicate="AIBV_state=DISARMED⇒AIBV_expected_position=AIBV_CLOSED" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#l"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lopJ" org.eventb.core.predicate="AIBV_state=DISARMED⇒AIBV_believed_position=AIBV_CLOSED" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#m"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lopK" org.eventb.core.predicate="MIN_TEMP≤AIBV_temperature∧AIBV_temperature≤MAX_TEMP" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#n"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lopL" org.eventb.core.predicate="AIBV_required_position∈{n⦂ℤ·n∈ℤ∧AIBV_CLOSED≤n∧n≤AIBV_OPEN ∣ n}" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#o"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lopM" org.eventb.core.predicate="AIBV_CLOSED≤AIBV_required_position∧AIBV_required_position≤AIBV_OPEN" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#p"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lopN" org.eventb.core.predicate="AIBV_temperature_needs_checking=FALSE∧AIBV_temperature_error=TRUE⇒¬(MIN_TEMP≤AIBV_buffered_temperature∧AIBV_buffered_temperature≤MAX_TEMP)" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#q"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lopO" org.eventb.core.predicate="AIBV_new_temperature_measurement=FALSE∧FULLY_OPEN_TEMP≤AIBV_temperature∧AIBV_temperature≤FULLY_CLOSED_TEMP⇒AIBV_required_position∗(FULLY_CLOSED_TEMP − FULLY_OPEN_TEMP)≤AIBV_OPEN∗FULLY_CLOSED_TEMP − AIBV_CLOSED∗FULLY_OPEN_TEMP − (AIBV_OPEN − AIBV_CLOSED)∗AIBV_temperature" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#r"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lopP" org.eventb.core.predicate="AIBV_new_temperature_measurement=FALSE∧FULLY_OPEN_TEMP≤AIBV_temperature∧AIBV_temperature≤FULLY_CLOSED_TEMP⇒AIBV_OPEN∗FULLY_CLOSED_TEMP − AIBV_CLOSED∗FULLY_OPEN_TEMP − (AIBV_OPEN − AIBV_CLOSED)∗AIBV_temperature − FULLY_CLOSED_TEMP+FULLY_OPEN_TEMP≤AIBV_required_position∗(FULLY_CLOSED_TEMP − FULLY_OPEN_TEMP)" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#s"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lopQ" org.eventb.core.predicate="AIBV_new_temperature_measurement=FALSE∧AIBV_temperature≤FULLY_OPEN_TEMP⇒AIBV_required_position=AIBV_OPEN" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#t"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lopR" org.eventb.core.predicate="AIBV_new_temperature_measurement=FALSE∧FULLY_CLOSED_TEMP≤AIBV_temperature⇒AIBV_required_position=AIBV_CLOSED" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#u"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lopS" org.eventb.core.predicate="AIBV_temperature_control_loop_started=TRUE⇒AIBV_state=ARMED" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#v"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lopT" org.eventb.core.predicate="AIBV_state=DISARMED⇒AIBV_temperature_control_loop_started=FALSE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#w"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lopU" org.eventb.core.predicate="AIBV_state=DISARMED⇒AIBV_have_done_a_temperature_control_loop=FALSE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#x"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lopV" org.eventb.core.predicate="AIBV_state=ARMED∧AIBV_control_loop_started=TRUE⇒AIBV_temperature_control_loop_started=TRUE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#y"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lopW" org.eventb.core.predicate="AIBV_state=ARMED∧AIBV_control_loop_started=TRUE⇒AIBV_expected_position=AIBV_required_position" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#z"/>
+<org.eventb.core.poPredicate name="AIBV_have_done_a_temperature_control_lopX" org.eventb.core.predicate="AIBV_state=ARMED∧AIBV_have_done_a_temperature_control_loop=TRUE∧AIBV_temperature_control_loop_started=FALSE∧AIBV_position_error=FALSE⇒AIBV_believed_position=AIBV_required_position" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.invariant#{"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="inv2/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#HYPAIBV_temperature_contey]"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="AIBV_CLOSED≤AIBV_required_position_LOCAL∧AIBV_required_position_LOCAL≤AIBV_OPEN" org.eventb.core.source="/AIBV/AIBV_controller_2b.bum|org.eventb.core.machineFile#AIBV_controller_2b|org.eventb.core.invariant#'Y"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_controller_2b.bum|org.eventb.core.machineFile#AIBV_controller_2b|org.eventb.core.invariant#'Y"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#HYPAIBV_temperature_contey]"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#EVTALLHYPAIBV_have_done_a_temperature_control_looq"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="AIBV_CLOSED∈{n⦂ℤ·n∈ℤ∧AIBV_CLOSED≤n∧n≤AIBV_OPEN ∣ n}" org.eventb.core.source="/AIBV/AIBV_controller_2b.bum|org.eventb.core.machineFile#AIBV_controller_2b|org.eventb.core.invariant#'X"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AIBV/AIBV_controller_1.bum|org.eventb.core.machineFile#AIBV_controller_1|org.eventb.core.event#';"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AIBV/AIBV_controller_2b.bum|org.eventb.core.machineFile#AIBV_controller_2b|org.eventb.core.event#';"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_controller_2b.bum|org.eventb.core.machineFile#AIBV_controller_2b|org.eventb.core.invariant#'X"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#HYPAIBV_temperature_contey]|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_have_done_a_temperature_control_looq" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_action'" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.poIdentifier name="AIBV_state'" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.poIdentifier name="AIBV_buffered_temperature'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_have_done_a_temperature_control_loop'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_control_action_started'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_position_measurement_to_check'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_control_loop_finishing'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_expected_position'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_position_error'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_measured_position'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_temperature_error'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_required_position'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_believed_position'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_temperature'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_required_position_LOCAL'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_action_needs_to_measure_position'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_temperature_control_loop_started'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_new_temperature_measurement'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_control_loop_started'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_temperature_needs_checking'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_amount'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_measuring_position'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_have_done_a_temperature_control_looq" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#EVTIDENTAIBV_have_done_a_temperature_control_looq" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_have_done_a_temperature_control_loor" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_state'" org.eventb.core.type="AIBV_STATES"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_have_done_a_temperature_control_loor" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#EVTIDENTAIBV_have_done_a_temperature_control_loor" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="AIBV_state=DISARMED" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#}|org.eventb.core.guard#'"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_have_done_a_temperature_control_loos" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_state'" org.eventb.core.type="AIBV_STATES"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_have_done_a_temperature_control_loos" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#EVTIDENTAIBV_have_done_a_temperature_control_loos" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="AIBV_state=ARMED" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#~|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="AIBV_control_loop_started=FALSE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#~|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="AIBV_position_error=FALSE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#~|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="AIBV_temperature_control_loop_started=FALSE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#~|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_have_done_a_temperature_control_loot" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_state'" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.poIdentifier name="AIBV_have_done_a_temperature_control_loop'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_have_done_a_temperature_control_loot" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#EVTIDENTAIBV_have_done_a_temperature_control_loot" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="AIBV_state=DISARMING" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#''|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="AIBV_control_loop_started=FALSE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#''|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="AIBV_believed_position=AIBV_CLOSED" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#''|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="AIBV_position_error=FALSE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#''|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_have_done_a_temperature_control_loou" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_control_action_started'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="amount" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_have_done_a_temperature_control_loou" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#EVTIDENTAIBV_have_done_a_temperature_control_loou" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="amount∈ℤ" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'(|org.eventb.core.guard#0"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="AIBV_state=ARMED" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'(|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="AIBV_action=OPEN" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'(|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="AIBV_control_action_started=FALSE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'(|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="amount=AIBV_amount" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'(|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="0≤amount" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'(|org.eventb.core.guard#-"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_have_done_a_temperature_control_loov" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_action'" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.poIdentifier name="AIBV_control_action_started'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_amount'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_have_done_a_temperature_control_loov" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#EVTIDENTAIBV_have_done_a_temperature_control_loov" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="AIBV_state=ARMED" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#')|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="AIBV_action=OPEN" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#')|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="AIBV_control_action_started=TRUE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#')|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_have_done_a_temperature_control_loow" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_control_action_started'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="amount" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_have_done_a_temperature_control_loow" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#EVTIDENTAIBV_have_done_a_temperature_control_loow" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="amount∈ℤ" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'*|org.eventb.core.guard#0"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="AIBV_state≠DISARMED" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'*|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="AIBV_action=CLOSE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'*|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="AIBV_control_action_started=FALSE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'*|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="amount=AIBV_amount" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'*|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="0≤amount" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'*|org.eventb.core.guard#-"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_have_done_a_temperature_control_loox" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_action'" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.poIdentifier name="AIBV_control_action_started'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_amount'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_have_done_a_temperature_control_loox" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#EVTIDENTAIBV_have_done_a_temperature_control_loox" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="AIBV_state≠DISARMED" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'+|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="AIBV_action=CLOSE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'+|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="AIBV_control_action_started=TRUE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'+|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_have_done_a_temperature_control_looy" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_action'" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.poIdentifier name="AIBV_expected_position'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_action_needs_to_measure_position'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_control_loop_started'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_amount'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_have_done_a_temperature_control_looy" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#EVTIDENTAIBV_have_done_a_temperature_control_looy" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="AIBV_temperature_control_loop_started=TRUE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#',|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="AIBV_control_loop_started=FALSE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#',|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="AIBV_position_error=FALSE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#',|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="AIBV_believed_position&lt;AIBV_required_position" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#',|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_have_done_a_temperature_control_looz" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_action'" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.poIdentifier name="AIBV_expected_position'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_action_needs_to_measure_position'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_control_loop_started'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_amount'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_have_done_a_temperature_control_looz" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#EVTIDENTAIBV_have_done_a_temperature_control_looz" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="AIBV_temperature_control_loop_started=TRUE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'-|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="AIBV_control_loop_started=FALSE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'-|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="AIBV_position_error=FALSE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'-|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="AIBV_required_position&lt;AIBV_believed_position" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'-|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_have_done_a_temperature_control_loo{" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_action'" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.poIdentifier name="AIBV_expected_position'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_action_needs_to_measure_position'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_control_loop_started'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_amount'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_have_done_a_temperature_control_loo{" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#EVTIDENTAIBV_have_done_a_temperature_control_loo{" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="AIBV_state=DISARMING" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'.|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="AIBV_control_loop_started=FALSE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'.|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="AIBV_position_error=FALSE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'.|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="AIBV_believed_position≠AIBV_CLOSED" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'.|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_have_done_a_temperature_control_loo|" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_measuring_position'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_have_done_a_temperature_control_loo|" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#EVTIDENTAIBV_have_done_a_temperature_control_loo\|" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="AIBV_action_needs_to_measure_position=TRUE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'\/|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="AIBV_action=NOTHING" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'\/|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="AIBV_measuring_position=FALSE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'\/|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_have_done_a_temperature_control_loo}" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_position_measurement_to_check'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_measured_position'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_action_needs_to_measure_position'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="position_measurement" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_measuring_position'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_have_done_a_temperature_control_loo}" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#EVTIDENTAIBV_have_done_a_temperature_control_loo}" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="position_measurement∈ℤ" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'0|org.eventb.core.guard#2"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="AIBV_action_needs_to_measure_position=TRUE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'0|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="AIBV_action=NOTHING" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'0|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="(AIBV_CLOSED≤position_measurement∧position_measurement≤AIBV_OPEN)∨position_measurement=AIBV_UNKNOWN" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'0|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="AIBV_measuring_position=TRUE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'0|org.eventb.core.guard#-"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_have_done_a_temperature_control_loo~" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_control_loop_finishing'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_position_measurement_to_check'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_position_error'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_believed_position'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_have_done_a_temperature_control_loo~" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#EVTIDENTAIBV_have_done_a_temperature_control_loo~" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="AIBV_position_measurement_to_check=TRUE" org.eventb.core.source="/AIBV/AIBV_controller_1.bum|org.eventb.core.machineFile#AIBV_controller_1|org.eventb.core.event#'I|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="AIBV_measured_position=AIBV_expected_position" org.eventb.core.source="/AIBV/AIBV_controller_1.bum|org.eventb.core.machineFile#AIBV_controller_1|org.eventb.core.event#'I|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_have_done_a_temperature_control_lop'" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_control_loop_finishing'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_position_measurement_to_check'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_position_error'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_believed_position'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_have_done_a_temperature_control_lop'" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#EVTIDENTAIBV_have_done_a_temperature_control_lop'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="AIBV_position_measurement_to_check=TRUE" org.eventb.core.source="/AIBV/AIBV_controller_1.bum|org.eventb.core.machineFile#AIBV_controller_1|org.eventb.core.event#'R|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="AIBV_measured_position≠AIBV_expected_position" org.eventb.core.source="/AIBV/AIBV_controller_1.bum|org.eventb.core.machineFile#AIBV_controller_1|org.eventb.core.event#'R|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_have_done_a_temperature_control_lop(" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="believed_position" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_have_done_a_temperature_control_loop'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_control_loop_finishing'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_temperature_control_loop_started'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_control_loop_started'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_have_done_a_temperature_control_lop(" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#EVTIDENTAIBV_have_done_a_temperature_control_lop(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="believed_position∈ℤ" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'2|org.eventb.core.guard#."/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="AIBV_control_loop_finishing=TRUE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'2|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="believed_position=AIBV_believed_position" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'2|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_have_done_a_temperature_control_lop)" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="temperature" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_buffered_temperature'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_temperature_needs_checking'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_have_done_a_temperature_control_lop)" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#EVTIDENTAIBV_have_done_a_temperature_control_lop)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="temperature∈ℤ" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'3|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_have_done_a_temperature_control_lop*" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_temperature_error'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_temperature'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_new_temperature_measurement'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_temperature_needs_checking'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_have_done_a_temperature_control_lop*" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#EVTIDENTAIBV_have_done_a_temperature_control_lop*" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="AIBV_temperature_needs_checking=TRUE" org.eventb.core.source="/AIBV/AIBV_controller_1.bum|org.eventb.core.machineFile#AIBV_controller_1|org.eventb.core.event#'L|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="MIN_TEMP≤AIBV_buffered_temperature∧AIBV_buffered_temperature≤MAX_TEMP" org.eventb.core.source="/AIBV/AIBV_controller_1.bum|org.eventb.core.machineFile#AIBV_controller_1|org.eventb.core.event#'L|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_have_done_a_temperature_control_lop+" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_temperature_error'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_temperature_needs_checking'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_have_done_a_temperature_control_lop+" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#EVTIDENTAIBV_have_done_a_temperature_control_lop+" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="AIBV_temperature_needs_checking=TRUE" org.eventb.core.source="/AIBV/AIBV_controller_1.bum|org.eventb.core.machineFile#AIBV_controller_1|org.eventb.core.event#'S|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="¬(MIN_TEMP≤AIBV_buffered_temperature∧AIBV_buffered_temperature≤MAX_TEMP)" org.eventb.core.source="/AIBV/AIBV_controller_1.bum|org.eventb.core.machineFile#AIBV_controller_1|org.eventb.core.event#'S|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_have_done_a_temperature_control_lop," org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_required_position'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_temperature_control_loop_started'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_new_temperature_measurement'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_have_done_a_temperature_control_lop," org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#EVTIDENTAIBV_have_done_a_temperature_control_lop," org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="AIBV_state=ARMED" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'5|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="AIBV_temperature_control_loop_started=FALSE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'5|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="AIBV_new_temperature_measurement=TRUE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'5|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="FULLY_OPEN_TEMP≤AIBV_temperature∧AIBV_temperature≤FULLY_CLOSED_TEMP" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'5|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_have_done_a_temperature_control_lop-" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_required_position'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_temperature_control_loop_started'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_new_temperature_measurement'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_have_done_a_temperature_control_lop-" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#EVTIDENTAIBV_have_done_a_temperature_control_lop-" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="AIBV_state=ARMED" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'6|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="AIBV_temperature_control_loop_started=FALSE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'6|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="AIBV_new_temperature_measurement=TRUE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'6|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="AIBV_temperature&lt;FULLY_OPEN_TEMP" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'6|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_have_done_a_temperature_control_lop." org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_required_position'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_temperature_control_loop_started'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="AIBV_new_temperature_measurement'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_have_done_a_temperature_control_lop." org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#EVTIDENTAIBV_have_done_a_temperature_control_lop." org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="AIBV_state=ARMED" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'7|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="AIBV_temperature_control_loop_started=FALSE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'7|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="AIBV_new_temperature_measurement=TRUE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'7|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="FULLY_CLOSED_TEMP&lt;AIBV_temperature" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'7|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="AIBV_temperature_control_loop_not_needed/grd4/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#EVTALLHYPAIBV_have_done_a_temperature_control_lop\/"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="AIBV_believed_position=AIBV_required_position" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'8|org.eventb.core.guard#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AIBV/AIBV_controller_1.bum|org.eventb.core.machineFile#AIBV_controller_1|org.eventb.core.event#'P"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'8|org.eventb.core.guard#*"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AIBV/AIBV_controller_2b.bum|org.eventb.core.machineFile#AIBV_controller_2b|org.eventb.core.event#'R"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poSequent#AIBV_temperature_control_loop_not_needed\/grd4\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_have_done_a_temperature_control_lop/" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_temperature_control_loop_started'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_have_done_a_temperature_control_lop/" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#EVTIDENTAIBV_have_done_a_temperature_control_lop\/" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="AIBV_temperature_control_loop_started=TRUE" org.eventb.core.source="/AIBV/AIBV_controller_2b.bum|org.eventb.core.machineFile#AIBV_controller_2b|org.eventb.core.event#'R|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="AIBV_control_loop_started=FALSE" org.eventb.core.source="/AIBV/AIBV_controller_2b.bum|org.eventb.core.machineFile#AIBV_controller_2b|org.eventb.core.event#'R|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="AIBV_position_error=FALSE" org.eventb.core.source="/AIBV/AIBV_controller_2b.bum|org.eventb.core.machineFile#AIBV_controller_2b|org.eventb.core.event#'R|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="AIBV_believed_position=AIBV_required_position_LOCAL" org.eventb.core.source="/AIBV/AIBV_controller_2b.bum|org.eventb.core.machineFile#AIBV_controller_2b|org.eventb.core.event#'R|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_have_done_a_temperature_control_lop0" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_temperature_control_loop_started'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_have_done_a_temperature_control_lop0" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#EVTIDENTAIBV_have_done_a_temperature_control_lop0" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="AIBV_control_loop_started=FALSE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'9|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="AIBV_position_error=TRUE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'9|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="AIBV_temperature_control_loop_started=TRUE" org.eventb.core.source="/AIBV/AIBV_controller.bum|org.eventb.core.machineFile#AIBV_controller|org.eventb.core.event#'9|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="AIBV_get_required_position/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#EVTALLHYPAIBV_have_done_a_temperature_control_lop1"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="required_position∈{n⦂ℤ·n∈ℤ∧AIBV_CLOSED≤n∧n≤AIBV_OPEN ∣ n}" org.eventb.core.source="/AIBV/AIBV_controller_2b.bum|org.eventb.core.machineFile#AIBV_controller_2b|org.eventb.core.invariant#'X"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_controller_2b.bum|org.eventb.core.machineFile#AIBV_controller_2b|org.eventb.core.event#'T"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_controller_2b.bum|org.eventb.core.machineFile#AIBV_controller_2b|org.eventb.core.invariant#'X"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poSequent#AIBV_get_required_position\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#HYPAIBV_temperature_contey]|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_have_done_a_temperature_control_lop1" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_required_position_LOCAL'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="required_position" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_have_done_a_temperature_control_lop1" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#EVTIDENTAIBV_have_done_a_temperature_control_lop1" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="required_position=AIBV_required_position" org.eventb.core.source="/AIBV/AIBV_controller_2b.bum|org.eventb.core.machineFile#AIBV_controller_2b|org.eventb.core.event#'T|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="AIBV_CLOSED≤required_position∧required_position≤AIBV_OPEN" org.eventb.core.source="/AIBV/AIBV_controller_2b.bum|org.eventb.core.machineFile#AIBV_controller_2b|org.eventb.core.event#'T|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="AIBV_set_required_position/AIBV_required_position/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#EVTALLHYPAIBV_have_done_a_temperature_control_lop2"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="required_position=AIBV_required_position" org.eventb.core.source="/AIBV/AIBV_controller_2b.bum|org.eventb.core.machineFile#AIBV_controller_2b|org.eventb.core.event#'U|org.eventb.core.action#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AIBV/AIBV_controller_2b.bum|org.eventb.core.machineFile#AIBV_controller_2b|org.eventb.core.event#'U"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poSequent#AIBV_set_required_position\/AIBV_required_position\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_have_done_a_temperature_control_lop2" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_required_position'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="required_position" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_have_done_a_temperature_control_lop2" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#EVTIDENTAIBV_have_done_a_temperature_control_lop2" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="required_position=AIBV_required_position_LOCAL" org.eventb.core.source="/AIBV/AIBV_controller_2b.bum|org.eventb.core.machineFile#AIBV_controller_2b|org.eventb.core.event#'U|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="AIBV_CLOSED≤required_position∧required_position≤AIBV_OPEN" org.eventb.core.source="/AIBV/AIBV_controller_2b.bum|org.eventb.core.machineFile#AIBV_controller_2b|org.eventb.core.event#'U|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPAIBV_temperature_contey]" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="AIBV_required_position_LOCAL∈{n⦂ℤ·n∈ℤ∧AIBV_CLOSED≤n∧n≤AIBV_OPEN ∣ n}" org.eventb.core.source="/AIBV/AIBV_controller_2b.bum|org.eventb.core.machineFile#AIBV_controller_2b|org.eventb.core.invariant#'X"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/AIBV/AIBV_controller_2b.bpo|org.eventb.core.poFile#AIBV_controller_2b|org.eventb.core.poPredicateSet#HYPAIBV_temperature_contey]" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="AIBV_CLOSED≤AIBV_required_position_LOCAL∧AIBV_required_position_LOCAL≤AIBV_OPEN" org.eventb.core.source="/AIBV/AIBV_controller_2b.bum|org.eventb.core.machineFile#AIBV_controller_2b|org.eventb.core.invariant#'Y"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components:ComponentDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:components="http://soton.ac.uk/models/fmusim/components/1.0">
+  <components xsi:type="components:EventBComponent" extensionId="ac.soton.fmusim.components.eventb" name="controllerImpl">
+    <inputs xsi:type="components:EventBPort"/>
+    <outputs xsi:type="components:EventBPort" causality="Output"/>
+    <machine href="controllerImpl.bum#org.eventb.emf.core.machine.Machine.controllerImpl"/>
+    <readInputEvents href="controller.bum#org.eventb.emf.core.machine.Event.fmiSetInteger_c"/>
+    <readInputEvents href="controller.bum#org.eventb.emf.core.machine.Event.fmiSetBoolean_c"/>
+  </components>
+  <components xsi:type="components:FMUComponent">
+    <inputs xsi:type="components:FMUPort"/>
+    <outputs xsi:type="components:FMUPort" causality="Output"/>
+  </components>
+</components:ComponentDiagram>

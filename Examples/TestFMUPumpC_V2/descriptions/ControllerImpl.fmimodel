@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fmiModelDescription author="University of Southampton" fmiVersion="2.0" generationDateAndTime="2014-03-07T12:21:41.135Z" generationTool="EB2FMU" guid="GUID_ControllerImpl_2014-03-07T12:21:41.135Z" modelName="ControllerImpl" numberOfEventIndicators="0">
+  <CoSimulation modelIdentifier="ControllerImpl"/>
+  <DefaultExperiment stepSize="1.0"/>
+  <ModelVariables>
+    <ScalarVariable causality="input" initial="exact" name="c_level" valueReference="0" variability="discrete">
+      <Integer start="100"/>
+    </ScalarVariable>
+    <ScalarVariable causality="input" initial="exact" name="c_pumpOnReq" valueReference="0" variability="discrete">
+      <Boolean start="false"/>
+    </ScalarVariable>
+    <ScalarVariable causality="output" name="c_pumpOnCmd" valueReference="1" variability="discrete">
+      <Boolean/>
+    </ScalarVariable>
+    <ScalarVariable causality="output" name="c_warn" valueReference="2" variability="discrete">
+      <Boolean/>
+    </ScalarVariable>
+    <ScalarVariable name="c_level_internal" valueReference="1" variability="discrete">
+      <Integer/>
+    </ScalarVariable>
+    <ScalarVariable name="c_pumpOnReq_internal" valueReference="3" variability="discrete">
+      <Boolean/>
+    </ScalarVariable>
+    <ScalarVariable name="c_pumpOnCmd_internal" valueReference="4" variability="discrete">
+      <Boolean/>
+    </ScalarVariable>
+    <ScalarVariable name="c_warn_internal" valueReference="5" variability="discrete">
+      <Boolean/>
+    </ScalarVariable>
+    <ScalarVariable name="commit" valueReference="6" variability="discrete">
+      <Boolean/>
+    </ScalarVariable>
+  </ModelVariables>
+  <ModelStructure>
+    <Inputs>
+      <Input name="c_level"/>
+      <Input name="c_pumpOnReq"/>
+    </Inputs>
+    <Outputs>
+      <Output name="c_pumpOnCmd"/>
+      <Output name="c_warn"/>
+    </Outputs>
+  </ModelStructure>
+</fmiModelDescription>

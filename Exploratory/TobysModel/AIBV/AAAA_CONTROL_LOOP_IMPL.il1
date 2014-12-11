@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="ASCII"?>
+<il1:Program xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:il1="http://il1/1.0" projectName="AIBV">
+  <decls xsi:type="il1:ConstantDecl" identifier="AIBV_UNKNOWN" type="&#x2124;" initialValue="&#x2212;1" ProjectName="AIBV" ComponentName="AIBV_position_context"/>
+  <decls xsi:type="il1:ConstantDecl" identifier="AIBV_CLOSED" type="&#x2124;" initialValue="0" ProjectName="AIBV" ComponentName="AIBV_position_context"/>
+  <decls xsi:type="il1:Enumeration" identifier="AIBV_STATES" ProjectName="AIBV" ComponentName="AIBV_arm_disarm_context">
+    <literalValues>ARMED</literalValues>
+    <literalValues>DISARMING</literalValues>
+    <literalValues>DISARMED</literalValues>
+  </decls>
+  <decls xsi:type="il1:ConstantDecl" identifier="MAX_TEMP" type="&#x2124;" initialValue="4" ProjectName="AIBV" ComponentName="AIBV_temperature_context"/>
+  <decls xsi:type="il1:ConstantDecl" identifier="MIN_TEMP" type="&#x2124;" initialValue="0" ProjectName="AIBV" ComponentName="AIBV_temperature_context"/>
+  <decls xsi:type="il1:ConstantDecl" identifier="FULLY_CLOSED_TEMP" type="&#x2124;" initialValue="2" ProjectName="AIBV" ComponentName="AIBV_temperature_context"/>
+  <decls xsi:type="il1:ConstantDecl" identifier="FULLY_OPEN_TEMP" type="&#x2124;" initialValue="1" ProjectName="AIBV" ComponentName="AIBV_temperature_context"/>
+  <decls xsi:type="il1:ConstantDecl" identifier="NOMINAL_TEMP" type="&#x2124;" initialValue="3" ProjectName="AIBV" ComponentName="AIBV_temperature_context"/>
+  <decls xsi:type="il1:ConstantDecl" identifier="AIBV_OPEN" type="&#x2124;" initialValue="2" ProjectName="AIBV" ComponentName="AIBV_position_context"/>
+  <decls xsi:type="il1:Enumeration" identifier="AIBV_ACTIONS" ProjectName="AIBV" ComponentName="AIBV_controller_context">
+    <literalValues>OPEN</literalValues>
+    <literalValues>CLOSE</literalValues>
+    <literalValues>NOTHING</literalValues>
+  </decls>
+  <protected name="AAAA_SHARED_IMPL" projectName="AIBV" machineName="AAAA_SHARED_IMPL">
+    <subroutines name="AIBV_check_temperature_ok" machineName="AAAA_SHARED_IMPL" projectName="AIBV">
+      <body xsi:type="il1:Action" ParentEventName="AIBV_check_temperature_ok" action="AIBV_temperature, AIBV_new_temperature_measurement &#x2254; buffered_temperature, TRUE"/>
+      <formalParameters xsi:type="il1:InParameter" identifier="buffered_temperature" type=" &#x2124;" ProjectName="AIBV"/>
+      <guards>MIN_TEMP &#x2264; buffered_temperature &#x2227; buffered_temperature &#x2264; MAX_TEMP</guards>
+    </subroutines>
+    <subroutines name="AIBV_get_temperature" machineName="AAAA_SHARED_IMPL" projectName="AIBV">
+      <body xsi:type="il1:Seq">
+        <leftBranch xsi:type="il1:Action" action="temperature  &#x2254; AIBV_temperature"/>
+        <rightBranch xsi:type="il1:Action" action="new_temperature_measurement  &#x2254; AIBV_new_temperature_measurement"/>
+      </body>
+      <formalParameters xsi:type="il1:OutParameter" identifier="temperature" type=" &#x2124;" ProjectName="AIBV"/>
+      <formalParameters xsi:type="il1:OutParameter" identifier="new_temperature_measurement" type=" BOOL" ProjectName="AIBV" orderNumber="1"/>
+      <guards>AIBV_new_temperature_measurement = TRUE</guards>
+    </subroutines>
+    <subroutines name="AIBV_set_new_temperature_measurement" machineName="AAAA_SHARED_IMPL" projectName="AIBV">
+      <body xsi:type="il1:Action" ParentEventName="AIBV_set_new_temperature_measurement" action="AIBV_new_temperature_measurement &#x2254; new_temperature_measurement"/>
+      <formalParameters xsi:type="il1:InParameter" identifier="new_temperature_measurement" type=" BOOL" ProjectName="AIBV"/>
+    </subroutines>
+    <decls xsi:type="il1:VariableDecl" identifier="AIBV_temperature" type="&#x2124;" initialValue="NOMINAL_TEMP" ProjectName="AIBV" ComponentName="AAAA_SHARED_IMPL"/>
+    <decls xsi:type="il1:VariableDecl" identifier="AIBV_new_temperature_measurement" type="BOOL" initialValue="FALSE" ProjectName="AIBV" ComponentName="AAAA_SHARED_IMPL"/>
+  </protected>
+  <entryPoint>
+    <autoTasks name="AAAA_CONTROL_LOOP_IMPL" projectName="AIBV" machineName="AAAA_CONTROL_LOOP_IMPL">
+      <body xsi:type="il1:Seq">
+        <leftBranch xsi:type="il1:Seq">
+          <rightBranch xsi:type="il1:Call">
+            <subroutine name="AIBV_get_temperature" machineName="AAAA_SHARED_IMPL" projectName="AIBV">
+              <body xsi:type="il1:Seq">
+                <leftBranch xsi:type="il1:Action" action="temperature  &#x2254; AIBV_temperature"/>
+                <rightBranch xsi:type="il1:Action" action="new_temperature_measurement  &#x2254; AIBV_new_temperature_measurement"/>
+              </body>
+              <formalParameters xsi:type="il1:OutParameter" identifier="temperature" type=" &#x2124;" ProjectName="AIBV"/>
+              <formalParameters xsi:type="il1:OutParameter" identifier="new_temperature_measurement" type=" BOOL" ProjectName="AIBV" orderNumber="1"/>
+              <guards>AIBV_new_temperature_measurement = TRUE</guards>
+            </subroutine>
+            <actualParameters xsi:type="il1:InParameter" identifier="AIBV_temperature_LOCAL" type=" &#x2124;" ProjectName="AIBV" ComponentName="AAAA_CONTROL_LOOP_IMPL"/>
+            <actualParameters xsi:type="il1:InParameter" identifier="AIBV_new_temperature_measurement_LOCAL" type=" BOOL" ProjectName="AIBV" ComponentName="AAAA_CONTROL_LOOP_IMPL" orderNumber="1"/>
+          </rightBranch>
+        </leftBranch>
+        <rightBranch xsi:type="il1:Seq">
+          <leftBranch xsi:type="il1:If">
+            <body xsi:type="il1:Seq">
+              <leftBranch xsi:type="il1:Seq">
+                <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_calculate_position_partial" action="AIBV_required_position  &#x2254; (AIBV_OPEN &#x2217; FULLY_CLOSED_TEMP &#x2212; AIBV_CLOSED &#x2217; FULLY_OPEN_TEMP &#x2212; (AIBV_OPEN &#x2212; AIBV_CLOSED) &#x2217; AIBV_temperature_LOCAL) &#xf7; (FULLY_CLOSED_TEMP &#x2212; FULLY_OPEN_TEMP)"/>
+                <rightBranch xsi:type="il1:Seq">
+                  <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_calculate_position_partial" action="AIBV_new_temperature_measurement_LOCAL  &#x2254; FALSE"/>
+                  <rightBranch xsi:type="il1:Action" ParentEventName="AIBV_calculate_position_partial" action="AIBV_temperature_control_loop_started  &#x2254; TRUE"/>
+                </rightBranch>
+              </leftBranch>
+            </body>
+            <condition>AIBV_state = ARMED</condition>
+            <condition>AIBV_temperature_control_loop_started = FALSE</condition>
+            <condition>AIBV_new_temperature_measurement_LOCAL = TRUE</condition>
+            <condition>FULLY_OPEN_TEMP &#x2264; AIBV_temperature_LOCAL &#x2227; AIBV_temperature_LOCAL &#x2264; FULLY_CLOSED_TEMP</condition>
+            <branch>
+              <condition>AIBV_state = ARMED</condition>
+              <condition>AIBV_temperature_control_loop_started = FALSE</condition>
+              <condition>AIBV_new_temperature_measurement_LOCAL = TRUE</condition>
+              <condition>AIBV_temperature_LOCAL &lt; FULLY_OPEN_TEMP</condition>
+              <action xsi:type="il1:Seq">
+                <leftBranch xsi:type="il1:Seq">
+                  <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_calculate_position_open" action="AIBV_required_position  &#x2254; AIBV_OPEN"/>
+                  <rightBranch xsi:type="il1:Seq">
+                    <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_calculate_position_open" action="AIBV_new_temperature_measurement_LOCAL  &#x2254; FALSE"/>
+                    <rightBranch xsi:type="il1:Action" ParentEventName="AIBV_calculate_position_open" action="AIBV_temperature_control_loop_started  &#x2254; TRUE"/>
+                  </rightBranch>
+                </leftBranch>
+              </action>
+              <branch>
+                <condition>AIBV_state = ARMED</condition>
+                <condition>AIBV_temperature_control_loop_started = FALSE</condition>
+                <condition>AIBV_new_temperature_measurement_LOCAL = TRUE</condition>
+                <condition>FULLY_CLOSED_TEMP &lt; AIBV_temperature_LOCAL</condition>
+                <action xsi:type="il1:Seq">
+                  <leftBranch xsi:type="il1:Seq">
+                    <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_calculate_position_closed" action="AIBV_required_position  &#x2254; AIBV_CLOSED"/>
+                    <rightBranch xsi:type="il1:Seq">
+                      <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_calculate_position_closed" action="AIBV_new_temperature_measurement_LOCAL  &#x2254; FALSE"/>
+                      <rightBranch xsi:type="il1:Action" ParentEventName="AIBV_calculate_position_closed" action="AIBV_temperature_control_loop_started  &#x2254; TRUE"/>
+                    </rightBranch>
+                  </leftBranch>
+                </action>
+                <relatedEvent href="platform:/resource/AIBV/AAAA_CONTROL_LOOP_IMPL.bum#org.eventb.emf.core.machine.Event.AIBV_calculate_position_closed"/>
+              </branch>
+              <relatedEvent href="platform:/resource/AIBV/AAAA_CONTROL_LOOP_IMPL.bum#org.eventb.emf.core.machine.Event.AIBV_calculate_position_open"/>
+            </branch>
+            <else xsi:type="il1:Seq">
+              <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_calculate_position_ELSE" action="DUMMY_VARIABLE  &#x2254; FALSE"/>
+            </else>
+            <relatedEvent href="platform:/resource/AIBV/AAAA_CONTROL_LOOP_IMPL.bum#org.eventb.emf.core.machine.Event.AIBV_calculate_position_partial"/>
+          </leftBranch>
+          <rightBranch xsi:type="il1:Seq">
+            <leftBranch xsi:type="il1:Seq">
+              <rightBranch xsi:type="il1:Call">
+                <subroutine name="AIBV_set_new_temperature_measurement" machineName="AAAA_SHARED_IMPL" projectName="AIBV">
+                  <body xsi:type="il1:Action" ParentEventName="AIBV_set_new_temperature_measurement" action="AIBV_new_temperature_measurement &#x2254; new_temperature_measurement"/>
+                  <formalParameters xsi:type="il1:InParameter" identifier="new_temperature_measurement" type=" BOOL" ProjectName="AIBV"/>
+                </subroutine>
+                <actualParameters xsi:type="il1:OutParameter" identifier="AIBV_new_temperature_measurement_LOCAL" type=" BOOL" ProjectName="AIBV" ComponentName="AAAA_CONTROL_LOOP_IMPL"/>
+              </rightBranch>
+            </leftBranch>
+            <rightBranch xsi:type="il1:Seq">
+              <leftBranch xsi:type="il1:If">
+                <body xsi:type="il1:Seq">
+                  <leftBranch xsi:type="il1:Seq">
+                    <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_control_action_open" action="AIBV_action  &#x2254; OPEN"/>
+                    <rightBranch xsi:type="il1:Seq">
+                      <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_control_action_open" action="AIBV_amount  &#x2254; AIBV_required_position &#x2212; AIBV_believed_position"/>
+                      <rightBranch xsi:type="il1:Seq">
+                        <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_control_action_open" action="AIBV_expected_position  &#x2254; AIBV_required_position"/>
+                        <rightBranch xsi:type="il1:Seq">
+                          <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_control_action_open" action="AIBV_action_needs_to_measure_position  &#x2254; TRUE"/>
+                          <rightBranch xsi:type="il1:Action" ParentEventName="AIBV_control_action_open" action="AIBV_control_loop_started  &#x2254; TRUE"/>
+                        </rightBranch>
+                      </rightBranch>
+                    </rightBranch>
+                  </leftBranch>
+                </body>
+                <condition>AIBV_temperature_control_loop_started = TRUE</condition>
+                <condition>AIBV_control_loop_started = FALSE</condition>
+                <condition>AIBV_position_error = FALSE</condition>
+                <condition>AIBV_believed_position &lt; AIBV_required_position</condition>
+                <branch>
+                  <condition>AIBV_temperature_control_loop_started = TRUE</condition>
+                  <condition>AIBV_control_loop_started = FALSE</condition>
+                  <condition>AIBV_position_error = FALSE</condition>
+                  <condition>AIBV_required_position &lt; AIBV_believed_position</condition>
+                  <action xsi:type="il1:Seq">
+                    <leftBranch xsi:type="il1:Seq">
+                      <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_control_action_close_armed" action="AIBV_action  &#x2254; CLOSE"/>
+                      <rightBranch xsi:type="il1:Seq">
+                        <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_control_action_close_armed" action="AIBV_amount  &#x2254; AIBV_believed_position &#x2212; AIBV_required_position"/>
+                        <rightBranch xsi:type="il1:Seq">
+                          <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_control_action_close_armed" action="AIBV_expected_position  &#x2254; AIBV_required_position"/>
+                          <rightBranch xsi:type="il1:Seq">
+                            <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_control_action_close_armed" action="AIBV_action_needs_to_measure_position  &#x2254; TRUE"/>
+                            <rightBranch xsi:type="il1:Action" ParentEventName="AIBV_control_action_close_armed" action="AIBV_control_loop_started  &#x2254; TRUE"/>
+                          </rightBranch>
+                        </rightBranch>
+                      </rightBranch>
+                    </leftBranch>
+                  </action>
+                  <branch>
+                    <condition>AIBV_temperature_control_loop_started = TRUE</condition>
+                    <condition>AIBV_control_loop_started = FALSE</condition>
+                    <condition>AIBV_position_error = FALSE</condition>
+                    <condition>AIBV_believed_position = AIBV_required_position</condition>
+                    <action xsi:type="il1:Seq">
+                      <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_temperature_control_loop_not_needed" action="AIBV_temperature_control_loop_started  &#x2254; FALSE"/>
+                    </action>
+                    <branch>
+                      <condition>AIBV_control_loop_started = FALSE</condition>
+                      <condition>AIBV_position_error = TRUE</condition>
+                      <condition>AIBV_temperature_control_loop_started = TRUE</condition>
+                      <action xsi:type="il1:Seq">
+                        <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_temperature_control_loop_abort" action="AIBV_temperature_control_loop_started  &#x2254; FALSE"/>
+                      </action>
+                      <branch>
+                        <condition>AIBV_state = DISARMING</condition>
+                        <condition>AIBV_control_loop_started = FALSE</condition>
+                        <condition>AIBV_position_error = FALSE</condition>
+                        <condition>AIBV_believed_position &#x2260; AIBV_CLOSED</condition>
+                        <action xsi:type="il1:Seq">
+                          <leftBranch xsi:type="il1:Seq">
+                            <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_control_action_close_disarming" action="AIBV_action  &#x2254; CLOSE"/>
+                            <rightBranch xsi:type="il1:Seq">
+                              <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_control_action_close_disarming" action="AIBV_amount  &#x2254; AIBV_believed_position &#x2212; AIBV_CLOSED"/>
+                              <rightBranch xsi:type="il1:Seq">
+                                <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_control_action_close_disarming" action="AIBV_expected_position  &#x2254; AIBV_CLOSED"/>
+                                <rightBranch xsi:type="il1:Seq">
+                                  <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_control_action_close_disarming" action="AIBV_action_needs_to_measure_position  &#x2254; TRUE"/>
+                                  <rightBranch xsi:type="il1:Action" ParentEventName="AIBV_control_action_close_disarming" action="AIBV_control_loop_started  &#x2254; TRUE"/>
+                                </rightBranch>
+                              </rightBranch>
+                            </rightBranch>
+                          </leftBranch>
+                        </action>
+                        <relatedEvent href="platform:/resource/AIBV/AAAA_CONTROL_LOOP_IMPL.bum#org.eventb.emf.core.machine.Event.AIBV_control_action_close_disarming"/>
+                      </branch>
+                      <relatedEvent href="platform:/resource/AIBV/AAAA_CONTROL_LOOP_IMPL.bum#org.eventb.emf.core.machine.Event.AIBV_temperature_control_loop_abort"/>
+                    </branch>
+                    <relatedEvent href="platform:/resource/AIBV/AAAA_CONTROL_LOOP_IMPL.bum#org.eventb.emf.core.machine.Event.AIBV_temperature_control_loop_not_needed"/>
+                  </branch>
+                  <relatedEvent href="platform:/resource/AIBV/AAAA_CONTROL_LOOP_IMPL.bum#org.eventb.emf.core.machine.Event.AIBV_control_action_close_armed"/>
+                </branch>
+                <else xsi:type="il1:Seq">
+                  <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_temperature_control_loop_ELSE" action="DUMMY_VARIABLE  &#x2254; FALSE"/>
+                </else>
+                <relatedEvent href="platform:/resource/AIBV/AAAA_CONTROL_LOOP_IMPL.bum#org.eventb.emf.core.machine.Event.AIBV_control_action_open"/>
+              </leftBranch>
+              <rightBranch xsi:type="il1:Seq">
+                <leftBranch xsi:type="il1:Seq">
+                  <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_open_start" action="AIBV_control_action_started  &#x2254; TRUE"/>
+                </leftBranch>
+                <rightBranch xsi:type="il1:Seq">
+                  <leftBranch xsi:type="il1:If">
+                    <body xsi:type="il1:Seq">
+                      <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_close_start" action="AIBV_control_action_started  &#x2254; TRUE"/>
+                    </body>
+                    <condition>AIBV_state &#x2260; DISARMED</condition>
+                    <condition>AIBV_action = CLOSE</condition>
+                    <condition>AIBV_control_action_started = FALSE</condition>
+                    <condition>0 &#x2264; AIBV_amount</condition>
+                    <else xsi:type="il1:Seq">
+                      <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_actuate_start_ELSE" action="DUMMY_VARIABLE  &#x2254; FALSE"/>
+                    </else>
+                    <relatedEvent href="platform:/resource/AIBV/AAAA_CONTROL_LOOP_IMPL.bum#org.eventb.emf.core.machine.Event.AIBV_close_start"/>
+                  </leftBranch>
+                  <rightBranch xsi:type="il1:Seq">
+                    <leftBranch xsi:type="il1:If">
+                      <body xsi:type="il1:Seq">
+                        <leftBranch xsi:type="il1:Seq">
+                          <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_open_end" action="AIBV_action, AIBV_amount  &#x2254; NOTHING, 0"/>
+                          <rightBranch xsi:type="il1:Action" ParentEventName="AIBV_open_end" action="AIBV_control_action_started  &#x2254; FALSE"/>
+                        </leftBranch>
+                      </body>
+                      <condition>AIBV_state = ARMED</condition>
+                      <condition>AIBV_action = OPEN</condition>
+                      <condition>AIBV_control_action_started = TRUE</condition>
+                      <branch>
+                        <condition>AIBV_state &#x2260; DISARMED</condition>
+                        <condition>AIBV_action = CLOSE</condition>
+                        <condition>AIBV_control_action_started = TRUE</condition>
+                        <action xsi:type="il1:Seq">
+                          <leftBranch xsi:type="il1:Seq">
+                            <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_close_end" action="AIBV_action, AIBV_amount  &#x2254; NOTHING, 0"/>
+                            <rightBranch xsi:type="il1:Action" ParentEventName="AIBV_close_end" action="AIBV_control_action_started  &#x2254; FALSE"/>
+                          </leftBranch>
+                        </action>
+                        <relatedEvent href="platform:/resource/AIBV/AAAA_CONTROL_LOOP_IMPL.bum#org.eventb.emf.core.machine.Event.AIBV_close_end"/>
+                      </branch>
+                      <else xsi:type="il1:Seq">
+                        <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_actuate_end_ELSE" action="DUMMY_VARIABLE  &#x2254; FALSE"/>
+                      </else>
+                      <relatedEvent href="platform:/resource/AIBV/AAAA_CONTROL_LOOP_IMPL.bum#org.eventb.emf.core.machine.Event.AIBV_open_end"/>
+                    </leftBranch>
+                    <rightBranch xsi:type="il1:Seq">
+                      <leftBranch xsi:type="il1:If">
+                        <body xsi:type="il1:Seq">
+                          <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_measure_position_start" action="AIBV_measuring_position  &#x2254; TRUE"/>
+                        </body>
+                        <condition>AIBV_action_needs_to_measure_position = TRUE</condition>
+                        <condition>AIBV_action = NOTHING</condition>
+                        <condition>AIBV_measuring_position = FALSE</condition>
+                        <else xsi:type="il1:Seq">
+                          <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_measure_position_start_ELSE" action="DUMMY_VARIABLE  &#x2254; FALSE"/>
+                        </else>
+                        <relatedEvent href="platform:/resource/AIBV/AAAA_CONTROL_LOOP_IMPL.bum#org.eventb.emf.core.machine.Event.AIBV_measure_position_start"/>
+                      </leftBranch>
+                      <rightBranch xsi:type="il1:Seq">
+                        <leftBranch xsi:type="il1:If">
+                          <body xsi:type="il1:Seq">
+                            <leftBranch xsi:type="il1:Seq">
+                              <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_measure_position_end" action="AIBV_action_needs_to_measure_position  &#x2254; FALSE"/>
+                              <rightBranch xsi:type="il1:Seq">
+                                <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_measure_position_end" action="AIBV_measured_position  &#x2254; position_measurement"/>
+                                <rightBranch xsi:type="il1:Seq">
+                                  <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_measure_position_end" action="AIBV_position_measurement_to_check  &#x2254; TRUE"/>
+                                  <rightBranch xsi:type="il1:Action" ParentEventName="AIBV_measure_position_end" action="AIBV_measuring_position  &#x2254; FALSE"/>
+                                </rightBranch>
+                              </rightBranch>
+                            </leftBranch>
+                          </body>
+                          <condition>AIBV_action_needs_to_measure_position = TRUE</condition>
+                          <condition>AIBV_action = NOTHING</condition>
+                          <condition>(AIBV_CLOSED &#x2264; position_measurement &#x2227; position_measurement &#x2264; AIBV_OPEN) &#x2228; position_measurement = AIBV_UNKNOWN</condition>
+                          <condition>AIBV_measuring_position = TRUE</condition>
+                          <else xsi:type="il1:Seq">
+                            <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_measure_position_end_ELSE" action="DUMMY_VARIABLE  &#x2254; FALSE"/>
+                          </else>
+                          <relatedEvent href="platform:/resource/AIBV/AAAA_CONTROL_LOOP_IMPL.bum#org.eventb.emf.core.machine.Event.AIBV_measure_position_end"/>
+                        </leftBranch>
+                        <rightBranch xsi:type="il1:Seq">
+                          <leftBranch xsi:type="il1:If">
+                            <body xsi:type="il1:Seq">
+                              <leftBranch xsi:type="il1:Seq">
+                                <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_check_position_ok" action="AIBV_position_measurement_to_check  &#x2254; FALSE"/>
+                                <rightBranch xsi:type="il1:Seq">
+                                  <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_check_position_ok" action="AIBV_position_error, AIBV_believed_position  &#x2254; FALSE, AIBV_measured_position"/>
+                                  <rightBranch xsi:type="il1:Action" ParentEventName="AIBV_check_position_ok" action="AIBV_control_loop_finishing  &#x2254; TRUE"/>
+                                </rightBranch>
+                              </leftBranch>
+                            </body>
+                            <condition>AIBV_position_measurement_to_check = TRUE</condition>
+                            <condition>AIBV_measured_position = AIBV_expected_position</condition>
+                            <branch>
+                              <condition>AIBV_position_measurement_to_check = TRUE</condition>
+                              <condition>AIBV_measured_position &#x2260; AIBV_expected_position</condition>
+                              <action xsi:type="il1:Seq">
+                                <leftBranch xsi:type="il1:Seq">
+                                  <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_check_position_error" action="AIBV_position_measurement_to_check  &#x2254; FALSE"/>
+                                  <rightBranch xsi:type="il1:Seq">
+                                    <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_check_position_error" action="AIBV_position_error, AIBV_believed_position  &#x2254; TRUE, AIBV_UNKNOWN"/>
+                                    <rightBranch xsi:type="il1:Action" ParentEventName="AIBV_check_position_error" action="AIBV_control_loop_finishing  &#x2254; TRUE"/>
+                                  </rightBranch>
+                                </leftBranch>
+                              </action>
+                              <relatedEvent href="platform:/resource/AIBV/AAAA_CONTROL_LOOP_IMPL.bum#org.eventb.emf.core.machine.Event.AIBV_check_position_error"/>
+                            </branch>
+                            <else xsi:type="il1:Seq">
+                              <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_check_position_ELSE" action="DUMMY_VARIABLE  &#x2254; FALSE"/>
+                            </else>
+                            <relatedEvent href="platform:/resource/AIBV/AAAA_CONTROL_LOOP_IMPL.bum#org.eventb.emf.core.machine.Event.AIBV_check_position_ok"/>
+                          </leftBranch>
+                          <rightBranch xsi:type="il1:If">
+                            <body xsi:type="il1:Seq">
+                              <leftBranch xsi:type="il1:Seq">
+                                <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_finish_control_loop" action="AIBV_control_loop_started  &#x2254; FALSE"/>
+                                <rightBranch xsi:type="il1:Seq">
+                                  <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_finish_control_loop" action="AIBV_control_loop_finishing  &#x2254; FALSE"/>
+                                  <rightBranch xsi:type="il1:Seq">
+                                    <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_finish_control_loop" action="AIBV_temperature_control_loop_started  &#x2254; FALSE"/>
+                                    <rightBranch xsi:type="il1:Action" ParentEventName="AIBV_finish_control_loop" action="AIBV_have_done_a_temperature_control_loop  &#x2254; TRUE"/>
+                                  </rightBranch>
+                                </rightBranch>
+                              </leftBranch>
+                            </body>
+                            <condition>AIBV_control_loop_finishing = TRUE</condition>
+                            <else xsi:type="il1:Seq">
+                              <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_finish_control_loop_ELSE" action="DUMMY_VARIABLE  &#x2254; FALSE"/>
+                            </else>
+                            <relatedEvent href="platform:/resource/AIBV/AAAA_CONTROL_LOOP_IMPL.bum#org.eventb.emf.core.machine.Event.AIBV_finish_control_loop"/>
+                          </rightBranch>
+                        </rightBranch>
+                      </rightBranch>
+                    </rightBranch>
+                  </rightBranch>
+                </rightBranch>
+              </rightBranch>
+            </rightBranch>
+          </rightBranch>
+        </rightBranch>
+      </body>
+      <taskType xsi:type="il1:PeriodicTaskType"/>
+      <decls xsi:type="il1:VariableDecl" identifier="AIBV_state" type="AIBV_STATES" initialValue="DISARMED" ProjectName="AIBV" ComponentName="AAAA_CONTROL_LOOP_IMPL"/>
+      <decls xsi:type="il1:VariableDecl" identifier="AIBV_action" type="AIBV_ACTIONS" initialValue="NOTHING" ProjectName="AIBV" ComponentName="AAAA_CONTROL_LOOP_IMPL"/>
+      <decls xsi:type="il1:VariableDecl" identifier="AIBV_amount" type="&#x2124;" initialValue="0" ProjectName="AIBV" ComponentName="AAAA_CONTROL_LOOP_IMPL"/>
+      <decls xsi:type="il1:VariableDecl" identifier="AIBV_control_action_started" type="BOOL" initialValue="FALSE" ProjectName="AIBV" ComponentName="AAAA_CONTROL_LOOP_IMPL"/>
+      <decls xsi:type="il1:VariableDecl" identifier="AIBV_action_needs_to_measure_position" type="BOOL" initialValue="FALSE" ProjectName="AIBV" ComponentName="AAAA_CONTROL_LOOP_IMPL"/>
+      <decls xsi:type="il1:VariableDecl" identifier="AIBV_measured_position" type="&#x2124;" initialValue="AIBV_UNKNOWN" ProjectName="AIBV" ComponentName="AAAA_CONTROL_LOOP_IMPL"/>
+      <decls xsi:type="il1:VariableDecl" identifier="AIBV_position_measurement_to_check" type="BOOL" initialValue="FALSE" ProjectName="AIBV" ComponentName="AAAA_CONTROL_LOOP_IMPL"/>
+      <decls xsi:type="il1:VariableDecl" identifier="AIBV_control_loop_finishing" type="BOOL" initialValue="FALSE" ProjectName="AIBV" ComponentName="AAAA_CONTROL_LOOP_IMPL"/>
+      <decls xsi:type="il1:VariableDecl" identifier="AIBV_position_error" type="BOOL" initialValue="FALSE" ProjectName="AIBV" ComponentName="AAAA_CONTROL_LOOP_IMPL"/>
+      <decls xsi:type="il1:VariableDecl" identifier="AIBV_believed_position" type="&#x2124;" initialValue="AIBV_CLOSED" ProjectName="AIBV" ComponentName="AAAA_CONTROL_LOOP_IMPL"/>
+      <decls xsi:type="il1:VariableDecl" identifier="AIBV_control_loop_started" type="BOOL" initialValue="FALSE" ProjectName="AIBV" ComponentName="AAAA_CONTROL_LOOP_IMPL"/>
+      <decls xsi:type="il1:VariableDecl" identifier="AIBV_expected_position" type="&#x2124;" initialValue="AIBV_CLOSED" ProjectName="AIBV" ComponentName="AAAA_CONTROL_LOOP_IMPL"/>
+      <decls xsi:type="il1:VariableDecl" identifier="AIBV_measuring_position" type="BOOL" initialValue="FALSE" ProjectName="AIBV" ComponentName="AAAA_CONTROL_LOOP_IMPL"/>
+      <decls xsi:type="il1:VariableDecl" identifier="AIBV_required_position" type="&#x2124;" initialValue="AIBV_CLOSED" ProjectName="AIBV" ComponentName="AAAA_CONTROL_LOOP_IMPL"/>
+      <decls xsi:type="il1:VariableDecl" identifier="AIBV_temperature_control_loop_started" type="BOOL" initialValue="FALSE" ProjectName="AIBV" ComponentName="AAAA_CONTROL_LOOP_IMPL"/>
+      <decls xsi:type="il1:VariableDecl" identifier="AIBV_have_done_a_temperature_control_loop" type="BOOL" initialValue="FALSE" ProjectName="AIBV" ComponentName="AAAA_CONTROL_LOOP_IMPL"/>
+      <decls xsi:type="il1:VariableDecl" identifier="AIBV_temperature_LOCAL" type="&#x2124;" initialValue="NOMINAL_TEMP" ProjectName="AIBV" ComponentName="AAAA_CONTROL_LOOP_IMPL"/>
+      <decls xsi:type="il1:VariableDecl" identifier="AIBV_new_temperature_measurement_LOCAL" type="BOOL" initialValue="FALSE" ProjectName="AIBV" ComponentName="AAAA_CONTROL_LOOP_IMPL"/>
+      <decls xsi:type="il1:VariableDecl" identifier="DUMMY_VARIABLE" type="BOOL" initialValue="FALSE" ProjectName="AIBV" ComponentName="AAAA_CONTROL_LOOP_IMPL"/>
+    </autoTasks>
+    <autoTasks name="AAAA_TEMPERATURE_IMPL" projectName="AIBV" machineName="AAAA_TEMPERATURE_IMPL">
+      <body xsi:type="il1:Seq">
+        <leftBranch xsi:type="il1:Seq">
+          <leftBranch xsi:type="il1:Seq">
+            <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_temperature_measurement" action="AIBV_buffered_temperature  &#x2254; temperature"/>
+            <rightBranch xsi:type="il1:Action" ParentEventName="AIBV_temperature_measurement" action="AIBV_temperature_needs_checking  &#x2254; TRUE"/>
+          </leftBranch>
+        </leftBranch>
+        <rightBranch xsi:type="il1:If">
+          <body xsi:type="il1:Seq">
+            <leftBranch xsi:type="il1:Seq">
+              <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_check_temperature_ok" action="AIBV_temperature_error  &#x2254; FALSE"/>
+              <rightBranch xsi:type="il1:Action" ParentEventName="AIBV_check_temperature_ok" action="AIBV_temperature_needs_checking  &#x2254; FALSE"/>
+            </leftBranch>
+            <rightBranch xsi:type="il1:If">
+              <body xsi:type="il1:Call">
+                <subroutine name="AIBV_check_temperature_ok" machineName="AAAA_SHARED_IMPL" projectName="AIBV">
+                  <body xsi:type="il1:Action" ParentEventName="AIBV_check_temperature_ok" action="AIBV_temperature, AIBV_new_temperature_measurement &#x2254; buffered_temperature, TRUE"/>
+                  <formalParameters xsi:type="il1:InParameter" identifier="buffered_temperature" type=" &#x2124;" ProjectName="AIBV"/>
+                  <guards>MIN_TEMP &#x2264; buffered_temperature &#x2227; buffered_temperature &#x2264; MAX_TEMP</guards>
+                </subroutine>
+                <actualParameters xsi:type="il1:OutParameter" identifier="AIBV_buffered_temperature" type=" &#x2124;" ProjectName="AIBV" ComponentName="AAAA_TEMPERATURE_IMPL"/>
+              </body>
+              <condition>AIBV_temperature_needs_checking = TRUE</condition>
+              <condition>MIN_TEMP &#x2264; AIBV_buffered_temperature &#x2227; AIBV_buffered_temperature &#x2264; MAX_TEMP</condition>
+              <condition>MIN_TEMP &#x2264; buffered_temperature &#x2227; buffered_temperature &#x2264; MAX_TEMP</condition>
+            </rightBranch>
+          </body>
+          <condition>AIBV_temperature_needs_checking = TRUE</condition>
+          <condition>MIN_TEMP &#x2264; AIBV_buffered_temperature &#x2227; AIBV_buffered_temperature &#x2264; MAX_TEMP</condition>
+          <condition>MIN_TEMP &#x2264; buffered_temperature &#x2227; buffered_temperature &#x2264; MAX_TEMP</condition>
+          <else xsi:type="il1:Seq">
+            <leftBranch xsi:type="il1:Seq">
+              <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_check_temperature_error" action="AIBV_temperature_error  &#x2254; TRUE"/>
+              <rightBranch xsi:type="il1:Action" ParentEventName="AIBV_check_temperature_error" action="AIBV_temperature_needs_checking  &#x2254; FALSE"/>
+            </leftBranch>
+          </else>
+          <relatedEvent href="platform:/resource/AIBV/AAAA_TEMPERATURE_IMPL.bum#org.eventb.emf.core.machine.Event.AIBV_check_temperature_ok"/>
+        </rightBranch>
+      </body>
+      <taskType xsi:type="il1:PeriodicTaskType"/>
+      <decls xsi:type="il1:VariableDecl" identifier="AIBV_temperature_needs_checking" type="BOOL" initialValue="FALSE" ProjectName="AIBV" ComponentName="AAAA_TEMPERATURE_IMPL"/>
+      <decls xsi:type="il1:VariableDecl" identifier="AIBV_temperature_error" type="BOOL" initialValue="FALSE" ProjectName="AIBV" ComponentName="AAAA_TEMPERATURE_IMPL"/>
+      <decls xsi:type="il1:VariableDecl" identifier="AIBV_buffered_temperature" type="&#x2124;" initialValue="NOMINAL_TEMP" ProjectName="AIBV" ComponentName="AAAA_TEMPERATURE_IMPL"/>
+    </autoTasks>
+  </entryPoint>
+  <environMachines name="AIBV_plant_IMPL" projectName="AIBV" machineName="AIBV_plant_IMPL">
+    <decls xsi:type="il1:VariableDecl" identifier="AIBV_position" type="&#x2124;" initialValue="AIBV_CLOSED" ProjectName="AIBV" ComponentName="AIBV_plant_IMPL"/>
+    <decls xsi:type="il1:VariableDecl" identifier="AIBV_open_started" type="BOOL" initialValue="FALSE" ProjectName="AIBV" ComponentName="AIBV_plant_IMPL"/>
+    <decls xsi:type="il1:VariableDecl" identifier="AIBV_open_performed" type="BOOL" initialValue="FALSE" ProjectName="AIBV" ComponentName="AIBV_plant_IMPL"/>
+    <decls xsi:type="il1:VariableDecl" identifier="AIBV_close_started" type="BOOL" initialValue="FALSE" ProjectName="AIBV" ComponentName="AIBV_plant_IMPL"/>
+    <decls xsi:type="il1:VariableDecl" identifier="AIBV_close_performed" type="BOOL" initialValue="FALSE" ProjectName="AIBV" ComponentName="AIBV_plant_IMPL"/>
+    <decls xsi:type="il1:VariableDecl" identifier="AIBV_position_moving" type="&#x2124;" initialValue="AIBV_CLOSED" ProjectName="AIBV" ComponentName="AIBV_plant_IMPL"/>
+    <decls xsi:type="il1:VariableDecl" identifier="AIBV_measure_position_started" type="BOOL" initialValue="FALSE" ProjectName="AIBV" ComponentName="AIBV_plant_IMPL"/>
+    <decls xsi:type="il1:VariableDecl" identifier="AIBV_measure_position_performed" type="BOOL" initialValue="FALSE" ProjectName="AIBV" ComponentName="AIBV_plant_IMPL"/>
+    <decls xsi:type="il1:VariableDecl" identifier="AIBV_new_position_measurement" type="&#x2124;" initialValue="AIBV_UNKNOWN" ProjectName="AIBV" ComponentName="AIBV_plant_IMPL"/>
+    <decls xsi:type="il1:VariableDecl" identifier="AIBV_undetectable_error_occured" type="BOOL" initialValue="FALSE" ProjectName="AIBV" ComponentName="AIBV_plant_IMPL"/>
+    <decls xsi:type="il1:VariableDecl" identifier="AIBV_amount_copy" type="&#x2124;" initialValue="0" ProjectName="AIBV" ComponentName="AIBV_plant_IMPL"/>
+    <decls xsi:type="il1:VariableDecl" identifier="ENV_temperature" type="&#x2124;" initialValue="NOMINAL_TEMP" ProjectName="AIBV" ComponentName="AIBV_plant_IMPL"/>
+    <decls xsi:type="il1:VariableDecl" identifier="ENV_got_temperature" type="BOOL" initialValue="FALSE" ProjectName="AIBV" ComponentName="AIBV_plant_IMPL"/>
+    <decls xsi:type="il1:VariableDecl" identifier="ENV_temperature_reading" type="&#x2124;" initialValue="NOMINAL_TEMP" ProjectName="AIBV" ComponentName="AIBV_plant_IMPL"/>
+    <subroutines name="AIBV_open_start" machineName="AIBV_plant_IMPL" projectName="AIBV">
+      <body xsi:type="il1:Seq">
+        <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_open_start" action="AIBV_open_started &#x2254; TRUE"/>
+        <rightBranch xsi:type="il1:Seq">
+          <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_open_start" action="AIBV_open_performed &#x2254; FALSE"/>
+          <rightBranch xsi:type="il1:Action" ParentEventName="AIBV_open_start" action="AIBV_amount_copy &#x2254; amount"/>
+        </rightBranch>
+      </body>
+      <formalParameters xsi:type="il1:InParameter" identifier="amount" type=" &#x2124;" ProjectName="AIBV"/>
+      <guards>AIBV_open_started = FALSE</guards>
+      <guards>0 &#x2264; amount</guards>
+      <guards>AIBV_close_started = FALSE</guards>
+    </subroutines>
+    <subroutines name="AIBV_open_end" machineName="AIBV_plant_IMPL" projectName="AIBV">
+      <body xsi:type="il1:Seq">
+        <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_open_end" action="AIBV_position &#x2254; AIBV_position_moving"/>
+        <rightBranch xsi:type="il1:Seq">
+          <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_open_end" action="AIBV_open_started &#x2254; FALSE"/>
+          <rightBranch xsi:type="il1:Action" ParentEventName="AIBV_open_end" action="AIBV_open_performed &#x2254; FALSE"/>
+        </rightBranch>
+      </body>
+      <guards>AIBV_open_performed = TRUE</guards>
+    </subroutines>
+    <subroutines name="AIBV_close_start" machineName="AIBV_plant_IMPL" projectName="AIBV">
+      <body xsi:type="il1:Seq">
+        <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_close_start" action="AIBV_close_started &#x2254; TRUE"/>
+        <rightBranch xsi:type="il1:Seq">
+          <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_close_start" action="AIBV_close_performed &#x2254; FALSE"/>
+          <rightBranch xsi:type="il1:Action" ParentEventName="AIBV_close_start" action="AIBV_amount_copy &#x2254; amount"/>
+        </rightBranch>
+      </body>
+      <formalParameters xsi:type="il1:InParameter" identifier="amount" type=" &#x2124;" ProjectName="AIBV"/>
+      <guards>AIBV_close_started = FALSE</guards>
+      <guards>0 &#x2264; amount</guards>
+      <guards>AIBV_open_started = FALSE</guards>
+    </subroutines>
+    <subroutines name="AIBV_close_end" machineName="AIBV_plant_IMPL" projectName="AIBV">
+      <body xsi:type="il1:Seq">
+        <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_close_end" action="AIBV_position &#x2254; AIBV_position_moving"/>
+        <rightBranch xsi:type="il1:Seq">
+          <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_close_end" action="AIBV_close_started &#x2254; FALSE"/>
+          <rightBranch xsi:type="il1:Action" ParentEventName="AIBV_close_end" action="AIBV_close_performed &#x2254; FALSE"/>
+        </rightBranch>
+      </body>
+      <guards>AIBV_close_performed = TRUE</guards>
+    </subroutines>
+    <subroutines name="AIBV_measure_position_start" machineName="AIBV_plant_IMPL" projectName="AIBV">
+      <body xsi:type="il1:Seq">
+        <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_measure_position_start" action="AIBV_measure_position_started &#x2254; TRUE"/>
+        <rightBranch xsi:type="il1:Action" ParentEventName="AIBV_measure_position_start" action="AIBV_measure_position_performed &#x2254; FALSE"/>
+      </body>
+      <guards>AIBV_measure_position_started = FALSE</guards>
+    </subroutines>
+    <subroutines name="AIBV_measure_position_end" machineName="AIBV_plant_IMPL" projectName="AIBV">
+      <body xsi:type="il1:Seq">
+        <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_measure_position_end" action="AIBV_measure_position_started &#x2254; FALSE"/>
+        <rightBranch xsi:type="il1:Seq">
+          <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_measure_position_end" action="AIBV_measure_position_performed &#x2254; FALSE"/>
+          <rightBranch xsi:type="il1:Action" action="position_measurement &#x2254; AIBV_new_position_measurement"/>
+        </rightBranch>
+      </body>
+      <formalParameters xsi:type="il1:OutParameter" identifier="position_measurement" type=" &#x2124;" ProjectName="AIBV"/>
+      <guards>AIBV_measure_position_performed = TRUE</guards>
+      <guards>(AIBV_CLOSED &#x2264; position_measurement &#x2227; position_measurement &#x2264; AIBV_OPEN) &#x2228; position_measurement = AIBV_UNKNOWN</guards>
+    </subroutines>
+    <subroutines name="AIBV_finish_control_loop" machineName="AIBV_plant_IMPL" projectName="AIBV">
+      <body xsi:type="il1:Action" ParentEventName="AIBV_finish_control_loop" action="AIBV_undetectable_error_occured :&#x2223; (((believed_position &#x2260; AIBV_UNKNOWN &#x2227; believed_position &#x2260; AIBV_position) &#x2228; AIBV_undetectable_error_occured = TRUE) &#x2227; AIBV_undetectable_error_occured' = TRUE) &#x2228; ((&#xac;(believed_position &#x2260; AIBV_UNKNOWN &#x2227; believed_position &#x2260; AIBV_position) &#x2227; AIBV_undetectable_error_occured = FALSE) &#x2227; AIBV_undetectable_error_occured' = FALSE)"/>
+    </subroutines>
+    <subroutines name="AIBV_temperature_measurement" machineName="AIBV_plant_IMPL" projectName="AIBV">
+      <body xsi:type="il1:Seq">
+        <leftBranch xsi:type="il1:Action" ParentEventName="AIBV_temperature_measurement" action="ENV_got_temperature &#x2254; FALSE"/>
+        <rightBranch xsi:type="il1:Action" action="temperature &#x2254; ENV_temperature_reading"/>
+      </body>
+      <formalParameters xsi:type="il1:OutParameter" identifier="temperature" type=" &#x2124;" ProjectName="AIBV"/>
+      <guards>ENV_got_temperature = TRUE</guards>
+    </subroutines>
+  </environMachines>
+</il1:Program>

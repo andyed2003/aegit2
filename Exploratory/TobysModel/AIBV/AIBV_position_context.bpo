@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_STATES" org.eventb.core.type="ℙ(AIBV_STATES)"/>
+<org.eventb.core.poIdentifier name="ARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.poIdentifier name="DISARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.poIdentifier name="DISARMING" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.poPredicate name="AIBV_STATET" org.eventb.core.predicate="partition(AIBV_STATES,{ARMED},{DISARMING},{DISARMED})" org.eventb.core.source="/AIBV/AIBV_arm_disarm_context.buc|org.eventb.core.contextFile#AIBV_arm_disarm_context|org.eventb.core.axiom#+"/>
+<org.eventb.core.poIdentifier name="AIBV_CLOSED" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_OPEN" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_UNKNOWN" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="axm7/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AIBV/AIBV_position_context.bpo|org.eventb.core.poFile#AIBV_position_context|org.eventb.core.poPredicateSet#HYPAIBV_arm_disarm_contexz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="AIBV_UNKNOWN&lt;AIBV_CLOSED∧AIBV_CLOSED&lt;AIBV_OPEN" org.eventb.core.source="/AIBV/AIBV_position_context.buc|org.eventb.core.contextFile#AIBV_position_context|org.eventb.core.axiom#3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_position_context.buc|org.eventb.core.contextFile#AIBV_position_context|org.eventb.core.axiom#3"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/AIBV/AIBV_position_context.bpo|org.eventb.core.poFile#AIBV_position_context|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/AIBV/AIBV_position_context.bpo|org.eventb.core.poFile#AIBV_position_context|org.eventb.core.poPredicateSet#HYPAIBV_arm_disarm_contexz"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="HYPAIBV_arm_disarm_contexz" org.eventb.core.parentSet="/AIBV/AIBV_position_context.bpo|org.eventb.core.poFile#AIBV_position_context|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="AIBV_CLOSED∈ℤ" org.eventb.core.source="/AIBV/AIBV_position_context.buc|org.eventb.core.contextFile#AIBV_position_context|org.eventb.core.axiom#,"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="AIBV_CLOSED=0" org.eventb.core.source="/AIBV/AIBV_position_context.buc|org.eventb.core.contextFile#AIBV_position_context|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="AIBV_OPEN∈ℤ" org.eventb.core.source="/AIBV/AIBV_position_context.buc|org.eventb.core.contextFile#AIBV_position_context|org.eventb.core.axiom#\/"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="AIBV_OPEN=2" org.eventb.core.source="/AIBV/AIBV_position_context.buc|org.eventb.core.contextFile#AIBV_position_context|org.eventb.core.axiom#0"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="AIBV_UNKNOWN∈ℤ" org.eventb.core.source="/AIBV/AIBV_position_context.buc|org.eventb.core.contextFile#AIBV_position_context|org.eventb.core.axiom#1"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="AIBV_UNKNOWN=−1" org.eventb.core.source="/AIBV/AIBV_position_context.buc|org.eventb.core.contextFile#AIBV_position_context|org.eventb.core.axiom#2"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/AIBV/AIBV_position_context.bpo|org.eventb.core.poFile#AIBV_position_context|org.eventb.core.poPredicateSet#HYPAIBV_arm_disarm_contexz" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="AIBV_UNKNOWN&lt;AIBV_CLOSED∧AIBV_CLOSED&lt;AIBV_OPEN" org.eventb.core.source="/AIBV/AIBV_position_context.buc|org.eventb.core.contextFile#AIBV_position_context|org.eventb.core.axiom#3"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

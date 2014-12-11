@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;org.eventb.codegen.ui.cgConfig" version="5">
+<org.eventb.core.variable name="," org.eventb.core.comment="The controller's copy of b, set by the master (from fmiSetInteger)" org.eventb.core.identifier="a"/>
+<org.eventb.core.event name="-" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="*" org.eventb.core.assignment="a :∈ ℤ" org.eventb.core.label="act6"/>
+<org.eventb.core.action name="'" org.eventb.core.assignment="x :∈ ℤ" org.eventb.core.label="act3a"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="b :∈ ℤ" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="used_a ≔ 0" org.eventb.core.label="act8"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="." org.eventb.core.comment="simulation step" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="env_fmiDoStep">
+<org.eventb.core.action name="'" org.eventb.core.assignment="b ≔ b + 1" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event ch.ethz.eventb.decomposition.external="true" name="/" org.eventb.core.comment="simulation step" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="controller_fmiDoStep">
+<org.eventb.core.action name="'" org.eventb.core.assignment="used_a ≔ a ÷ 2" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="(" org.eventb.core.comment="The environment variable in the env_fmu (The source value)" org.eventb.core.identifier="b"/>
+<org.eventb.core.variable name="1" org.eventb.core.comment="The master's copy of b (by fmiGetInteger)" org.eventb.core.identifier="x"/>
+<org.eventb.core.invariant name="=" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="inv7" org.eventb.core.predicate="a ∈ ℤ"/>
+<org.eventb.core.invariant name="2" org.eventb.core.label="inv1" org.eventb.core.predicate="x ∈ ℤ"/>
+<org.eventb.core.invariant name="5" org.eventb.core.label="inv2" org.eventb.core.predicate="b ∈ ℤ"/>
+<org.eventb.core.variable name="@" org.eventb.core.comment="The value calculated by the controller fmu" org.eventb.core.identifier="used_a"/>
+<org.eventb.core.invariant name="A" org.eventb.codegen.ui.typingAttribute="--unset--" org.eventb.core.label="inv9" org.eventb.core.predicate="used_a ∈ ℤ"/>
+<org.eventb.core.event name="0" org.eventb.core.comment="master read" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="fmiGetInteger">
+<org.eventb.core.action name="'" org.eventb.core.assignment="x ≔ b" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="3" org.eventb.core.comment="master write" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="fmiSetInteger">
+<org.eventb.core.action name="'" org.eventb.core.assignment="a ≔ x" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

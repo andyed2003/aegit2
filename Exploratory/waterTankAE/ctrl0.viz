@@ -1,0 +1,5 @@
+#Thu Jul 18 16:09:03 BST 2013
+e1e3592b-f0ad-4242-a851-0b320d9455ae={"mode"\:2,"disabled"\:[],"expr"\:"","transformers"\:[]}
+24eddf06-6b86-4aa9-b719-783c4ad0ab6a={"mode"\:1,"disabled"\:[],"transformers"\:[]}
+22dbd390-25d0-48ea-81f5-d8a5bc83fcad={"time"\:"\#EventB\:time","mode"\:"over","formula"\:["\#EventB\:fmiLevel"]}
+bf327b0e-a6ec-4038-ab17-49e000316c10={"time"\:"\#EventB\:time","mode"\:"each","formula"\:["\#EventB\:fmiLevel","\#EventB\:fmiPump","\#EventB\:pump","\#EventB\:level"]}

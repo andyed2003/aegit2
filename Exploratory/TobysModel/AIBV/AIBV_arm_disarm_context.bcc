@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;org.eventb.codegen.ui.cgConfig">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(AIBV_STATES,{ARMED},{DISARMING},{DISARMED})" org.eventb.core.source="/AIBV/AIBV_arm_disarm_context.buc|org.eventb.core.contextFile#AIBV_arm_disarm_context|org.eventb.core.axiom#+" org.eventb.core.theorem="false"/>
+<org.eventb.core.scCarrierSet name="AIBV_STATES" org.eventb.core.source="/AIBV/AIBV_arm_disarm_context.buc|org.eventb.core.contextFile#AIBV_arm_disarm_context|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(AIBV_STATES)"/>
+<org.eventb.core.scConstant name="ARMED" org.eventb.core.source="/AIBV/AIBV_arm_disarm_context.buc|org.eventb.core.contextFile#AIBV_arm_disarm_context|org.eventb.core.constant#(" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.scConstant name="DISARMED" org.eventb.core.source="/AIBV/AIBV_arm_disarm_context.buc|org.eventb.core.contextFile#AIBV_arm_disarm_context|org.eventb.core.constant#*" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.scConstant name="DISARMING" org.eventb.core.source="/AIBV/AIBV_arm_disarm_context.buc|org.eventb.core.contextFile#AIBV_arm_disarm_context|org.eventb.core.constant#)" org.eventb.core.type="AIBV_STATES"/>
+</org.eventb.core.scContextFile>

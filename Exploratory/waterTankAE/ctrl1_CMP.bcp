@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ac.soton.composition.core.composedMachineFile org.eventb.core.comment="" org.eventb.core.configuration="ac.soton.composition.core.cmp" version="7">
+<ac.soton.composition.core.refinesMachine ac.soton.composition.core.target="ctrl1" name="internal_refines1"/>
+<ac.soton.composition.core.seesContext ac.soton.composition.core.target="ctx0" name="internal_sees1"/>
+<ac.soton.composition.core.seesContext ac.soton.composition.core.target="ctrl0_implicitContext" name="internal_sees2"/>
+<ac.soton.composition.core.includeMachine ac.soton.composition.core.includedInvariant="false" ac.soton.composition.core.project="waterTankAE" ac.soton.composition.core.target="controllerImpl" name="internal_includes1"/>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="" org.eventb.core.convergence="0" org.eventb.core.label="INITIALISATION">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[waterTankAE]controllerImpl" name="internal_combines events1" org.eventb.core.target="INITIALISATION"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[waterTankAE]environmentImpl" name="internal_combines events2" org.eventb.core.target="INITIALISATION"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events2" org.eventb.core.convergence="0" org.eventb.core.label="readLevel">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[waterTankAE]controllerImpl" name="internal_combines events1" org.eventb.core.target="readLevel"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="readLevel"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[waterTankAE]environmentImpl" name="internal_combines events2" org.eventb.core.target="readLevel"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events3" org.eventb.core.convergence="0" org.eventb.core.label="writePump">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[waterTankAE]controllerImpl" name="internal_combines events1" org.eventb.core.target="writePump"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="writePump"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[waterTankAE]environmentImpl" name="internal_combines events2" org.eventb.core.target="writePump"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events4" org.eventb.core.convergence="0" org.eventb.core.label="decideOff">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[waterTankAE]controllerImpl" name="internal_combines events1" org.eventb.core.target="decideOff"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="decideOff"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events5" org.eventb.core.convergence="0" org.eventb.core.label="decideOn">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[waterTankAE]controllerImpl" name="internal_combines events1" org.eventb.core.target="decideOn"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="decideOn"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events6" org.eventb.core.convergence="0" org.eventb.core.label="decideKeep">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[waterTankAE]controllerImpl" name="internal_combines events1" org.eventb.core.target="decideKeep"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="decideKeep"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.includeMachine ac.soton.composition.core.includedInvariant="false" ac.soton.composition.core.project="waterTankAE" ac.soton.composition.core.target="environmentImpl" name="internal_includes2"/>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events7" org.eventb.core.convergence="0" org.eventb.core.label="fmiIncLevel">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[waterTankAE]environmentImpl" name="internal_combines events1" org.eventb.core.target="fmiIncLevel"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="fmiIncLevel"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events8" org.eventb.core.convergence="0" org.eventb.core.label="fmiDecLevel">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[waterTankAE]environmentImpl" name="internal_combines events1" org.eventb.core.target="fmiDecLevel"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="fmiDecLevel"/>
+</ac.soton.composition.core.composesEvent>
+</ac.soton.composition.core.composedMachineFile>

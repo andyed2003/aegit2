@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/ch.ethz.eventb.decomposition_feature_1.3.0.v20141120.jar" id="ch.ethz.eventb.decomposition_feature" version="1.3.0.v20141120">
+      <category name="new_category_1"/>
+   </feature>
+   <feature url="features/ac.soton.composition_feature_1.7.0.v20141120.jar" id="ac.soton.composition_feature" version="1.7.0.v20141120">
+      <category name="new_category_1"/>
+   </feature>
+   <category-def name="new_category_1" label="New Category 1"/>
+</site>

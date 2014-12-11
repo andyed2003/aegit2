@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ac.soton.composition.core.composedMachineFile org.eventb.core.comment="" org.eventb.core.configuration="ac.soton.composition.core.cmp" version="7">
+<ac.soton.composition.core.refinesMachine ac.soton.composition.core.target="m2" name="internal_refines1"/>
+<ac.soton.composition.core.seesContext ac.soton.composition.core.target="ctx" name="internal_sees1"/>
+<ac.soton.composition.core.includeMachine ac.soton.composition.core.includedInvariant="false" ac.soton.composition.core.project="PumpControllerFMU" ac.soton.composition.core.target="ControllerImpl" name="internal_includes1"/>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events1" org.eventb.core.convergence="0" org.eventb.core.label="INITIALISATION">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[PumpControllerFMU]ControllerImpl" name="internal_combines events1" org.eventb.core.target="INITIALISATION"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[PumpControllerFMU]EnvironmentImpl" name="internal_combines events2" org.eventb.core.target="INITIALISATION"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events2" org.eventb.core.convergence="0" org.eventb.core.label="c_read">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[PumpControllerFMU]ControllerImpl" name="internal_combines events1" org.eventb.core.target="c_read"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="c_read"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[PumpControllerFMU]EnvironmentImpl" name="internal_combines events2" org.eventb.core.target="c_read"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events3" org.eventb.core.convergence="0" org.eventb.core.label="internalCommsPre">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[PumpControllerFMU]ControllerImpl" name="internal_combines events1" org.eventb.core.target="internalCommsPre"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="internalCommsPre"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events4" org.eventb.core.convergence="0" org.eventb.core.label="filterWarn">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[PumpControllerFMU]ControllerImpl" name="internal_combines events1" org.eventb.core.target="filterWarn"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="filterWarn"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events5" org.eventb.core.convergence="0" org.eventb.core.label="filterOK">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[PumpControllerFMU]ControllerImpl" name="internal_combines events1" org.eventb.core.target="filterOK"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="filterOK"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events6" org.eventb.core.convergence="0" org.eventb.core.label="internalCommsPost">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[PumpControllerFMU]ControllerImpl" name="internal_combines events1" org.eventb.core.target="internalCommsPost"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="internalCommsPost"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events7" org.eventb.core.convergence="0" org.eventb.core.label="c_write">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[PumpControllerFMU]ControllerImpl" name="internal_combines events1" org.eventb.core.target="c_write"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="c_write"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[PumpControllerFMU]EnvironmentImpl" name="internal_combines events2" org.eventb.core.target="c_write"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.includeMachine ac.soton.composition.core.includedInvariant="false" ac.soton.composition.core.project="PumpControllerFMU" ac.soton.composition.core.target="EnvironmentImpl" name="internal_includes2"/>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events8" org.eventb.core.convergence="0" org.eventb.core.label="set_ePortValsMin">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[PumpControllerFMU]EnvironmentImpl" name="internal_combines events1" org.eventb.core.target="set_ePortValsMin"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="set_ePortVals"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events9" org.eventb.core.convergence="0" org.eventb.core.label="set_ePortValsNormal">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[PumpControllerFMU]EnvironmentImpl" name="internal_combines events1" org.eventb.core.target="set_ePortValsNormal"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="set_ePortVals"/>
+</ac.soton.composition.core.composesEvent>
+</ac.soton.composition.core.composedMachineFile>

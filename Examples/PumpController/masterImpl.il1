@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="ASCII"?>
+<il1:Program xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:il1="http://il1/1.0" projectName="PumpController">
+  <decls xsi:type="il1:ConstantDecl" identifier="MIN" type="&#x2124;" initialValue="10" ProjectName="PumpController" ComponentName="ctx"/>
+  <protected name="controllerImpl" projectName="PumpController" machineName="controllerImpl">
+    <subroutines name="fmiSetInteger_c" machineName="controllerImpl" projectName="PumpController">
+      <body xsi:type="il1:Action" ParentEventName="fmiSetInteger_c" action="c_level &#x2254; q"/>
+      <formalParameters xsi:type="il1:InParameter" identifier="q" type=" &#x2124;" ProjectName="PumpController"/>
+    </subroutines>
+    <subroutines name="fmiSetBoolean_c" machineName="controllerImpl" projectName="PumpController">
+      <body xsi:type="il1:Action" ParentEventName="fmiSetBoolean_c" action="c_pumpOnReq &#x2254; r"/>
+      <formalParameters xsi:type="il1:InParameter" identifier="r" type=" BOOL" ProjectName="PumpController"/>
+    </subroutines>
+    <subroutines name="fmiGetBoolean_c" machineName="controllerImpl" projectName="PumpController">
+      <formalParameters xsi:type="il1:OutParameter" identifier="c_pumpOnCmd" type=" BOOL" ProjectName="PumpController"/>
+    </subroutines>
+    <subroutines name="fmiDoStep" machineName="controllerImpl" projectName="PumpController">
+      <body xsi:type="il1:If">
+        <body xsi:type="il1:Seq">
+          <leftBranch xsi:type="il1:Seq">
+            <leftBranch xsi:type="il1:Action" ParentEventName="filterOK" action="c_level_internal  &#x2254; c_level"/>
+            <rightBranch xsi:type="il1:Seq">
+              <leftBranch xsi:type="il1:Action" ParentEventName="filterOK" action="c_pumpOnReq_internal  &#x2254; TRUE"/>
+              <rightBranch xsi:type="il1:Action" ParentEventName="filterOK" action="c_pumpOnCmd  &#x2254; TRUE"/>
+            </rightBranch>
+          </leftBranch>
+        </body>
+        <condition>c_level > MIN</condition>
+        <condition>c_pumpOnReq = TRUE</condition>
+        <branch>
+          <condition>c_level &#x2264; MIN</condition>
+          <condition>c_pumpOnReq = TRUE</condition>
+          <action xsi:type="il1:Seq">
+            <leftBranch xsi:type="il1:Action" ParentEventName="filterWarn" action="c_warn  &#x2254; TRUE"/>
+          </action>
+          <relatedEvent href="platform:/resource/PumpController/controllerImpl.bum#org.eventb.emf.core.machine.Event.filterWarn"/>
+        </branch>
+        <else xsi:type="il1:Seq"/>
+        <relatedEvent href="platform:/resource/PumpController/controllerImpl.bum#org.eventb.emf.core.machine.Event.filterOK"/>
+      </body>
+    </subroutines>
+    <decls xsi:type="il1:VariableDecl" identifier="c_level" type="&#x2124;" initialValue="100" ProjectName="PumpController" ComponentName="controllerImpl"/>
+    <decls xsi:type="il1:VariableDecl" identifier="c_pumpOnReq" type="BOOL" initialValue="FALSE" ProjectName="PumpController" ComponentName="controllerImpl"/>
+    <decls xsi:type="il1:VariableDecl" identifier="c_pumpOnCmd" type="BOOL" initialValue="FALSE" ProjectName="PumpController" ComponentName="controllerImpl"/>
+    <decls xsi:type="il1:VariableDecl" identifier="c_warn" type="BOOL" initialValue="FALSE" ProjectName="PumpController" ComponentName="controllerImpl"/>
+    <decls xsi:type="il1:VariableDecl" identifier="c_level_internal" type="&#x2124;" initialValue="100" ProjectName="PumpController" ComponentName="controllerImpl"/>
+    <decls xsi:type="il1:VariableDecl" identifier="c_pumpOnReq_internal" type="BOOL" initialValue="FALSE" ProjectName="PumpController" ComponentName="controllerImpl"/>
+  </protected>
+  <protected name="environmentImpl" projectName="PumpController" machineName="environmentImpl">
+    <subroutines name="fmiSetBoolean_e" machineName="environmentImpl" projectName="PumpController">
+      <body xsi:type="il1:Action" ParentEventName="fmiSetBoolean_e" action="e_pumpOnCmd &#x2254; p"/>
+      <formalParameters xsi:type="il1:InParameter" identifier="p" type=" BOOL" ProjectName="PumpController"/>
+    </subroutines>
+    <subroutines name="fmiGetBoolean_e" machineName="environmentImpl" projectName="PumpController">
+      <formalParameters xsi:type="il1:OutParameter" identifier="e_pumpOnReq" type=" BOOL" ProjectName="PumpController"/>
+    </subroutines>
+    <subroutines name="fmiGetInteger_e" machineName="environmentImpl" projectName="PumpController">
+      <formalParameters xsi:type="il1:OutParameter" identifier="e_level" type=" &#x2124;" ProjectName="PumpController"/>
+    </subroutines>
+    <subroutines name="fmiDoStep" machineName="environmentImpl" projectName="PumpController">
+      <body xsi:type="il1:Action" ParentEventName="e_requestPumpOn" action="e_pumpOnReq  &#x2254; TRUE"/>
+    </subroutines>
+    <decls xsi:type="il1:VariableDecl" identifier="e_level" type="&#x2124;" initialValue="90" ProjectName="PumpController" ComponentName="environmentImpl"/>
+    <decls xsi:type="il1:VariableDecl" identifier="e_pumpOnReq" type="BOOL" initialValue="FALSE" ProjectName="PumpController" ComponentName="environmentImpl"/>
+    <decls xsi:type="il1:VariableDecl" identifier="e_pumpOnCmd" type="BOOL" initialValue="FALSE" ProjectName="PumpController" ComponentName="environmentImpl"/>
+    <decls xsi:type="il1:VariableDecl" identifier="e_warn" type="BOOL" initialValue="FALSE" ProjectName="PumpController" ComponentName="environmentImpl"/>
+  </protected>
+  <entryPoint>
+    <autoTasks name="masterImpl" projectName="PumpController" machineName="masterImpl">
+      <body xsi:type="il1:Seq">
+        <leftBranch xsi:type="il1:Seq">
+          <leftBranch xsi:type="il1:Action" ParentEventName="fmiGetInteger_e" action="m_level  &#x2254; p"/>
+          <rightBranch xsi:type="il1:Call">
+            <subroutine name="fmiGetInteger_e" machineName="environmentImpl" projectName="PumpController">
+              <formalParameters xsi:type="il1:OutParameter" identifier="e_level" type=" &#x2124;" ProjectName="PumpController"/>
+            </subroutine>
+            <actualParameters xsi:type="il1:InParameter" identifier="p" type=" &#x2124;" ProjectName="PumpController" ComponentName="masterImpl"/>
+          </rightBranch>
+        </leftBranch>
+        <rightBranch xsi:type="il1:Seq">
+          <leftBranch xsi:type="il1:Seq">
+            <leftBranch xsi:type="il1:Action" ParentEventName="fmiGetBoolean_e" action="m_pumpOnReq  &#x2254; p"/>
+            <rightBranch xsi:type="il1:Call">
+              <subroutine name="fmiGetBoolean_e" machineName="environmentImpl" projectName="PumpController">
+                <formalParameters xsi:type="il1:OutParameter" identifier="e_pumpOnReq" type=" BOOL" ProjectName="PumpController"/>
+              </subroutine>
+              <actualParameters xsi:type="il1:InParameter" identifier="p" type=" BOOL" ProjectName="PumpController" ComponentName="masterImpl"/>
+            </rightBranch>
+          </leftBranch>
+          <rightBranch xsi:type="il1:Seq">
+            <leftBranch xsi:type="il1:Seq">
+              <leftBranch xsi:type="il1:Action" ParentEventName="fmiGetBoolean_c" action="m_pumpOnCmd  &#x2254; p"/>
+              <rightBranch xsi:type="il1:Call">
+                <subroutine name="fmiGetBoolean_c" machineName="controllerImpl" projectName="PumpController">
+                  <formalParameters xsi:type="il1:OutParameter" identifier="c_pumpOnCmd" type=" BOOL" ProjectName="PumpController"/>
+                </subroutine>
+                <actualParameters xsi:type="il1:InParameter" identifier="p" type=" BOOL" ProjectName="PumpController" ComponentName="masterImpl"/>
+              </rightBranch>
+            </leftBranch>
+            <rightBranch xsi:type="il1:Seq">
+              <leftBranch xsi:type="il1:Seq">
+                <rightBranch xsi:type="il1:Call">
+                  <subroutine name="fmiSetInteger_c" machineName="controllerImpl" projectName="PumpController">
+                    <body xsi:type="il1:Action" ParentEventName="fmiSetInteger_c" action="c_level &#x2254; q"/>
+                    <formalParameters xsi:type="il1:InParameter" identifier="q" type=" &#x2124;" ProjectName="PumpController"/>
+                  </subroutine>
+                  <actualParameters xsi:type="il1:OutParameter" identifier="m_level" type=" &#x2124;" ProjectName="PumpController" ComponentName="masterImpl"/>
+                </rightBranch>
+              </leftBranch>
+              <rightBranch xsi:type="il1:Seq">
+                <leftBranch xsi:type="il1:Seq">
+                  <rightBranch xsi:type="il1:Call">
+                    <subroutine name="fmiSetBoolean_c" machineName="controllerImpl" projectName="PumpController">
+                      <body xsi:type="il1:Action" ParentEventName="fmiSetBoolean_c" action="c_pumpOnReq &#x2254; r"/>
+                      <formalParameters xsi:type="il1:InParameter" identifier="r" type=" BOOL" ProjectName="PumpController"/>
+                    </subroutine>
+                    <actualParameters xsi:type="il1:OutParameter" identifier="m_pumpOnReq" type=" BOOL" ProjectName="PumpController" ComponentName="masterImpl"/>
+                  </rightBranch>
+                </leftBranch>
+                <rightBranch xsi:type="il1:Seq">
+                  <leftBranch xsi:type="il1:Seq">
+                    <rightBranch xsi:type="il1:Call">
+                      <subroutine name="fmiSetBoolean_e" machineName="environmentImpl" projectName="PumpController">
+                        <body xsi:type="il1:Action" ParentEventName="fmiSetBoolean_e" action="e_pumpOnCmd &#x2254; p"/>
+                        <formalParameters xsi:type="il1:InParameter" identifier="p" type=" BOOL" ProjectName="PumpController"/>
+                      </subroutine>
+                      <actualParameters xsi:type="il1:OutParameter" identifier="m_pumpOnCmd" type=" BOOL" ProjectName="PumpController" ComponentName="masterImpl"/>
+                    </rightBranch>
+                  </leftBranch>
+                  <rightBranch xsi:type="il1:Seq">
+                    <leftBranch xsi:type="il1:Output" text="warning: " element="m_warn"/>
+                    <rightBranch xsi:type="il1:Output" text="m_level" element="m_level"/>
+                  </rightBranch>
+                </rightBranch>
+              </rightBranch>
+            </rightBranch>
+          </rightBranch>
+        </rightBranch>
+      </body>
+      <taskType xsi:type="il1:PeriodicTaskType" period="100"/>
+      <decls xsi:type="il1:VariableDecl" identifier="m_level" type="&#x2124;" initialValue="80" ProjectName="PumpController" ComponentName="masterImpl"/>
+      <decls xsi:type="il1:VariableDecl" identifier="m_pumpOnReq" type="BOOL" initialValue="FALSE" ProjectName="PumpController" ComponentName="masterImpl"/>
+      <decls xsi:type="il1:VariableDecl" identifier="m_pumpOnCmd" type="BOOL" initialValue="FALSE" ProjectName="PumpController" ComponentName="masterImpl"/>
+      <decls xsi:type="il1:VariableDecl" identifier="m_warn" type="BOOL" initialValue="FALSE" ProjectName="PumpController" ComponentName="masterImpl"/>
+    </autoTasks>
+  </entryPoint>
+</il1:Program>

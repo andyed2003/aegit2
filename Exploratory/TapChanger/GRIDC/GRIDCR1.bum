@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1398692022444" org.eventb.texttools.text_representation="machine GRIDCR1 refines GRIDCM&#10;&#10;variables v tappos predictedv TCInit ControllerActive&#10;&#10;invariants&#10;  @inv1 TCInit ∈ BOOL&#10;  @inv2 ControllerActive ∈ BOOL&#10;&#10;events&#10;  event INITIALISATION&#10;    then&#10;      @act1 v ≔ 240&#10;      @act2 tappos ≔ 20&#10;      @act3 predictedv ≔ 240&#10;      @act8 TCInit ≔ FALSE&#10;      @act10 ControllerActive ≔ FALSE&#10;  end&#10;&#10;  event ControllerInitiateTapChangerComms&#10;    where&#10;      @grd3 ControllerActive = FALSE&#10;      @grd4 TCInit = FALSE&#10;    then&#10;      @act1 TCInit ≔ TRUE&#10;  end&#10;&#10;  event ControllerCompleteTapChangerComms&#10;    any pack&#10;    where&#10;      @grd1 pack = TRUE&#10;      @grd2 TCInit = TRUE&#10;      @grd4 ControllerActive = FALSE&#10;    then&#10;      @act1 ControllerActive ≔ TRUE&#10;  end&#10;&#10;  event ControllerCompleteTapChangerCommsFail&#10;    any pack&#10;    where&#10;      @grd1 pack = FALSE&#10;      @grd2 TCInit = TRUE&#10;      @grd4 ControllerActive = FALSE&#10;    then&#10;      @act1 TCInit ≔ FALSE&#10;  end&#10;&#10;  event ReadVoltage refines ReadVoltage&#10;    any pv&#10;    where&#10;      @grd1 pv ∈ 235 ‥ 245&#10;    then&#10;      @act1 v ≔ pv&#10;  end&#10;&#10;  event PredictVoltageChange refines PredictVoltageChange&#10;    any ppv&#10;    where&#10;      @grd1 ppv ∈ 235 ‥ 245&#10;      @grd2 ControllerActive = TRUE&#10;    then&#10;      @act1 predictedv ≔ ppv&#10;  end&#10;&#10;  event AdjustTapPosition refines AdjustTapPosition&#10;    any ptp&#10;    where&#10;      @grd1 ptp ∈ −10 ‥ 10&#10;      @grd2 tappos + ptp ≥ 10&#10;      @grd3 tappos + ptp ≤ 30&#10;      @grd4 ControllerActive = TRUE&#10;    then&#10;      @act1 tappos ≔ tappos + ptp&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="_VU-yoM7REeOwhtEFi5ykCw" org.eventb.core.target="GRIDCM"/>
+<org.eventb.core.variable name="_KqLEgM7LEeOwhtEFi5ykCw" org.eventb.core.identifier="v"/>
+<org.eventb.core.variable name="_KqLEgc7LEeOwhtEFi5ykCw" org.eventb.core.identifier="tappos"/>
+<org.eventb.core.variable name="_KqLEgs7LEeOwhtEFi5ykCw" org.eventb.core.identifier="predictedv"/>
+<org.eventb.core.variable name="_MTFtoc7MEeOwhtEFi5ykCw" org.eventb.core.identifier="TCInit"/>
+<org.eventb.core.variable name="_MTGUsM7MEeOwhtEFi5ykCw" org.eventb.core.identifier="ControllerActive"/>
+<org.eventb.core.invariant name="_MTGUsc7MEeOwhtEFi5ykCw" org.eventb.core.label="inv1" org.eventb.core.predicate="TCInit ∈ BOOL"/>
+<org.eventb.core.invariant name="_MTGUss7MEeOwhtEFi5ykCw" org.eventb.core.label="inv2" org.eventb.core.predicate="ControllerActive ∈ BOOL"/>
+<org.eventb.core.event name="_KqLEgs7LEeOwhtEFi5ykCx" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_MTGUs87MEeOwhtEFi5ykCw" org.eventb.core.assignment="v ≔ 240" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_MTG7wM7MEeOwhtEFi5ykCw" org.eventb.core.assignment="tappos ≔ 20" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="_MTG7wc7MEeOwhtEFi5ykCw" org.eventb.core.assignment="predictedv ≔ 240" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="_MTG7ws7MEeOwhtEFi5ykCw" org.eventb.core.assignment="TCInit ≔ FALSE" org.eventb.core.label="act8"/>
+<org.eventb.core.action name="_MTG7w87MEeOwhtEFi5ykCw" org.eventb.core.assignment="ControllerActive ≔ FALSE" org.eventb.core.label="act10"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_MTIw8s7MEeOwhtEFi5ykCw" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerInitiateTapChangerComms">
+<org.eventb.core.guard name="_MTIw887MEeOwhtEFi5ykCw" org.eventb.core.label="grd3" org.eventb.core.predicate="ControllerActive = FALSE"/>
+<org.eventb.core.guard name="_MTIw9M7MEeOwhtEFi5ykCw" org.eventb.core.label="grd4" org.eventb.core.predicate="TCInit = FALSE"/>
+<org.eventb.core.action name="_MTIw9c7MEeOwhtEFi5ykCw" org.eventb.core.assignment="TCInit ≔ TRUE" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_MTJYBM7MEeOwhtEFi5ykCw" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerCompleteTapChangerComms">
+<org.eventb.core.parameter name="_VVAAwM7REeOwhtEFi5ykCw" org.eventb.core.identifier="pack"/>
+<org.eventb.core.guard name="_VVAAwc7REeOwhtEFi5ykCw" org.eventb.core.label="grd1" org.eventb.core.predicate="pack = TRUE"/>
+<org.eventb.core.guard name="_MTJ_EM7MEeOwhtEFi5ykCw" org.eventb.core.label="grd2" org.eventb.core.predicate="TCInit = TRUE"/>
+<org.eventb.core.guard name="_MTJ_Ec7MEeOwhtEFi5ykCw" org.eventb.core.label="grd4" org.eventb.core.predicate="ControllerActive = FALSE"/>
+<org.eventb.core.action name="_MTJ_Es7MEeOwhtEFi5ykCw" org.eventb.core.assignment="ControllerActive ≔ TRUE" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_MTJ_E87MEeOwhtEFi5ykCw" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerCompleteTapChangerCommsFail">
+<org.eventb.core.parameter name="_VVAn0M7REeOwhtEFi5ykCw" org.eventb.core.identifier="pack"/>
+<org.eventb.core.guard name="_VVAn0c7REeOwhtEFi5ykCw" org.eventb.core.label="grd1" org.eventb.core.predicate="pack = FALSE"/>
+<org.eventb.core.guard name="_MTJ_FM7MEeOwhtEFi5ykCw" org.eventb.core.label="grd2" org.eventb.core.predicate="TCInit = TRUE"/>
+<org.eventb.core.guard name="_MTJ_Fc7MEeOwhtEFi5ykCw" org.eventb.core.label="grd4" org.eventb.core.predicate="ControllerActive = FALSE"/>
+<org.eventb.core.action name="_MTKmIM7MEeOwhtEFi5ykCw" org.eventb.core.assignment="TCInit ≔ FALSE" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_KqLEgs7LEeOwhtEFi5ykCy" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ReadVoltage">
+<org.eventb.core.refinesEvent name="_VVBO4M7REeOwhtEFi5ykCw" org.eventb.core.target="ReadVoltage"/>
+<org.eventb.core.parameter name="_MTG7xc7MEeOwhtEFi5ykCw" org.eventb.core.identifier="pv"/>
+<org.eventb.core.guard name="_MTHi0M7MEeOwhtEFi5ykCw" org.eventb.core.label="grd1" org.eventb.core.predicate="pv ∈ 235 ‥ 245"/>
+<org.eventb.core.action name="_MTHi0c7MEeOwhtEFi5ykCw" org.eventb.core.assignment="v ≔ pv" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_KqLEgs7LEeOwhtEFi5ykCz" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PredictVoltageChange">
+<org.eventb.core.refinesEvent name="_VVBO4c7REeOwhtEFi5ykCw" org.eventb.core.target="PredictVoltageChange"/>
+<org.eventb.core.parameter name="_MTHi087MEeOwhtEFi5ykCw" org.eventb.core.identifier="ppv"/>
+<org.eventb.core.guard name="_MTHi1M7MEeOwhtEFi5ykCw" org.eventb.core.label="grd1" org.eventb.core.predicate="ppv ∈ 235 ‥ 245"/>
+<org.eventb.core.guard name="_MTHi1c7MEeOwhtEFi5ykCw" org.eventb.core.label="grd2" org.eventb.core.predicate="ControllerActive = TRUE"/>
+<org.eventb.core.action name="_MTIJ4M7MEeOwhtEFi5ykCw" org.eventb.core.assignment="predictedv ≔ ppv" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_KqLEgs7LEeOwhtEFi5ykC{" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AdjustTapPosition">
+<org.eventb.core.refinesEvent name="_VVB18M7REeOwhtEFi5ykCw" org.eventb.core.target="AdjustTapPosition"/>
+<org.eventb.core.parameter name="_MTIJ4s7MEeOwhtEFi5ykCw" org.eventb.core.identifier="ptp"/>
+<org.eventb.core.guard name="_MTIJ487MEeOwhtEFi5ykCw" org.eventb.core.label="grd1" org.eventb.core.predicate="ptp ∈ −10 ‥ 10"/>
+<org.eventb.core.guard name="_MTIJ5M7MEeOwhtEFi5ykCw" org.eventb.core.label="grd2" org.eventb.core.predicate="tappos + ptp ≥ 10"/>
+<org.eventb.core.guard name="_MTIJ5c7MEeOwhtEFi5ykCw" org.eventb.core.label="grd3" org.eventb.core.predicate="tappos + ptp ≤ 30"/>
+<org.eventb.core.guard name="_MTIw8M7MEeOwhtEFi5ykCw" org.eventb.core.label="grd4" org.eventb.core.predicate="ControllerActive = TRUE"/>
+<org.eventb.core.action name="_MTIw8c7MEeOwhtEFi5ykCw" org.eventb.core.assignment="tappos ≔ tappos + ptp" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

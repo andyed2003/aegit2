@@ -1,0 +1,170 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage[top=3cm, bottom=2.5cm, left=3cm, right=2.5cm] {geometry}
+\usepackage {bsymb,b2latex}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr,lastpage,color}
+\lhead{\rm An Event-B Specification of m1}
+\rhead {\rm Page \thepage~of \pageref{LastPage}}
+\lfoot{}\cfoot{}\rfoot{}
+\pagestyle{fancy}
+%---------------------------------------------------------
+\begin{document}
+\thispagestyle{empty}
+\begin{description}
+\BTitle{m1}{6Dec2013}{07:46:28 AM}
+\MACHINE{m1}\cmt{		\\\hspace*{1 cm}  Adding Internal Controller Decision Making }
+\REFINES{m0}
+\SEES{ctx}
+\VARIABLES
+	\begin{description}
+		\Item{ m\_level }
+		\Item{ c\_level }
+		\Item{ e\_level }
+		\Item{ m\_pumpOnReq }
+		\Item{ c\_pumpOnReq }
+		\Item{ e\_pumpOnReq }
+		\Item{ m\_pumpOnCmd }
+		\Item{ c\_pumpOnCmd }
+		\Item{ e\_pumpOnCmd }
+		\Item{ m\_warn }
+		\Item{ c\_warn }
+		\Item{ e\_warn }
+		\Item{ c\_level\_internal }
+		\Item{ c\_pumpOnReq\_internal }
+	\end{description}
+\INVARIANTS
+	\begin{description}
+		\nItem{ inv1 }{ c\_level\_internal \leq  MIN \land  c\_pumpOnReq\_internal = TRUE \limp  c\_warn = TRUE }
+		\nItem{ inv2 }{ c\_level\_internal >  MIN \land  c\_pumpOnReq\_internal = TRUE \limp  c\_pumpOnCmd = TRUE }
+		\nItem{ inv3 }{ c\_level\_internal \in  \intg  }
+		\nItem{ inv4 }{ c\_pumpOnReq\_internal \in  BOOL }
+	\end{description}
+\EVENTS
+	\INITIALISATION
+		\begin{description}
+		\BeginAct
+			\begin{description}
+			\nItem{ act1 }{ c\_level :=  100 }
+			\nItem{ act2 }{ m\_level := 80 }
+			\nItem{ act6 }{ e\_level :=  90 }
+			\nItem{ act5 }{ c\_pumpOnReq :=  FALSE }
+			\nItem{ act3 }{ m\_pumpOnReq :=  FALSE }
+			\nItem{ act4 }{ e\_pumpOnReq :=  FALSE }
+			\nItem{ act7 }{ c\_pumpOnCmd :=  FALSE }
+			\nItem{ act8 }{ m\_pumpOnCmd :=  FALSE }
+			\nItem{ act9 }{ e\_pumpOnCmd :=  FALSE }
+			\nItem{ act10 }{ m\_warn :=  FALSE }
+			\nItem{ act11 }{ c\_warn :=  FALSE }
+			\nItem{ act12 }{ e\_warn :=  FALSE }
+			\nItem{ act13 }{ c\_level\_internal :=  100 }
+			\nItem{ act14 }{ c\_pumpOnReq\_internal :=  FALSE }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {fmiGetInteger\_e}
+	\EXTD {fmiGetInteger\_e}
+		\begin{description}
+		\BeginAct
+			\begin{description}
+			\nItemX{ act1 }{ m\_level :=  e\_level }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {fmiGetBoolean\_c}
+	\EXTD {fmiGetBoolean\_c}
+		\begin{description}
+		\BeginAct
+			\begin{description}
+			\nItemX{ act1 }{ m\_pumpOnCmd :=  c\_pumpOnCmd }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {fmiGetBoolean\_e}
+	\EXTD {fmiGetBoolean\_e}
+		\begin{description}
+		\BeginAct
+			\begin{description}
+			\nItemX{ act1 }{ m\_pumpOnReq :=  e\_pumpOnReq }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {fmiSetInteger\_c}
+	\EXTD {fmiSetInteger\_c}
+		\begin{description}
+		\BeginAct
+			\begin{description}
+			\nItemX{ act1 }{ c\_level :=  m\_level }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {fmiSetBoolean\_c}
+	\EXTD {fmiSetBoolean\_c}
+		\begin{description}
+		\BeginAct
+			\begin{description}
+			\nItemX{ act1 }{ c\_pumpOnReq :=  m\_pumpOnReq }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {fmiSetBoolean\_e}
+	\EXTD {fmiSetBoolean\_e}
+		\begin{description}
+		\BeginAct
+			\begin{description}
+			\nItemX{ act1 }{ e\_pumpOnCmd :=  m\_pumpOnCmd }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {filterOK}
+		\begin{description}
+		\WhenGrd
+			\begin{description}
+			\nItem{ grd1 }{ c\_level >  MIN }
+			\nItem{ grd2 }{ c\_pumpOnReq = TRUE }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItem{ act1 }{ c\_level\_internal :=  c\_level }
+			\nItem{ act2 }{ c\_pumpOnReq\_internal :=  TRUE }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {filterWarn}
+	\REF {filterWarn}
+		\begin{description}
+		\WhenGrd
+			\begin{description}
+			\nItem{ grd1 }{ c\_level \leq  MIN }
+			\nItem{ grd2 }{ c\_pumpOnReq = TRUE }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItem{ act1 }{ c\_warn :=  TRUE }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {decide}\cmt{		\\\hspace*{1.8 cm}  level $>$  MIN and pumpOnRequested }
+	\REF {decide}
+		\begin{description}
+		\WhenGrd
+			\begin{description}
+			\nItem{ grd1 }{ c\_pumpOnReq\_internal = TRUE }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItem{ act1 }{ c\_pumpOnCmd :=  TRUE }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {e\_requestPumpOn}
+	\REF {e\_requestPumpOn}
+		\begin{description}
+		\BeginAct
+			\begin{description}
+			\nItem{ act1 }{ e\_pumpOnReq :=  TRUE }
+			\end{description}
+		\EndAct
+		\end{description}
+\END
+\end{description}
+\end{document}

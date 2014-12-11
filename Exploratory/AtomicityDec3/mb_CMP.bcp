@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ac.soton.composition.core.composedMachineFile org.eventb.core.comment="" org.eventb.core.configuration="ac.soton.composition.core.cmp" version="7">
+<ac.soton.composition.core.refinesMachine ac.soton.composition.core.target="mb" name="internal_refines1"/>
+<ac.soton.composition.core.includeMachine ac.soton.composition.core.includedInvariant="false" ac.soton.composition.core.project="AtomicityDec3" ac.soton.composition.core.target="masterImpl" name="internal_includes1"/>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events1" org.eventb.core.convergence="0" org.eventb.core.label="INITIALISATION">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AtomicityDec3]masterImpl" name="internal_combines events1" org.eventb.core.target="INITIALISATION"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AtomicityDec3]controllerImpl" name="internal_combines events2" org.eventb.core.target="INITIALISATION"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AtomicityDec3]environImpl" name="internal_combines events3" org.eventb.core.target="INITIALISATION"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events2" org.eventb.core.convergence="0" org.eventb.core.label="fmiGetInteger">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AtomicityDec3]masterImpl" name="internal_combines events1" org.eventb.core.target="fmiGetInteger"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="fmiGetInteger"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AtomicityDec3]environImpl" name="internal_combines events2" org.eventb.core.target="fmiGetInteger"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events3" org.eventb.core.convergence="0" org.eventb.core.label="fmiSetInteger">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AtomicityDec3]masterImpl" name="internal_combines events1" org.eventb.core.target="fmiSetInteger"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="fmiSetInteger"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AtomicityDec3]controllerImpl" name="internal_combines events2" org.eventb.core.target="fmiSetInteger"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.includeMachine ac.soton.composition.core.includedInvariant="false" ac.soton.composition.core.project="AtomicityDec3" ac.soton.composition.core.target="controllerImpl" name="internal_includes2"/>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events4" org.eventb.core.convergence="0" org.eventb.core.label="controller_fmiDoStep">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AtomicityDec3]controllerImpl" name="internal_combines events1" org.eventb.core.target="controller_fmiDoStep"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="controller_fmiDoStep"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.includeMachine ac.soton.composition.core.includedInvariant="false" ac.soton.composition.core.project="AtomicityDec3" ac.soton.composition.core.target="environImpl" name="internal_includes3"/>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events5" org.eventb.core.convergence="0" org.eventb.core.label="env_fmiDoStep">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AtomicityDec3]environImpl" name="internal_combines events1" org.eventb.core.target="env_fmiDoStep"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="env_fmiDoStep"/>
+</ac.soton.composition.core.composesEvent>
+</ac.soton.composition.core.composedMachineFile>

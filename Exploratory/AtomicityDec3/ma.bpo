@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/AtomicityDec3/ma.bpo|org.eventb.core.poFile#ma|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="a" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="b" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="used_a" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="x" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/act6/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AtomicityDec3/ma.bpo|org.eventb.core.poFile#ma|org.eventb.core.poPredicateSet#EVTALLHYPused_b"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ℤ≠(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/AtomicityDec3/ma.bum|org.eventb.core.machineFile#ma|org.eventb.core.event#-|org.eventb.core.action#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AtomicityDec3/ma.bum|org.eventb.core.machineFile#ma|org.eventb.core.event#-|org.eventb.core.action#*"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/AtomicityDec3/ma.bpo|org.eventb.core.poFile#ma|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/AtomicityDec3/ma.bpo|org.eventb.core.poFile#ma|org.eventb.core.poPredicateSet#EVTALLHYPused_b"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/act3a/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AtomicityDec3/ma.bpo|org.eventb.core.poFile#ma|org.eventb.core.poPredicateSet#EVTALLHYPused_b"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ℤ≠(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/AtomicityDec3/ma.bum|org.eventb.core.machineFile#ma|org.eventb.core.event#-|org.eventb.core.action#'"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AtomicityDec3/ma.bum|org.eventb.core.machineFile#ma|org.eventb.core.event#-|org.eventb.core.action#'"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/AtomicityDec3/ma.bpo|org.eventb.core.poFile#ma|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/AtomicityDec3/ma.bpo|org.eventb.core.poFile#ma|org.eventb.core.poPredicateSet#EVTALLHYPused_b"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/act4/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AtomicityDec3/ma.bpo|org.eventb.core.poFile#ma|org.eventb.core.poPredicateSet#EVTALLHYPused_b"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ℤ≠(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/AtomicityDec3/ma.bum|org.eventb.core.machineFile#ma|org.eventb.core.event#-|org.eventb.core.action#("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AtomicityDec3/ma.bum|org.eventb.core.machineFile#ma|org.eventb.core.event#-|org.eventb.core.action#("/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/AtomicityDec3/ma.bpo|org.eventb.core.poFile#ma|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/AtomicityDec3/ma.bpo|org.eventb.core.poFile#ma|org.eventb.core.poPredicateSet#EVTALLHYPused_b"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTused_b" org.eventb.core.parentSet="/AtomicityDec3/ma.bpo|org.eventb.core.poFile#ma|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="x'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="b'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="used_a'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="a'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPused_b" org.eventb.core.parentSet="/AtomicityDec3/ma.bpo|org.eventb.core.poFile#ma|org.eventb.core.poPredicateSet#EVTIDENTused_b" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTused_c" org.eventb.core.parentSet="/AtomicityDec3/ma.bpo|org.eventb.core.poFile#ma|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="b'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPused_c" org.eventb.core.parentSet="/AtomicityDec3/ma.bpo|org.eventb.core.poFile#ma|org.eventb.core.poPredicateSet#EVTIDENTused_c" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="controller_fmiDoStep/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AtomicityDec3/ma.bpo|org.eventb.core.poFile#ma|org.eventb.core.poPredicateSet#EVTALLHYPused_d"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="2≠0" org.eventb.core.source="/AtomicityDec3/ma.bum|org.eventb.core.machineFile#ma|org.eventb.core.event#\/|org.eventb.core.action#'"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AtomicityDec3/ma.bum|org.eventb.core.machineFile#ma|org.eventb.core.event#\/|org.eventb.core.action#'"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/AtomicityDec3/ma.bpo|org.eventb.core.poFile#ma|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AtomicityDec3/ma.bpo|org.eventb.core.poFile#ma|org.eventb.core.poPredicateSet#EVTALLHYPused_d"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTused_d" org.eventb.core.parentSet="/AtomicityDec3/ma.bpo|org.eventb.core.poFile#ma|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="used_a'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPused_d" org.eventb.core.parentSet="/AtomicityDec3/ma.bpo|org.eventb.core.poFile#ma|org.eventb.core.poPredicateSet#EVTIDENTused_d" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTused_e" org.eventb.core.parentSet="/AtomicityDec3/ma.bpo|org.eventb.core.poFile#ma|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="x'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPused_e" org.eventb.core.parentSet="/AtomicityDec3/ma.bpo|org.eventb.core.poFile#ma|org.eventb.core.poPredicateSet#EVTIDENTused_e" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTused_f" org.eventb.core.parentSet="/AtomicityDec3/ma.bpo|org.eventb.core.poFile#ma|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="a'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPused_f" org.eventb.core.parentSet="/AtomicityDec3/ma.bpo|org.eventb.core.poFile#ma|org.eventb.core.poPredicateSet#EVTIDENTused_f" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/AtomicityDec3/ma.bpo|org.eventb.core.poFile#ma|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="a∈ℤ" org.eventb.core.source="/AtomicityDec3/ma.bum|org.eventb.core.machineFile#ma|org.eventb.core.invariant#="/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="x∈ℤ" org.eventb.core.source="/AtomicityDec3/ma.bum|org.eventb.core.machineFile#ma|org.eventb.core.invariant#2"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="b∈ℤ" org.eventb.core.source="/AtomicityDec3/ma.bum|org.eventb.core.machineFile#ma|org.eventb.core.invariant#5"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="used_a∈ℤ" org.eventb.core.source="/AtomicityDec3/ma.bum|org.eventb.core.machineFile#ma|org.eventb.core.invariant#A"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

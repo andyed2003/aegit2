@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="ComputeDelay" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="High" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="Low" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="ReadDelay" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="WriteDelay" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="ComputeDelaz" org.eventb.core.predicate="Low∈ℤ" org.eventb.core.source="/waterTankAE/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#6"/>
+<org.eventb.core.poPredicate name="ComputeDela{" org.eventb.core.predicate="High∈ℤ" org.eventb.core.source="/waterTankAE/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#7"/>
+<org.eventb.core.poPredicate name="ComputeDela|" org.eventb.core.predicate="ReadDelay∈ℤ" org.eventb.core.source="/waterTankAE/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#8"/>
+<org.eventb.core.poPredicate name="ComputeDela}" org.eventb.core.predicate="WriteDelay∈ℤ" org.eventb.core.source="/waterTankAE/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#9"/>
+<org.eventb.core.poPredicate name="ComputeDela~" org.eventb.core.predicate="ComputeDelay∈ℤ" org.eventb.core.source="/waterTankAE/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#:"/>
+<org.eventb.core.poPredicate name="ComputeDelb'" org.eventb.core.predicate="Low=800" org.eventb.core.source="/waterTankAE/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#\/"/>
+<org.eventb.core.poPredicate name="ComputeDelb(" org.eventb.core.predicate="High=2000" org.eventb.core.source="/waterTankAE/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="ComputeDelb)" org.eventb.core.predicate="ReadDelay=20" org.eventb.core.source="/waterTankAE/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#1"/>
+<org.eventb.core.poPredicate name="ComputeDelb*" org.eventb.core.predicate="WriteDelay=20" org.eventb.core.source="/waterTankAE/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#3"/>
+<org.eventb.core.poPredicate name="ComputeDelb+" org.eventb.core.predicate="ComputeDelay=100" org.eventb.core.source="/waterTankAE/ctx0.buc|org.eventb.core.contextFile#ctx0|org.eventb.core.axiom#5"/>
+<org.eventb.core.poIdentifier name="controllerSM_STATES" org.eventb.core.type="ℙ(controllerSM_STATES)"/>
+<org.eventb.core.poIdentifier name="environSM_STATES" org.eventb.core.type="ℙ(environSM_STATES)"/>
+<org.eventb.core.poIdentifier name="ready" org.eventb.core.type="controllerSM_STATES"/>
+<org.eventb.core.poIdentifier name="stableSim" org.eventb.core.type="environSM_STATES"/>
+<org.eventb.core.poPredicate name="controllerSM_STATET" org.eventb.core.predicate="ready∈controllerSM_STATES" org.eventb.core.source="/waterTankAE/ctrl0_implicitContext.buc|org.eventb.core.contextFile#ctrl0_implicitContext|org.eventb.core.axiom#_3zU28PB2EeKaLbsssYXfTQ"/>
+<org.eventb.core.poPredicate name="controllerSM_STATEU" org.eventb.core.predicate="partition(controllerSM_STATES,{ready})" org.eventb.core.source="/waterTankAE/ctrl0_implicitContext.buc|org.eventb.core.contextFile#ctrl0_implicitContext|org.eventb.core.axiom#_3zU28fB2EeKaLbsssYXfTQ"/>
+<org.eventb.core.poPredicate name="controllerSM_STATEV" org.eventb.core.predicate="stableSim∈environSM_STATES" org.eventb.core.source="/waterTankAE/ctrl0_implicitContext.buc|org.eventb.core.contextFile#ctrl0_implicitContext|org.eventb.core.axiom#_L9sXMO-2EeKTcslIVbS7zQ"/>
+<org.eventb.core.poPredicate name="controllerSM_STATEW" org.eventb.core.predicate="partition(environSM_STATES,{stableSim})" org.eventb.core.source="/waterTankAE/ctrl0_implicitContext.buc|org.eventb.core.contextFile#ctrl0_implicitContext|org.eventb.core.axiom#_L9s-QO-2EeKTcslIVbS7zQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/waterTankAE/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="c_Level" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="c_pumpOn" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="c_time" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="controllerSM" org.eventb.core.type="controllerSM_STATES"/>
+<org.eventb.core.poPredicate name="controllerSN" org.eventb.core.predicate="controllerSM∈controllerSM_STATES" org.eventb.core.source="/waterTankAE/controller.bum|org.eventb.core.machineFile#controller|org.eventb.core.invariant#+"/>
+<org.eventb.core.poPredicate name="controllerSO" org.eventb.core.predicate="c_time∈ℤ" org.eventb.core.source="/waterTankAE/controller.bum|org.eventb.core.machineFile#controller|org.eventb.core.invariant#,"/>
+<org.eventb.core.poPredicate name="controllerSP" org.eventb.core.predicate="c_Level∈ℤ" org.eventb.core.source="/waterTankAE/controller.bum|org.eventb.core.machineFile#controller|org.eventb.core.invariant#-"/>
+<org.eventb.core.poPredicate name="controllerSQ" org.eventb.core.predicate="c_pumpOn∈BOOL" org.eventb.core.source="/waterTankAE/controller.bum|org.eventb.core.machineFile#controller|org.eventb.core.invariant#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTctrl0_implicitContex}" org.eventb.core.parentSet="/waterTankAE/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="controllerSM'" org.eventb.core.type="controllerSM_STATES"/>
+<org.eventb.core.poIdentifier name="c_pumpOn'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="c_Level'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="c_time'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPctrl0_implicitContex}" org.eventb.core.parentSet="/waterTankAE/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#EVTIDENTctrl0_implicitContex}" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTctrl0_implicitContex~" org.eventb.core.parentSet="/waterTankAE/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="c_Level'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPctrl0_implicitContex~" org.eventb.core.parentSet="/waterTankAE/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#EVTIDENTctrl0_implicitContex~" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈ℤ" org.eventb.core.source="/waterTankAE/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.event#_hHUHMO-0EeKTcslIVbS7zT|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTctrl0_implicitContey'" org.eventb.core.parentSet="/waterTankAE/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPctrl0_implicitContey'" org.eventb.core.parentSet="/waterTankAE/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#EVTIDENTctrl0_implicitContey'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈BOOL" org.eventb.core.source="/waterTankAE/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.event#_hHUHMO-0EeKTcslIVbS7zU|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="p=c_pumpOn" org.eventb.core.source="/waterTankAE/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.event#_hHUHMO-0EeKTcslIVbS7zU|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTctrl0_implicitContey(" org.eventb.core.parentSet="/waterTankAE/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="c_pumpOn'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="c_time'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPctrl0_implicitContey(" org.eventb.core.parentSet="/waterTankAE/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#EVTIDENTctrl0_implicitContey(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="controllerSM=ready" org.eventb.core.source="/waterTankAE/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.event#_hHUHMO-0EeKTcslIVbS7zV|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_Level&gt;High" org.eventb.core.source="/waterTankAE/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.event#_hHUHMO-0EeKTcslIVbS7zV|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTctrl0_implicitContey)" org.eventb.core.parentSet="/waterTankAE/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="c_pumpOn'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="c_time'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPctrl0_implicitContey)" org.eventb.core.parentSet="/waterTankAE/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#EVTIDENTctrl0_implicitContey)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="controllerSM=ready" org.eventb.core.source="/waterTankAE/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.event#_hHUHMO-0EeKTcslIVbS7zW|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_Level&lt;Low" org.eventb.core.source="/waterTankAE/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.event#_hHUHMO-0EeKTcslIVbS7zW|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTctrl0_implicitContey*" org.eventb.core.parentSet="/waterTankAE/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="c_time'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPctrl0_implicitContey*" org.eventb.core.parentSet="/waterTankAE/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#EVTIDENTctrl0_implicitContey*" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c_Level≥Low" org.eventb.core.source="/waterTankAE/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.event#_hHUHMO-0EeKTcslIVbS7zX|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_Level≤High" org.eventb.core.source="/waterTankAE/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.event#_hHUHMO-0EeKTcslIVbS7zX|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="controllerSM=ready" org.eventb.core.source="/waterTankAE/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.event#_hHUHMO-0EeKTcslIVbS7zX|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/waterTankAE/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="controllerSM∈controllerSM_STATES" org.eventb.core.source="/waterTankAE/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.invariant#typing_controllerSM"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_time∈ℤ" org.eventb.core.source="/waterTankAE/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.invariant#typing_c_time"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="c_Level∈ℤ" org.eventb.core.source="/waterTankAE/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.invariant#typing_c_Level"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="c_pumpOn∈BOOL" org.eventb.core.source="/waterTankAE/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.invariant#typing_c_pumpOn"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

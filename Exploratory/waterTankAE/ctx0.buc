@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.codegen.ui.taskingContextAttribute="Tasking" org.eventb.core.configuration="org.eventb.core.fwd;org.eventb.codegen.ui.cgConfig" version="3">
+<org.eventb.core.constant name="," org.eventb.core.identifier="High"/>
+<org.eventb.core.axiom name="6" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="axm7" org.eventb.core.predicate="Low ∈ ℤ"/>
+<org.eventb.core.axiom name="7" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="axm8" org.eventb.core.predicate="High ∈ ℤ"/>
+<org.eventb.core.axiom name="8" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="axm9" org.eventb.core.predicate="ReadDelay ∈ ℤ"/>
+<org.eventb.core.axiom name="9" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="axm10" org.eventb.core.predicate="WriteDelay ∈ ℤ"/>
+<org.eventb.core.axiom name=":" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="axm11" org.eventb.core.predicate="ComputeDelay ∈ ℤ"/>
+<org.eventb.core.axiom name="/" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="axm3" org.eventb.core.predicate="Low = 800"/>
+<org.eventb.core.axiom name="-" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="axm2" org.eventb.core.predicate="High = 2000"/>
+<org.eventb.core.constant name="." org.eventb.core.identifier="Low"/>
+<org.eventb.core.constant name="0" org.eventb.core.identifier="ReadDelay"/>
+<org.eventb.core.axiom name="1" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="axm4" org.eventb.core.predicate="ReadDelay = 20"/>
+<org.eventb.core.constant name="2" org.eventb.core.identifier="WriteDelay"/>
+<org.eventb.core.axiom name="3" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="axm5" org.eventb.core.predicate="WriteDelay = 20"/>
+<org.eventb.core.constant name="4" org.eventb.core.identifier="ComputeDelay"/>
+<org.eventb.core.axiom name="5" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="axm6" org.eventb.core.predicate="ComputeDelay = 100"/>
+</org.eventb.core.contextFile>

@@ -1,0 +1,141 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage[top=3cm, bottom=2.5cm, left=3cm, right=2.5cm] {geometry}
+\usepackage {bsymb,b2latex}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr,lastpage,color}
+\lhead{\rm An Event-B Specification of m0}
+\rhead {\rm Page \thepage~of \pageref{LastPage}}
+\lfoot{}\cfoot{}\rfoot{}
+\pagestyle{fancy}
+%---------------------------------------------------------
+\begin{document}
+\thispagestyle{empty}
+\begin{description}
+\BTitle{m0}{6Dec2013}{07:46:28 AM}
+\MACHINE{m0}\cmt{		\\\hspace*{1 cm}  Initial Communication Details }
+\SEES{ctx}
+\VARIABLES
+	\begin{description}
+		\Item{ m\_level }
+		\Item{ c\_level }
+		\Item{ e\_level }
+		\Item{ m\_pumpOnReq }
+		\Item{ c\_pumpOnReq }
+		\Item{ e\_pumpOnReq }
+		\Item{ m\_pumpOnCmd }
+		\Item{ c\_pumpOnCmd }
+		\Item{ e\_pumpOnCmd }
+		\Item{ m\_warn }
+		\Item{ c\_warn }
+		\Item{ e\_warn }
+	\end{description}
+\INVARIANTS
+	\begin{description}
+		\nItem{ inv2 }{ m\_level \in  \intg  }
+		\nItem{ inv1 }{ c\_level \in  \intg  }
+		\nItem{ inv6 }{ e\_level \in  \intg  }
+		\nItem{ inv3 }{ m\_pumpOnReq \in  BOOL }
+		\nItem{ inv5 }{ c\_pumpOnReq \in  BOOL }
+		\nItem{ inv4 }{ e\_pumpOnReq \in  BOOL }
+		\nItem{ inv8 }{ m\_pumpOnCmd \in  BOOL }
+		\nItem{ inv7 }{ c\_pumpOnCmd \in  BOOL }
+		\nItem{ inv9 }{ e\_pumpOnCmd \in  BOOL }
+		\nItem{ inv10 }{ m\_warn \in  BOOL }
+		\nItem{ inv11 }{ c\_warn \in  BOOL }
+		\nItem{ inv12 }{ e\_warn \in  BOOL }
+	\end{description}
+\EVENTS
+	\INITIALISATION
+		\begin{description}
+		\BeginAct
+			\begin{description}
+			\nItem{ act1 }{ c\_level :=  100 }
+			\nItem{ act2 }{ m\_level := 80 }
+			\nItem{ act6 }{ e\_level :=  90 }
+			\nItem{ act5 }{ c\_pumpOnReq :=  FALSE }
+			\nItem{ act3 }{ m\_pumpOnReq :=  FALSE }
+			\nItem{ act4 }{ e\_pumpOnReq :=  FALSE }
+			\nItem{ act7 }{ c\_pumpOnCmd :=  FALSE }
+			\nItem{ act8 }{ m\_pumpOnCmd :=  FALSE }
+			\nItem{ act9 }{ e\_pumpOnCmd :=  FALSE }
+			\nItem{ act10 }{ m\_warn :=  FALSE }
+			\nItem{ act11 }{ c\_warn :=  FALSE }
+			\nItem{ act12 }{ e\_warn :=  FALSE }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {fmiGetInteger\_e}
+		\begin{description}
+		\BeginAct
+			\begin{description}
+			\nItem{ act1 }{ m\_level :=  e\_level }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {fmiGetBoolean\_c}
+		\begin{description}
+		\BeginAct
+			\begin{description}
+			\nItem{ act1 }{ m\_pumpOnCmd :=  c\_pumpOnCmd }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {fmiGetBoolean\_e}
+		\begin{description}
+		\BeginAct
+			\begin{description}
+			\nItem{ act1 }{ m\_pumpOnReq :=  e\_pumpOnReq }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {fmiSetInteger\_c}
+		\begin{description}
+		\BeginAct
+			\begin{description}
+			\nItem{ act1 }{ c\_level :=  m\_level }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {fmiSetBoolean\_c}
+		\begin{description}
+		\BeginAct
+			\begin{description}
+			\nItem{ act1 }{ c\_pumpOnReq :=  m\_pumpOnReq }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {fmiSetBoolean\_e}
+		\begin{description}
+		\BeginAct
+			\begin{description}
+			\nItem{ act1 }{ e\_pumpOnCmd :=  m\_pumpOnCmd }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {filterWarn}
+		\begin{description}
+		\BeginAct
+			\begin{description}
+			\nItem{ act1 }{ c\_warn :\in  BOOL }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {decide}
+		\begin{description}
+		\BeginAct
+			\begin{description}
+			\nItem{ act1 }{ c\_pumpOnCmd :\in  BOOL }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {e\_requestPumpOn}
+		\begin{description}
+		\BeginAct
+			\begin{description}
+			\nItem{ act1 }{ e\_pumpOnReq :=  TRUE }
+			\end{description}
+		\EndAct
+		\end{description}
+\END
+\end{description}
+\end{document}

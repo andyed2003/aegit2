@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.codegen.ui.taskingContextAttribute="Tasking" org.eventb.core.comment="" org.eventb.core.configuration="org.eventb.core.fwd;org.eventb.codegen.ui.cgConfig" org.eventb.core.generated="true" version="3">
+<org.eventb.core.carrierSet name="_CHG1EBMYEeSLSP1fFDAmeg" org.eventb.core.comment="wake up kinds" org.eventb.core.generated="true" org.eventb.core.identifier="WakeKind" org.eventb.emf.persistence.generator_ID="ac.soton.eventb.components._3wPKEfhLEeOWPMVIXr20cg"/>
+<org.eventb.core.constant name="_CHG1ERMYEeSLSP1fFDAmeg" org.eventb.core.comment="wake up kind: addEvent" org.eventb.core.generated="true" org.eventb.core.identifier="AddEvent" org.eventb.emf.persistence.generator_ID="ac.soton.eventb.components._3wPKEfhLEeOWPMVIXr20cg"/>
+<org.eventb.core.constant name="_CHG1EhMYEeSLSP1fFDAmeg" org.eventb.core.comment="wake up kind: nullEvent" org.eventb.core.generated="true" org.eventb.core.identifier="NullEvent" org.eventb.emf.persistence.generator_ID="ac.soton.eventb.components._3wPKEfhLEeOWPMVIXr20cg"/>
+<org.eventb.core.axiom name="_CHG1ExMYEeSLSP1fFDAmeg" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.comment="" org.eventb.core.generated="true" org.eventb.core.label="WakeKinds_enum" org.eventb.core.predicate="partition(WakeKind,{NullEvent},{AddEvent})" org.eventb.emf.persistence.generator_ID="ac.soton.eventb.components._3wPKEfhLEeOWPMVIXr20cg"/>
+</org.eventb.core.contextFile>

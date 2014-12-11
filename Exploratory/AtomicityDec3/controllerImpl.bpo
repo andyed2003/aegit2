@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/AtomicityDec3/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="a" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="used_a" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="used_b" org.eventb.core.predicate="used_a∈ℤ" org.eventb.core.source="/AtomicityDec3/controller.bum|org.eventb.core.machineFile#controller|org.eventb.core.invariant#)"/>
+<org.eventb.core.poPredicate name="used_c" org.eventb.core.predicate="a∈ℤ" org.eventb.core.source="/AtomicityDec3/controller.bum|org.eventb.core.machineFile#controller|org.eventb.core.invariant#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTused_b" org.eventb.core.parentSet="/AtomicityDec3/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="used_a'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="a'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPused_b" org.eventb.core.parentSet="/AtomicityDec3/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#EVTIDENTused_b" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTused_c" org.eventb.core.parentSet="/AtomicityDec3/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="used_a'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPused_c" org.eventb.core.parentSet="/AtomicityDec3/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#EVTIDENTused_c" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTused_d" org.eventb.core.parentSet="/AtomicityDec3/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="a'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPused_d" org.eventb.core.parentSet="/AtomicityDec3/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#EVTIDENTused_d" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈ℤ" org.eventb.core.source="/AtomicityDec3/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.event#+|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/AtomicityDec3/controllerImpl.bpo|org.eventb.core.poFile#controllerImpl|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="used_a∈ℤ" org.eventb.core.source="/AtomicityDec3/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.invariant#typing_used_a"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="a∈ℤ" org.eventb.core.source="/AtomicityDec3/controllerImpl.bum|org.eventb.core.machineFile#controllerImpl|org.eventb.core.invariant#typing_a"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

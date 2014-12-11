@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FmiModelV1:DocumentRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:FmiModelV1="http://ac.soton.fmusim.codegen.fmimetamodelV1">
+  <fmiModelDescription author="University of Southampton" fmiVersion="1.0" generationDateAndTime="2014-05-09T10:41:00.391+01:00" generationTool="EB2FMU" guid="GUID_ControllerImpl_2014-05-09T10:41:00.391+01:00" modelIdentifier="ControllerImpl" modelName="ControllerImpl" numberOfContinuousStates="0" numberOfEventIndicators="0">
+    <ModelVariables>
+      <ScalarVariable causality="input" name="c_level" valueReference="0" variability="discrete">
+        <Integer start="100"/>
+      </ScalarVariable>
+      <ScalarVariable causality="input" name="c_pumpOnReq" valueReference="0" variability="discrete">
+        <Boolean start="false"/>
+      </ScalarVariable>
+      <ScalarVariable causality="output" name="c_pumpOnCmd" valueReference="1" variability="discrete">
+        <Boolean/>
+      </ScalarVariable>
+      <ScalarVariable causality="output" name="c_warn" valueReference="2" variability="discrete">
+        <Boolean/>
+      </ScalarVariable>
+      <ScalarVariable name="c_level_internal" valueReference="1" variability="discrete">
+        <Integer/>
+      </ScalarVariable>
+      <ScalarVariable name="c_pumpOnReq_internal" valueReference="3" variability="discrete">
+        <Boolean/>
+      </ScalarVariable>
+      <ScalarVariable name="c_pumpOnCmd_internal" valueReference="4" variability="discrete">
+        <Boolean/>
+      </ScalarVariable>
+      <ScalarVariable name="c_warn_internal" valueReference="5" variability="discrete">
+        <Boolean/>
+      </ScalarVariable>
+      <ScalarVariable name="commit" valueReference="6" variability="discrete">
+        <Boolean/>
+      </ScalarVariable>
+    </ModelVariables>
+    <Implementation>
+      <CoSimulation_StandAlone>
+        <Capabilities/>
+      </CoSimulation_StandAlone>
+    </Implementation>
+  </fmiModelDescription>
+</FmiModelV1:DocumentRoot>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;org.eventb.codegen.ui.cgConfig" version="3">
+<org.eventb.core.extendsContext name="_cjNfQPB3EeKaLbsssYXfTQ" org.eventb.core.target="ctrl0_implicitContext"/>
+</org.eventb.core.contextFile>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile ch.ethz.eventb.decomposition.decomposed="true" org.eventb.core.configuration="ch.ethz.eventb.decomposition.mchBase;org.eventb.codegen.ui.cgConfig" org.eventb.core.generated="true" version="5">
+<org.eventb.core.seesContext name="E" org.eventb.core.target="GRIDCC"/>
+<org.eventb.core.variable name="'" org.eventb.core.identifier="Tstep"/>
+<org.eventb.core.variable name="(" org.eventb.core.identifier="TCInit"/>
+<org.eventb.core.variable name=")" org.eventb.core.identifier="TCAcknowledgeInit"/>
+<org.eventb.core.variable name="*" org.eventb.core.identifier="TCCommsFailure"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="TCCommsInitiated"/>
+<org.eventb.core.variable name="," org.eventb.core.identifier="TCposition"/>
+<org.eventb.core.variable name="-" org.eventb.core.identifier="TCrequestedposition"/>
+<org.eventb.core.variable name="." org.eventb.core.identifier="TCstep"/>
+<org.eventb.core.invariant name="/" org.eventb.core.label="typing_TCAcknowledgeInit" org.eventb.core.predicate="TCAcknowledgeInit ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="0" org.eventb.core.label="typing_Tstep" org.eventb.core.predicate="Tstep ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="1" org.eventb.core.label="typing_TCCommsInitiated" org.eventb.core.predicate="TCCommsInitiated ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="2" org.eventb.core.label="typing_TCrequestedposition" org.eventb.core.predicate="TCrequestedposition ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="3" org.eventb.core.label="typing_TCInit" org.eventb.core.predicate="TCInit ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="4" org.eventb.core.label="typing_TCCommsFailure" org.eventb.core.predicate="TCCommsFailure ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="5" org.eventb.core.label="typing_TCposition" org.eventb.core.predicate="TCposition ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="6" org.eventb.core.label="typing_TCstep" org.eventb.core.predicate="TCstep ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.event name="7" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="Tstep ≔ 0" org.eventb.core.label="act7"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="TCInit ≔ FALSE" org.eventb.core.label="act8"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="TCAcknowledgeInit ≔ FALSE" org.eventb.core.label="act9"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="TCCommsFailure ≔ FALSE" org.eventb.core.label="act11"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="TCCommsInitiated ≔ FALSE" org.eventb.core.label="act12"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="TCposition ≔ 20" org.eventb.core.label="act16"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="TCrequestedposition ≔ 20" org.eventb.core.label="act17"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="TCstep ≔ 0" org.eventb.core.label="act20"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="8" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerInitiateTapChangerComms">
+<org.eventb.core.guard name="(" org.eventb.core.label="grd4" org.eventb.core.predicate="TCInit = FALSE"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="TCInit ≔ TRUE" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="9" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerRetryTapChangerComms">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd2" org.eventb.core.predicate="TCInit = TRUE"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd3" org.eventb.core.predicate="TCAcknowledgeInit = FALSE"/>
+</org.eventb.core.event>
+<org.eventb.core.event name=":" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerCompleteTapChangerComms">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd2" org.eventb.core.predicate="TCInit = TRUE"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd3" org.eventb.core.predicate="TCAcknowledgeInit = TRUE"/>
+</org.eventb.core.event>
+<org.eventb.core.event name=";" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerCompleteTapChangerCommsFail">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd2" org.eventb.core.predicate="TCInit = TRUE"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd3" org.eventb.core.predicate="TCAcknowledgeInit = FALSE"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="TCInit ≔ FALSE" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="=" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerWritePosition">
+<org.eventb.core.guard name="*" org.eventb.core.label="grd4" org.eventb.core.predicate="TCInit = TRUE"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd5" org.eventb.core.predicate="TCAcknowledgeInit = TRUE"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="TapChangerEvaluate">
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="TCstep = 0"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="TCstep ≔ 1" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="?" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="TapChangerReadInitSignal">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="TCAcknowledgeInit = FALSE"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="TCInit = TRUE"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="Tstep = 0"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd4" org.eventb.core.predicate="TCstep = 1"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="Tstep ≔ 1" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="@" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="TapChangerInitTerminated">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="TCAcknowledgeInit = FALSE"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="TCInit = FALSE"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd4" org.eventb.core.predicate="TCCommsFailure = FALSE"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd5" org.eventb.core.predicate="TCCommsInitiated = TRUE"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd6" org.eventb.core.predicate="Tstep = 0"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd7" org.eventb.core.predicate="TCstep = 1"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="TCCommsInitiated ≔ FALSE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="Tstep ≔ 2" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="A" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="TapChangerAcknowledgeInit">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="pack"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="pfail"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="pack ∈ BOOL"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="pfail ∈ BOOL"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="pack = TRUE ⇒ pfail = FALSE"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd4" org.eventb.core.predicate="TCCommsFailure = TRUE ⇒ pack = FALSE ∧ pfail = TRUE"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd5" org.eventb.core.predicate="Tstep = 1"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd6" org.eventb.core.predicate="TCstep = 1"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="TCAcknowledgeInit ≔ pack" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="TCCommsFailure ≔ pfail" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="1" org.eventb.core.assignment="TCCommsInitiated ≔ TRUE" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="2" org.eventb.core.assignment="Tstep ≔ 2" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="B" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="TapChangerReset">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="TCCommsFailure = TRUE"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="Tstep = 0"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="TCstep = 1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="TCCommsFailure ≔ FALSE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="Tstep ≔ 2" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="C" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="TapChangerReadPosition">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="position_param"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="typing_position_param" org.eventb.core.predicate="position_param ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="TCAcknowledgeInit = TRUE"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="TCInit = TRUE"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd3" org.eventb.core.predicate="Tstep = 0"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd4" org.eventb.core.predicate="TCstep = 1"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="Tstep ≔ 2" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="TCrequestedposition ≔ position_param" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="D" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="TapChangerWait">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="Tstep = 2"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="TCstep = 1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="Tstep ≔ 0" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="TCstep ≔ 0" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="ch.ethz.eventb.decomposition.mchBase;org.eventb.codegen.ui.cgConfig" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="master"/>
+<org.eventb.core.variable name="'" org.eventb.codegen.tasking.flattened="true" org.eventb.core.identifier="x"/>
+<org.eventb.core.event name="(" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="x ≔ 0" org.eventb.core.label="act3a"/>
+</org.eventb.core.event>
+<org.eventb.core.event name=")" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="fmiGetInteger">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="fmiGetInteger"/>
+<org.eventb.core.parameter name="'" org.eventb.codegen.ui.parameterTypeAttribute="In" org.eventb.core.identifier="p"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="x ≔ p" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="*" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_p" org.eventb.core.predicate="p ∈ ℤ" org.eventb.core.theorem="true"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="*" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="fmiSetInteger">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="fmiSetInteger"/>
+<org.eventb.core.parameter name="'" org.eventb.codegen.ui.parameterTypeAttribute="Out" org.eventb.core.identifier="p"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_p" org.eventb.core.predicate="p ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="(" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="p = x"/>
+</org.eventb.core.event>
+<org.eventb.tasking.persistence.MachineType name="+" org.eventb.tasking.persistence.machineTypeAttribute="AutoTask" org.eventb.tasking.persistence.priority="5">
+<org.eventb.tasking.persistence.TaskType name="'" org.eventb.tasking.persistence.periodicTaskTypeAttribute="100" org.eventb.tasking.persistence.simpleTaskTypeAttribute="NotRequired" org.eventb.tasking.persistence.taskTypeAttribute="Periodic"/>
+<org.eventb.tasking.persistence.TaskBody name="(" org.eventb.tasking.persistence.taskBodyAttribute="fmiGetInteger;&#10;fmiSetInteger"/>
+</org.eventb.tasking.persistence.MachineType>
+<org.eventb.core.invariant name="typing_x" org.eventb.codegen.tasking.flattened="true" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="typing_x" org.eventb.core.predicate="x ∈ ℤ" org.eventb.core.theorem="true"/>
+</org.eventb.core.machineFile>

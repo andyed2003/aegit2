@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ac.soton.composition.core.composedMachineFile org.eventb.core.comment="" org.eventb.core.configuration="ac.soton.composition.core.cmp" version="7">
+<ac.soton.composition.core.refinesMachine ac.soton.composition.core.target="AIBV_controller_2c" name="internal_refines1"/>
+<ac.soton.composition.core.seesContext ac.soton.composition.core.target="AIBV_temperature_context" name="internal_sees1"/>
+<ac.soton.composition.core.includeMachine ac.soton.composition.core.includedInvariant="false" ac.soton.composition.core.project="AIBV" ac.soton.composition.core.target="SHARED_IMPL" name="internal_includes1"/>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events1" org.eventb.core.convergence="0" org.eventb.core.label="INITIALISATION">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AIBV]SHARED_IMPL" name="internal_combines events1" org.eventb.core.target="INITIALISATION"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AIBV]CONTROL_LOOP_IMPL" name="internal_combines events2" org.eventb.core.target="INITIALISATION"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AIBV]TEMPERATURE_IMPL" name="internal_combines events3" org.eventb.core.target="INITIALISATION"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events2" org.eventb.core.convergence="0" org.eventb.core.label="AIBV_check_temperature_ok">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AIBV]SHARED_IMPL" name="internal_combines events1" org.eventb.core.target="AIBV_check_temperature_ok"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="AIBV_check_temperature_ok"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AIBV]TEMPERATURE_IMPL" name="internal_combines events2" org.eventb.core.target="AIBV_check_temperature_ok"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events3" org.eventb.core.convergence="0" org.eventb.core.label="AIBV_calculate_position_partial">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AIBV]SHARED_IMPL" name="internal_combines events1" org.eventb.core.target="AIBV_calculate_position_partial"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="AIBV_calculate_position_partial"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AIBV]CONTROL_LOOP_IMPL" name="internal_combines events2" org.eventb.core.target="AIBV_calculate_position_partial"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events4" org.eventb.core.convergence="0" org.eventb.core.label="AIBV_calculate_position_open">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AIBV]SHARED_IMPL" name="internal_combines events1" org.eventb.core.target="AIBV_calculate_position_open"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="AIBV_calculate_position_open"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AIBV]CONTROL_LOOP_IMPL" name="internal_combines events2" org.eventb.core.target="AIBV_calculate_position_open"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events5" org.eventb.core.convergence="0" org.eventb.core.label="AIBV_calculate_position_closed">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AIBV]SHARED_IMPL" name="internal_combines events1" org.eventb.core.target="AIBV_calculate_position_closed"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="AIBV_calculate_position_closed"/>
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AIBV]CONTROL_LOOP_IMPL" name="internal_combines events2" org.eventb.core.target="AIBV_calculate_position_closed"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.includeMachine ac.soton.composition.core.includedInvariant="false" ac.soton.composition.core.project="AIBV" ac.soton.composition.core.target="CONTROL_LOOP_IMPL" name="internal_includes2"/>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events6" org.eventb.core.convergence="0" org.eventb.core.label="AIBV_arm">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AIBV]CONTROL_LOOP_IMPL" name="internal_combines events1" org.eventb.core.target="AIBV_arm"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="AIBV_arm"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events7" org.eventb.core.convergence="0" org.eventb.core.label="AIBV_disarm">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AIBV]CONTROL_LOOP_IMPL" name="internal_combines events1" org.eventb.core.target="AIBV_disarm"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="AIBV_disarm"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events8" org.eventb.core.convergence="0" org.eventb.core.label="AIBV_disarmed">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AIBV]CONTROL_LOOP_IMPL" name="internal_combines events1" org.eventb.core.target="AIBV_disarmed"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="AIBV_disarmed"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events9" org.eventb.core.convergence="0" org.eventb.core.label="AIBV_open_start">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AIBV]CONTROL_LOOP_IMPL" name="internal_combines events1" org.eventb.core.target="AIBV_open_start"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="AIBV_open_start"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events10" org.eventb.core.convergence="0" org.eventb.core.label="AIBV_open_end">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AIBV]CONTROL_LOOP_IMPL" name="internal_combines events1" org.eventb.core.target="AIBV_open_end"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="AIBV_open_end"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events11" org.eventb.core.convergence="0" org.eventb.core.label="AIBV_close_start">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AIBV]CONTROL_LOOP_IMPL" name="internal_combines events1" org.eventb.core.target="AIBV_close_start"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="AIBV_close_start"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events12" org.eventb.core.convergence="0" org.eventb.core.label="AIBV_close_end">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AIBV]CONTROL_LOOP_IMPL" name="internal_combines events1" org.eventb.core.target="AIBV_close_end"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="AIBV_close_end"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events13" org.eventb.core.convergence="0" org.eventb.core.label="AIBV_control_action_open">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AIBV]CONTROL_LOOP_IMPL" name="internal_combines events1" org.eventb.core.target="AIBV_control_action_open"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="AIBV_control_action_open"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events14" org.eventb.core.convergence="0" org.eventb.core.label="AIBV_control_action_close_armed">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AIBV]CONTROL_LOOP_IMPL" name="internal_combines events1" org.eventb.core.target="AIBV_control_action_close_armed"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="AIBV_control_action_close_armed"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events15" org.eventb.core.convergence="0" org.eventb.core.label="AIBV_control_action_close_disarming">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AIBV]CONTROL_LOOP_IMPL" name="internal_combines events1" org.eventb.core.target="AIBV_control_action_close_disarming"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="AIBV_control_action_close_disarming"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events16" org.eventb.core.convergence="0" org.eventb.core.label="AIBV_measure_position_start">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AIBV]CONTROL_LOOP_IMPL" name="internal_combines events1" org.eventb.core.target="AIBV_measure_position_start"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="AIBV_measure_position_start"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events17" org.eventb.core.convergence="0" org.eventb.core.label="AIBV_measure_position_end">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AIBV]CONTROL_LOOP_IMPL" name="internal_combines events1" org.eventb.core.target="AIBV_measure_position_end"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="AIBV_measure_position_end"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events18" org.eventb.core.convergence="0" org.eventb.core.label="AIBV_check_position_ok">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AIBV]CONTROL_LOOP_IMPL" name="internal_combines events1" org.eventb.core.target="AIBV_check_position_ok"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="AIBV_check_position_ok"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events19" org.eventb.core.convergence="0" org.eventb.core.label="AIBV_check_position_error">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AIBV]CONTROL_LOOP_IMPL" name="internal_combines events1" org.eventb.core.target="AIBV_check_position_error"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="AIBV_check_position_error"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events20" org.eventb.core.convergence="0" org.eventb.core.label="AIBV_finish_control_loop">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AIBV]CONTROL_LOOP_IMPL" name="internal_combines events1" org.eventb.core.target="AIBV_finish_control_loop"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="AIBV_finish_control_loop"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events21" org.eventb.core.convergence="0" org.eventb.core.label="AIBV_temperature_control_loop_not_needed">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AIBV]CONTROL_LOOP_IMPL" name="internal_combines events1" org.eventb.core.target="AIBV_temperature_control_loop_not_needed"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="AIBV_temperature_control_loop_not_needed"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events22" org.eventb.core.convergence="0" org.eventb.core.label="AIBV_temperature_control_loop_abort">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AIBV]CONTROL_LOOP_IMPL" name="internal_combines events1" org.eventb.core.target="AIBV_temperature_control_loop_abort"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="AIBV_temperature_control_loop_abort"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.includeMachine ac.soton.composition.core.includedInvariant="false" ac.soton.composition.core.project="AIBV" ac.soton.composition.core.target="TEMPERATURE_IMPL" name="internal_includes3"/>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events23" org.eventb.core.convergence="0" org.eventb.core.label="AIBV_temperature_measurement">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AIBV]TEMPERATURE_IMPL" name="internal_combines events1" org.eventb.core.target="AIBV_temperature_measurement"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="AIBV_temperature_measurement"/>
+</ac.soton.composition.core.composesEvent>
+<ac.soton.composition.core.composesEvent ac.soton.composition.core.composesEventExtended="false" name="internal_composes events24" org.eventb.core.convergence="0" org.eventb.core.label="AIBV_check_temperature_error">
+<ac.soton.composition.core.combinedEventMachine ac.soton.composition.core.target="[AIBV]TEMPERATURE_IMPL" name="internal_combines events1" org.eventb.core.target="AIBV_check_temperature_error"/>
+<ac.soton.composition.core.refinesEvent name="internal_refines1" org.eventb.core.target="AIBV_check_temperature_error"/>
+</ac.soton.composition.core.composesEvent>
+</ac.soton.composition.core.composedMachineFile>

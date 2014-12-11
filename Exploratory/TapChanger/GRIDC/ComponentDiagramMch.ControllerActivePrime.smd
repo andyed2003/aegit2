@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:statemachines="http://soton.ac.uk/models/eventb/statemachines/2014">
+  <notation:Diagram xmi:id="_NDxZwAadEeS-760vy2s1cg" type="Statemachines" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_NDyA0AadEeS-760vy2s1cg"/>
+    <element xmi:type="statemachines:Statemachine" href="ComponentDiagramMch.bum#http://soton.ac.uk/models/eventb/statemachines/2014::Statemachine::ComponentDiagramMch.Component1.Controller.ControllerActivePrime"/>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_s5tbIAaeEeS-760vy2s1cg" type="Statemachines" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_s5tbIQaeEeS-760vy2s1cg"/>
+    <element xmi:type="statemachines:Statemachine" href="ComponentDiagramMch.bum#http://soton.ac.uk/models/eventb/statemachines/2014::Statemachine::ComponentDiagramMch.Component1.Controller.ControllerActivePrime"/>
+  </notation:Diagram>
+</xmi:XMI>

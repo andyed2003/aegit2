@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components:ComponentDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:components="http://soton.ac.uk/models/fmusim/components/1.0" name="newControllerDiagram" stopTime="10.0" stepSize="0.1">
+  <components xsi:type="components:EventBComponent" reference="ac.soton.fmusim.components.eventb._jX7uoOb8EeOO4J6iJDeRyA" extensionId="ac.soton.fmusim.components.eventb" name="ControllerImpl" stepPeriod="0.1">
+    <inputs xsi:type="components:EventBPort" name="c_level" type="Integer" connector="//@connectors.0">
+      <parameter href="ControllerImpl.bum#org.eventb.emf.core.machine.Parameter.p1"/>
+    </inputs>
+    <inputs xsi:type="components:EventBPort" name="c_pumpOnReq" type="Boolean" connector="//@connectors.1">
+      <parameter href="ControllerImpl.bum#org.eventb.emf.core.machine.Parameter.p2"/>
+    </inputs>
+    <outputs xsi:type="components:EventBPort" name="c_pumpOnCmd" type="Boolean" causality="Output" connector="//@connectors.2">
+      <variable href="Controller.bum#org.eventb.emf.core.machine.Variable.c_pumpOnCmd"/>
+    </outputs>
+    <outputs xsi:type="components:EventBPort" name="c_warn" type="Boolean" causality="Output" connector="//@connectors.3">
+      <variable href="ControllerImpl.bum#org.eventb.emf.core.machine.Variable.c_warn"/>
+    </outputs>
+    <variables xsi:type="components:EventBVariable" type="String" causality="Internal">
+      <variable href="ControllerImpl.bum#org.eventb.emf.core.machine.Variable.c_level"/>
+    </variables>
+    <variables xsi:type="components:EventBVariable" type="String" causality="Internal">
+      <variable href="ControllerImpl.bum#org.eventb.emf.core.machine.Variable.c_pumpOnReq"/>
+    </variables>
+    <variables xsi:type="components:EventBVariable" type="String" causality="Internal">
+      <variable href="ControllerImpl.bum#org.eventb.emf.core.machine.Variable.c_pumpOnCmd"/>
+    </variables>
+    <variables xsi:type="components:EventBVariable" type="String" causality="Internal">
+      <variable href="ControllerImpl.bum#org.eventb.emf.core.machine.Variable.c_warn"/>
+    </variables>
+    <variables xsi:type="components:EventBVariable" type="String" causality="Internal">
+      <variable href="ControllerImpl.bum#org.eventb.emf.core.machine.Variable.c_level_internal"/>
+    </variables>
+    <variables xsi:type="components:EventBVariable" type="String" causality="Internal">
+      <variable href="ControllerImpl.bum#org.eventb.emf.core.machine.Variable.c_pumpOnReq_internal"/>
+    </variables>
+    <variables xsi:type="components:EventBVariable" type="String" causality="Internal">
+      <variable href="ControllerImpl.bum#org.eventb.emf.core.machine.Variable.c_pumpOnCmd_internal"/>
+    </variables>
+    <variables xsi:type="components:EventBVariable" type="String" causality="Internal">
+      <variable href="ControllerImpl.bum#org.eventb.emf.core.machine.Variable.c_warn_internal"/>
+    </variables>
+    <variables xsi:type="components:EventBVariable" type="String" causality="Internal">
+      <variable href="ControllerImpl.bum#org.eventb.emf.core.machine.Variable.commit"/>
+    </variables>
+    <machine href="ControllerImpl.bum#org.eventb.emf.core.machine.Machine.ControllerImpl"/>
+    <readInputEvents href="ControllerImpl.bum#org.eventb.emf.core.machine.Event.c_read"/>
+    <waitEvents href="ControllerImpl.bum#org.eventb.emf.core.machine.Event.c_write"/>
+  </components>
+  <components xsi:type="components:EventBComponent" reference="ac.soton.fmusim.components.eventb._2GrFsOb8EeOO4J6iJDeRyA" extensionId="ac.soton.fmusim.components.eventb" name="EnvironmentImpl" stepPeriod="0.1">
+    <inputs xsi:type="components:EventBPort" name="e_pumpOnCmd" type="Boolean" connector="//@connectors.2">
+      <parameter href="EnvironmentImpl.bum#org.eventb.emf.core.machine.Parameter.p3"/>
+    </inputs>
+    <inputs xsi:type="components:EventBPort" name="e_warn" type="Boolean" connector="//@connectors.3">
+      <parameter href="EnvironmentImpl.bum#org.eventb.emf.core.machine.Parameter.p4"/>
+    </inputs>
+    <outputs xsi:type="components:EventBPort" name="e_level" type="Integer" causality="Output" connector="//@connectors.0">
+      <variable href="EnvironmentImpl.bum#org.eventb.emf.core.machine.Variable.e_level"/>
+    </outputs>
+    <outputs xsi:type="components:EventBPort" name="e_pumpOnReq" type="Boolean" causality="Output" connector="//@connectors.1">
+      <variable href="EnvironmentImpl.bum#org.eventb.emf.core.machine.Variable.e_pumpOnReq"/>
+    </outputs>
+    <variables xsi:type="components:EventBVariable" type="String" causality="Internal">
+      <variable href="EnvironmentImpl.bum#org.eventb.emf.core.machine.Variable.e_level"/>
+    </variables>
+    <variables xsi:type="components:EventBVariable" type="String" causality="Internal">
+      <variable href="EnvironmentImpl.bum#org.eventb.emf.core.machine.Variable.e_pumpOnReq"/>
+    </variables>
+    <variables xsi:type="components:EventBVariable" type="String" causality="Internal">
+      <variable href="EnvironmentImpl.bum#org.eventb.emf.core.machine.Variable.e_pumpOnCmd"/>
+    </variables>
+    <variables xsi:type="components:EventBVariable" type="String" causality="Internal">
+      <variable href="EnvironmentImpl.bum#org.eventb.emf.core.machine.Variable.e_warn"/>
+    </variables>
+    <variables xsi:type="components:EventBVariable" type="String" causality="Internal">
+      <variable href="EnvironmentImpl.bum#org.eventb.emf.core.machine.Variable.init"/>
+    </variables>
+    <machine href="EnvironmentImpl.bum#org.eventb.emf.core.machine.Machine.EnvironmentImpl"/>
+    <readInputEvents href="EnvironmentImpl.bum#org.eventb.emf.core.machine.Event.c_write"/>
+    <waitEvents href="EnvironmentImpl.bum#org.eventb.emf.core.machine.Event.read_ePorts"/>
+  </components>
+  <connectors ports="//@components.0/@inputs.0 //@components.1/@outputs.0"/>
+  <connectors ports="//@components.1/@outputs.1 //@components.0/@inputs.1"/>
+  <connectors ports="//@components.0/@outputs.0 //@components.1/@inputs.0"/>
+  <connectors ports="//@components.0/@outputs.1 //@components.1/@inputs.1"/>
+</components:ComponentDiagram>

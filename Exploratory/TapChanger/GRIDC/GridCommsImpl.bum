@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="ch.ethz.eventb.decomposition.mchBase;org.eventb.codegen.ui.cgConfig" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="GridComms"/>
+<org.eventb.core.seesContext name="Y" org.eventb.core.target="GRIDCC"/>
+<org.eventb.core.variable name="'" org.eventb.core.generated="true" org.eventb.core.identifier="CEvaluated"/>
+<org.eventb.core.variable name="(" org.eventb.core.generated="true" org.eventb.core.identifier="TEvaluated"/>
+<org.eventb.core.variable name=")" org.eventb.core.generated="true" org.eventb.core.identifier="position"/>
+<org.eventb.core.variable name="*" org.eventb.core.generated="true" org.eventb.core.identifier="positionprime"/>
+<org.eventb.core.variable name="+" org.eventb.core.generated="true" org.eventb.core.identifier="count"/>
+<org.eventb.core.variable name="," org.eventb.core.generated="true" org.eventb.core.identifier="countprime"/>
+<org.eventb.core.variable name="-" org.eventb.core.generated="true" org.eventb.core.identifier="currentvoltage"/>
+<org.eventb.core.variable name="." org.eventb.core.generated="true" org.eventb.core.identifier="currentvoltageprime"/>
+<org.eventb.core.variable name="/" org.eventb.core.generated="true" org.eventb.core.identifier="predicted"/>
+<org.eventb.core.variable name="0" org.eventb.core.generated="true" org.eventb.core.identifier="predictedprime"/>
+<org.eventb.core.variable name="1" org.eventb.core.generated="true" org.eventb.core.identifier="reset"/>
+<org.eventb.core.variable name="2" org.eventb.core.generated="true" org.eventb.core.identifier="resetprime"/>
+<org.eventb.core.variable name="3" org.eventb.core.generated="true" org.eventb.core.identifier="PEvaluated"/>
+<org.eventb.core.variable name="4" org.eventb.core.generated="true" org.eventb.core.identifier="DEvaluated"/>
+<org.eventb.core.event name="Z" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.event name="[" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="ControllerEvaluate">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ControllerEvaluate"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="\" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="ControllerAdjustTapPositionUp">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ControllerAdjustTapPositionUp"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="]" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="ControllerAdjustTapPositionDown">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ControllerAdjustTapPositionDown"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="^" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="ControllerDoNotAdjustTapPositionOnCount">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ControllerDoNotAdjustTapPositionOnCount"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="ControllerDoNotAdjustTapPositionOnLowVoltage">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ControllerDoNotAdjustTapPositionOnLowVoltage"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="`" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="ControllerDoNotAdjustTapPositionOnHighVoltage">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ControllerDoNotAdjustTapPositionOnHighVoltage"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="a" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="ControllerMovetoSafeModeLowVoltage">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ControllerMovetoSafeModeLowVoltage"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="b" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="ControllerMovetoSafeModeHighVoltage">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ControllerMovetoSafeModeHighVoltage"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="c" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="ControllerWritePosition">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ControllerWritePosition"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="d" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="ControllerWriteVoltage">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ControllerWriteVoltage"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="e" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="ControllerWait">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ControllerWait"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="f" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="TapChangerEvaluate">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="TapChangerEvaluate"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="g" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="TapChangerReadPosition">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="TapChangerReadPosition"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="h" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="TapChangerWait">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="TapChangerWait"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="i" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="PredictorEvaluate">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="PredictorEvaluate"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="j" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="PredictorReadVoltage">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="PredictorReadVoltage"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="k" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="PredictorWriteVoltage">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="PredictorWriteVoltage"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="l" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="PredictorWait">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="PredictorWait"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="m" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="DecrementerEvaluate">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="DecrementerEvaluate"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="n" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="Update">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Update"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="CEvaluated" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="ControllerActive" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="Istep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="TCAcknowledgeInit" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="TCCommsFailure" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="TCCommsInitiated" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="TCInit" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="TEvaluated" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="Tstep" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="predictedv" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="tappos" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="v" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="TCAcknowledgeIniu" org.eventb.core.predicate="v∈235 ‥ 245" org.eventb.core.source="/GRIDC/GRIDCM.bum|org.eventb.core.machineFile#GRIDCM|org.eventb.core.invariant#_KqLEg87LEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="TCAcknowledgeIniv" org.eventb.core.predicate="tappos∈10 ‥ 30" org.eventb.core.source="/GRIDC/GRIDCM.bum|org.eventb.core.machineFile#GRIDCM|org.eventb.core.invariant#_KqLEhM7LEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="TCAcknowledgeIniw" org.eventb.core.predicate="predictedv∈235 ‥ 245" org.eventb.core.source="/GRIDC/GRIDCM.bum|org.eventb.core.machineFile#GRIDCM|org.eventb.core.invariant#_KqLEhc7LEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="TCAcknowledgeInix" org.eventb.core.predicate="TCInit∈BOOL" org.eventb.core.source="/GRIDC/GRIDCR1.bum|org.eventb.core.machineFile#GRIDCR1|org.eventb.core.invariant#_MTGUsc7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="TCAcknowledgeIniy" org.eventb.core.predicate="ControllerActive∈BOOL" org.eventb.core.source="/GRIDC/GRIDCR1.bum|org.eventb.core.machineFile#GRIDCR1|org.eventb.core.invariant#_MTGUss7MEeOwhtEFi5ykCw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTALLHYPTCAcknowledgeIniu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ 1" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugI9M7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR1.bum|org.eventb.core.machineFile#GRIDCR1|org.eventb.core.event#_KqLEgs7LEeOwhtEFi5ykCx"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykCx"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugI9M7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTALLHYPTCAcknowledgeIniu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ 2" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugwAM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR1.bum|org.eventb.core.machineFile#GRIDCR1|org.eventb.core.event#_KqLEgs7LEeOwhtEFi5ykCx"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykCx"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugwAM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTTCAcknowledgeIniu" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="predictedv'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="Tstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="TCCommsInitiated'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="ControllerActive'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="TCCommsFailure'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="TCInit'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="TEvaluated'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="Istep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="tappos'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="CEvaluated'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="TCAcknowledgeInit'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="v'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTCAcknowledgeIniu" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTIDENTTCAcknowledgeIniu" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="ControllerInitiateTapChangerComms/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTALLHYPTCAcknowledgeIniv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1∈0 ‥ 1" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugI9M7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR1.bum|org.eventb.core.machineFile#GRIDCR1|org.eventb.core.event#_MTIw8s7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykC\|"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugI9M7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poSequent#ControllerInitiateTapChangerComms\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTTCAcknowledgeIniv" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="TCInit'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="Istep'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTCAcknowledgeIniv" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTIDENTTCAcknowledgeIniv" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="CEvaluated=FALSE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykC\||org.eventb.core.guard#_8uilMc7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="Istep=0" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykC\||org.eventb.core.guard#_8uilMs7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="ControllerActive=FALSE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykC\||org.eventb.core.guard#_8uilM87MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="TCInit=FALSE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykC\||org.eventb.core.guard#_8ujMQM7MEeOwhtEFi5ykCw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="ControllerRetryTapChangerComms/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTALLHYPTCAcknowledgeIniw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1∈0 ‥ 1" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugI9M7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykC}"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugI9M7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poSequent#ControllerRetryTapChangerComms\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTTCAcknowledgeIniw" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="Istep'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTCAcknowledgeIniw" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTIDENTTCAcknowledgeIniw" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="CEvaluated=FALSE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykC}|org.eventb.core.guard#_8ujMQ87MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="TCInit=TRUE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykC}|org.eventb.core.guard#_8ujMRM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="TCAcknowledgeInit=FALSE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykC}|org.eventb.core.guard#_8ujzUM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="Istep=0" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykC}|org.eventb.core.guard#_8ujzUs7MEeOwhtEFi5ykCw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="ControllerCompleteTapChangerComms/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTALLHYPTCAcknowledgeInix"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1∈0 ‥ 1" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugI9M7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR1.bum|org.eventb.core.machineFile#GRIDCR1|org.eventb.core.event#_MTJYBM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykC~"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugI9M7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poSequent#ControllerCompleteTapChangerComms\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ControllerCompleteTapChangerComms/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTALLHYPTCAcknowledgeInix"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="TCAcknowledgeInit=TRUE" org.eventb.core.source="/GRIDC/GRIDCR1.bum|org.eventb.core.machineFile#GRIDCR1|org.eventb.core.event#_MTJYBM7MEeOwhtEFi5ykCw|org.eventb.core.guard#_VVAAwc7REeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR1.bum|org.eventb.core.machineFile#GRIDCR1|org.eventb.core.event#_MTJYBM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR1.bum|org.eventb.core.machineFile#GRIDCR1|org.eventb.core.event#_MTJYBM7MEeOwhtEFi5ykCw|org.eventb.core.guard#_VVAAwc7REeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykC~"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poSequent#ControllerCompleteTapChangerComms\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTTCAcknowledgeInix" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="ControllerActive'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="pack" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="Istep'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTCAcknowledgeInix" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTIDENTTCAcknowledgeInix" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="CEvaluated=FALSE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykC~|org.eventb.core.guard#_8ujzVM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="TCInit=TRUE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykC~|org.eventb.core.guard#_8ukaYM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="TCAcknowledgeInit=TRUE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykC~|org.eventb.core.guard#_8ukaYc7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="ControllerActive=FALSE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykC~|org.eventb.core.guard#_8ukaYs7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="Istep=0" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykC~|org.eventb.core.guard#_8ukaY87MEeOwhtEFi5ykCw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="ControllerCompleteTapChangerCommsFail/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTALLHYPTCAcknowledgeIniy"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1∈0 ‥ 1" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugI9M7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR1.bum|org.eventb.core.machineFile#GRIDCR1|org.eventb.core.event#_MTJ_E87MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugI9M7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poSequent#ControllerCompleteTapChangerCommsFail\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ControllerCompleteTapChangerCommsFail/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTALLHYPTCAcknowledgeIniy"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="TCAcknowledgeInit=FALSE" org.eventb.core.source="/GRIDC/GRIDCR1.bum|org.eventb.core.machineFile#GRIDCR1|org.eventb.core.event#_MTJ_E87MEeOwhtEFi5ykCw|org.eventb.core.guard#_VVAn0c7REeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR1.bum|org.eventb.core.machineFile#GRIDCR1|org.eventb.core.event#_MTJ_E87MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/GRIDC/GRIDCR1.bum|org.eventb.core.machineFile#GRIDCR1|org.eventb.core.event#_MTJ_E87MEeOwhtEFi5ykCw|org.eventb.core.guard#_VVAn0c7REeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD'"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poSequent#ControllerCompleteTapChangerCommsFail\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTTCAcknowledgeIniy" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="TCInit'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="pack" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="Istep'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTCAcknowledgeIniy" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTIDENTTCAcknowledgeIniy" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="CEvaluated=FALSE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD'|org.eventb.core.guard#_8ulBcc7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="TCInit=TRUE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD'|org.eventb.core.guard#_8ulBcs7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="TCAcknowledgeInit=FALSE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD'|org.eventb.core.guard#_8ulBc87MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="ControllerActive=FALSE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD'|org.eventb.core.guard#_8ulogM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="Istep=0" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykD'|org.eventb.core.guard#_8ulogc7MEeOwhtEFi5ykCw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="ControllerWritePosition/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTALLHYPTCAcknowledgeIniz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1∈0 ‥ 1" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugI9M7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8xCuQM-KEeOpipKU6EcABg"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugI9M7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poSequent#ControllerWritePosition\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTTCAcknowledgeIniz" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="Istep'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTCAcknowledgeIniz" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTIDENTTCAcknowledgeIniz" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="CEvaluated=FALSE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8xCuQM-KEeOpipKU6EcABg|org.eventb.core.guard#_8xDVUM-KEeOpipKU6EcABg"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="Istep=0" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8xCuQM-KEeOpipKU6EcABg|org.eventb.core.guard#_8xD8YM-KEeOpipKU6EcABg"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="ControllerActive=TRUE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8xCuQM-KEeOpipKU6EcABg|org.eventb.core.guard#_8xD8Yc-KEeOpipKU6EcABg"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="TCInit=TRUE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8xCuQM-KEeOpipKU6EcABg|org.eventb.core.guard#_8xEjcM-KEeOpipKU6EcABg"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="TCAcknowledgeInit=TRUE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8xCuQM-KEeOpipKU6EcABg|org.eventb.core.guard#_8xEjcc-KEeOpipKU6EcABg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="ControllerWait/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTALLHYPTCAcknowledgeIni{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ 1" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugI9M7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8up58M7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugI9M7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poSequent#ControllerWait\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTTCAcknowledgeIni{" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="Istep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="CEvaluated'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTCAcknowledgeIni{" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTIDENTTCAcknowledgeIni{" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="Istep=1" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8up58M7MEeOwhtEFi5ykCw|org.eventb.core.guard#_8up58c7MEeOwhtEFi5ykCw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="TapChangerReadInitSignal/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTALLHYPTCAcknowledgeIni\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1∈0 ‥ 2" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugwAM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8up59M7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugwAM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poSequent#TapChangerReadInitSignal\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTTCAcknowledgeIni|" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="Tstep'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTCAcknowledgeIni|" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTIDENTTCAcknowledgeIni\|" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="TCAcknowledgeInit=FALSE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8up59M7MEeOwhtEFi5ykCw|org.eventb.core.guard#_8uqhAM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="TCInit=TRUE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8up59M7MEeOwhtEFi5ykCw|org.eventb.core.guard#_8uqhAc7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="TEvaluated=FALSE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8up59M7MEeOwhtEFi5ykCw|org.eventb.core.guard#_8uqhAs7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="Tstep=0" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8up59M7MEeOwhtEFi5ykCw|org.eventb.core.guard#_8uqhA87MEeOwhtEFi5ykCw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="TapChangerInitTerminated/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTALLHYPTCAcknowledgeIni}"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="2∈0 ‥ 2" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugwAM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8urIEc7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugwAM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poSequent#TapChangerInitTerminated\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTTCAcknowledgeIni}" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="Tstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="TCCommsInitiated'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTCAcknowledgeIni}" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTIDENTTCAcknowledgeIni}" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="TCAcknowledgeInit=FALSE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8urIEc7MEeOwhtEFi5ykCw|org.eventb.core.guard#_8urIEs7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="TCInit=FALSE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8urIEc7MEeOwhtEFi5ykCw|org.eventb.core.guard#_8urIE87MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="TEvaluated=FALSE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8urIEc7MEeOwhtEFi5ykCw|org.eventb.core.guard#_8urIFM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="TCCommsFailure=FALSE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8urIEc7MEeOwhtEFi5ykCw|org.eventb.core.guard#_8urvIM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="TCCommsInitiated=TRUE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8urIEc7MEeOwhtEFi5ykCw|org.eventb.core.guard#_8urvIc7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="Tstep=0" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8urIEc7MEeOwhtEFi5ykCw|org.eventb.core.guard#_8urvIs7MEeOwhtEFi5ykCw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="TapChangerAcknowledgeInit/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTALLHYPTCAcknowledgeIni~"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="2∈0 ‥ 2" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugwAM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8urvJc7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugwAM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poSequent#TapChangerAcknowledgeInit\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTTCAcknowledgeIni~" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="pfail" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="Tstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="TCCommsInitiated'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="TCCommsFailure'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="pack" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="TCAcknowledgeInit'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTCAcknowledgeIni~" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTIDENTTCAcknowledgeIni~" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="pack∈BOOL" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8urvJc7MEeOwhtEFi5ykCw|org.eventb.core.guard#_8usWMs7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="pfail∈BOOL" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8urvJc7MEeOwhtEFi5ykCw|org.eventb.core.guard#_8usWM87MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="pack=TRUE⇒pfail=FALSE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8urvJc7MEeOwhtEFi5ykCw|org.eventb.core.guard#_8usWNM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="TCCommsFailure=TRUE⇒pack=FALSE∧pfail=TRUE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8urvJc7MEeOwhtEFi5ykCw|org.eventb.core.guard#_8usWNc7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="Tstep=1" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8urvJc7MEeOwhtEFi5ykCw|org.eventb.core.guard#_8usWNs7MEeOwhtEFi5ykCw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="TapChangerReset/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTALLHYPTCAcknowledgeInj'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="2∈0 ‥ 2" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugwAM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8us9RM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugwAM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poSequent#TapChangerReset\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTTCAcknowledgeInj'" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="Tstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="TCCommsFailure'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTCAcknowledgeInj'" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTIDENTTCAcknowledgeInj'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="TCCommsFailure=TRUE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8us9RM7MEeOwhtEFi5ykCw|org.eventb.core.guard#_8utkUM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="Tstep=0" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8us9RM7MEeOwhtEFi5ykCw|org.eventb.core.guard#_8utkUc7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="TEvaluated=FALSE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8us9RM7MEeOwhtEFi5ykCw|org.eventb.core.guard#_8utkUs7MEeOwhtEFi5ykCw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="TapChangerReadPosition/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTALLHYPTCAcknowledgeInj("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="2∈0 ‥ 2" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugwAM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_hM7R8M-KEeOpipKU6EcABg"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugwAM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poSequent#TapChangerReadPosition\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTTCAcknowledgeInj(" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="Tstep'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTCAcknowledgeInj(" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTIDENTTCAcknowledgeInj(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="TCAcknowledgeInit=TRUE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_hM7R8M-KEeOpipKU6EcABg|org.eventb.core.guard#_hM75AM-KEeOpipKU6EcABg"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="TCInit=TRUE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_hM7R8M-KEeOpipKU6EcABg|org.eventb.core.guard#_hM75Ac-KEeOpipKU6EcABg"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="TEvaluated=FALSE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_hM7R8M-KEeOpipKU6EcABg|org.eventb.core.guard#_hM8gEM-KEeOpipKU6EcABg"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="Tstep=0" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_hM7R8M-KEeOpipKU6EcABg|org.eventb.core.guard#_hM8gEc-KEeOpipKU6EcABg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="TapChangerWait/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTALLHYPTCAcknowledgeInj)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ 2" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugwAM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8utkVc7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugwAM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poSequent#TapChangerWait\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTTCAcknowledgeInj)" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="Tstep'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="TEvaluated'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTCAcknowledgeInj)" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTIDENTTCAcknowledgeInj)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="Tstep=2" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8utkVc7MEeOwhtEFi5ykCw|org.eventb.core.guard#_8uuLYM7MEeOwhtEFi5ykCw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTTCAcknowledgeInj*" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="pv" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="v'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTCAcknowledgeInj*" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTIDENTTCAcknowledgeInj*" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="pv∈235 ‥ 245" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykCy|org.eventb.core.guard#_8unds87MEeOwhtEFi5ykCw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTTCAcknowledgeInj+" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="predictedv'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="ppv" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTCAcknowledgeInj+" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTIDENTTCAcknowledgeInj+" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ppv∈235 ‥ 245" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykCz|org.eventb.core.guard#_8uoEw87MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="ControllerActive=TRUE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykCz|org.eventb.core.guard#_8uoExM7MEeOwhtEFi5ykCw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTTCAcknowledgeInj," org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="ptp" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="tappos'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTCAcknowledgeInj," org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTIDENTTCAcknowledgeInj," org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ptp∈−10 ‥ 10" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykC{|org.eventb.core.guard#_8uor087MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="tappos+ptp≥10" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykC{|org.eventb.core.guard#_8upS4M7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="tappos+ptp≤30" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykC{|org.eventb.core.guard#_8upS4c7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="ControllerActive=TRUE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_MTGUsM7MEeOwhtEFi5ykC{|org.eventb.core.guard#_8upS4s7MEeOwhtEFi5ykCw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTTCAcknowledgeInj-" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="TEvaluated'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="CEvaluated'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPTCAcknowledgeInj-" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#EVTIDENTTCAcknowledgeInj-" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="CEvaluated=TRUE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8uuLY87MEeOwhtEFi5ykCw|org.eventb.core.guard#_8uuLZM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="TEvaluated=TRUE" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.event#_8uuLY87MEeOwhtEFi5ykCw|org.eventb.core.guard#_8uuLZc7MEeOwhtEFi5ykCw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/GRIDC/GRIDCR2.bpo|org.eventb.core.poFile#GRIDCR2|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="CEvaluated∈BOOL" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugI8s7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="TEvaluated∈BOOL" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugI887MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="Istep∈0 ‥ 1" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugI9M7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="Tstep∈0 ‥ 2" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugwAM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="TCInit∈BOOL" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugwAc7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="TCAcknowledgeInit∈BOOL" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugwAs7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="ControllerActive∈BOOL" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugwA87MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="TCCommsFailure∈BOOL" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugwBM7MEeOwhtEFi5ykCw"/>
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="TCCommsInitiated∈BOOL" org.eventb.core.source="/GRIDC/GRIDCR2.bum|org.eventb.core.machineFile#GRIDCR2|org.eventb.core.invariant#_8ugwBc7MEeOwhtEFi5ykCw"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

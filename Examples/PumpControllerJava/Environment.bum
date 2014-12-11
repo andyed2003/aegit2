@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile ch.ethz.eventb.decomposition.decomposed="true" org.eventb.core.configuration="ch.ethz.eventb.decomposition.mchBase;org.eventb.codegen.ui.cgConfig" org.eventb.core.generated="true" version="5">
+<org.eventb.core.seesContext name="5" org.eventb.core.target="ctx"/>
+<org.eventb.core.variable name="'" org.eventb.core.identifier="e_level"/>
+<org.eventb.core.variable name="(" org.eventb.core.identifier="e_pumpOnReq"/>
+<org.eventb.core.variable name=")" org.eventb.core.identifier="e_pumpOnCmd"/>
+<org.eventb.core.variable name="*" org.eventb.core.identifier="e_warn"/>
+<org.eventb.core.invariant name="+" org.eventb.core.label="typing_e_pumpOnCmd" org.eventb.core.predicate="e_pumpOnCmd ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="," org.eventb.core.label="typing_e_warn" org.eventb.core.predicate="e_warn ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="-" org.eventb.core.label="typing_e_level" org.eventb.core.predicate="e_level ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="." org.eventb.core.label="typing_e_pumpOnReq" org.eventb.core.predicate="e_pumpOnReq ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.event name="/" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="e_level ≔ 90" org.eventb.core.label="act6"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="e_pumpOnReq ≔ FALSE" org.eventb.core.label="act4"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="e_pumpOnCmd ≔ FALSE" org.eventb.core.label="act9"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="e_warn ≔ FALSE" org.eventb.core.label="act12"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="getLevel_eAPI">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="p1"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="typing_p1" org.eventb.core.predicate="p1 ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="p1 = e_level"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="getPumpOnReq_eAPI">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="p2"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="typing_p2" org.eventb.core.predicate="p2 ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="p2 = e_pumpOnReq"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="setPumpOnCmd_eAPI">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="p3"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="typing_p3" org.eventb.core.predicate="p3 ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="e_pumpOnCmd ≔ p3" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="setWarn_eAPI">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="p4"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="typing_p4" org.eventb.core.predicate="p4 ∈ BOOL" org.eventb.core.theorem="true"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="e_warn ≔ p4" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="4" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="write_ePorts">
+<org.eventb.core.action name="'" org.eventb.core.assignment="e_level :∈ ℤ" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="e_pumpOnReq :∈ BOOL" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

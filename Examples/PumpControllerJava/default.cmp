@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components:ComponentDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:components="http://soton.ac.uk/models/fmusim/components/1.0" name="PumpController">
+  <components xsi:type="components:EventBComponent" reference="ac.soton.fmusim.components.eventb._Nje2kJPIEeOUTrmx2j5ogQ" localGenerated="false" extensionId="ac.soton.fmusim.components.eventb" name="ControllerImpl" stepPeriod="1.0">
+    <annotations source="http:///org/eventb/core/RodinInternalAnnotations">
+      <details key="name" value="_BDZOsI_ZEeO8kbnRdv0uRw"/>
+    </annotations>
+    <inputs xsi:type="components:EventBPort" name="c_level" type="Integer" connector="//@connectors.0">
+      <parameter href="EnvironmentImpl.bum#org.eventb.emf.core.machine.Parameter.p1"/>
+      <variable href="ControllerImpl.bum#org.eventb.emf.core.machine.Variable.c_level"/>
+    </inputs>
+    <inputs xsi:type="components:EventBPort" name="c_pumpOnReq" type="Boolean" connector="//@connectors.1">
+      <parameter href="EnvironmentImpl.bum#org.eventb.emf.core.machine.Parameter.p2"/>
+      <variable href="ControllerImpl.bum#org.eventb.emf.core.machine.Variable.c_pumpOnReq"/>
+    </inputs>
+    <outputs xsi:type="components:EventBPort" name="c_warn" type="Boolean" causality="Output" connector="//@connectors.2">
+      <parameter href="EnvironmentImpl.bum#org.eventb.emf.core.machine.Parameter.p3"/>
+      <variable href="ControllerImpl.bum#org.eventb.emf.core.machine.Variable.c_warn"/>
+    </outputs>
+    <outputs xsi:type="components:EventBPort" name="c_pumpOnCmd" type="Boolean" causality="Output" connector="//@connectors.3">
+      <parameter href="EnvironmentImpl.bum#org.eventb.emf.core.machine.Parameter.p4"/>
+      <variable href="ControllerImpl.bum#org.eventb.emf.core.machine.Variable.c_pumpOnCmd"/>
+    </outputs>
+    <machine href="ControllerImpl.bum#org.eventb.emf.core.machine.Machine.ControllerImpl"/>
+    <readInputEvents href="ControllerImpl.bum#org.eventb.emf.core.machine.Event.internalCommsPre"/>
+    <waitEvents href="ControllerImpl.bum#org.eventb.emf.core.machine.Event.internalCommsPost"/>
+  </components>
+  <components xsi:type="components:EventBComponent" reference="ac.soton.fmusim.components.eventb._ugEV8JPUEeOUTrmx2j5ogQ" localGenerated="false" extensionId="ac.soton.fmusim.components.eventb" name="EnvironmentImplImpl" stepPeriod="1.0">
+    <annotations source="http:///org/eventb/core/RodinInternalAnnotations">
+      <details key="name" value="_BECH4I_ZEeO8kbnRdv0uRw"/>
+    </annotations>
+    <inputs xsi:type="components:EventBPort" name="e_pumpOnCmd" type="Boolean" connector="//@connectors.3">
+      <parameter href="EnvironmentImpl.bum#org.eventb.emf.core.machine.Parameter.p4"/>
+      <variable href="EnvironmentImpl.bum#org.eventb.emf.core.machine.Variable.e_pumpOnCmd"/>
+    </inputs>
+    <inputs xsi:type="components:EventBPort" name="e_warn" type="Boolean" connector="//@connectors.2">
+      <parameter href="EnvironmentImpl.bum#org.eventb.emf.core.machine.Parameter.p3"/>
+      <variable href="EnvironmentImpl.bum#org.eventb.emf.core.machine.Variable.e_warn"/>
+    </inputs>
+    <outputs xsi:type="components:EventBPort" name="e_level" type="Integer" causality="Output" connector="//@connectors.0">
+      <parameter href="EnvironmentImpl.bum#org.eventb.emf.core.machine.Parameter.p1"/>
+      <variable href="EnvironmentImpl.bum#org.eventb.emf.core.machine.Variable.e_level"/>
+    </outputs>
+    <outputs xsi:type="components:EventBPort" name="e_pumpOnReq" type="Boolean" causality="Output" connector="//@connectors.1">
+      <parameter href="EnvironmentImpl.bum#org.eventb.emf.core.machine.Parameter.p2"/>
+      <variable href="EnvironmentImpl.bum#org.eventb.emf.core.machine.Variable.e_pumpOnReq"/>
+    </outputs>
+    <machine href="EnvironmentImpl.bum#org.eventb.emf.core.machine.Machine.EnvironmentImpl"/>
+    <readInputEvents href="EnvironmentImpl.bum#org.eventb.emf.core.machine.Event.read_ePorts"/>
+    <waitEvents href="EnvironmentImpl.bum#org.eventb.emf.core.machine.Event.write_ePorts"/>
+  </components>
+  <connectors name="" ports="//@components.0/@inputs.0 //@components.1/@outputs.0"/>
+  <connectors ports="//@components.1/@outputs.1 //@components.0/@inputs.1"/>
+  <connectors ports="//@components.1/@inputs.1 //@components.0/@outputs.0"/>
+  <connectors ports="//@components.1/@inputs.0 //@components.0/@outputs.1"/>
+</components:ComponentDiagram>

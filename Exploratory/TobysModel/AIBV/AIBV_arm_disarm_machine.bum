@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.seesContext name="." org.eventb.core.target="AIBV_arm_disarm_context"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="AIBV_state ≔ DISARMED" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="(" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_arm">
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_state = DISARMED"/>
+<org.eventb.core.action name="'" org.eventb.core.assignment="AIBV_state ≔ ARMED" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name=")" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_disarm">
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_state = ARMED"/>
+<org.eventb.core.action name="'" org.eventb.core.assignment="AIBV_state ≔ DISARMING" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="/" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_disarmed">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_state = DISARMING"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="AIBV_state ≔ DISARMED" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="*" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_open">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_state = ARMED"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="+" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AIBV_close">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="AIBV_state ≠ DISARMED"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="," org.eventb.core.identifier="AIBV_state"/>
+<org.eventb.core.invariant name="-" org.eventb.core.label="inv1" org.eventb.core.predicate="AIBV_state ∈ AIBV_STATES"/>
+</org.eventb.core.machineFile>

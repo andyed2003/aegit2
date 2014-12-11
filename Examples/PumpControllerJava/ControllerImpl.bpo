@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="MIN" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="MIO" org.eventb.core.predicate="MIN∈ℤ" org.eventb.core.source="/PumpControllerJava/ctx.buc|org.eventb.core.contextFile#ctx|org.eventb.core.axiom#*"/>
+<org.eventb.core.poPredicate name="MIP" org.eventb.core.predicate="MIN=10" org.eventb.core.source="/PumpControllerJava/ctx.buc|org.eventb.core.contextFile#ctx|org.eventb.core.axiom#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/PumpControllerJava/ControllerImpl.bpo|org.eventb.core.poFile#ControllerImpl|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="c_level" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="c_level_internal" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="c_pumpOnCmd" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="c_pumpOnCmd_internal" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="c_pumpOnReq" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="c_pumpOnReq_internal" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="c_warn" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="c_warn_internal" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="commit" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poPredicate name="c_pumpOnReq_internam" org.eventb.core.predicate="commit∈BOOL" org.eventb.core.source="/PumpControllerJava/Controller.bum|org.eventb.core.machineFile#Controller|org.eventb.core.invariant#0"/>
+<org.eventb.core.poPredicate name="c_pumpOnReq_internan" org.eventb.core.predicate="c_pumpOnCmd_internal∈BOOL" org.eventb.core.source="/PumpControllerJava/Controller.bum|org.eventb.core.machineFile#Controller|org.eventb.core.invariant#1"/>
+<org.eventb.core.poPredicate name="c_pumpOnReq_internao" org.eventb.core.predicate="c_pumpOnReq_internal∈BOOL" org.eventb.core.source="/PumpControllerJava/Controller.bum|org.eventb.core.machineFile#Controller|org.eventb.core.invariant#2"/>
+<org.eventb.core.poPredicate name="c_pumpOnReq_internap" org.eventb.core.predicate="c_level_internal∈ℤ" org.eventb.core.source="/PumpControllerJava/Controller.bum|org.eventb.core.machineFile#Controller|org.eventb.core.invariant#3"/>
+<org.eventb.core.poPredicate name="c_pumpOnReq_internaq" org.eventb.core.predicate="c_warn_internal∈BOOL" org.eventb.core.source="/PumpControllerJava/Controller.bum|org.eventb.core.machineFile#Controller|org.eventb.core.invariant#4"/>
+<org.eventb.core.poPredicate name="c_pumpOnReq_internar" org.eventb.core.predicate="c_level∈ℤ" org.eventb.core.source="/PumpControllerJava/Controller.bum|org.eventb.core.machineFile#Controller|org.eventb.core.invariant#5"/>
+<org.eventb.core.poPredicate name="c_pumpOnReq_internas" org.eventb.core.predicate="c_pumpOnCmd∈BOOL" org.eventb.core.source="/PumpControllerJava/Controller.bum|org.eventb.core.machineFile#Controller|org.eventb.core.invariant#6"/>
+<org.eventb.core.poPredicate name="c_pumpOnReq_internat" org.eventb.core.predicate="c_warn∈BOOL" org.eventb.core.source="/PumpControllerJava/Controller.bum|org.eventb.core.machineFile#Controller|org.eventb.core.invariant#7"/>
+<org.eventb.core.poPredicate name="c_pumpOnReq_internau" org.eventb.core.predicate="c_pumpOnReq∈BOOL" org.eventb.core.source="/PumpControllerJava/Controller.bum|org.eventb.core.machineFile#Controller|org.eventb.core.invariant#8"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_pumpOnReq_internam" org.eventb.core.parentSet="/PumpControllerJava/ControllerImpl.bpo|org.eventb.core.poFile#ControllerImpl|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="c_level_internal'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="c_pumpOnCmd_internal'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="c_warn_internal'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="commit'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="c_warn'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="c_pumpOnCmd'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="c_pumpOnReq'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="c_level'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="c_pumpOnReq_internal'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_pumpOnReq_internam" org.eventb.core.parentSet="/PumpControllerJava/ControllerImpl.bpo|org.eventb.core.poFile#ControllerImpl|org.eventb.core.poPredicateSet#EVTIDENTc_pumpOnReq_internam" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_pumpOnReq_internan" org.eventb.core.parentSet="/PumpControllerJava/ControllerImpl.bpo|org.eventb.core.poFile#ControllerImpl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="p1" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="c_level'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_pumpOnReq_internan" org.eventb.core.parentSet="/PumpControllerJava/ControllerImpl.bpo|org.eventb.core.poFile#ControllerImpl|org.eventb.core.poPredicateSet#EVTIDENTc_pumpOnReq_internan" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p1∈ℤ" org.eventb.core.source="/PumpControllerJava/ControllerImpl.bum|org.eventb.core.machineFile#ControllerImpl|org.eventb.core.event#E|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_pumpOnReq_internao" org.eventb.core.parentSet="/PumpControllerJava/ControllerImpl.bpo|org.eventb.core.poFile#ControllerImpl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="p2" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="c_pumpOnReq'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_pumpOnReq_internao" org.eventb.core.parentSet="/PumpControllerJava/ControllerImpl.bpo|org.eventb.core.poFile#ControllerImpl|org.eventb.core.poPredicateSet#EVTIDENTc_pumpOnReq_internao" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p2∈BOOL" org.eventb.core.source="/PumpControllerJava/ControllerImpl.bum|org.eventb.core.machineFile#ControllerImpl|org.eventb.core.event#F|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_pumpOnReq_internap" org.eventb.core.parentSet="/PumpControllerJava/ControllerImpl.bpo|org.eventb.core.poFile#ControllerImpl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="c_level_internal'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="c_pumpOnReq_internal'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_pumpOnReq_internap" org.eventb.core.parentSet="/PumpControllerJava/ControllerImpl.bpo|org.eventb.core.poFile#ControllerImpl|org.eventb.core.poPredicateSet#EVTIDENTc_pumpOnReq_internap" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="commit=FALSE" org.eventb.core.source="/PumpControllerJava/ControllerImpl.bum|org.eventb.core.machineFile#ControllerImpl|org.eventb.core.event#G|org.eventb.core.guard#'"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_pumpOnReq_internaq" org.eventb.core.parentSet="/PumpControllerJava/ControllerImpl.bpo|org.eventb.core.poFile#ControllerImpl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="c_warn_internal'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="commit'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_pumpOnReq_internaq" org.eventb.core.parentSet="/PumpControllerJava/ControllerImpl.bpo|org.eventb.core.poFile#ControllerImpl|org.eventb.core.poPredicateSet#EVTIDENTc_pumpOnReq_internaq" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c_level_internal≤MIN" org.eventb.core.source="/PumpControllerJava/ControllerImpl.bum|org.eventb.core.machineFile#ControllerImpl|org.eventb.core.event#H|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_pumpOnReq_internal=TRUE" org.eventb.core.source="/PumpControllerJava/ControllerImpl.bum|org.eventb.core.machineFile#ControllerImpl|org.eventb.core.event#H|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_pumpOnReq_internar" org.eventb.core.parentSet="/PumpControllerJava/ControllerImpl.bpo|org.eventb.core.poFile#ControllerImpl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="c_pumpOnCmd_internal'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="commit'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_pumpOnReq_internar" org.eventb.core.parentSet="/PumpControllerJava/ControllerImpl.bpo|org.eventb.core.poFile#ControllerImpl|org.eventb.core.poPredicateSet#EVTIDENTc_pumpOnReq_internar" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c_level_internal&gt;MIN" org.eventb.core.source="/PumpControllerJava/ControllerImpl.bum|org.eventb.core.machineFile#ControllerImpl|org.eventb.core.event#I|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_pumpOnReq_internal=TRUE" org.eventb.core.source="/PumpControllerJava/ControllerImpl.bum|org.eventb.core.machineFile#ControllerImpl|org.eventb.core.event#I|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_pumpOnReq_internas" org.eventb.core.parentSet="/PumpControllerJava/ControllerImpl.bpo|org.eventb.core.poFile#ControllerImpl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="c_pumpOnCmd'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="c_warn'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_pumpOnReq_internas" org.eventb.core.parentSet="/PumpControllerJava/ControllerImpl.bpo|org.eventb.core.poFile#ControllerImpl|org.eventb.core.poPredicateSet#EVTIDENTc_pumpOnReq_internas" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_pumpOnReq_internat" org.eventb.core.parentSet="/PumpControllerJava/ControllerImpl.bpo|org.eventb.core.poFile#ControllerImpl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="p3" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_pumpOnReq_internat" org.eventb.core.parentSet="/PumpControllerJava/ControllerImpl.bpo|org.eventb.core.poFile#ControllerImpl|org.eventb.core.poPredicateSet#EVTIDENTc_pumpOnReq_internat" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p3∈BOOL" org.eventb.core.source="/PumpControllerJava/ControllerImpl.bum|org.eventb.core.machineFile#ControllerImpl|org.eventb.core.event#K|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="p3=c_pumpOnCmd" org.eventb.core.source="/PumpControllerJava/ControllerImpl.bum|org.eventb.core.machineFile#ControllerImpl|org.eventb.core.event#K|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_pumpOnReq_internau" org.eventb.core.parentSet="/PumpControllerJava/ControllerImpl.bpo|org.eventb.core.poFile#ControllerImpl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="p4" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_pumpOnReq_internau" org.eventb.core.parentSet="/PumpControllerJava/ControllerImpl.bpo|org.eventb.core.poFile#ControllerImpl|org.eventb.core.poPredicateSet#EVTIDENTc_pumpOnReq_internau" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p4∈BOOL" org.eventb.core.source="/PumpControllerJava/ControllerImpl.bum|org.eventb.core.machineFile#ControllerImpl|org.eventb.core.event#L|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="p4=c_warn" org.eventb.core.source="/PumpControllerJava/ControllerImpl.bum|org.eventb.core.machineFile#ControllerImpl|org.eventb.core.event#L|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/PumpControllerJava/ControllerImpl.bpo|org.eventb.core.poFile#ControllerImpl|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="commit∈BOOL" org.eventb.core.source="/PumpControllerJava/ControllerImpl.bum|org.eventb.core.machineFile#ControllerImpl|org.eventb.core.invariant#typing_commit"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_pumpOnCmd_internal∈BOOL" org.eventb.core.source="/PumpControllerJava/ControllerImpl.bum|org.eventb.core.machineFile#ControllerImpl|org.eventb.core.invariant#typing_c_pumpOnCmd_internal"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="c_pumpOnReq_internal∈BOOL" org.eventb.core.source="/PumpControllerJava/ControllerImpl.bum|org.eventb.core.machineFile#ControllerImpl|org.eventb.core.invariant#typing_c_pumpOnReq_internal"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="c_level_internal∈ℤ" org.eventb.core.source="/PumpControllerJava/ControllerImpl.bum|org.eventb.core.machineFile#ControllerImpl|org.eventb.core.invariant#typing_c_level_internal"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="c_warn_internal∈BOOL" org.eventb.core.source="/PumpControllerJava/ControllerImpl.bum|org.eventb.core.machineFile#ControllerImpl|org.eventb.core.invariant#typing_c_warn_internal"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="c_level∈ℤ" org.eventb.core.source="/PumpControllerJava/ControllerImpl.bum|org.eventb.core.machineFile#ControllerImpl|org.eventb.core.invariant#typing_c_level"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="c_pumpOnCmd∈BOOL" org.eventb.core.source="/PumpControllerJava/ControllerImpl.bum|org.eventb.core.machineFile#ControllerImpl|org.eventb.core.invariant#typing_c_pumpOnCmd"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="c_warn∈BOOL" org.eventb.core.source="/PumpControllerJava/ControllerImpl.bum|org.eventb.core.machineFile#ControllerImpl|org.eventb.core.invariant#typing_c_warn"/>
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="c_pumpOnReq∈BOOL" org.eventb.core.source="/PumpControllerJava/ControllerImpl.bum|org.eventb.core.machineFile#ControllerImpl|org.eventb.core.invariant#typing_c_pumpOnReq"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

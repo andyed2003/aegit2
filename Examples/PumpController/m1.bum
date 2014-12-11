@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.comment="Adding Internal Controller Decision Making" org.eventb.core.configuration="org.eventb.core.fwd;org.eventb.codegen.ui.cgConfig" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="m0"/>
+<org.eventb.core.seesContext name="N" org.eventb.core.target="ctx"/>
+<org.eventb.core.variable name="*" org.eventb.core.identifier="m_level"/>
+<org.eventb.core.variable name="(" org.eventb.core.identifier="c_level"/>
+<org.eventb.core.variable name="2" org.eventb.core.identifier="e_level"/>
+<org.eventb.core.variable name="," org.eventb.core.identifier="m_pumpOnReq"/>
+<org.eventb.core.variable name="0" org.eventb.core.identifier="c_pumpOnReq"/>
+<org.eventb.core.variable name="." org.eventb.core.identifier="e_pumpOnReq"/>
+<org.eventb.core.variable name="6" org.eventb.core.identifier="m_pumpOnCmd"/>
+<org.eventb.core.variable name="4" org.eventb.core.identifier="c_pumpOnCmd"/>
+<org.eventb.core.variable name="8" org.eventb.core.identifier="e_pumpOnCmd"/>
+<org.eventb.core.variable name="C" org.eventb.core.identifier="m_warn"/>
+<org.eventb.core.variable name="E" org.eventb.core.identifier="c_warn"/>
+<org.eventb.core.variable name="G" org.eventb.core.identifier="e_warn"/>
+<org.eventb.core.event name="O" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name=")" org.eventb.core.assignment="c_level ≔ 100" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="m_level ≔80" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="e_level ≔ 90" org.eventb.core.label="act6"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="c_pumpOnReq ≔ FALSE" org.eventb.core.label="act5"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="m_pumpOnReq ≔ FALSE" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="e_pumpOnReq ≔ FALSE" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="c_pumpOnCmd ≔ FALSE" org.eventb.core.label="act7"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="m_pumpOnCmd ≔ FALSE" org.eventb.core.label="act8"/>
+<org.eventb.core.action name="1" org.eventb.core.assignment="e_pumpOnCmd ≔ FALSE" org.eventb.core.label="act9"/>
+<org.eventb.core.action name="2" org.eventb.core.assignment="m_warn ≔ FALSE" org.eventb.core.label="act10"/>
+<org.eventb.core.action name="3" org.eventb.core.assignment="c_warn ≔ FALSE" org.eventb.core.label="act11"/>
+<org.eventb.core.action name="4" org.eventb.core.assignment="e_warn ≔ FALSE" org.eventb.core.label="act12"/>
+<org.eventb.core.action name="'" org.eventb.core.assignment="c_level_internal ≔ 100" org.eventb.core.label="act13"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="c_pumpOnReq_internal ≔ FALSE" org.eventb.core.label="act14"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="P" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="fmiGetInteger_e">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="fmiGetInteger_e"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="Q" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="fmiGetBoolean_c">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="fmiGetBoolean_c"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="R" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="fmiGetBoolean_e">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="fmiGetBoolean_e"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="S" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="fmiSetInteger_c">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="fmiSetInteger_c"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="T" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="fmiSetBoolean_c">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="fmiSetBoolean_c"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="U" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="fmiSetBoolean_e">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="fmiSetBoolean_e"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="V" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="inv1" org.eventb.core.predicate="c_level_internal ≤ MIN ∧ c_pumpOnReq_internal = TRUE ⇒ c_warn = TRUE"/>
+<org.eventb.core.event name="W" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="filterOK">
+<org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="c_level &gt; MIN"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="c_level_internal ≔ c_level" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="c_pumpOnReq = TRUE"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="c_pumpOnReq_internal ≔ TRUE" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="c_pumpOnCmd ≔ TRUE" org.eventb.core.label="act3"/>
+<org.eventb.core.refinesEvent name="," org.eventb.core.target="filterOK"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="X" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="filterWarn">
+<org.eventb.core.guard name="'" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd1" org.eventb.core.predicate="c_level ≤ MIN"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="c_warn ≔ TRUE" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name=")" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="grd2" org.eventb.core.predicate="c_pumpOnReq = TRUE"/>
+<org.eventb.core.refinesEvent name="*" org.eventb.core.target="filterWarn"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="Y" org.eventb.core.identifier="c_level_internal"/>
+<org.eventb.core.variable name="[" org.eventb.core.identifier="c_pumpOnReq_internal"/>
+<org.eventb.core.event name="^" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="e_requestPumpOn">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="e_requestPumpOn"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="e_pumpOnReq ≔ TRUE" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="_" org.eventb.codegen.ui.typingAttribute="NonTyping" org.eventb.core.label="inv2" org.eventb.core.predicate="c_level_internal &gt; MIN ∧ c_pumpOnReq_internal = TRUE ⇒ c_pumpOnCmd = TRUE"/>
+<org.eventb.core.invariant name="Z" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="inv3" org.eventb.core.predicate="c_level_internal ∈ ℤ"/>
+<org.eventb.core.invariant name="\" org.eventb.codegen.ui.typingAttribute="Typing" org.eventb.core.label="inv4" org.eventb.core.predicate="c_pumpOnReq_internal ∈ BOOL"/>
+</org.eventb.core.machineFile>

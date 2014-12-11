@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ch.ethz.eventb.decomposition.core.dcpFile org.eventb.core.configuration="ch.ethz.eventb.decomposition.core.dcmp">
+<ch.ethz.eventb.decomposition.core.configuration ch.ethz.eventb.decomposition.core.decomposeContext="NO_DECOMPOSITION" ch.ethz.eventb.decomposition.core.newProject="false" ch.ethz.eventb.decomposition.core.style="Shared events (B-style)" name="internal_configuration1"/>
+<ch.ethz.eventb.decomposition.core.component ch.ethz.eventb.decomposition.core.target="GRIDCR5" name="internal_component1"/>
+<ch.ethz.eventb.decomposition.core.subComponent name="internal_sub-component1" org.eventb.core.label="Controller">
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="v" name="internal_elements1"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="tappos" name="internal_elements2"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="predictedv" name="internal_elements3"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="Istep" name="internal_elements4"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="ControllerActive" name="internal_elements5"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="CRetrycount" name="internal_elements6"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="Cstep" name="internal_elements7"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="CFstep" name="internal_elements8"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="safemode" name="internal_elements9"/>
+</ch.ethz.eventb.decomposition.core.subComponent>
+<ch.ethz.eventb.decomposition.core.subComponent name="internal_sub-component2" org.eventb.core.label="Predictor">
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="Pstep" name="internal_elements1"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="PFstep" name="internal_elements2"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="PRstep" name="internal_elements3"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="seedvoltage" name="internal_elements4"/>
+</ch.ethz.eventb.decomposition.core.subComponent>
+<ch.ethz.eventb.decomposition.core.subComponent name="internal_sub-component3" org.eventb.core.label="TapChanger">
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="Tstep" name="internal_elements1"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="TCInit" name="internal_elements2"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="TCAcknowledgeInit" name="internal_elements3"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="TCCommsFailure" name="internal_elements4"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="TCCommsInitiated" name="internal_elements5"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="TCposition" name="internal_elements6"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="TCrequestedposition" name="internal_elements7"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="TCstep" name="internal_elements8"/>
+</ch.ethz.eventb.decomposition.core.subComponent>
+<ch.ethz.eventb.decomposition.core.subComponent name="internal_sub-component4" org.eventb.core.label="Decrementor"/>
+<ch.ethz.eventb.decomposition.core.subComponent name="internal_sub-component5" org.eventb.core.label="GridComms">
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="CEvaluated" name="internal_elements1"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="TEvaluated" name="internal_elements2"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="position" name="internal_elements3"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="positionprime" name="internal_elements4"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="count" name="internal_elements5"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="countprime" name="internal_elements6"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="currentvoltage" name="internal_elements7"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="currentvoltageprime" name="internal_elements8"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="predicted" name="internal_elements9"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="predictedprime" name="internal_elements10"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="reset" name="internal_elements11"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="resetprime" name="internal_elements12"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="PEvaluated" name="internal_elements13"/>
+<ch.ethz.eventb.decomposition.core.subComponentElement ch.ethz.eventb.decomposition.core.subComponentElementName="DEvaluated" name="internal_elements14"/>
+</ch.ethz.eventb.decomposition.core.subComponent>
+</ch.ethz.eventb.decomposition.core.dcpFile>

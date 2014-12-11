@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_STATES" org.eventb.core.type="ℙ(AIBV_STATES)"/>
+<org.eventb.core.poIdentifier name="ARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.poIdentifier name="DISARMED" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.poIdentifier name="DISARMING" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.poPredicate name="AIBV_STATET" org.eventb.core.predicate="partition(AIBV_STATES,{ARMED},{DISARMING},{DISARMED})" org.eventb.core.source="/AIBV/AIBV_arm_disarm_context.buc|org.eventb.core.contextFile#AIBV_arm_disarm_context|org.eventb.core.axiom#+"/>
+<org.eventb.core.poIdentifier name="AIBV_CLOSED" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_OPEN" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_UNKNOWN" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="AIBV_UNKNOWO" org.eventb.core.predicate="AIBV_CLOSED∈ℤ" org.eventb.core.source="/AIBV/AIBV_position_context.buc|org.eventb.core.contextFile#AIBV_position_context|org.eventb.core.axiom#,"/>
+<org.eventb.core.poPredicate name="AIBV_UNKNOWP" org.eventb.core.predicate="AIBV_CLOSED=0" org.eventb.core.source="/AIBV/AIBV_position_context.buc|org.eventb.core.contextFile#AIBV_position_context|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="AIBV_UNKNOWQ" org.eventb.core.predicate="AIBV_OPEN∈ℤ" org.eventb.core.source="/AIBV/AIBV_position_context.buc|org.eventb.core.contextFile#AIBV_position_context|org.eventb.core.axiom#\/"/>
+<org.eventb.core.poPredicate name="AIBV_UNKNOWR" org.eventb.core.predicate="AIBV_OPEN=2" org.eventb.core.source="/AIBV/AIBV_position_context.buc|org.eventb.core.contextFile#AIBV_position_context|org.eventb.core.axiom#0"/>
+<org.eventb.core.poPredicate name="AIBV_UNKNOWS" org.eventb.core.predicate="AIBV_UNKNOWN∈ℤ" org.eventb.core.source="/AIBV/AIBV_position_context.buc|org.eventb.core.contextFile#AIBV_position_context|org.eventb.core.axiom#1"/>
+<org.eventb.core.poPredicate name="AIBV_UNKNOWT" org.eventb.core.predicate="AIBV_UNKNOWN=−1" org.eventb.core.source="/AIBV/AIBV_position_context.buc|org.eventb.core.contextFile#AIBV_position_context|org.eventb.core.axiom#2"/>
+<org.eventb.core.poPredicate name="AIBV_UNKNOWU" org.eventb.core.predicate="AIBV_UNKNOWN&lt;AIBV_CLOSED∧AIBV_CLOSED&lt;AIBV_OPEN" org.eventb.core.source="/AIBV/AIBV_position_context.buc|org.eventb.core.contextFile#AIBV_position_context|org.eventb.core.axiom#3"/>
+<org.eventb.core.poIdentifier name="AIBV_ACTIONS" org.eventb.core.type="ℙ(AIBV_ACTIONS)"/>
+<org.eventb.core.poIdentifier name="CLOSE" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.poIdentifier name="NOTHING" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.poIdentifier name="OPEN" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.poPredicate name="AIBV_UNKNOWV" org.eventb.core.predicate="partition(AIBV_ACTIONS,{OPEN},{CLOSE},{NOTHING})" org.eventb.core.source="/AIBV/AIBV_controller_context.buc|org.eventb.core.contextFile#AIBV_controller_context|org.eventb.core.axiom#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_action" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.poIdentifier name="AIBV_amount" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_position" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_state" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.poPredicate name="AIBV_positioo" org.eventb.core.predicate="AIBV_state∈AIBV_STATES" org.eventb.core.source="/AIBV/AIBV_arm_disarm_machine.bum|org.eventb.core.machineFile#AIBV_arm_disarm_machine|org.eventb.core.invariant#-"/>
+<org.eventb.core.poPredicate name="AIBV_positiop" org.eventb.core.predicate="AIBV_position∈{n⦂ℤ·n∈ℤ∧AIBV_CLOSED≤n∧n≤AIBV_OPEN ∣ n}" org.eventb.core.source="/AIBV/AIBV_position_machine.bum|org.eventb.core.machineFile#AIBV_position_machine|org.eventb.core.invariant#5"/>
+<org.eventb.core.poPredicate name="AIBV_positioq" org.eventb.core.predicate="AIBV_CLOSED≤AIBV_position∧AIBV_position≤AIBV_OPEN" org.eventb.core.source="/AIBV/AIBV_position_machine.bum|org.eventb.core.machineFile#AIBV_position_machine|org.eventb.core.invariant#6"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#EVTALLHYPAIBV_controller_contexz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="NOTHING=OPEN⇒DISARMED=ARMED" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AIBV/AIBV_position_machine.bum|org.eventb.core.machineFile#AIBV_position_machine|org.eventb.core.event#\/"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.event#5"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#EVTALLHYPAIBV_controller_contexz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈ℕ" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#?"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AIBV/AIBV_position_machine.bum|org.eventb.core.machineFile#AIBV_position_machine|org.eventb.core.event#\/"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.event#5"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#?"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#EVTALLHYPAIBV_controller_contexz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0≤0" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#@"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AIBV/AIBV_position_machine.bum|org.eventb.core.machineFile#AIBV_position_machine|org.eventb.core.event#\/"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.event#5"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#@"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#EVTALLHYPAIBV_controller_contexz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="NOTHING≠NOTHING⇔0&gt;0" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#F"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AIBV/AIBV_position_machine.bum|org.eventb.core.machineFile#AIBV_position_machine|org.eventb.core.event#\/"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.event#5"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#F"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poSequent#INITIALISATION\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_controller_contexz" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_action'" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.poIdentifier name="AIBV_state'" org.eventb.core.type="AIBV_STATES"/>
+<org.eventb.core.poIdentifier name="AIBV_position'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_amount'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_controller_contexz" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#EVTIDENTAIBV_controller_contexz" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="AIBV_arm/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#EVTALLHYPAIBV_controller_contex{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="AIBV_action=OPEN⇒ARMED=ARMED" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AIBV/AIBV_position_machine.bum|org.eventb.core.machineFile#AIBV_position_machine|org.eventb.core.event#0"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.event#6"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poSequent#AIBV_arm\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_controller_contex{" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_state'" org.eventb.core.type="AIBV_STATES"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_controller_contex{" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#EVTIDENTAIBV_controller_contex{" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="AIBV_state=DISARMED" org.eventb.core.source="/AIBV/AIBV_arm_disarm_machine.bum|org.eventb.core.machineFile#AIBV_arm_disarm_machine|org.eventb.core.event#(|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="AIBV_disarm/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#EVTALLHYPAIBV_controller_contex\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="AIBV_action=OPEN⇒DISARMING=ARMED" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AIBV/AIBV_position_machine.bum|org.eventb.core.machineFile#AIBV_position_machine|org.eventb.core.event#1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.event#7"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poSequent#AIBV_disarm\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_controller_contex|" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_state'" org.eventb.core.type="AIBV_STATES"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_controller_contex|" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#EVTIDENTAIBV_controller_contex\|" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="AIBV_state=ARMED" org.eventb.core.source="/AIBV/AIBV_arm_disarm_machine.bum|org.eventb.core.machineFile#AIBV_arm_disarm_machine|org.eventb.core.event#)|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="AIBV_action=NOTHING" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.event#7|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="AIBV_disarmed/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#EVTALLHYPAIBV_controller_contex}"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="AIBV_action=OPEN⇒DISARMED=ARMED" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AIBV/AIBV_position_machine.bum|org.eventb.core.machineFile#AIBV_position_machine|org.eventb.core.event#7"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.event#G"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poSequent#AIBV_disarmed\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_controller_contex}" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_state'" org.eventb.core.type="AIBV_STATES"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_controller_contex}" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#EVTIDENTAIBV_controller_contex}" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="AIBV_state=DISARMING" org.eventb.core.source="/AIBV/AIBV_arm_disarm_machine.bum|org.eventb.core.machineFile#AIBV_arm_disarm_machine|org.eventb.core.event#\/|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="AIBV_action=NOTHING" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.event#G|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="AIBV_open/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#EVTALLHYPAIBV_controller_contex~"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="NOTHING=OPEN⇒AIBV_state=ARMED" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AIBV/AIBV_position_machine.bum|org.eventb.core.machineFile#AIBV_position_machine|org.eventb.core.event#2"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.event#8"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poSequent#AIBV_open\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="AIBV_open/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#EVTALLHYPAIBV_controller_contex~"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈ℕ" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#?"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AIBV/AIBV_position_machine.bum|org.eventb.core.machineFile#AIBV_position_machine|org.eventb.core.event#2"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.event#8"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#?"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poSequent#AIBV_open\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="AIBV_open/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#EVTALLHYPAIBV_controller_contex~"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0≤0" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#@"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AIBV/AIBV_position_machine.bum|org.eventb.core.machineFile#AIBV_position_machine|org.eventb.core.event#2"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.event#8"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#@"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poSequent#AIBV_open\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="AIBV_open/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#EVTALLHYPAIBV_controller_contex~"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="NOTHING≠NOTHING⇔0&gt;0" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#F"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AIBV/AIBV_position_machine.bum|org.eventb.core.machineFile#AIBV_position_machine|org.eventb.core.event#2"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.event#8"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#F"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poSequent#AIBV_open\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_controller_contex~" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_action'" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.poIdentifier name="AIBV_position'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_amount'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_controller_contex~" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#EVTIDENTAIBV_controller_contex~" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="AIBV_state=ARMED" org.eventb.core.source="/AIBV/AIBV_arm_disarm_machine.bum|org.eventb.core.machineFile#AIBV_arm_disarm_machine|org.eventb.core.event#*|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="AIBV_action=OPEN" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.event#8|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="AIBV_close/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#EVTALLHYPAIBV_controller_contey'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="NOTHING=OPEN⇒AIBV_state=ARMED" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AIBV/AIBV_position_machine.bum|org.eventb.core.machineFile#AIBV_position_machine|org.eventb.core.event#3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.event#9"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poSequent#AIBV_close\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="AIBV_close/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#EVTALLHYPAIBV_controller_contey'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈ℕ" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#?"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AIBV/AIBV_position_machine.bum|org.eventb.core.machineFile#AIBV_position_machine|org.eventb.core.event#3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.event#9"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#?"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poSequent#AIBV_close\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="AIBV_close/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#EVTALLHYPAIBV_controller_contey'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0≤0" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#@"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AIBV/AIBV_position_machine.bum|org.eventb.core.machineFile#AIBV_position_machine|org.eventb.core.event#3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.event#9"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#@"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poSequent#AIBV_close\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="AIBV_close/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#EVTALLHYPAIBV_controller_contey'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="NOTHING≠NOTHING⇔0&gt;0" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#F"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/AIBV/AIBV_position_machine.bum|org.eventb.core.machineFile#AIBV_position_machine|org.eventb.core.event#3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.event#9"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#F"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poSequent#AIBV_close\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_controller_contey'" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_action'" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.poIdentifier name="AIBV_position'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="AIBV_amount'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_controller_contey'" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#EVTIDENTAIBV_controller_contey'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="AIBV_state≠DISARMED" org.eventb.core.source="/AIBV/AIBV_arm_disarm_machine.bum|org.eventb.core.machineFile#AIBV_arm_disarm_machine|org.eventb.core.event#+|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="AIBV_action=CLOSE" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.event#9|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="AIBV_control_action/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#EVTALLHYPAIBV_controller_contey(">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="((AIBV_state=ARMED∧AIBV_action'=OPEN)∨AIBV_action'=CLOSE)∧0&lt;AIBV_amount'" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.event#:|org.eventb.core.action#'"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="AIBV_action'=OPEN⇒AIBV_state=ARMED" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.event#:"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#E"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poSequent#AIBV_control_action\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="AIBV_control_action/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#EVTALLHYPAIBV_controller_contey(">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="((AIBV_state=ARMED∧AIBV_action'=OPEN)∨AIBV_action'=CLOSE)∧0&lt;AIBV_amount'" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.event#:|org.eventb.core.action#'"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="AIBV_amount'∈ℕ" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#?"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.event#:"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#?"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poSequent#AIBV_control_action\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="AIBV_control_action/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#EVTALLHYPAIBV_controller_contey(">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="((AIBV_state=ARMED∧AIBV_action'=OPEN)∨AIBV_action'=CLOSE)∧0&lt;AIBV_amount'" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.event#:|org.eventb.core.action#'"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0≤AIBV_amount'" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#@"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.event#:"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#@"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poSequent#AIBV_control_action\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="AIBV_control_action/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#EVTALLHYPAIBV_controller_contey(">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="((AIBV_state=ARMED∧AIBV_action'=OPEN)∨AIBV_action'=CLOSE)∧0&lt;AIBV_amount'" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.event#:|org.eventb.core.action#'"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="AIBV_action'≠NOTHING⇔AIBV_amount'&gt;0" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#F"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.event#:"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#F"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poSequent#AIBV_control_action\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="AIBV_control_action/act1/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#EVTALLHYPAIBV_controller_contey("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∃AIBV_action'⦂AIBV_ACTIONS,AIBV_amount'⦂ℤ·((AIBV_state=ARMED∧AIBV_action'=OPEN)∨AIBV_action'=CLOSE)∧0&lt;AIBV_amount'" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.event#:|org.eventb.core.action#'"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.event#:|org.eventb.core.action#'"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#EVTALLHYPAIBV_controller_contey("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTAIBV_controller_contey(" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AIBV_action'" org.eventb.core.type="AIBV_ACTIONS"/>
+<org.eventb.core.poIdentifier name="AIBV_amount'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAIBV_controller_contey(" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#EVTIDENTAIBV_controller_contey(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="AIBV_state≠DISARMED" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.event#:|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="AIBV_action=NOTHING" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.event#:|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/AIBV/AIBV_control_action_machine.bpo|org.eventb.core.poFile#AIBV_control_action_machine|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="AIBV_action∈AIBV_ACTIONS" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#="/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="AIBV_action=OPEN⇒AIBV_state=ARMED" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#E"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="AIBV_amount∈ℕ" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#?"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="0≤AIBV_amount" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#@"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="AIBV_action≠NOTHING⇔AIBV_amount&gt;0" org.eventb.core.source="/AIBV/AIBV_control_action_machine.bum|org.eventb.core.machineFile#AIBV_control_action_machine|org.eventb.core.invariant#F"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

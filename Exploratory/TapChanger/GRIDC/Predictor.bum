@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile ch.ethz.eventb.decomposition.decomposed="true" org.eventb.core.configuration="ch.ethz.eventb.decomposition.mchBase;org.eventb.codegen.ui.cgConfig" org.eventb.core.generated="true" version="5">
+<org.eventb.core.seesContext name="A" org.eventb.core.target="GRIDCC"/>
+<org.eventb.core.variable name="'" org.eventb.core.identifier="Pstep"/>
+<org.eventb.core.variable name="(" org.eventb.core.identifier="PFstep"/>
+<org.eventb.core.variable name=")" org.eventb.core.identifier="PRstep"/>
+<org.eventb.core.variable name="*" org.eventb.core.identifier="seedvoltage"/>
+<org.eventb.core.invariant name="+" org.eventb.core.label="typing_PFstep" org.eventb.core.predicate="PFstep ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="," org.eventb.core.label="typing_Pstep" org.eventb.core.predicate="Pstep ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="-" org.eventb.core.label="typing_PRstep" org.eventb.core.predicate="PRstep ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="." org.eventb.core.label="typing_seedvoltage" org.eventb.core.predicate="seedvoltage ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.event name="/" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="Pstep ≔ 0" org.eventb.core.label="act19"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="PFstep ≔ 0" org.eventb.core.label="act31"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="seedvoltage ≔ 240" org.eventb.core.label="act34"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="PRstep ≔ 0" org.eventb.core.label="act35"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerReadVoltage">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="pv"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="typing_pv" org.eventb.core.predicate="pv ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="pv ∈ 235 ‥ 245"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd7" org.eventb.core.predicate="Pstep = 0"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerAdjustTapPositionUp">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="ptp"/>
+<org.eventb.core.guard name="5" org.eventb.core.label="typing_ptp" org.eventb.core.predicate="ptp ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="ptp ∈ 1 ‥ 10"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd7" org.eventb.core.predicate="Pstep = 0"/>
+<org.eventb.core.action name="4" org.eventb.core.assignment="Pstep ≔ 1" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerAdjustTapPositionDown">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="ptp"/>
+<org.eventb.core.guard name="4" org.eventb.core.label="typing_ptp" org.eventb.core.predicate="ptp ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="ptp ∈ −10 ‥ −1"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd6" org.eventb.core.predicate="Pstep = 0"/>
+<org.eventb.core.action name="3" org.eventb.core.assignment="Pstep ≔ 1" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerDoNotAdjustTapPositionOnCount">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="ptp"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="typing_ptp" org.eventb.core.predicate="ptp ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd0" org.eventb.core.predicate="ptp = 0"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="Pstep = 0"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="Pstep ≔ 1" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="4" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerDoNotAdjustTapPositionOnLowVoltage">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="ptp"/>
+<org.eventb.core.guard name="1" org.eventb.core.label="typing_ptp" org.eventb.core.predicate="ptp ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd0" org.eventb.core.predicate="ptp = 0"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="Pstep = 0"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="Pstep ≔ 1" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="5" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerDoNotAdjustTapPositionOnHighVoltage">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="ptp"/>
+<org.eventb.core.guard name="1" org.eventb.core.label="typing_ptp" org.eventb.core.predicate="ptp ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd0" org.eventb.core.predicate="ptp = 0"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="Pstep = 0"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="Pstep ≔ 1" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="6" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerMovetoSafeModeLowVoltage">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="ptp"/>
+<org.eventb.core.guard name="2" org.eventb.core.label="typing_ptp" org.eventb.core.predicate="ptp ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd0" org.eventb.core.predicate="ptp = 0"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="Pstep = 0"/>
+<org.eventb.core.action name="1" org.eventb.core.assignment="Pstep ≔ 1" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="7" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerMovetoSafeModeHighVoltage">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="ptp"/>
+<org.eventb.core.guard name="2" org.eventb.core.label="typing_ptp" org.eventb.core.predicate="ptp ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd0" org.eventb.core.predicate="ptp = 0"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="Pstep = 0"/>
+<org.eventb.core.action name="1" org.eventb.core.assignment="Pstep ≔ 1" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="8" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerWritePosition">
+<org.eventb.core.guard name="-" org.eventb.core.label="grd7" org.eventb.core.predicate="Pstep = 1"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="Pstep ≔ 1" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="9" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ControllerWait">
+<org.eventb.core.action name=")" org.eventb.core.assignment="Pstep ≔ 0" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.event name=":" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PredictorEvaluate">
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="PRstep = 0"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="PRstep ≔ 1" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name=";" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PredictorReadVoltage">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="currentvoltage_param"/>
+<org.eventb.core.guard name="." org.eventb.core.label="typing_currentvoltage_param" org.eventb.core.predicate="currentvoltage_param ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="PRstep = 1"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="PFstep = 0"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="seedvoltage ≔ currentvoltage_param" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="PFstep ≔ 1" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="=" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PredictorPredictVoltageChange">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="ptrajectory"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="pfirststep"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="pload"/>
+<org.eventb.core.guard name="3" org.eventb.core.label="typing_pload" org.eventb.core.predicate="pload ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="4" org.eventb.core.label="typing_ptrajectory" org.eventb.core.predicate="ptrajectory ∈ ℙ(ℤ × ℤ)" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="5" org.eventb.core.label="typing_pfirststep" org.eventb.core.predicate="pfirststep ∈ ℤ" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="pfirststep ∈ ℕ"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="PRstep = 1"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="pload ∈ 1 ‥ 3"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="seedvoltage ∈ dom(HORIZON)"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="ptrajectory = HORIZON(seedvoltage)"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd6" org.eventb.core.predicate="pfirststep = ptrajectory(pload)"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="grd7" org.eventb.core.predicate="PFstep = 1"/>
+<org.eventb.core.action name="2" org.eventb.core.assignment="PFstep ≔ 2" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PredictorInactive">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="PRstep = 1"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="PFstep = 0"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="PFstep ≔ 3" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="?" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PredictorWriteVoltage">
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="PRstep = 1"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="PFstep = 2"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="PFstep ≔ 3" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="@" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PredictorWait">
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="PRstep = 1"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="PFstep = 3"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="PRstep ≔ 0" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="PFstep ≔ 0" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="ch.ethz.eventb.decomposition.mchBase;org.eventb.codegen.ui.cgConfig" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="TapChanger"/>
+<org.eventb.core.seesContext name="E" org.eventb.core.target="GRIDCC"/>
+<org.eventb.core.variable name="'" org.eventb.core.generated="true" org.eventb.core.identifier="Tstep"/>
+<org.eventb.core.variable name="(" org.eventb.core.generated="true" org.eventb.core.identifier="TCInit"/>
+<org.eventb.core.variable name=")" org.eventb.core.generated="true" org.eventb.core.identifier="TCAcknowledgeInit"/>
+<org.eventb.core.variable name="*" org.eventb.core.generated="true" org.eventb.core.identifier="TCCommsFailure"/>
+<org.eventb.core.variable name="+" org.eventb.core.generated="true" org.eventb.core.identifier="TCCommsInitiated"/>
+<org.eventb.core.variable name="," org.eventb.core.generated="true" org.eventb.core.identifier="TCposition"/>
+<org.eventb.core.variable name="-" org.eventb.core.generated="true" org.eventb.core.identifier="TCrequestedposition"/>
+<org.eventb.core.variable name="." org.eventb.core.generated="true" org.eventb.core.identifier="TCstep"/>
+<org.eventb.core.event name="F" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.event name="G" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="ControllerInitiateTapChangerComms">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ControllerInitiateTapChangerComms"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="H" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="ControllerRetryTapChangerComms">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ControllerRetryTapChangerComms"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="I" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="ControllerCompleteTapChangerComms">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ControllerCompleteTapChangerComms"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="J" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="ControllerCompleteTapChangerCommsFail">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ControllerCompleteTapChangerCommsFail"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="ControllerWritePosition">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ControllerWritePosition"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="L" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="TapChangerEvaluate">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="TapChangerEvaluate"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="M" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="TapChangerReadInitSignal">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="TapChangerReadInitSignal"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="N" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="TapChangerInitTerminated">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="TapChangerInitTerminated"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="O" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="TapChangerAcknowledgeInit">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="TapChangerAcknowledgeInit"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="P" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="TapChangerReset">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="TapChangerReset"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="Q" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="TapChangerReadPosition">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="TapChangerReadPosition"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="R" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="true" org.eventb.core.label="TapChangerWait">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="TapChangerWait"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>
